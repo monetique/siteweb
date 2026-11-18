@@ -191,7 +191,7 @@ PARTNERS = {'banque_tunisienne': ['Amen Bank',
                       'Banco de Fomento Internacional'],
  'client_privatif': ['Pluxee by Sodexo', 'Jocker Tunisie', 'Servimax'],
  'partenaire_technologique': ['Visa', 'Mastercard', 'JCB', 'UnionPay', 'American Express', 'BPC', 'MS Solutions', 'Wesettle'],
- 'operateur_facturier': ['Ooredoo', 'Orange', 'Tunisie Telecom', 'Topnet', 'STEG', 'SONEDE', 'Tunisie Autoroutes']}
+ 'operateur_facturier': ['Ooredoo', 'Orange', 'Tunisie Telecom', 'TOPNET', 'STEG', 'SONEDE', 'Tunisie Autoroutes']}
 
 FAQ = {'carte_bancaire': [('Que peut-on faire avec une Carte Bancaire ?',
                      "<ul><li><strong>Retirer de l'argent facilement :</strong> accédez à votre argent 24h/24 et 7j/7 auprès de tous les distributeurs automatiques de billets (DAB/GAB) grâce à votre "

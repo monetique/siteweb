@@ -71,26 +71,35 @@ export async function LatestNews({ block }: P) {
 /* ---------- Partenaires */
 export async function PartnersRibbon({ block }: P) {
   const partners = (await getPartenaires()).filter((p) => p.showInRibbon);
+  if (!partners.length) return null;
   return (
-    <section className="w-full border-t border-outline-variant/30 bg-surface-container-low py-14">
-      <Container className="flex flex-col items-center gap-6">
-        <span className="text-eyebrow uppercase tracking-widest text-on-surface-variant">{block.title || "Partenaires & clients"}</span>
-        <div className="flex flex-wrap items-center justify-center gap-3">
-          {partners.map((p) => {
-            const logo = mediaUrl(p.logo);
-            return (
-              <span key={p.name} className="flex h-11 items-center rounded-lg border border-outline-variant/30 bg-surface-container-lowest px-4 text-label-md">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                {logo ? <img src={logo} alt={p.name} className="h-7 w-auto" /> : p.name}
-              </span>
-            );
-          })}
+    // Bandeau de la maquette : filet supérieur, intitulé discret et noms des partenaires en typographie
+    // (ou leur logo en niveaux de gris s'il est renseigné dans le CMS). S'enchaîne avec la section Contact.
+    <section className="w-full bg-surface-container-low pb-20 pt-2">
+      <Container>
+        <div className="border-t border-outline-variant/40 pt-10">
+          <h2 className="mb-6 block text-center text-eyebrow font-bold uppercase tracking-widest text-on-surface-variant">
+            {block.title || "Partenaires & facturiers interconnectés"}
+          </h2>
+          <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 opacity-80 md:gap-x-12">
+            {partners.map((p) => {
+              const logo = mediaUrl(p.logo);
+              return (
+                <li key={p.name} className="text-headline-sm font-bold tracking-wider text-on-surface">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  {logo ? <img src={logo} alt={p.name} className="h-8 w-auto grayscale" /> : p.name}
+                </li>
+              );
+            })}
+          </ul>
+          {block.showAllLink && (
+            <p className="mt-8 text-center">
+              <NextLink href="/partenaires" className="inline-flex items-center gap-1 text-label-md text-secondary underline-offset-4 hover:underline">
+                Voir tous nos partenaires <Icon name="east" className="text-[16px]" />
+              </NextLink>
+            </p>
+          )}
         </div>
-        {block.showAllLink !== false && (
-          <NextLink href="/partenaires" className="inline-flex items-center gap-1 text-label-md text-secondary hover:underline">
-            Voir tous nos partenaires <Icon name="east" className="text-[16px]" />
-          </NextLink>
-        )}
       </Container>
     </section>
   );

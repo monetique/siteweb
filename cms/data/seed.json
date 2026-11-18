@@ -1295,7 +1295,7 @@
    "name": "Office National des Postes",
    "category": "banque_tunisienne",
    "order": 23,
-   "showInRibbon": true
+   "showInRibbon": false
   },
   {
    "name": "Banque Centrale de Tunisie",
@@ -1397,13 +1397,13 @@
    "name": "Visa",
    "category": "partenaire_technologique",
    "order": 1,
-   "showInRibbon": true
+   "showInRibbon": false
   },
   {
    "name": "Mastercard",
    "category": "partenaire_technologique",
    "order": 2,
-   "showInRibbon": true
+   "showInRibbon": false
   },
   {
    "name": "JCB",
@@ -1415,7 +1415,7 @@
    "name": "UnionPay",
    "category": "partenaire_technologique",
    "order": 4,
-   "showInRibbon": true
+   "showInRibbon": false
   },
   {
    "name": "American Express",
@@ -1460,16 +1460,16 @@
    "showInRibbon": true
   },
   {
-   "name": "Topnet",
+   "name": "TOPNET",
    "category": "operateur_facturier",
    "order": 4,
-   "showInRibbon": false
+   "showInRibbon": true
   },
   {
    "name": "STEG",
    "category": "operateur_facturier",
    "order": 5,
-   "showInRibbon": true
+   "showInRibbon": false
   },
   {
    "name": "SONEDE",
@@ -3208,8 +3208,8 @@
     },
     {
      "__component": "blocks.partners-ribbon",
-     "title": "Partenaires et clients",
-     "showAllLink": true
+     "title": "Partenaires & facturiers interconnectés",
+     "showAllLink": false
     }
    ]
   },
@@ -3664,7 +3664,7 @@
     },
     {
      "__component": "blocks.partners-ribbon",
-     "title": "Partenaires et clients",
+     "title": "Partenaires & facturiers interconnectés",
      "showAllLink": true
     }
    ]
@@ -3736,7 +3736,7 @@
     },
     {
      "__component": "blocks.partners-ribbon",
-     "title": "Partenaires et clients",
+     "title": "Partenaires & facturiers interconnectés",
      "showAllLink": true
     }
    ]

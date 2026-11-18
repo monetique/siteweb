@@ -273,7 +273,7 @@ PAGES = [
       "tags": [kp(c) for c in ["Tunisie", "Algérie", "Libye", "Mauritanie", "Rwanda", "Congo", "Cap-Vert"]]},
      {"__component": "blocks.latest-news", "eyebrow": "Actualités", "title": "Actualités & appels d'offres", "source": "mixte", "count": 3},
      {"__component": "blocks.contact-section", "title": "Votre assistance à portée de main", "showForm": True, "showMap": False},
-     {"__component": "blocks.partners-ribbon", "title": "Partenaires et clients", "showAllLink": True},
+     {"__component": "blocks.partners-ribbon", "title": "Partenaires & facturiers interconnectés", "showAllLink": False},
    ]},
   {"title": "Monétique Tunisie", "slug": "monetique-tunisie",
    "seo": {"metaTitle": "Mission, gouvernance et actionnaires",
@@ -301,7 +301,7 @@ PAGES = [
                   {"value": "40 600", "label": "TPE", "note": "Fin juin 2025"},
                   {"value": "PCI DSS", "label": "Certification renouvelée chaque année", "note": "Audits Visa & Mastercard"}]},
                 cta_band("Un projet monétique, e-commerce ou de paiement mobile ?", "Notre direction commerciale accompagne banques, établissements de paiement, fintechs et commerçants.", "Nous contacter", "/contact"),
-                {"__component": "blocks.partners-ribbon", "title": "Partenaires et clients", "showAllLink": True}]},
+                {"__component": "blocks.partners-ribbon", "title": "Partenaires & facturiers interconnectés", "showAllLink": True}]},
   {"title": "Solutions", "slug": "solutions",
    "seo": {"metaTitle": "Nos solutions de paiement digital", "metaDescription": "Carte bancaire, switch monétique, switch mobile, Paysmart, certification, sécurité, hébergement, assistance et conseil."},
    "blocks": [hero("Nos solutions de paiement digital", "Nous accompagnons nos partenaires et clients dans leur croissance en leur fournissant des solutions de paiement de qualité supérieure.", "Solutions"),
@@ -313,7 +313,7 @@ PAGES = [
               {"__component": "blocks.stats-table", "title": "Évolution du réseau national", "subtitle": "Période 2022 – juin 2025",
                "footnote": "*Juin 2025 : évolution T2 2024 / T2 2025 pour le nombre d'opérations et le volume d'affaires."},
               cta_band("Vous souhaitez en savoir plus sur nos chiffres ?", "Notre direction commerciale répond à vos demandes.", "Nous contacter", "/contact"),
-              {"__component": "blocks.partners-ribbon", "title": "Partenaires et clients", "showAllLink": True}]},
+              {"__component": "blocks.partners-ribbon", "title": "Partenaires & facturiers interconnectés", "showAllLink": True}]},
   {"title": "Actualités", "slug": "actualites",
    "seo": {"metaTitle": "Actualités, évènements et appels d’offres", "metaDescription": "Les actualités, évènements, avis d’appels à candidatures et appels d’offres de Monétique Tunisie."},
    "blocks": [hero("Actualités & événements", "Retrouvez les actualités, les évènements, les avis d'appels à candidatures et les appels d'offres de Monétique Tunisie.", "Actualités & publications"),
@@ -378,7 +378,7 @@ SEED = {"global": GLOBAL, "navigation": NAVIGATION, "dirigeants": DIRIGEANTS, "i
                        "seo": {"metaTitle": SOL_TITLES.get(s["slug"], s["name"]), "metaDescription": s["tagline"]}}
                       for i, s in enumerate(SOLUTIONS)],
         "partenaires": [{"name": n, "category": cat, "order": i + 1,
-                         "showInRibbon": n in ("Visa", "Mastercard", "UnionPay", "Office National des Postes", "Ooredoo", "Orange", "Tunisie Telecom", "STEG", "SONEDE")}
+                         "showInRibbon": n in ("Ooredoo", "Orange", "Tunisie Telecom", "TOPNET", "SONEDE")}
                         for cat, names in PARTNERS.items() for i, n in enumerate(names)],
         "faqs": [{"question": q, "answer": blocks(a), "category": cat, "order": i + 1} for cat, items in FAQ.items() for i, (q, a) in enumerate(items)],
         "actualites": [{**a, "content": blocks(a["content"])} for a in ACTUALITES],
