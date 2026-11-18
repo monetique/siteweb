@@ -41,7 +41,7 @@ ENCRYPTION_KEY=${rnd()}
 DATABASE_CLIENT=sqlite
 DATABASE_FILENAME=.tmp/data.db
 STRAPI_TELEMETRY_DISABLED=true
-CORS_ORIGINS=http://localhost:3000,http://localhost:1337
+CORS_ORIGINS=http://localhost:3100,http://localhost:1337
 IS_PROXIED=false
 # E-mails : lancer le simulateur (python cms/scripts/smtp-simulateur.py) pour les recevoir dans cms/mails/
 SMTP_HOST=127.0.0.1
@@ -59,7 +59,7 @@ const webEnv = path.join(WEB, ".env.local");
 if (!fs.existsSync(webEnv)) {
   fs.writeFileSync(webEnv, `STRAPI_URL=http://localhost:1337
 STRAPI_TOKEN=
-SITE_URL=http://localhost:3000
+SITE_URL=http://localhost:3100
 NEXT_PUBLIC_CONTACT_ENDPOINT=http://localhost:1337/api/messages-contact
 `);
   console.log("✓ web/.env.local créé");
@@ -72,5 +72,5 @@ console.log(`
 Installation terminée.
   1. npm run dev                      → lance le CMS et le site
   2. http://localhost:1337/admin      → créer le premier compte administrateur
-  3. http://localhost:3000            → le site
+  3. http://localhost:3100            → le site
 `);

@@ -23,7 +23,7 @@ npm run dev        # lance le CMS et le site
 ```
 
 1. Ouvrir **http://localhost:1337/admin** et créer le premier compte administrateur (une seule fois).
-2. Le site est sur **http://localhost:3000**. Une modification publiée dans le CMS apparaît au rechargement de la page.
+2. Le site est sur **http://localhost:3100** (port choisi pour ne pas entrer en conflit avec d'autres applications sur le port 3000). Une modification publiée dans le CMS apparaît au rechargement de la page.
 
 | Commande | Rôle |
 |---|---|
