@@ -3980,7 +3980,7 @@
     },
     {
      "__component": "blocks.contact-section",
-     "title": "Laissez-nous un message",
+     "title": "Nos coordonnées",
      "showForm": true,
      "showMap": true
     },

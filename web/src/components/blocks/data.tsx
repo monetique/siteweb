@@ -86,65 +86,39 @@ function PartnerLink({ partner, className, children }: { partner: Partenaire; cl
 export async function PartnersRibbon({ block }: { block: Block }) {
   const all = await getPartenaires();
   const homeStyle = block.variant === "facturiers";
+  // Même présentation partout (accueil, pages intérieures, page Partenaires) : filet, intitulé discret,
+  // noms en typographie (ou logo), liens vers les sites. Seule la sélection change : facturiers sur l'accueil,
+  // partenaires cochés « bandeau » ailleurs.
   const partners = all.filter((p) => (homeStyle ? p.showOnHome : p.showInRibbon));
   if (!partners.length) return null;
-  const allLink = block.showAllLink && (
-    <NextLink href="/partenaires" className="inline-flex items-center gap-1 text-label-md text-secondary underline-offset-4 hover:underline">
-      Voir tous nos partenaires <Icon name="east" className="text-[16px]" />
-    </NextLink>
-  );
-
-  if (homeStyle) {
-    // Accueil (maquette) : filet, intitulé discret, noms en typographie ; s'enchaîne avec la section Contact.
-    return (
-      <section className="w-full bg-surface-container-low pb-20 pt-2">
-        <Container>
-          <div className="border-t border-outline-variant/40 pt-10">
-            <h2 className="mb-6 block text-center text-eyebrow font-bold uppercase tracking-widest text-on-surface-variant">
-              {block.title || "Partenaires & facturiers interconnectés"}
-            </h2>
-            <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 opacity-80 md:gap-x-12">
-              {partners.map((p) => {
-                const logo = mediaUrl(p.logo);
-                return (
-                  <li key={p.name} className="text-headline-sm font-bold tracking-wider text-on-surface">
-                    <PartnerLink partner={p} className="transition-colors hover:text-secondary">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      {logo ? <img src={logo} alt={p.name} className="h-8 w-auto grayscale transition hover:grayscale-0" /> : p.name}
-                    </PartnerLink>
-                  </li>
-                );
-              })}
-            </ul>
-            {allLink && <p className="mt-8 text-center">{allLink}</p>}
-          </div>
-        </Container>
-      </section>
-    );
-  }
-
-  // Pages intérieures (maquette) : pastilles sur fond clair, filet supérieur.
   return (
-    <section className="w-full border-t border-outline-variant/30 bg-surface-container-low py-14">
-      <Container className="flex flex-col items-center gap-6">
-        <h2 className="text-eyebrow font-bold uppercase tracking-widest text-on-surface-variant">{block.title || "Partenaires & clients"}</h2>
-        <ul className="flex flex-wrap items-center justify-center gap-3">
-          {partners.map((p) => {
-            const logo = mediaUrl(p.logo);
-            return (
-              <li key={p.name}>
-                <PartnerLink
-                  partner={p}
-                  className="flex h-10 items-center rounded-lg border border-outline-variant/30 bg-surface-container-lowest px-4 text-label-md text-on-surface transition hover:border-secondary/50 hover:text-secondary"
-                >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  {logo ? <img src={logo} alt={p.name} className="h-6 w-auto" /> : p.name}
-                </PartnerLink>
-              </li>
-            );
-          })}
-        </ul>
-        {allLink}
+    <section className={`w-full bg-surface-container-low ${homeStyle ? "pb-20 pt-2" : "py-16"}`}>
+      <Container>
+        <div className="border-t border-outline-variant/40 pt-10">
+          <h2 className="mb-6 block text-center text-eyebrow font-bold uppercase tracking-widest text-on-surface-variant">
+            {block.title || (homeStyle ? "Partenaires & facturiers interconnectés" : "Partenaires & clients")}
+          </h2>
+          <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 opacity-80 md:gap-x-12">
+            {partners.map((p) => {
+              const logo = mediaUrl(p.logo);
+              return (
+                <li key={p.name} className="text-center text-body-lg font-bold tracking-wider text-on-surface md:text-headline-sm">
+                  <PartnerLink partner={p} className="transition-colors hover:text-secondary">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    {logo ? <img src={logo} alt={p.name} className="h-8 w-auto grayscale transition hover:grayscale-0" /> : p.name}
+                  </PartnerLink>
+                </li>
+              );
+            })}
+          </ul>
+          {block.showAllLink && (
+            <p className="mt-8 text-center">
+              <NextLink href="/partenaires" className="inline-flex items-center gap-1 text-label-md text-secondary underline-offset-4 hover:underline">
+                Voir tous nos partenaires <Icon name="east" className="text-[16px]" />
+              </NextLink>
+            </p>
+          )}
+        </div>
       </Container>
     </section>
   );

@@ -359,7 +359,7 @@ PAGES = [
   {"title": "Contact", "slug": "contact",
    "seo": {"metaTitle": "Contactez Monétique Tunisie", "metaDescription": "Centre d’appel 7j/7 – 24h/24 : +216 71 155 840. Numéro vert : 80 100 115. Sana Center, Centre Urbain Nord, Tunis."},
    "blocks": [hero("Contactez-nous", "Switch national monétique, mobile et agrégateur de facturier. Notre centre d'appel est à votre écoute 7j/7 et 24h/24.", "Contact"),
-              {"__component": "blocks.contact-section", "title": "Laissez-nous un message", "showForm": True, "showMap": True},
+              {"__component": "blocks.contact-section", "title": "Nos coordonnées", "showForm": True, "showMap": True},
               {"__component": "blocks.cards-grid", "eyebrow": "Vos interlocuteurs", "title": "Comment pouvons-nous vous aider ?", "columns": 3, "cards": [
                 {"icon": "support_agent", "title": "Centre d'appel 7j/7 – 24h/24", "text": "Pour toutes vos questions, demandes d'informations et besoins d'assistance technique : +216 71 155 840."},
                 {"icon": "shield", "title": "Carte perdue ou volée", "text": "Faites opposition sans délai auprès de votre banque et du centre d'appel (+216 71 155 840), puis confirmez par lettre recommandée à votre banque."},

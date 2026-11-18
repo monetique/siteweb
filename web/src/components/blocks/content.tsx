@@ -88,7 +88,7 @@ async function HomeHero({ block }: { block: Block }) {
 /* ---------- Texte riche */
 export function RichTextBlock({ block }: P) {
   return (
-    <Section tone="surface">
+    <Section tone="surface" className="rt-block">
       <div className="max-w-3xl">
         <SectionTitle eyebrow={block.eyebrow} title={block.title} />
         <RichText content={block.body} className="text-body-lg" />
