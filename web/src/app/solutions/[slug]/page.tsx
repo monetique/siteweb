@@ -1,7 +1,6 @@
 import NextLink from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumb } from "@/components/Breadcrumb";
-import { PartnersRibbon } from "@/components/blocks/data";
 import { Icon } from "@/components/Icon";
 import { RichText } from "@/components/RichText";
 import { Container } from "@/components/Section";
@@ -70,7 +69,6 @@ export default async function SolutionPage({ params }: Props) {
           </aside>
         </Container>
       </section>
-      <PartnersRibbon block={{ __component: "blocks.partners-ribbon", id: 0, title: "Partenaires et clients" }} page={null as any} />
     </>
   );
 }
