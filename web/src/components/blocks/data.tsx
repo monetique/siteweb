@@ -153,26 +153,23 @@ export async function PartnersRibbon({ block }: { block: Block }) {
 export async function PartnersGrid({ block }: P) {
   const partners = await getPartenaires();
   const groups = Object.entries(PARTNER_CATEGORY).map(([key, label]) => ({ label, items: partners.filter((p) => p.category === key) })).filter((g) => g.items.length);
+  // Même présentation que le bandeau de l'accueil : filet, intitulé discret, noms en typographie (ou logo), liens vers les sites.
   return (
-    <Section tone="surface">
+    <Section tone="low">
       <SectionTitle title={block.title} subtitle={block.intro} />
       {groups.map((g) => (
-        <div key={g.label} className="mb-14 last:mb-0">
-          <div className="mb-6 flex items-center justify-between">
-            <h2 className="text-headline-md">{g.label}</h2>
-            <span className="text-label-sm text-on-surface-variant">{g.items.length}</span>
-          </div>
-          <ul className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-6">
+        <div key={g.label} className="border-t border-outline-variant/40 py-10 last:pb-0">
+          <h2 className="mb-6 text-center text-eyebrow font-bold uppercase tracking-widest text-on-surface-variant">
+            {g.label} <span className="font-normal">· {g.items.length}</span>
+          </h2>
+          <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 opacity-80 md:gap-x-12">
             {g.items.map((p) => {
               const logo = mediaUrl(p.logo);
               return (
-                <li key={p.name}>
-                  <PartnerLink
-                    partner={p}
-                    className="flex h-20 items-center justify-center rounded-xl border border-outline-variant/30 bg-surface-container-lowest px-4 text-center text-label-md shadow-sm transition hover:border-secondary/50 hover:shadow-md"
-                  >
+                <li key={p.name} className="text-center text-body-lg font-bold tracking-wider text-on-surface md:text-headline-sm">
+                  <PartnerLink partner={p} className="transition-colors hover:text-secondary">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    {logo ? <img src={logo} alt={p.name} className="max-h-12 w-auto" /> : p.name}
+                    {logo ? <img src={logo} alt={p.name} className="h-8 w-auto grayscale transition hover:grayscale-0" /> : p.name}
                   </PartnerLink>
                 </li>
               );
