@@ -1,0 +1,65 @@
+{
+  "kind": "collectionType",
+  "collectionName": "messages_contact",
+  "info": {
+    "singularName": "message-contact",
+    "pluralName": "messages-contact",
+    "displayName": "Message de contact",
+    "description": "Messages reçus via le formulaire du site"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": false
+    }
+  },
+  "attributes": {
+    "fullName": {
+      "type": "string",
+      "required": true,
+      "maxLength": 120
+    },
+    "phone": {
+      "type": "string",
+      "maxLength": 30
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "subject": {
+      "type": "enumeration",
+      "enum": [
+        "carte_bancaire",
+        "switch_monetique",
+        "switch_mobile_wallet",
+        "ecommerce_clictopay",
+        "paysmart",
+        "certification",
+        "formation_conseil",
+        "reclamation_autre"
+      ],
+      "required": true
+    },
+    "message": {
+      "type": "text",
+      "required": true,
+      "maxLength": 5000
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "nouveau",
+        "en_cours",
+        "traite"
+      ],
+      "default": "nouveau"
+    },
+    "internalNote": {
+      "type": "text",
+      "private": true
+    }
+  }
+}

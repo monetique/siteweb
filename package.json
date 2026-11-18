@@ -1,0 +1,17 @@
+{
+  "name": "site-monetique-tunisie",
+  "private": true,
+  "description": "Site institutionnel Monétique Tunisie — CMS Strapi + site Next.js statique",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "setup": "node scripts/setup-local.mjs",
+    "dev": "concurrently -n cms,site -c blue,green \"npm --prefix cms run develop\" \"npm --prefix web run dev\"",
+    "dev:cms": "npm --prefix cms run develop",
+    "dev:web": "npm --prefix web run dev",
+    "build:web": "npm --prefix web run build",
+    "audit": "npm --prefix cms audit --omit=dev && npm --prefix web audit --omit=dev"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

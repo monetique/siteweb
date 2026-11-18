@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_navigation_sub_item",
+  "info": {
+    "displayName": "Sous-menu",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "type": "string"
+    }
+  }
+}

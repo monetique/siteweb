@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_blocks_solutions_list",
+  "info": {
+    "displayName": "Liste des solutions",
+    "icon": "puzzle"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    }
+  }
+}

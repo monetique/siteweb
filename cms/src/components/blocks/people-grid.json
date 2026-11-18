@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_blocks_people_grid",
+  "info": {
+    "displayName": "Dirigeants",
+    "icon": "user"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "anchor": {
+      "type": "string"
+    }
+  }
+}

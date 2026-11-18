@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_blocks_cards_grid",
+  "info": {
+    "displayName": "Grille de cartes",
+    "icon": "grid"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "columns": {
+      "type": "integer",
+      "default": 3,
+      "min": 2,
+      "max": 4
+    },
+    "cards": {
+      "type": "component",
+      "component": "blocks.card",
+      "repeatable": true
+    }
+  }
+}

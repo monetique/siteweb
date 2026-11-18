@@ -1,0 +1,23 @@
+# /etc/systemd/system/smt-builder.service — reconstruction automatique du site public
+[Unit]
+Description=Monétique Tunisie — reconstruction automatique du site
+After=network.target
+
+[Service]
+Type=simple
+User=smt-web
+Group=smt-web
+WorkingDirectory=/opt/smt/deploy/builder
+EnvironmentFile=/opt/smt/deploy/builder/builder.env
+ExecStart=/usr/bin/node server.mjs
+Restart=always
+RestartSec=5
+# Durcissement : le service ne peut écrire que dans le dossier du site et celui du projet Next.js
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ReadWritePaths=/var/www/smt /opt/smt/smt-web
+
+[Install]
+WantedBy=multi-user.target

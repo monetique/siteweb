@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_key_point",
+  "info": {
+    "displayName": "Point clé",
+    "icon": "check"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "type": "string"
+    }
+  }
+}

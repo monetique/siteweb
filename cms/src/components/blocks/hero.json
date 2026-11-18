@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_blocks_hero",
+  "info": {
+    "displayName": "Bannière",
+    "icon": "landscape"
+  },
+  "options": {},
+  "attributes": {
+    "variant": {
+      "type": "enumeration",
+      "enum": [
+        "sombre",
+        "claire",
+        "accueil"
+      ],
+      "default": "sombre"
+    },
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "ctas": {
+      "type": "component",
+      "component": "shared.link",
+      "repeatable": true
+    }
+  }
+}

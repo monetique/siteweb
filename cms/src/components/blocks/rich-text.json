@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_blocks_rich_text",
+  "info": {
+    "displayName": "Texte riche",
+    "icon": "pencil"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "blocks"
+    }
+  }
+}

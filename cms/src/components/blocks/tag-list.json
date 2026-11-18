@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_blocks_tag_list",
+  "info": {
+    "displayName": "Liste d'étiquettes",
+    "icon": "hashtag"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "blocks"
+    },
+    "tags": {
+      "type": "component",
+      "component": "shared.key-point",
+      "repeatable": true
+    }
+  }
+}

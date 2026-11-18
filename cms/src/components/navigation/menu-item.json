@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_navigation_menu_item",
+  "info": {
+    "displayName": "Entrée de menu",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "children": {
+      "type": "component",
+      "component": "navigation.sub-item",
+      "repeatable": true
+    }
+  }
+}

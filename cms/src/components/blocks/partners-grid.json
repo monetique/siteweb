@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_blocks_partners_grid",
+  "info": {
+    "displayName": "Grille des partenaires",
+    "icon": "handHeart"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "intro": {
+      "type": "text"
+    }
+  }
+}

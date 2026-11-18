@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_blocks_partners_ribbon",
+  "info": {
+    "displayName": "Bandeau partenaires",
+    "icon": "handHeart"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "showAllLink": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

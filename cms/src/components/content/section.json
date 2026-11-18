@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_content_section",
+  "info": {
+    "displayName": "Section de texte",
+    "icon": "file"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "body": {
+      "type": "blocks"
+    }
+  }
+}

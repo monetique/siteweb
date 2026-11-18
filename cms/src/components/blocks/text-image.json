@@ -1,0 +1,48 @@
+{
+  "collectionName": "components_blocks_text_image",
+  "info": {
+    "displayName": "Texte + visuel",
+    "icon": "picture"
+  },
+  "options": {},
+  "attributes": {
+    "anchor": {
+      "type": "string"
+    },
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "body": {
+      "type": "blocks"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "imagePosition": {
+      "type": "enumeration",
+      "enum": [
+        "droite",
+        "gauche"
+      ],
+      "default": "droite"
+    },
+    "keyPoints": {
+      "type": "component",
+      "component": "shared.key-point",
+      "repeatable": true
+    },
+    "cta": {
+      "type": "component",
+      "component": "shared.link",
+      "repeatable": false
+    }
+  }
+}

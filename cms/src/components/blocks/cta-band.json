@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_blocks_cta_band",
+  "info": {
+    "displayName": "Bandeau d'appel à l'action",
+    "icon": "cursor"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "text"
+    },
+    "cta": {
+      "type": "component",
+      "component": "shared.link",
+      "repeatable": false
+    }
+  }
+}

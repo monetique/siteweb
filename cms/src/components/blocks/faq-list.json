@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_blocks_faq_list",
+  "info": {
+    "displayName": "Liste FAQ",
+    "icon": "question"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "toutes",
+        "carte_bancaire",
+        "wallet",
+        "paysmart",
+        "achat_internet",
+        "glossaire"
+      ],
+      "default": "toutes"
+    }
+  }
+}

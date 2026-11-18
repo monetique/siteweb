@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_navigation_footer_column",
+  "info": {
+    "displayName": "Colonne de pied de page",
+    "icon": "layout"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "links": {
+      "type": "component",
+      "component": "shared.link",
+      "repeatable": true
+    }
+  }
+}

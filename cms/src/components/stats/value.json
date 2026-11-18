@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_stats_value",
+  "info": {
+    "displayName": "Valeur statistique",
+    "icon": "chartBubble"
+  },
+  "options": {},
+  "attributes": {
+    "period": {
+      "type": "string",
+      "required": true
+    },
+    "year": {
+      "type": "integer"
+    },
+    "value": {
+      "type": "decimal",
+      "required": true
+    },
+    "displayValue": {
+      "type": "string"
+    },
+    "evolution": {
+      "type": "decimal"
+    },
+    "isPartialYear": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

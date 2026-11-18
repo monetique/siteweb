@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_blocks_key_figures",
+  "info": {
+    "displayName": "Chiffres clés",
+    "icon": "chartPie"
+  },
+  "options": {},
+  "attributes": {
+    "eyebrow": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "items": {
+      "type": "component",
+      "component": "blocks.figure",
+      "repeatable": true
+    },
+    "source": {
+      "type": "string"
+    },
+    "cta": {
+      "type": "component",
+      "component": "shared.link",
+      "repeatable": false
+    }
+  }
+}

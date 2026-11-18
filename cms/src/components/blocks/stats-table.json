@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_blocks_stats_table",
+  "info": {
+    "displayName": "Tableau statistiques",
+    "icon": "chartBar"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "footnote": {
+      "type": "string"
+    }
+  }
+}

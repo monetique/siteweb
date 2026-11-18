@@ -1,0 +1,31 @@
+# Dépendances et builds
+node_modules/
+.next/
+out/
+dist/
+build/
+.cache/
+*.tsbuildinfo
+
+# Strapi : base locale, médias téléversés, fichiers générés
+cms/.tmp/
+cms/.strapi/
+cms/public/uploads/*
+!cms/public/uploads/.gitkeep
+cms/mails/
+*.log
+
+# Secrets — ne JAMAIS versionner
+.env
+.env.*
+!.env.example
+deploy/builder/builder.env
+*.pem
+*.key
+
+# Divers
+.DS_Store
+Thumbs.db
+__pycache__/
+.vscode/
+.idea/
