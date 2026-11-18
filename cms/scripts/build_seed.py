@@ -114,10 +114,14 @@ SOL_NAV = [("Carte Bancaire", "carte-bancaire", "credit_card"), ("Switch Monéti
            ("Certification", "certification", "verified"), ("Sécurité Fraude et Monitoring", "securite-fraude-et-monitoring", "shield"),
            ("Hébergement sécurisé", "hebergement-securise", "dns"), ("Assistance et conseil", "assistance-et-conseil", "support_agent")]
 
+EXP_NAV = [("Monétique", "monetique", "payments"), ("E-commerce", "ecommerce", "shopping_cart"),
+           ("Mobile Payment", "mobile-payment", "phone_iphone"), ("Sécurité", "securite", "lock"),
+           ("Formation & Conseil", "formation-conseil", "school")]
+
 NAVIGATION = {
   "mainMenu": [
     {"label": "Monétique Tunisie", "url": "/monetique-tunisie", "children": []},
-    {"label": "Expertise", "url": "/expertise", "children": []},
+    {"label": "Expertise", "url": "/expertise", "children": [{"label": n, "url": f"/expertise#{a}", "icon": i} for n, a, i in EXP_NAV]},
     {"label": "Solutions", "url": "/solutions", "children": [{"label": n, "url": f"/solutions/{s}", "icon": i} for n, s, i in SOL_NAV]},
     {"label": "Statistiques", "url": "/statistiques", "children": []},
     {"label": "Actualités", "url": "/actualites", "children": []},

@@ -38,7 +38,33 @@
    {
     "label": "الخبرة",
     "url": "/expertise",
-    "children": []
+    "children": [
+     {
+      "label": "النقديات",
+      "url": "/expertise#monetique",
+      "icon": "payments"
+     },
+     {
+      "label": "التجارة الإلكترونية",
+      "url": "/expertise#ecommerce",
+      "icon": "shopping_cart"
+     },
+     {
+      "label": "الدفع عبر الهاتف الجوال",
+      "url": "/expertise#mobile-payment",
+      "icon": "phone_iphone"
+     },
+     {
+      "label": "الأمن",
+      "url": "/expertise#securite",
+      "icon": "lock"
+     },
+     {
+      "label": "التكوين والاستشارة",
+      "url": "/expertise#formation-conseil",
+      "icon": "school"
+     }
+    ]
    },
    {
     "label": "الحلول",

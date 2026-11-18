@@ -33,6 +33,22 @@ with sync_playwright() as p:
     pg.get_by_role('link', name='Switch Mobile').first.click(); pg.wait_for_url('**/solutions/switch-mobile/')
     check('Lien sous-menu → fiche Switch Mobile', pg.locator('h1').inner_text() == 'Switch Mobile')
 
+    # 2 bis. Sous-menu Expertise : lien direct vers chaque section (ancre), y compris depuis la même page
+    nav = pg.locator('nav[aria-label="Navigation principale"]')
+    sec_top = lambda a: pg.evaluate(f'document.getElementById("{a}").getBoundingClientRect().top')
+    pg.goto(B + '/', wait_until='networkidle')
+    nav.get_by_role('link', name='Expertise', exact=True).hover(); pg.wait_for_timeout(300)
+    check('Sous-menu Expertise au survol (5 sections + vue d’ensemble)', pg.get_by_role('link', name='Toute notre expertise').is_visible() and nav.locator('a[href*="/expertise#"], a[href*="/expertise/#"]').count() == 5)
+    nav.locator('a[href*="#securite"]').click(); pg.wait_for_url('**/expertise/#securite'); pg.wait_for_timeout(800)
+    check('Expertise → « Sécurité » : section affichée sous l’en-tête', 80 < sec_top('securite') < 300, f'top={sec_top("securite"):.0f}px')
+    pg.mouse.move(700, 600); pg.wait_for_timeout(300)
+    check('Menu Expertise refermé après le clic', not pg.get_by_role('link', name='Toute notre expertise').is_visible())
+    nav.get_by_role('link', name='Expertise', exact=True).hover(); pg.wait_for_timeout(300)
+    nav.locator('a[href*="#monetique"]').click(); pg.wait_for_timeout(1000)
+    check('Expertise → « Monétique » depuis la même page', pg.url.endswith('#monetique') and 80 < sec_top('monetique') < 300, f'top={sec_top("monetique"):.0f}px')
+    pg.mouse.move(700, 600); pg.wait_for_timeout(300)
+    check('Menu refermé après une ancre sur la même page', not pg.get_by_role('link', name='Toute notre expertise').is_visible())
+
     # 3. Lien d'évitement et retour en haut
     pg.goto(B + '/expertise/', wait_until='networkidle'); pg.keyboard.press('Tab')
     check('Lien « Aller au contenu » au premier Tab', pg.evaluate('document.activeElement.innerText') == 'Aller au contenu')
@@ -90,7 +106,7 @@ with sync_playwright() as p:
     check('Mobile : menu principal masqué', not m.locator('nav[aria-label="Navigation principale"]').is_visible())
     m.get_by_label('Ouvrir le menu').click()
     check('Mobile : menu ouvert', m.locator('#menu-mobile').is_visible())
-    m.locator('#menu-mobile summary').click(); m.locator('#menu-mobile').get_by_role('link', name='Certification').click(); m.wait_for_url('**/solutions/certification/'); m.wait_for_timeout(300)
+    m.locator('#menu-mobile summary', has_text='Solutions').click(); m.locator('#menu-mobile').get_by_role('link', name='Certification').click(); m.wait_for_url('**/solutions/certification/'); m.wait_for_timeout(300)
     check('Mobile : menu refermé après navigation', m.locator('#menu-mobile').count() == 0)
 
     # 9. Page 404 générée
@@ -128,6 +144,14 @@ with sync_playwright() as p:
     check('AR mobile : menu ouvert', m.locator('#menu-mobile').is_visible())
     m.locator('#menu-mobile').get_by_role('link', name='الأخبار').click(); m.wait_for_url('**/ar/actualites/')
     check('AR mobile : navigation dans la langue', m.url.endswith('/ar/actualites/'), m.url)
+    pg.goto(B + '/ar/', wait_until='networkidle')
+    pg.locator('header nav').nth(1).get_by_role('link', name='الخبرة', exact=True).hover(); pg.wait_for_timeout(300)
+    pg.locator('header nav').nth(1).locator('a[href*="#securite"]').click(); pg.wait_for_url('**/ar/expertise/#securite'); pg.wait_for_timeout(800)
+    check('AR : sous-menu الخبرة → section الأمن', 80 < sec_top('securite') < 300, pg.url)
+    m.goto(B + '/expertise/', wait_until='networkidle'); m.locator('button[aria-controls=menu-mobile]').click()
+    if not m.locator('#menu-mobile a[href*="#ecommerce"]').is_visible(): m.locator('#menu-mobile summary', has_text='Expertise').click()
+    m.locator('#menu-mobile a[href*="#ecommerce"]').click(); m.wait_for_timeout(1000)
+    check('Mobile : Expertise → E-commerce, menu refermé', m.locator('#menu-mobile').count() == 0 and m.url.endswith('#ecommerce'), m.url)
     hl = pg.eval_on_selector_all('link[rel=alternate][hreflang]', 'e => e.map(l => l.hreflang).sort()')
     check('Balises hreflang fr/en/ar/x-default', hl == ['ar', 'en', 'fr', 'x-default'], str(hl))
     br.close()

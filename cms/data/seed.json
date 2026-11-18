@@ -38,7 +38,33 @@
    {
     "label": "Expertise",
     "url": "/expertise",
-    "children": []
+    "children": [
+     {
+      "label": "Monétique",
+      "url": "/expertise#monetique",
+      "icon": "payments"
+     },
+     {
+      "label": "E-commerce",
+      "url": "/expertise#ecommerce",
+      "icon": "shopping_cart"
+     },
+     {
+      "label": "Mobile Payment",
+      "url": "/expertise#mobile-payment",
+      "icon": "phone_iphone"
+     },
+     {
+      "label": "Sécurité",
+      "url": "/expertise#securite",
+      "icon": "lock"
+     },
+     {
+      "label": "Formation & Conseil",
+      "url": "/expertise#formation-conseil",
+      "icon": "school"
+     }
+    ]
    },
    {
     "label": "Solutions",

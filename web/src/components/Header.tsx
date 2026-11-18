@@ -30,6 +30,10 @@ export function Header({ global, nav, logoUrl }: { global: Global; nav: Navigati
   const [open, setOpen] = useState(false);
   useEffect(() => setOpen(false), [pathname]);
   const isActive = (url: string) => pathname === url || pathname.startsWith(url + "/");
+  // Libellé du lien « vue d'ensemble » en tête de chaque menu déroulant
+  const overview = (url: string) => (url === "/expertise" ? d.allExpertise : d.allSolutions);
+  // Après un clic dans un menu déroulant (ancre sur la même page comprise), on le referme
+  const closeDropdown = () => (document.activeElement as HTMLElement | null)?.blur();
   const cta = nav.headerCta;
 
   return (
@@ -90,11 +94,11 @@ export function Header({ global, nav, logoUrl }: { global: Global; nav: Navigati
                   </NextLink>
                   <div className="absolute start-0 top-full z-50 hidden pt-2 group-focus-within:block group-hover:block">
                     <div className="w-80 rounded-xl border border-outline-variant/30 bg-surface-container-lowest py-2 shadow-xl">
-                      <NextLink href={item.url} className="mb-1 flex items-center justify-between border-b border-outline-variant/30 px-4 py-2.5 text-sm font-semibold hover:text-secondary">
-                        {d.allSolutions} <Icon name="east" className="text-[16px]" />
+                      <NextLink href={item.url} onClick={closeDropdown} className="mb-1 flex items-center justify-between border-b border-outline-variant/30 px-4 py-2.5 text-sm font-semibold hover:text-secondary">
+                        {overview(item.url)} <Icon name="east" className="text-[16px]" />
                       </NextLink>
                       {item.children.map((c) => (
-                        <NextLink key={c.url} href={c.url}
+                        <NextLink key={c.url} href={c.url} onClick={closeDropdown}
                           className={`flex items-center gap-3 px-4 py-2.5 text-sm transition-colors hover:bg-surface-container hover:text-secondary ${isActive(c.url) ? "font-semibold text-secondary" : "text-on-surface"}`}>
                           <Icon name={c.icon} className="text-[18px] text-secondary" />{c.label}
                         </NextLink>
@@ -135,9 +139,9 @@ export function Header({ global, nav, logoUrl }: { global: Global; nav: Navigati
                     <summary className="flex cursor-pointer list-none items-center justify-between rounded-lg px-4 py-3 text-label-md">
                       {item.label}<Icon name="expand_more" className="transition-transform group-open:rotate-180" />
                     </summary>
-                    <NextLink href={item.url} className="block py-2 ps-8 pe-4 text-sm font-semibold">{d.allSolutions}</NextLink>
+                    <NextLink href={item.url} onClick={() => setOpen(false)} className="block py-2 ps-8 pe-4 text-sm font-semibold">{overview(item.url)}</NextLink>
                     {item.children.map((c) => (
-                      <NextLink key={c.url} href={c.url} className="block py-2 ps-8 pe-4 text-sm text-on-surface-variant hover:text-secondary">{c.label}</NextLink>
+                      <NextLink key={c.url} href={c.url} onClick={() => setOpen(false)} className="block py-2 ps-8 pe-4 text-sm text-on-surface-variant hover:text-secondary">{c.label}</NextLink>
                     ))}
                   </details>
                 ) : (
