@@ -17,6 +17,8 @@ for (const file of walk(path.join(ROOT, "src")).filter((f) => /\.(tsx?|mjs)$/.te
   const src = fs.readFileSync(file, "utf8");
   for (const m of src.matchAll(/(?:name|icon)=\{?["']([a-z0-9_]+)["']/g)) names.add(m[1]);
   for (const m of src.matchAll(/(?:icon|name)\s*\?\?\s*["']([a-z0-9_]+)["']/g)) names.add(m[1]);
+  // name={cond ? "close" : "menu"} : les deux branches d'un ternaire
+  for (const m of src.matchAll(/(?:name|icon)=\{[^}]*?\?\s*["']([a-z0-9_]+)["']\s*:\s*["']([a-z0-9_]+)["']/g)) { names.add(m[1]); names.add(m[2]); }
   for (const m of src.matchAll(/["']([a-z][a-z0-9_]+)["']\s*:\s*["']/g)) if (fs.existsSync(path.join(SVG_DIR, `${m[1]}.svg`))) names.add(m[1]);
 }
 
