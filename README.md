@@ -34,6 +34,8 @@ npm run dev        # lance le CMS et le site
 | `python cms/scripts/smtp-simulateur.py` | reçoit localement les e-mails du formulaire dans `cms/mails/` |
 | `npm run audit` | vérifie les vulnérabilités connues des dépendances |
 
+En développement, une adresse inexistante affiche une erreur au lieu de la page 404 (comportement normal de Next.js) ; le site généré, lui, sert bien la page 404.
+
 En local, la base est un fichier SQLite (`cms/.tmp/data.db`) et les médias sont dans `cms/public/uploads/` : ni l'un ni l'autre n'est versionné.
 
 ## Mise en production

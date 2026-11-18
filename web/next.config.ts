@@ -1,3 +1,4 @@
+import path from "node:path";
 import type { NextConfig } from "next";
 
 /**
@@ -9,6 +10,7 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   images: { unoptimized: true },
   turbopack: {
+    root: path.resolve(__dirname), // dépôt à plusieurs projets : la racine du site est ce dossier
     rules: {
       "*.css": {
         loaders: ["@tailwindcss/turbopack"],
