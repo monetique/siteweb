@@ -2,7 +2,8 @@
 import json, re, sys
 from playwright.sync_api import sync_playwright
 
-BASE = 'http://localhost:4321'
+import os, sys
+BASE = os.environ.get('QA_BASE', sys.argv[1] if len(sys.argv) > 1 else 'http://localhost:3100').rstrip('/')
 AXE = open('/home/claude/qa/node_modules/axe-core/axe.min.js').read()
 sitemap = open('/home/claude/strapi/smt-web/out/sitemap.xml').read()
 paths = [u.replace('https://www.monetiquetunisie.com', '') for u in re.findall(r'<loc>(.*?)</loc>', sitemap)]
@@ -39,6 +40,8 @@ with sync_playwright() as p:
             headingSkips: [...new Set(skips)],
             imgNoAlt: [...document.querySelectorAll('img')].filter(i => !i.hasAttribute('alt')).map(i => i.src.slice(-60)),
             brokenImg: [...document.querySelectorAll('img')].filter(i => i.complete && i.naturalWidth === 0).map(i => i.src.slice(-60)),
+            missingIcons: [...document.querySelectorAll('[data-icon-missing]')].map(e => e.dataset.iconMissing),
+            emptyIconBoxes: [...document.querySelectorAll('div,span')].filter(e => { const b = e.getBoundingClientRect(); const cs = getComputedStyle(e); return b.width >= 32 && b.width <= 96 && Math.abs(b.width - b.height) < 2 && cs.backgroundColor !== 'rgba(0, 0, 0, 0)' && e.children.length === 0 && !e.textContent.trim(); }).length,
             emptyLinks: [...document.querySelectorAll('a')].filter(a => !a.innerText.trim() && !a.getAttribute('aria-label') && !a.querySelector('img[alt]:not([alt=""])')).map(a => a.getAttribute('href')),
             hashLinks: [...document.querySelectorAll('a[href="#"]')].map(a => a.innerText.trim()),
             textLen: text.length,
