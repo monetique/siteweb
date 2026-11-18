@@ -29,3 +29,6 @@ Thumbs.db
 __pycache__/
 .vscode/
 .idea/
+
+# Généré automatiquement (npm run icons, lancé avant dev et build)
+web/src/lib/icons.json

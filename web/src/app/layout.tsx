@@ -29,7 +29,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     sameAs: global.socialLinks.map((s) => s.url),
   };
   return (
-    <html lang="fr">
+    <html lang="fr" data-scroll-behavior="smooth">
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(orgLd) }} />
         <Header global={global} nav={nav} logoUrl={logoUrl} />

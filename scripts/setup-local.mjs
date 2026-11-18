@@ -66,6 +66,7 @@ NEXT_PUBLIC_CONTACT_ENDPOINT=http://localhost:1337/api/messages-contact
 }
 
 if (!fs.existsSync(path.join(CMS, ".tmp", "data.db"))) run("npm run seed", CMS);
+run("npm run icons", WEB); // pictogrammes du site (fichier généré, non versionné)
 else console.log("\n(base existante conservée — pour réimporter : cd cms && npm run seed -- --reset)");
 
 console.log(`
