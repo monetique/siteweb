@@ -34,9 +34,23 @@ npm run dev        # lance le CMS et le site
 | `python cms/scripts/smtp-simulateur.py` | reçoit localement les e-mails du formulaire dans `cms/mails/` |
 | `npm run audit` | vérifie les vulnérabilités connues des dépendances |
 
-En développement, une adresse inexistante affiche une erreur au lieu de la page 404 (comportement normal de Next.js) ; le site généré, lui, sert bien la page 404.
+Le site est trilingue : français à la racine (`/`), anglais sous **/en/** et arabe (de droite à gauche) sous **/ar/**. Voir « Langues » plus bas.
 
 En local, la base est un fichier SQLite (`cms/.tmp/data.db`) et les médias sont dans `cms/public/uploads/` : ni l'un ni l'autre n'est versionné.
+
+## Langues (FR / EN / AR)
+
+| Adresse | Langue |
+|---|---|
+| `http://localhost:3100/` | Français (langue de référence) |
+| `http://localhost:3100/en/` | Anglais |
+| `http://localhost:3100/ar/` | Arabe, mise en page de droite à gauche |
+
+- **Contenus** : chaque contenu Strapi existe en trois versions (sélecteur de langue en haut à droite de l'éditeur). Une version anglaise ou arabe absente est remplacée par le français : rien ne casse si une traduction manque.
+- **Textes fixes de l'interface** (boutons, libellés, dates) : dictionnaire `web/src/lib/i18n.ts`.
+- **Noms propres** : les noms des partenaires, institutions et entreprises (Banque Centrale de Tunisie, STEG, SONEDE, Tunisie Telecom, ministères…) restent en français dans les trois langues.
+- **Traductions initiales** : faites pour le démarrage du site. Elles doivent être **relues par SMT** (idéalement un traducteur pour l'arabe) avant la mise en ligne. Procédure de mise à jour : [`cms/README.md`](cms/README.md#traductions).
+- **Routes** : les pages `/en/…` et `/ar/…` sont générées par `node web/scripts/gen-routes.mjs` à partir des vues communes (`web/src/views/`). Relancer ce script seulement si l'on ajoute un nouveau type de page.
 
 ## Mise en production
 

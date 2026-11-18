@@ -1,10 +1,12 @@
-import NextLink from "next/link";
+import { L as NextLink } from "@/components/LangProvider";
 import type { Global, Navigation } from "@/lib/strapi";
 import { Icon } from "./Icon";
 import { SmartLink } from "./SmartLink";
 import { BackToTop } from "./BackToTop";
+import { t } from "@/lib/lang-server";
 
 export function Footer({ global, nav, logoUrl }: { global: Global; nav: Navigation; logoUrl: string | null }) {
+  const d = t();
   return (
     <footer className="w-full border-t border-white/10 bg-primary-container pb-8 pt-16 text-on-primary">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
@@ -12,7 +14,7 @@ export function Footer({ global, nav, logoUrl }: { global: Global; nav: Navigati
           {nav.footerColumns.map((col, i) => (
             <div key={col.title}>
               {i === 0 && logoUrl && (
-                <NextLink href="/" className="mb-6 inline-flex rounded-xl bg-white px-4 py-3 shadow-sm" aria-label={`${global.siteName} – Accueil`}>
+                <NextLink href="/" className="mb-6 inline-flex rounded-xl bg-white px-4 py-3 shadow-sm" aria-label={`${global.siteName} – ${d.homeAria}`}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={logoUrl} alt={global.siteName} className="h-10 w-auto" width={100} height={43} />
                 </NextLink>
@@ -36,16 +38,16 @@ export function Footer({ global, nav, logoUrl }: { global: Global; nav: Navigati
             </div>
           ))}
           <div>
-            <h2 className="mb-4 font-sans text-label-md uppercase tracking-wider text-on-primary">Contact</h2>
+            <h2 className="mb-4 font-sans text-label-md uppercase tracking-wider text-on-primary">{d.contact}</h2>
             <ul className="space-y-3 text-body-sm text-on-primary-container">
               {global.address && <li className="flex items-start gap-2"><Icon name="location_on" className="text-[18px] text-secondary-fixed" />{global.address}</li>}
               {global.phoneCallCenter && (
                 <li className="flex items-start gap-2"><Icon name="support_agent" className="text-[18px] text-secondary-fixed" />
-                  <span><a href={`tel:${global.phoneCallCenter.replace(/\s/g, "")}`} className="hover:text-on-primary">{global.phoneCallCenter}</a><br /><span className="text-[12px]">Centre d’appel 7j/7 – 24h/24</span></span></li>
+                  <span><a href={`tel:${global.phoneCallCenter.replace(/\s/g, "")}`} className="hover:text-on-primary">{global.phoneCallCenter}</a><br /><span className="text-[12px]">{d.callCenter247}</span></span></li>
               )}
               {global.phoneGreenNumber && (
                 <li className="flex items-start gap-2"><Icon name="call" className="text-[18px] text-secondary-fixed" />
-                  <span><a href={`tel:${global.phoneGreenNumber.replace(/\s/g, "")}`} className="hover:text-on-primary">{global.phoneGreenNumber}</a> <span className="text-[12px]">(numéro vert)</span></span></li>
+                  <span><a href={`tel:${global.phoneGreenNumber.replace(/\s/g, "")}`} className="hover:text-on-primary">{global.phoneGreenNumber}</a> <span className="text-[12px]">({d.greenNumber})</span></span></li>
               )}
               {global.emailContact && (
                 <li className="flex items-start gap-2"><Icon name="mail" className="text-[18px] text-secondary-fixed" />
@@ -53,7 +55,7 @@ export function Footer({ global, nav, logoUrl }: { global: Global; nav: Navigati
               )}
             </ul>
             <NextLink href="/contact" className="mt-5 inline-flex items-center gap-2 rounded-lg bg-secondary-container px-4 py-2.5 text-label-md text-on-secondary-container">
-              Nous écrire <Icon name="east" className="text-[16px]" />
+              {d.writeToUs} <Icon name="east" className="text-[16px]" />
             </NextLink>
           </div>
         </div>

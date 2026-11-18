@@ -1,0 +1,318 @@
+{
+"1fb0ee6fccbf": [
+"What can I do with my merchant wallet?",
+"ماذا يمكنني أن أفعل بمحفظة التاجر؟"
+],
+"ac814c81b4d7": [
+"As a merchant, the wallet gives you a range of features to simplify the day-to-day management of your business and improve your customers' experience.",
+"بصفتك تاجرًا، توفّر لك المحفظة الإلكترونية جملة من الوظائف لتبسيط التصرف اليومي في نشاطك وتحسين تجربة حرفائك."
+],
+"54369c87ba88": [
+"Accept contactless payments:",
+"قبول الدفع دون تلامس:"
+],
+"1b80acebb0b5": [
+"Collect your customers' payments easily.",
+"استخلص مدفوعات حرفائك بسهولة."
+],
+"a3a88cf57b89": [
+"Offer your customers a smooth and fast payment experience, reducing queues and increasing their satisfaction.",
+"وفّر لحرفائك تجربة دفع سلسة وسريعة تقلّص طوابير الانتظار وتزيد رضاهم."
+],
+"c24386eec833": [
+"Benefit from a modern and secure payment solution suited to today's needs.",
+"استفد من حل دفع عصري وآمن يستجيب لاحتياجات اليوم."
+],
+"772d26f3baa4": [
+"In addition to accepting payments, you can use the merchant wallet as a cardholder wallet.",
+"إضافة إلى قبول الدفع، يمكنك استعمال محفظة التاجر كمحفظة حامل."
+],
+"ba7a786b6744": [
+"Manage your transactions with ease:",
+"تصرّف في معاملاتك بكل بساطة:"
+],
+"0c9e7e862e45": [
+"View your transaction history and the details of each sale in real time.",
+"اطّلع في الوقت الحقيقي على سجل معاملاتك وتفاصيل كل عملية بيع."
+],
+"d04f8db021fd": [
+"Use reporting tools to analyse your sales and identify trends.",
+"استعمل أدوات التقارير لتحليل مبيعاتك وتحديد التوجهات."
+],
+"92320a1bd931": [
+"Export your transaction data to simplify your accounting.",
+"صدّر معطيات معاملاتك لتيسير مسك المحاسبة."
+],
+"4286359b0d69": [
+"Improve the security of your payments:",
+"حسّن أمن مدفوعاتك:"
+],
+"f4de99af2585": [
+"Benefit from cutting-edge technologies that protect your transactions against fraud and unauthorised payments.",
+"استفد من تكنولوجيات متطورة لحماية معاملاتك من الاحتيال والدفع غير المرخّص فيه."
+],
+"cd8707105ae5": [
+"What is Paysmart?",
+"ما هي Paysmart؟"
+],
+"4069a8112114": [
+"Paysmart is Monétique Tunisie's bill payment aggregation platform. It allows billers to present their bills to many payment service providers (PSPs), and customers to pay their bills by various means of payment.",
+"Paysmart هي منصة تجميع خلاص الفواتير التابعة لـMonétique Tunisie. وهي تمكّن مصدري الفواتير من عرض فواتيرهم على عدد كبير من مزوّدي خدمات الدفع، وتمكّن الحرفاء من خلاص فواتيرهم بوسائل دفع متنوعة."
+],
+"8a1eaad45ccd": [
+"Which payment methods does Paysmart accept?",
+"ما هي وسائل الدفع المقبولة على Paysmart؟"
+],
+"c192127b0aa0": [
+"Bank cards, wallets and bank transfers.",
+"البطاقة البنكية والمحافظ الإلكترونية والتحويلات البنكية."
+],
+"c88183a75336": [
+"Which billers are on Paysmart?",
+"من هم مصدرو الفواتير على Paysmart؟"
+],
+"350dbe9b2b9f": [
+"Partner billers include STEG, SONEDE, Tunisie Telecom, Topnet and Tunisie Autoroutes.",
+"من بين مصدري الفواتير الشركاء: STEG وSONEDE وTunisie Telecom وTopnet وTunisie Autoroutes."
+],
+"35520d66e886": [
+"What is the CVV2?",
+"ما هو رمز CVV2؟"
+],
+"79b63103f788": [
+"The CVV2, or Card Verification Value 2, is a three-digit security code printed on the back of your payment card, usually in the signature area. It plays a crucial role in protecting your online and telephone transactions by verifying that you are the legitimate cardholder.",
+"رمز CVV2 (Card Verification Value 2) رمز أمان من ثلاثة أرقام مطبوع على ظهر بطاقة الدفع، عادة في خانة الإمضاء. ويضطلع بدور أساسي في حماية معاملاتك عبر الإنترنت والهاتف، إذ يتيح التحقق من أنك الحامل الشرعي للبطاقة."
+],
+"56bd3addf1b8": [
+"How is the CVV2 used?",
+"كيف يُستعمل رمز CVV2؟"
+],
+"7c90ca715e19": [
+"When you shop online, the merchant website will ask you to enter your card's CVV2 in addition to the usual details, such as the card number and expiry date. This extra code confirms that you have the physical card in your possession.",
+"عند الشراء عبر الإنترنت، يطلب منك موقع التاجر إدخال رمز CVV2 لبطاقتك إضافة إلى المعلومات المعتادة مثل رقم البطاقة وتاريخ انتهاء صلوحيتها. ويؤكد هذا الرمز الإضافي أنّ البطاقة بحوزتك فعلًا."
+],
+"1416c0ba2a8d": [
+"What is an OTP?",
+"ما هو رمز OTP؟"
+],
+"866716ead934": [
+"An OTP, or One-Time Password, is a password generated for a single session and requested when you pay on a merchant website. It is often sent by SMS and strengthens the security of online transactions by adding an extra layer of protection to your identity.",
+"رمز OTP (One-Time Password) كلمة عبور صالحة لمرة واحدة تُولَّد لجلسة واحدة وتُطلب عند الدفع على موقع تاجر. وتُرسل غالبًا عبر إرسالية قصيرة، وتعزّز أمن المعاملات عبر الإنترنت بإضافة طبقة حماية إضافية لهويتك."
+],
+"c9207a6f429c": [
+"How is the OTP used?",
+"كيف يُستعمل رمز OTP؟"
+],
+"de38c9a782ca": [
+"When you pay or shop online, you will be asked to enter an OTP in addition to the CVV2. This unique code, usually valid for only a few minutes, confirms that you are the holder of the bank card making the payment.",
+"عند الدفع أو الشراء عبر الإنترنت، يُطلب منك إدخال رمز OTP إضافة إلى رمز CVV2. ويؤكد هذا الرمز الفريد، الصالح عادة لبضع دقائق فقط، أنك حامل البطاقة البنكية التي تُجرى بها عملية الدفع."
+],
+"1780b8093157": [
+"What is phishing?",
+"ما هو التصيّد الاحتيالي؟"
+],
+"959765fa79cd": [
+"Phishing is a fraud technique in which cybercriminals send deceptive messages to trick recipients into disclosing sensitive personal information, such as bank card numbers, login credentials or passwords. These messages often appear to come from trusted sources.",
+"التصيّد الاحتيالي (phishing) تقنية احتيال يرسل فيها مجرمو الإنترنت رسائل مضلّلة لدفع المتلقين إلى الإفصاح عن معلومات شخصية حساسة، مثل أرقام البطاقات البنكية أو معرّفات الدخول أو كلمات العبور. وكثيرًا ما تبدو هذه الرسائل صادرة عن جهات موثوقة."
+],
+"b54e099e8775": [
+"How can I avoid having my card details stolen online?",
+"كيف أتجنّب سرقة معطيات بطاقتي عبر الإنترنت؟"
+],
+"cdb76dfbc3ee": [
+"Use secure websites (shown by \"https\" and a padlock in the address bar).",
+"استعمل المواقع الآمنة (التي يدلّ عليها «https» ورمز القفل في شريط العنوان)."
+],
+"309e81f1e1a0": [
+"Never share your card details by email or SMS.",
+"لا تشارك أبدًا معطيات بطاقتك عبر البريد الإلكتروني أو الإرساليات القصيرة."
+],
+"4177ac27834d": [
+"Turn on transaction notifications, where available, to monitor the operations made with your card in real time.",
+"فعّل إشعارات المعاملات، متى أمكن ذلك، لمتابعة العمليات المنجزة ببطاقتك في الوقت الحقيقي."
+],
+"35d85e0a79df": [
+"Use strong, unique passwords for each online account and turn on two-factor authentication (2FA) where possible.",
+"استعمل كلمات عبور قوية ومختلفة لكل حساب على الإنترنت، وفعّل المصادقة الثنائية متى أمكن ذلك."
+],
+"0e7ec7aa0b9d": [
+"How can I check that a website is secure?",
+"كيف أتحقق من أنّ موقعًا ما آمن؟"
+],
+"6041400ba62b": [
+"Look for the padlock icon in the browser's address bar.",
+"ابحث عن رمز القفل في شريط عنوان المتصفح."
+],
+"cdeff9a3f375": [
+"Make sure the web address starts with \"https\" (the \"s\" stands for secure).",
+"تأكد من أنّ عنوان الموقع يبدأ بـ«https» (يشير حرف «s» إلى أنه آمن)."
+],
+"c962e9a6abce": [
+"Read the site's privacy policy and legal notice to check that it is legitimate.",
+"اطّلع على سياسة الخصوصية والبيانات القانونية للموقع للتحقق من مشروعيته."
+],
+"0b9c87bd1d10": [
+"Three-digit security code printed on the back of the card, requested for online and telephone payments.",
+"رمز أمان من ثلاثة أرقام مطبوع على ظهر البطاقة، يُطلب عند الدفع عبر الإنترنت والهاتف."
+],
+"b9d02fc6a103": [
+"One-Time Password: a single-use password, often sent by SMS, requested during an online payment.",
+"One-Time Password: كلمة عبور صالحة لمرة واحدة، تُرسل غالبًا عبر إرسالية قصيرة، وتُطلب عند الدفع عبر الإنترنت."
+],
+"b60862f4855a": [
+"Wallet",
+"المحفظة الإلكترونية"
+],
+"24a8e6cb0e93": [
+"Electronic purse: an app for storing and using money on a smartphone or connected device.",
+"محفظة إلكترونية: تطبيق يتيح حفظ الأموال واستعمالها على هاتف ذكي أو جهاز متصل."
+],
+"0513f1c10d90": [
+"ClicToPay",
+"ClicToPay"
+],
+"e81de18ba0cf": [
+"Monétique Tunisie's secure online payment platform, which onboards businesses to accept e-commerce payments.",
+"منصة الدفع الآمن عبر الإنترنت التابعة لـMonétique Tunisie، التي تُدمج المؤسسات لقبول مدفوعات التجارة الإلكترونية."
+],
+"1bcffd6780fc": [
+"Mobile payment: authorisation, payment, money transfers and cash-in / cash-out operations carried out through a wallet.",
+"الدفع عبر الهاتف الجوال: الترخيص والدفع وتحويل الأموال وعمليات الإيداع والسحب النقدي المنجزة عبر محفظة إلكترونية."
+],
+"3e44c920427e": [
+"Switch",
+"المحوّل"
+],
+"733fdaf6a103": [
+"Central payment processing interface that connects financial institutions and authorises transactions in real time.",
+"واجهة مركزية لمعالجة عمليات الدفع تربط بين المؤسسات المالية وترخّص في المعاملات في الوقت الحقيقي."
+],
+"fbbb1c6ba556": [
+"Simplify your payments with a wallet",
+"بسّط مدفوعاتك بالمحفظة الإلكترونية"
+],
+"1586bc8a4960": [
+"Pay, send and withdraw your money instantly from your phone, without carrying cash or queuing.",
+"ادفع وأرسل واسحب أموالك فورًا من هاتفك، دون حمل أموال نقدية أو الوقوف في الطوابير."
+],
+"2586779f50ac": [
+"With a wallet, everything gets easier: no more carrying cash or standing in line!",
+"مع المحفظة الإلكترونية يصبح كل شيء أسهل: لم تعد بحاجة إلى حمل الأموال نقدًا ولا إلى الوقوف في الطوابير!"
+],
+"93fcaf01684a": [
+"Pay, send and withdraw your money instantly. A wallet is an electronic purse on your phone that lets you do everything.",
+"ادفع وأرسل واسحب أموالك فورًا. المحفظة الإلكترونية محفظة على هاتفك تتيح لك القيام بكل شيء."
+],
+"0cfb2c3cd83c": [
+"Just go to the App Store or Google Play and download the mobile payment app you need in the blink of an eye.",
+"يكفي أن تدخل إلى App Store أو Google Play لتحمّل تطبيق الدفع عبر الهاتف الجوال الذي تحتاجه في لمح البصر."
+],
+"fccb0dfbc227": [
+"What a fantastic event: Monétique Tunisie team building!",
+"يا لها من فعالية رائعة: يوم بناء الفريق في Monétique Tunisie!"
+],
+"65a552c9c0ee": [
+"Company life",
+"الحياة الداخلية"
+],
+"abee23cb6a4a": [
+"Three days of games and moments of camaraderie, trust and communication, in support of our values of respect, integrity and responsibility.",
+"ثلاثة أيام من الألعاب ولحظات الزمالة والثقة والتواصل، خدمةً لقيمنا القائمة على الاحترام والنزاهة والمسؤولية."
+],
+"871b1f494c8c": [
+"A real success, full of games that highlighted the good relations and friendly atmosphere among employees.",
+"نجاح حقيقي حافل بالألعاب التي أبرزت الانسجام وروح الألفة بين الموظفين."
+],
+"7016c7913b08": [
+"Over the three days of this team building, we shared moments of camaraderie, trust and open communication that made the activities both fun and rewarding.",
+"على امتداد الأيام الثلاثة لهذه الفعالية، عشنا لحظات من الزمالة والثقة والتواصل المفتوح جعلت الأنشطة ممتعة ومثرية في آن واحد."
+],
+"2dfd5ff2f292": [
+"The spirit of collaboration and creativity was palpable, reflecting our company's vision centred on innovation and excellence.",
+"كانت روح التعاون والإبداع ملموسة، تعكس رؤية شركتنا القائمة على الابتكار والتميّز."
+],
+"c871e34a8e3c": [
+"This event strengthened our core values of respect, integrity and responsibility, creating lasting memories that will improve our relationships and foster a dynamic and inclusive culture within our company.",
+"عزّزت هذه الفعالية قيمنا الأساسية القائمة على الاحترام والنزاهة والمسؤولية، وصنعت ذكريات دائمة ستحسّن علاقاتنا وتدعم ثقافة حيوية وشاملة داخل شركتنا."
+],
+"8edc6b28bea3": [
+"Monétique Tunisie team building",
+"يوم بناء الفريق في Monétique Tunisie"
+],
+"9e11ef933ef6": [
+"Mr Bilel DARNAOUI on El Wataniya 1's 8 pm news: the growth of bank card payments in Tunisia",
+"مداخلة السيد بلال الدرناوي في نشرة أخبار الثامنة على El Wataniya 1: تطوّر الدفع بالبطاقات البنكية في تونس"
+],
+"486d82f4995b": [
+"Media",
+"إعلام"
+],
+"ed93deaaf75d": [
+"The CEO of Monétique Tunisie discusses the growth of bank card payments in Tunisia.",
+"المدير العام لـMonétique Tunisie يتحدث عن تطوّر الدفع بالبطاقات البنكية في تونس."
+],
+"a8a36ccbaf18": [
+"The CEO of Monétique Tunisie, Mr Bilel DARNAOUI, appeared on El Wataniya 1's 8 pm news to discuss the growth of bank card payments in Tunisia.",
+"شارك المدير العام لـMonétique Tunisie، السيد بلال الدرناوي، في نشرة أخبار الثامنة على El Wataniya 1 للحديث عن تطوّر الدفع بالبطاقات البنكية في تونس."
+],
+"57e31fcfc8d9": [
+"Bilel Darnaoui on El Wataniya 1 news",
+"بلال الدرناوي في نشرة أخبار El Wataniya 1"
+],
+"8e63ce94cd94": [
+"Monétique Tunisie at the 3rd International CSR Forum",
+"Monétique Tunisie في الدورة الثالثة للمنتدى الدولي للمسؤولية المجتمعية"
+],
+"97cc6cc26cda": [
+"On the theme \"Sustainable profitability: the new equation of corporate performance\", in Hammamet, May 2024.",
+"تحت شعار «المردودية المستدامة: المعادلة الجديدة لأداء المؤسسة»، بالحمامات في ماي 2024."
+],
+"2284a2cb7e80": [
+"Monétique Tunisie at the 3rd International CSR Forum on the theme: \"Sustainable profitability: the new equation of corporate performance\".",
+"Monétique Tunisie في الدورة الثالثة للمنتدى الدولي للمسؤولية المجتمعية تحت شعار: «المردودية المستدامة: المعادلة الجديدة لأداء المؤسسة»."
+],
+"e132d10570b2": [
+"Hôtel Diar Lemdina, Hammamet – May 2024.",
+"Hôtel Diar Lemdina، الحمامات – ماي 2024."
+],
+"0165dcaf03ff": [
+"3rd International CSR Forum",
+"المنتدى الدولي الثالث للمسؤولية المجتمعية"
+],
+"89babd77c960": [
+"Official pre-launch of the national E-construction and EC 2.0 service digitalisation platforms",
+"الإطلاق التمهيدي الرسمي للمنصتين الوطنيتين لرقمنة خدمات E-construction وEC 2.0"
+],
+"9920683cd896": [
+"E-payment",
+"الدفع الإلكتروني"
+],
+"e04adbe7e77b": [
+"Live demonstration of the E-payment component developed by Monétique Tunisie as part of the Digital4Reforms project.",
+"عرض مباشر لمكوّن الدفع الإلكتروني الذي طوّرته Monétique Tunisie في إطار مشروع Digital4Reforms."
+],
+"749e1c526203": [
+"Monétique Tunisie took part in the official pre-launch of the national E-construction and Espace Citoyen 2.0 service digitalisation platforms on Tuesday 23 April 2024.",
+"شاركت Monétique Tunisie في الإطلاق التمهيدي الرسمي للمنصتين الوطنيتين لرقمنة خدمات E-construction وEspace Citoyen 2.0، الذي انتظم يوم الثلاثاء 23 أفريل 2024."
+],
+"fef226dd22be": [
+"The event is part of the Digital4Reforms project, E-payment component, implemented by GIZ in cooperation with the Tunisian government and funded by the ministère fédéral allemand de la Coopération économique et du Développement (BMZ), in partnership with the ministère de l'Intérieur, the ministère des Finances and the Banque Centrale de Tunisie.",
+"تندرج هذه الفعالية في إطار مشروع Digital4Reforms، مكوّن الدفع الإلكتروني، الذي تنفذه GIZ بالتعاون مع الحكومة التونسية وبتمويل من ministère fédéral allemand de la Coopération économique et du Développement (BMZ)، بالشراكة مع ministère de l'Intérieur وministère des Finances وBanque Centrale de Tunisie."
+],
+"a8ad94fb83de": [
+"Live demonstration of the E-payment component developed by Monétique Tunisie.",
+"عرض مباشر لمكوّن الدفع الإلكتروني الذي طوّرته Monétique Tunisie."
+],
+"8a6b9b5b853d": [
+"E-construction and EC 2.0 pre-launch",
+"الإطلاق التمهيدي لـE-construction وEC 2.0"
+],
+"99bfca05ac05": [
+"Taking part in the International CSR Forum press conference",
+"المشاركة في الندوة الصحفية للمنتدى الدولي للمسؤولية المجتمعية"
+],
+"e1da5c457e1f": [
+"Monétique Tunisie took part in the International CSR Forum press conference on 31 January 2024 at the Maison de l'Exportateur (CEPEX).",
+"شاركت Monétique Tunisie في الندوة الصحفية للمنتدى الدولي للمسؤولية المجتمعية يوم 31 جانفي 2024 بMaison de l'Exportateur (CEPEX)."
+]
+}

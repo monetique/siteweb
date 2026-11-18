@@ -1,11 +1,12 @@
 @import "tailwindcss";
 @import "@fontsource-variable/inter";
 @import "@fontsource-variable/plus-jakarta-sans";
+@import "@fontsource-variable/noto-sans-arabic";
 
 /* Charte issue des maquettes (Design system « Sovereign Switch Banking ») */
 @theme {
-  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Plus Jakarta Sans Variable", "Inter Variable", ui-sans-serif, sans-serif;
+  --font-sans: "Inter Variable", "Noto Sans Arabic Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans Variable", "Inter Variable", "Noto Sans Arabic Variable", ui-sans-serif, sans-serif;
 
   --color-surface: #f8f9ff;
   --color-surface-bright: #f8f9ff;
@@ -96,8 +97,8 @@
 .prose-smt { @apply space-y-4 text-on-surface-variant leading-relaxed; }
 .prose-smt h2 { @apply text-headline-md text-on-surface mt-8; }
 .prose-smt h3 { @apply text-headline-sm text-on-surface mt-6; }
-.prose-smt ul { @apply list-disc pl-6 space-y-1.5; }
-.prose-smt ol { @apply list-decimal pl-6 space-y-1.5; }
+.prose-smt ul { @apply list-disc ps-6 space-y-1.5; }
+.prose-smt ol { @apply list-decimal ps-6 space-y-1.5; }
 .prose-smt a { @apply text-secondary underline underline-offset-2 hover:text-on-secondary-fixed-variant; }
 .prose-smt strong { @apply text-on-surface font-semibold; }
 
@@ -108,3 +109,12 @@
 
 /* Blocs de texte consécutifs (ex. mentions légales) : pas de double espacement entre deux sections */
 .rt-block + .rt-block { padding-top: 0; }
+
+/* ---------- Arabe (droite à gauche) */
+/* Icônes directionnelles (flèches, chevrons) retournées en arabe */
+[dir="rtl"] .icon-dir { transform: scaleX(-1); }
+/* Les capitales espacées n'existent pas en arabe : on neutralise l'espacement des sur-titres */
+[dir="rtl"] .uppercase { letter-spacing: 0; }
+[dir="rtl"] body { line-height: 1.7; }
+/* Numéros de téléphone, adresses e-mail et références restent de gauche à droite */
+[dir="rtl"] a[href^="tel:"], [dir="rtl"] a[href^="mailto:"] { direction: ltr; unicode-bidi: isolate; }

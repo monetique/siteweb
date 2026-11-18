@@ -95,3 +95,26 @@ Sécurité : contenu échappé en HTML, retours à la ligne supprimés des en-t�
 
 **Simulation en local** : `python3 scripts/smtp-simulateur.py` (nécessite `pip install aiosmtpd`) écoute sur 127.0.0.1:1025 ; chaque e-mail est enregistré dans `mails/` (.eml et aperçu .html). Rien ne part sur Internet.
 **Production** : renseigner `SMTP_HOST`, `SMTP_PORT` (587), `SMTP_REQUIRE_TLS=true`, `SMTP_USERNAME`, `SMTP_PASSWORD`, `SMTP_FROM` avec les paramètres de la messagerie SMT ; prévoir SPF/DKIM pour l'adresse d'envoi afin d'éviter les spams.
+
+## Traductions
+
+Le site existe en français (langue par défaut), anglais (`en`) et arabe (`ar`) grâce au module i18n de Strapi.
+
+**Au quotidien (rédacteurs)** : ouvrir un contenu, choisir la langue dans le sélecteur en haut à droite de l'éditeur, saisir ou corriger la version, puis publier. Une langue non remplie affiche la version française sur le site. Les chiffres des indicateurs statistiques (valeurs, évolutions) sont communs aux trois langues : on les met à jour une seule fois.
+
+**Contenu de démonstration** : les traductions initiales sont stockées dans `data/i18n/` et importées par `npm run seed`.
+
+| Commande | Rôle |
+|---|---|
+| `python3 scripts/i18n_strings.py extract` | liste les textes français à traduire dans `data/i18n/source.fr.json` |
+| `python3 scripts/i18n_strings.py status` | nombre de textes traduits par langue |
+| `python3 scripts/i18n_strings.py build` | produit `data/seed.en.json` et `data/seed.ar.json` à partir de `data/i18n/en.json` et `ar.json` |
+| `npm run seed -- --reset` | réimporte le contenu et ses traductions |
+
+Règles appliquées :
+
+- les noms des partenaires, institutions et entreprises restent en français ;
+- les identifiants (slugs, adresses, e-mails, téléphones, références d'appels d'offres) ne sont jamais traduits ;
+- dans un texte arabe, écrire les numéros de téléphone dans l'ordre normal (`+216 71 155 840`). Le site les isole automatiquement dans les textes riches pour qu'ils ne s'affichent pas à l'envers (le contenu de démonstration est déjà traité).
+
+Ces traductions sont un point de départ : **elles doivent être relues par SMT** avant la mise en ligne.

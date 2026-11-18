@@ -1,7 +1,10 @@
 """Scénarios d'interaction utilisateur sur le site statique."""
+import os, sys, re
 from playwright.sync_api import sync_playwright, expect
 
-B = 'http://localhost:4321'
+# Usage : python3 interactions.py [URL]  (défaut : build statique servi sur 4321 ; dev : http://localhost:3100)
+B = (sys.argv[1] if len(sys.argv) > 1 else os.environ.get('QA_BASE', 'http://localhost:4321')).rstrip('/')
+NOT_FOUND = '/404.html' if ':4321' in B else '/page-inexistante/'
 ok, ko = [], []
 def check(name, cond, detail=''):
     (ok if cond else ko).append(f'{name}{" — " + detail if detail else ""}')
@@ -91,8 +94,8 @@ with sync_playwright() as p:
     check('Mobile : menu refermé après navigation', m.locator('#menu-mobile').count() == 0)
 
     # 9. Page 404 générée
-    pg.goto(B + '/404.html', wait_until='networkidle')
-    check('Page 404 personnalisée', 'Page introuvable' in pg.locator('h1').inner_text())
+    pg.goto(B + NOT_FOUND, wait_until='networkidle')
+    check('Page 404 personnalisée (trilingue)', 'Page introuvable' in pg.locator('body').inner_text() and 'Page not found' in pg.locator('body').inner_text())
 
     # 10. Liens externes et mailto/tel
     pg.goto(B + '/appels-offres/administrateur-independant-comite-audit-risques/', wait_until='networkidle')
@@ -100,6 +103,33 @@ with sync_playwright() as p:
     check('Lien PDF externe ouvert dans un nouvel onglet', ext.get_attribute('target') == '_blank' and 'noopener' in (ext.get_attribute('rel') or ''))
     pg.goto(B + '/', wait_until='networkidle')
     check('Liens tel: au format international', all(h.startswith('tel:+216') for h in pg.eval_on_selector_all('a[href^="tel:"]', 'e => e.map(a => a.getAttribute("href"))')))
+
+    # 11. Versions anglaise et arabe
+    pg.goto(B + '/solutions/switch-mobile/', wait_until='networkidle')
+    pg.locator('header a[hreflang=en]').click(); pg.wait_for_url('**/en/solutions/switch-mobile/'); pg.wait_for_load_state('networkidle')
+    check('Sélecteur EN conserve la page', pg.evaluate('document.documentElement.lang') == 'en', pg.url)
+    pg.locator('header a[hreflang=ar]').click(); pg.wait_for_url('**/ar/solutions/switch-mobile/'); pg.wait_for_load_state('networkidle')
+    check('Sélecteur AR → lang=ar, dir=rtl', pg.evaluate('[document.documentElement.lang, document.documentElement.dir]') == ['ar', 'rtl'])
+    check('AR : texte aligné à droite', pg.evaluate('getComputedStyle(document.querySelector("main h1")).textAlign') in ('start', 'right'))
+    pg.locator('header nav').nth(1).get_by_role('link', name='الإحصائيات', exact=True).click(); pg.wait_for_url('**/ar/statistiques/')
+    check('AR : menu reste dans la langue', pg.url.endswith('/ar/statistiques/'), pg.url)
+    nums = pg.eval_on_selector_all('table td span[dir=ltr]', 'e => e.slice(0, 3).map(x => x.innerText)')
+    check('AR : chiffres non inversés', all(re.fullmatch(r'[\d\s.,+%-]+', n or '') for n in nums) and len(nums) > 0, str(nums))
+    pg.locator('header a[hreflang=fr]').click(); pg.wait_for_url('**/statistiques/')
+    check('Retour FR à la racine', '/ar/' not in pg.url and pg.evaluate('document.documentElement.lang') == 'fr', pg.url)
+    pg.goto(B + '/en/actualites/', wait_until='networkidle')
+    live = pg.locator('p[aria-live=polite]')
+    pg.get_by_role('tab', name='Events').click(); check('EN : filtre « Events »', live.inner_text().startswith('4 '), live.inner_text())
+    pg.goto(B + '/ar/contact/', wait_until='networkidle'); pg.unroute('**/api/messages-contact')
+    pg.fill('input[name=fullName]', 'QA عربي'); pg.fill('input[name=email]', 'qa@smt.tn'); pg.select_option('select[name=subject]', 'paysmart'); pg.fill('textarea[name=message]', 'اختبار')
+    pg.locator('form button[type=submit]').click(); pg.wait_for_timeout(1500)
+    check('AR : formulaire envoyé, confirmation en arabe', 'شكرًا' in pg.locator('form [aria-live=polite]').inner_text(), pg.locator('form [aria-live=polite]').inner_text())
+    m.goto(B + '/ar/', wait_until='networkidle'); m.locator('button[aria-controls=menu-mobile]').click()
+    check('AR mobile : menu ouvert', m.locator('#menu-mobile').is_visible())
+    m.locator('#menu-mobile').get_by_role('link', name='الأخبار').click(); m.wait_for_url('**/ar/actualites/')
+    check('AR mobile : navigation dans la langue', m.url.endswith('/ar/actualites/'), m.url)
+    hl = pg.eval_on_selector_all('link[rel=alternate][hreflang]', 'e => e.map(l => l.hreflang).sort()')
+    check('Balises hreflang fr/en/ar/x-default', hl == ['ar', 'en', 'fr', 'x-default'], str(hl))
     br.close()
 
 print(f'OK {len(ok)} / KO {len(ko)}')

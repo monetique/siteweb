@@ -15,6 +15,13 @@ const ROOT = path.resolve(__dirname, '..');
 const SEED = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'seed.json'), 'utf8'));
 const RESET = process.argv.includes('--reset');
 const LOCALE = 'fr';
+// Traductions du contenu de départ (data/seed.en.json, data/seed.ar.json — voir scripts/i18n_strings.py)
+const TRANSLATIONS = Object.fromEntries(
+  ['en', 'ar']
+    .map((l) => [l, path.join(ROOT, 'data', `seed.${l}.json`)])
+    .filter(([, f]) => fs.existsSync(f))
+    .map(([l, f]) => [l, JSON.parse(fs.readFileSync(f, 'utf8'))]),
+);
 
 const clean = (o) => JSON.parse(JSON.stringify(o, (k, v) => (v === null ? undefined : v)));
 
@@ -30,14 +37,14 @@ async function uploadFile(strapi, file, alt) {
   return uploaded;
 }
 
-async function setSingle(strapi, uid, data) {
+async function setSingle(strapi, uid, data, locale = LOCALE) {
   const docs = strapi.documents(uid);
   const current = await docs.findFirst({ locale: LOCALE });
-  if (current) return docs.update({ documentId: current.documentId, locale: LOCALE, data });
-  return docs.create({ locale: LOCALE, data });
+  if (current) return docs.update({ documentId: current.documentId, locale, data });
+  return docs.create({ locale, data });
 }
 
-async function fillCollection(strapi, uid, items, { localized = true, publish = true } = {}) {
+async function fillCollection(strapi, uid, items, { localized = true, publish = true, key } = {}) {
   const docs = strapi.documents(uid);
   const count = await strapi.db.query(uid).count();
   if (count && !RESET) {
@@ -46,14 +53,24 @@ async function fillCollection(strapi, uid, items, { localized = true, publish = 
   }
   if (RESET) await strapi.db.query(uid).deleteMany({});
   let n = 0;
-  for (const item of items) {
+  let translated = 0;
+  for (const [i, item] of items.entries()) {
     const params = { data: clean(item) };
     if (localized) params.locale = LOCALE;
     if (publish) params.status = 'published';
-    await docs.create(params);
+    const created = await docs.create(params);
     n += 1;
+    // Versions anglaise et arabe : même document (même documentId), une localisation par langue.
+    if (localized && key) {
+      for (const [lang, seed] of Object.entries(TRANSLATIONS)) {
+        const tr = seed[key]?.[i];
+        if (!tr) continue;
+        await docs.update({ documentId: created.documentId, locale: lang, data: clean(tr), ...(publish ? { status: 'published' } : {}) });
+        translated += 1;
+      }
+    }
   }
-  console.log(`  ${uid} : ${n} entrées importées`);
+  console.log(`  ${uid} : ${n} entrées importées${translated ? ` (+ ${translated} traductions)` : ''}`);
   return n;
 }
 
@@ -69,16 +86,20 @@ async function main() {
     console.log('Réglages globaux et navigation…');
     await setSingle(strapi, 'api::global.global', clean({ ...SEED.global, logo: logo.id, favicon: favicon.id }));
     await setSingle(strapi, 'api::navigation.navigation', clean(SEED.navigation));
+    for (const [lang, seed] of Object.entries(TRANSLATIONS)) {
+      await setSingle(strapi, 'api::global.global', clean({ ...seed.global, logo: logo.id, favicon: favicon.id }), lang);
+      await setSingle(strapi, 'api::navigation.navigation', clean(seed.navigation), lang);
+    }
 
     console.log('Collections…');
-    await fillCollection(strapi, 'api::dirigeant.dirigeant', SEED.dirigeants);
-    await fillCollection(strapi, 'api::indicateur.indicateur', SEED.indicateurs);
-    await fillCollection(strapi, 'api::solution.solution', SEED.solutions);
+    await fillCollection(strapi, 'api::dirigeant.dirigeant', SEED.dirigeants, { key: 'dirigeants' });
+    await fillCollection(strapi, 'api::indicateur.indicateur', SEED.indicateurs, { key: 'indicateurs' });
+    await fillCollection(strapi, 'api::solution.solution', SEED.solutions, { key: 'solutions' });
     await fillCollection(strapi, 'api::partenaire.partenaire', SEED.partenaires, { localized: false });
-    await fillCollection(strapi, 'api::faq.faq', SEED.faqs);
-    await fillCollection(strapi, 'api::actualite.actualite', SEED.actualites);
-    await fillCollection(strapi, 'api::appel-offres.appel-offres', SEED.appelsOffres);
-    await fillCollection(strapi, 'api::page.page', SEED.pages);
+    await fillCollection(strapi, 'api::faq.faq', SEED.faqs, { key: 'faqs' });
+    await fillCollection(strapi, 'api::actualite.actualite', SEED.actualites, { key: 'actualites' });
+    await fillCollection(strapi, 'api::appel-offres.appel-offres', SEED.appelsOffres, { key: 'appelsOffres' });
+    await fillCollection(strapi, 'api::page.page', SEED.pages, { key: 'pages' });
     console.log('Import terminé.');
   } finally {
     await strapi.destroy();

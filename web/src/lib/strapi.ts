@@ -1,10 +1,11 @@
 import type { BlocksContent } from "@strapi/blocks-react-renderer";
+import { DEFAULT_LANG } from "./i18n";
+import { getLang } from "./lang-server";
 
 /* ------------------------------------------------------------------ configuration */
 const STRAPI_URL = (process.env.STRAPI_URL || "http://localhost:1337").replace(/\/$/, "");
 const MEDIA_BASE_URL = (process.env.MEDIA_BASE_URL || STRAPI_URL).replace(/\/$/, "");
 const TOKEN = process.env.STRAPI_TOKEN;
-export const LOCALE = "fr";
 
 /** Construit la query string au format Strapi (filters[slug][$eq]=…, populate[a][populate]=*). */
 function toQuery(obj: Record<string, unknown>, prefix = ""): string[] {
@@ -17,7 +18,21 @@ function toQuery(obj: Record<string, unknown>, prefix = ""): string[] {
 }
 
 async function strapiGet<T>(path: string, params: Record<string, unknown> = {}): Promise<T> {
-  const qs = toQuery({ locale: LOCALE, ...params }).join("&");
+  const locale = "locale" in params ? params.locale : getLang();
+  const json = await strapiFetch<T>(path, { ...params, locale });
+  // Contenu pas encore traduit : on affiche la version française plutôt qu'une page vide.
+  const data = (json as { data?: unknown } | null)?.data;
+  const empty = data === null || data === undefined || (Array.isArray(data) && data.length === 0);
+  if (empty && locale && locale !== DEFAULT_LANG) {
+    const fallback = await strapiFetch<T>(path, { ...params, locale: DEFAULT_LANG });
+    if (fallback) return fallback;
+  }
+  if (!json) throw new Error(`Strapi 404 sur /api/${path}`);
+  return json;
+}
+
+async function strapiFetch<T>(path: string, params: Record<string, unknown>): Promise<T | null> {
+  const qs = toQuery(params).join("&");
   // Délai maximal et nouvelles tentatives : si Strapi ne répond pas, le build échoue proprement
   // (et le site en ligne reste inchangé) au lieu de rester bloqué.
   let res: Response | undefined;
@@ -36,6 +51,7 @@ async function strapiGet<T>(path: string, params: Record<string, unknown> = {}):
       await new Promise((r) => setTimeout(r, 2000 * attempt));
     }
   }
+  if (res.status === 404) return null; // type unique sans version dans cette langue
   if (!res.ok) throw new Error(`Strapi ${res.status} sur /api/${path}`);
   return (await res.json()) as T;
 }

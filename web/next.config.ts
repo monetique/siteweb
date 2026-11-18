@@ -9,6 +9,8 @@ const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
   images: { unoptimized: true },
+  // Page 404 commune aux trois langues (plusieurs mises en page racine : une par langue)
+  experimental: { globalNotFound: true },
   turbopack: {
     root: path.resolve(__dirname), // dépôt à plusieurs projets : la racine du site est ce dossier
     rules: {

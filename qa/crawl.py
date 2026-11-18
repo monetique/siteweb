@@ -4,10 +4,11 @@ from playwright.sync_api import sync_playwright
 
 import os, sys
 BASE = os.environ.get('QA_BASE', sys.argv[1] if len(sys.argv) > 1 else 'http://localhost:3100').rstrip('/')
-AXE = open('/home/claude/qa/node_modules/axe-core/axe.min.js').read()
-sitemap = open('/home/claude/strapi/smt-web/out/sitemap.xml').read()
-paths = [u.replace('https://www.monetiquetunisie.com', '') for u in re.findall(r'<loc>(.*?)</loc>', sitemap)]
-paths += ['/cookies/', '/page-inexistante/']
+AXE = open(os.environ.get('AXE_PATH', os.path.join(os.path.dirname(__file__), 'node_modules/axe-core/axe.min.js'))).read()
+import urllib.request
+sitemap = urllib.request.urlopen(BASE + '/sitemap.xml', timeout=120).read().decode()
+paths = sorted({re.sub(r'^https?://[^/]+', '', u) for u in re.findall(r'<loc>(.*?)</loc>', sitemap)})
+paths += ['/cookies/', '/en/cookies/', '/ar/cookies/', '/page-inexistante/']
 PLACEHOLDER = re.compile(r'lorem|ipsum|undefined|\bnull\b|NaN|\[object|TODO|tobemodified|xxx', re.I)
 
 results = []
@@ -35,6 +36,10 @@ with sync_playwright() as p:
             canonical: q('link[rel=canonical]')?.href || '',
             ogTitle: q('meta[property="og:title"]')?.content || '',
             lang: document.documentElement.lang,
+            dir: document.documentElement.dir,
+            hreflang: [...document.querySelectorAll('link[rel=alternate][hreflang]')].length,
+            wrongLangLinks: (() => { const L = location.pathname.match(/^\\/(en|ar)\\//)?.[1]; return [...document.querySelectorAll('header a[href^="/"], main a[href^="/"], footer a[href^="/"]')].filter(a => !a.hasAttribute('hreflang')).map(a => a.getAttribute('href')).filter(h => L ? !h.startsWith('/' + L + '/') : /^\\/(en|ar)\\//.test(h)).slice(0, 5); })(),
+            frenchLeftovers: (() => { if (!/^\\/(en|ar)\\//.test(location.pathname)) return []; const fr = /\\b(Toutes|Voir tous|En savoir plus|Nous contacter|Accueil|Lire l’article|Date limite|Consulter)\\b/; return [...document.querySelectorAll('main, header, footer')].flatMap(e => [...e.querySelectorAll('a,button,span,h1,h2,h3,p,th,label')]).map(e => e.childNodes.length === 1 ? e.textContent.trim() : '').filter(t => fr.test(t)).slice(0, 5); })(),
             h1: [...document.querySelectorAll('h1')].map(h => h.innerText.trim()),
             emptyHeadings: [...document.querySelectorAll('h1,h2,h3,h4')].filter(h => !h.innerText.trim()).length,
             headingSkips: [...new Set(skips)],
@@ -45,7 +50,7 @@ with sync_playwright() as p:
             emptyLinks: [...document.querySelectorAll('a')].filter(a => !a.innerText.trim() && !a.getAttribute('aria-label') && !a.querySelector('img[alt]:not([alt=""])')).map(a => a.getAttribute('href')),
             hashLinks: [...document.querySelectorAll('a[href="#"]')].map(a => a.innerText.trim()),
             textLen: text.length,
-            placeholders: (text.match(/lorem|ipsum|undefined|\\bnull\\b|NaN|\\[object|TODO/gi) || []),
+            placeholders: [...(text.match(/lorem|ipsum|\\bundefined\\b|\\bnull\\b|\\[object|\\bTODO\\b/gi) || []), ...(text.match(/\\bNaN\\b/g) || [])],
             jsonld: [...document.querySelectorAll('script[type="application/ld+json"]')].map(s => { try { return JSON.parse(s.textContent)['@type']; } catch(e) { return 'INVALID'; } }),
           };
         }'''))

@@ -1,4 +1,4 @@
-import NextLink from "next/link";
+import { L as NextLink } from "@/components/LangProvider";
 import type { ReactNode } from "react";
 import type { Link } from "@/lib/strapi";
 import { Icon } from "./Icon";

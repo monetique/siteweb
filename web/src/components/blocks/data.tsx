@@ -1,10 +1,11 @@
 /* Blocs « données » : ils affichent automatiquement les collections Strapi. */
 import type React from "react";
-import NextLink from "next/link";
+import { L as NextLink } from "@/components/LangProvider";
 import type { Block, Page, Partenaire } from "@/lib/strapi";
 import { safeHref } from "@/lib/safe";
 import { getActualites, getAppelsOffres, getDirigeants, getFaqs, getGlobal, getIndicateurs, getPartenaires, getSolutions, mediaUrl } from "@/lib/strapi";
-import { FAQ_CATEGORY, formatDate, formatEvolution, NEWS_CATEGORY, PARTNER_CATEGORY, TENDER_STATUS, TENDER_TYPE } from "@/lib/format";
+import { formatEvolution, localizePeriod } from "@/lib/i18n";
+import { getLang, t } from "@/lib/lang-server";
 import { Icon } from "../Icon";
 import { RichText } from "../RichText";
 import { Container, Section, SectionTitle } from "../Section";
@@ -19,7 +20,7 @@ export async function SolutionsList({ block }: P) {
   const solutions = await getSolutions();
   return (
     <Section tone="low">
-      {block.title ? <SectionTitle eyebrow={block.eyebrow} title={block.title} subtitle={block.subtitle} /> : <h2 className="sr-only">Liste des solutions</h2>}
+      {block.title ? <SectionTitle eyebrow={block.eyebrow} title={block.title} subtitle={block.subtitle} /> : <h2 className="sr-only">{t().solutionsList}</h2>}
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
         {solutions.map((s) => (
           <NextLink key={s.slug} href={`/solutions/${s.slug}`}
@@ -28,7 +29,7 @@ export async function SolutionsList({ block }: P) {
             <h3 className="mt-5 text-headline-sm">{s.name}</h3>
             <p className="mt-2 flex-1 text-body-sm text-on-surface-variant">{s.tagline}</p>
             <span className="mt-5 inline-flex items-center gap-1 text-label-md text-secondary">
-              En savoir plus <Icon name="east" className="text-[16px] transition-transform group-hover:translate-x-1" />
+              {t().learnMore} <Icon name="east" className="text-[16px] transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1" />
             </span>
           </NextLink>
         ))}
@@ -42,12 +43,13 @@ export async function getNewsItems(source: string = "mixte", limit = 100): Promi
   const items: NewsItem[] = [];
   if (source !== "appels_offres") {
     for (const a of await getActualites()) {
-      items.push({ kind: "actu", title: a.title, href: `/actualites/${a.slug}`, date: a.date, label: a.label || NEWS_CATEGORY[a.category], excerpt: a.excerpt, cover: mediaUrl(a.cover), group: a.category });
+      items.push({ kind: "actu", title: a.title, href: `/actualites/${a.slug}`, date: a.date, label: a.label || t().newsCategory[a.category], excerpt: a.excerpt, cover: mediaUrl(a.cover), group: a.category });
     }
   }
   if (source !== "actualites") {
-    for (const t of await getAppelsOffres()) {
-      items.push({ kind: "ao", title: t.title, href: `/appels-offres/${t.slug}`, date: t.publicationDate, label: TENDER_TYPE[t.type], excerpt: t.summary, meta: t.reference, group: t.type, status: t.tenderStatus, deadline: t.deadline });
+    const d = t();
+    for (const ao of await getAppelsOffres()) {
+      items.push({ kind: "ao", title: ao.title, href: `/appels-offres/${ao.slug}`, date: ao.publicationDate, label: d.tenderType[ao.type], excerpt: ao.summary, meta: ao.reference, group: ao.type, status: ao.tenderStatus, deadline: ao.deadline });
     }
   }
   return items.sort((a, b) => b.date.localeCompare(a.date)).slice(0, limit);
@@ -60,9 +62,9 @@ export async function LatestNews({ block }: P) {
       <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
         <SectionTitle eyebrow={block.eyebrow} title={block.title} />
         <div className="mb-10 flex gap-3 text-label-md">
-          <NextLink href="/actualites" className="text-secondary hover:underline">Toutes les actualités</NextLink>
+          <NextLink href="/actualites" className="text-secondary hover:underline">{t().allNews}</NextLink>
           <span className="text-outline-variant">|</span>
-          <NextLink href="/appels-offres" className="text-secondary hover:underline">Appels d'offres</NextLink>
+          <NextLink href="/appels-offres" className="text-secondary hover:underline">{t().allTenders}</NextLink>
         </div>
       </div>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-3">{items.map((i) => <NewsCard key={i.href} item={i} />)}</div>
@@ -77,7 +79,7 @@ function PartnerLink({ partner, className, children }: { partner: Partenaire; cl
   const href = partner.website ? safeHref(partner.website) : "#";
   if (href === "#" || !/^https?:/i.test(href)) return <span className={className}>{children}</span>;
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer" className={className} aria-label={`${partner.name} – site officiel (nouvel onglet)`}>
+    <a href={href} target="_blank" rel="noopener noreferrer" className={className} aria-label={`${partner.name} – ${t().officialSite}`}>
       {children}
     </a>
   );
@@ -96,7 +98,7 @@ export async function PartnersRibbon({ block }: { block: Block }) {
       <Container>
         <div className="border-t border-outline-variant/40 pt-10">
           <h2 className="mb-6 block text-center text-eyebrow font-bold uppercase tracking-widest text-on-surface-variant">
-            {block.title || (homeStyle ? "Partenaires & facturiers interconnectés" : "Partenaires & clients")}
+            {block.title || (homeStyle ? t().partnersHome : t().partnersInner)}
           </h2>
           <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 opacity-80 md:gap-x-12">
             {partners.map((p) => {
@@ -126,7 +128,7 @@ export async function PartnersRibbon({ block }: { block: Block }) {
 
 export async function PartnersGrid({ block }: P) {
   const partners = await getPartenaires();
-  const groups = Object.entries(PARTNER_CATEGORY).map(([key, label]) => ({ label, items: partners.filter((p) => p.category === key) })).filter((g) => g.items.length);
+  const groups = Object.entries(t().partnerCategory).map(([key, label]) => ({ label, items: partners.filter((p) => p.category === key) })).filter((g) => g.items.length);
   // Même présentation que le bandeau de l'accueil : filet, intitulé discret, noms en typographie (ou logo), liens vers les sites.
   return (
     <Section tone="low">
@@ -158,15 +160,15 @@ export async function PartnersGrid({ block }: P) {
 /* ---------- FAQ */
 export async function FaqList({ block }: P) {
   const all = await getFaqs();
-  const cats = block.category && block.category !== "toutes" ? [block.category] : Object.keys(FAQ_CATEGORY);
+  const cats = block.category && block.category !== "toutes" ? [block.category] : Object.keys(t().faqCategory);
   const showNav = cats.length > 1;
   return (
     <Section tone={showNav ? "surface" : "low"}>
       <SectionTitle title={block.title} />
       {showNav && (
-        <nav aria-label="Rubriques de la FAQ" className="mb-12 flex flex-wrap gap-3">
+        <nav aria-label={t().faqTopics} className="mb-12 flex flex-wrap gap-3">
           {cats.map((c) => (
-            <a key={c} href={`#faq-${c}`} className="rounded-full border border-outline-variant/40 bg-surface-container-lowest px-4 py-2 text-label-md hover:bg-surface-container">{FAQ_CATEGORY[c]}</a>
+            <a key={c} href={`#faq-${c}`} className="rounded-full border border-outline-variant/40 bg-surface-container-lowest px-4 py-2 text-label-md hover:bg-surface-container">{t().faqCategory[c]}</a>
           ))}
         </nav>
       )}
@@ -176,7 +178,7 @@ export async function FaqList({ block }: P) {
           if (!qs.length) return null;
           return (
             <div key={c} id={`faq-${c}`} className="mb-12 scroll-mt-40 last:mb-0">
-              {showNav && <h2 className="mb-5 text-headline-md">{FAQ_CATEGORY[c]}</h2>}
+              {showNav && <h2 className="mb-5 text-headline-md">{t().faqCategory[c]}</h2>}
               <div className="space-y-3">
                 {qs.map((q, i) => (
                   <details key={q.question} className="group rounded-xl border border-outline-variant/30 bg-surface-container-lowest shadow-sm" open={i === 0}>
@@ -192,7 +194,7 @@ export async function FaqList({ block }: P) {
         })}
         {!showNav && (
           <NextLink href="/faq" className="mt-8 inline-flex items-center gap-1 text-label-md text-secondary hover:underline">
-            Toutes les questions <Icon name="east" className="text-[16px]" />
+            {t().allQuestions} <Icon name="east" className="text-[16px]" />
           </NextLink>
         )}
       </div>
@@ -241,13 +243,13 @@ export async function StatsTable({ block }: P) {
             </div>
             <table className="w-full text-body-sm">
               <caption className="sr-only">{ind.name}</caption>
-              <thead><tr className="text-left text-label-sm text-on-surface-variant"><th className="py-2 font-semibold">Période</th><th className="py-2 text-right font-semibold">Valeur</th><th className="py-2 text-right font-semibold">Évolution</th></tr></thead>
+              <thead><tr className="text-start text-label-sm text-on-surface-variant"><th className="py-2 font-semibold">{t().period}</th><th className="py-2 text-end font-semibold">{t().value}</th><th className="py-2 text-end font-semibold">{t().evolution}</th></tr></thead>
               <tbody>
                 {ind.values.map((v) => (
                   <tr key={v.period} className="border-t border-outline-variant/30">
-                    <td className="py-2.5">{v.period}{v.isPartialYear ? "*" : ""}</td>
-                    <td className="py-2.5 text-right font-display font-bold">{v.displayValue ?? v.value}</td>
-                    <td className={`py-2.5 text-right ${(v.evolution ?? 0) < 0 ? "text-error" : "text-secondary"}`}>{formatEvolution(v.evolution)}</td>
+                    <td className="py-2.5">{localizePeriod(v.period, getLang())}{v.isPartialYear ? "*" : ""}</td>
+                    <td className="py-2.5 text-end font-display font-bold"><span dir="ltr">{v.displayValue ?? v.value}</span></td>
+                    <td className={`py-2.5 text-end ${(v.evolution ?? 0) < 0 ? "text-error" : "text-secondary"}`}><span dir="ltr">{formatEvolution(v.evolution, getLang())}</span></td>
                   </tr>
                 ))}
               </tbody>
@@ -269,12 +271,12 @@ export async function ContactSection({ block }: P) {
     <Section tone="low">
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
         <div className="lg:col-span-5">
-          <SectionTitle eyebrow="Contact" title={block.title} subtitle="Notre centre d'appel est à votre disposition 7j/7 et 24h/24 pour répondre à vos questions, demandes d'informations et besoins d'assistance technique." />
+          <SectionTitle eyebrow={t().contact} title={block.title} subtitle={t().contactIntro} />
           <ul className="space-y-5">
-            <li className="flex gap-3"><Icon name="location_on" className="text-secondary" /><div><strong className="block text-label-md">Adresse</strong>{g.address}{g.mapUrl && <> · <a href={g.mapUrl} target="_blank" rel="noopener noreferrer" className="text-secondary underline underline-offset-2">Itinéraire</a></>}</div></li>
-            <li className="flex gap-3"><Icon name="support_agent" className="text-secondary" /><div><strong className="block text-label-md">Centre d'appel 7j/7 – 24h/24</strong><a href={`tel:${tel(g.phoneCallCenter)}`} className="text-secondary">{g.phoneCallCenter}</a></div></li>
-            <li className="flex gap-3"><Icon name="call" className="text-secondary" /><div><strong className="block text-label-md">Numéro vert · Standard</strong><a href={`tel:${tel(g.phoneGreenNumber)}`} className="text-secondary">{g.phoneGreenNumber}</a> · <a href={`tel:${tel(g.phoneHeadquarters)}`} className="text-secondary">{g.phoneHeadquarters}</a></div></li>
-            <li className="flex gap-3"><Icon name="mail" className="text-secondary" /><div><strong className="block text-label-md">E-mail</strong><a href={`mailto:${g.emailContact}`} className="break-all text-secondary">{g.emailContact}</a><br /><a href={`mailto:${g.emailCommercial}`} className="break-all text-secondary">{g.emailCommercial}</a></div></li>
+            <li className="flex gap-3"><Icon name="location_on" className="text-secondary" /><div><strong className="block text-label-md">{t().address}</strong>{g.address}{g.mapUrl && <> · <a href={g.mapUrl} target="_blank" rel="noopener noreferrer" className="text-secondary underline underline-offset-2">{t().route}</a></>}</div></li>
+            <li className="flex gap-3"><Icon name="support_agent" className="text-secondary" /><div><strong className="block text-label-md">{t().callCenter}</strong><a href={`tel:${tel(g.phoneCallCenter)}`} className="text-secondary">{g.phoneCallCenter}</a></div></li>
+            <li className="flex gap-3"><Icon name="call" className="text-secondary" /><div><strong className="block text-label-md">{t().greenNumberStd}</strong><a href={`tel:${tel(g.phoneGreenNumber)}`} className="text-secondary">{g.phoneGreenNumber}</a> · <a href={`tel:${tel(g.phoneHeadquarters)}`} className="text-secondary">{g.phoneHeadquarters}</a></div></li>
+            <li className="flex gap-3"><Icon name="mail" className="text-secondary" /><div><strong className="block text-label-md">{t().emailLabel}</strong><a href={`mailto:${g.emailContact}`} className="break-all text-secondary">{g.emailContact}</a><br /><a href={`mailto:${g.emailCommercial}`} className="break-all text-secondary">{g.emailCommercial}</a></div></li>
           </ul>
         </div>
         {block.showForm !== false && <div className="lg:col-span-7"><ContactForm /></div>}

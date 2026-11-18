@@ -1,0 +1,4760 @@
+{
+ "global": {
+  "siteName": "Monétique Tunisie",
+  "tagline": "National payment switch, mobile switch and bill aggregator",
+  "statusLabel": "Operational",
+  "accreditation": "Interbank centre licensed by the Banque Centrale de Tunisie",
+  "address": "Centre Urbain Nord, Sana Center, Block C – 1082 Tunis",
+  "mapUrl": "https://maps.google.com/?q=Sana+Center+Centre+Urbain+Nord+Tunis",
+  "phoneHeadquarters": "+216 71 155 800",
+  "phoneCallCenter": "+216 71 155 840",
+  "phoneGreenNumber": "+216 80 100 115",
+  "emailContact": "contact@monetiquetunisie.com",
+  "emailCommercial": "direction.commerciale@monetiquetunisie.com",
+  "socialLinks": [],
+  "certifications": [
+   {
+    "text": "PCI DSS"
+   },
+   {
+    "text": "Visa"
+   },
+   {
+    "text": "Mastercard"
+   }
+  ],
+  "defaultSeo": {
+   "metaTitle": "Monétique Tunisie – Digital payment solutions",
+   "metaDescription": "National payment switch, mobile switch and bill aggregator (Paysmart): reliable and secure digital payment solutions in Tunisia and Africa."
+  }
+ },
+ "navigation": {
+  "mainMenu": [
+   {
+    "label": "Monétique Tunisie",
+    "url": "/monetique-tunisie",
+    "children": []
+   },
+   {
+    "label": "Expertise",
+    "url": "/expertise",
+    "children": []
+   },
+   {
+    "label": "Solutions",
+    "url": "/solutions",
+    "children": [
+     {
+      "label": "Bank Card",
+      "url": "/solutions/carte-bancaire",
+      "icon": "credit_card"
+     },
+     {
+      "label": "Payment Switch",
+      "url": "/solutions/switch-monetique",
+      "icon": "hub"
+     },
+     {
+      "label": "Mobile Switch",
+      "url": "/solutions/switch-mobile",
+      "icon": "smartphone"
+     },
+     {
+      "label": "Bill Aggregator",
+      "url": "/solutions/agregateur-de-facturier",
+      "icon": "receipt_long"
+     },
+     {
+      "label": "Certification",
+      "url": "/solutions/certification",
+      "icon": "verified"
+     },
+     {
+      "label": "Fraud Security and Monitoring",
+      "url": "/solutions/securite-fraude-et-monitoring",
+      "icon": "shield"
+     },
+     {
+      "label": "Secure Hosting",
+      "url": "/solutions/hebergement-securise",
+      "icon": "dns"
+     },
+     {
+      "label": "Support and Consulting",
+      "url": "/solutions/assistance-et-conseil",
+      "icon": "support_agent"
+     }
+    ]
+   },
+   {
+    "label": "Statistics",
+    "url": "/statistiques",
+    "children": []
+   },
+   {
+    "label": "News",
+    "url": "/actualites",
+    "children": []
+   },
+   {
+    "label": "Partners",
+    "url": "/partenaires",
+    "children": []
+   },
+   {
+    "label": "FAQ",
+    "url": "/faq",
+    "children": []
+   }
+  ],
+  "headerCta": {
+   "label": "Contact",
+   "url": "/contact",
+   "style": "primaire",
+   "isExternal": false,
+   "icon": "mail"
+  },
+  "footerColumns": [
+   {
+    "title": "Monétique Tunisie",
+    "links": [
+     {
+      "label": "About us",
+      "url": "/monetique-tunisie",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "Governance",
+      "url": "/monetique-tunisie#gouvernance",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "Partners",
+      "url": "/partenaires",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "Statistics",
+      "url": "/statistiques",
+      "style": "texte",
+      "isExternal": false
+     }
+    ]
+   },
+   {
+    "title": "Expertise",
+    "links": [
+     {
+      "label": "Electronic payments",
+      "url": "/expertise#monetique",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "E-commerce",
+      "url": "/expertise#ecommerce",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "Mobile Payment",
+      "url": "/expertise#mobile-payment",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "Security",
+      "url": "/expertise#securite",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "Training & Consulting",
+      "url": "/expertise#formation-conseil",
+      "style": "texte",
+      "isExternal": false
+     }
+    ]
+   },
+   {
+    "title": "Solutions",
+    "links": [
+     {
+      "label": "Bank Card",
+      "url": "/solutions/carte-bancaire",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "Payment Switch",
+      "url": "/solutions/switch-monetique",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "Mobile Switch",
+      "url": "/solutions/switch-mobile",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "Bill Aggregator",
+      "url": "/solutions/agregateur-de-facturier",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "Certification",
+      "url": "/solutions/certification",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "Fraud Security and Monitoring",
+      "url": "/solutions/securite-fraude-et-monitoring",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "Secure Hosting",
+      "url": "/solutions/hebergement-securise",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "Support and Consulting",
+      "url": "/solutions/assistance-et-conseil",
+      "style": "texte",
+      "isExternal": false
+     }
+    ]
+   },
+   {
+    "title": "Information",
+    "links": [
+     {
+      "label": "News",
+      "url": "/actualites",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "Tenders",
+      "url": "/appels-offres",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "FAQ",
+      "url": "/faq",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "Payment security",
+      "url": "/protection-des-donnees",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "Complaints",
+      "url": "/contact",
+      "style": "texte",
+      "isExternal": false
+     }
+    ]
+   }
+  ],
+  "legalLinks": [
+   {
+    "label": "Legal notice",
+    "url": "/mentions-legales",
+    "style": "texte",
+    "isExternal": false
+   },
+   {
+    "label": "Data protection",
+    "url": "/protection-des-donnees",
+    "style": "texte",
+    "isExternal": false
+   },
+   {
+    "label": "Cookies",
+    "url": "/cookies",
+    "style": "texte",
+    "isExternal": false
+   },
+   {
+    "label": "Accessibility",
+    "url": "/contact",
+    "style": "texte",
+    "isExternal": false
+   }
+  ],
+  "copyright": "© 2026 Monétique Tunisie (SMT). All rights reserved."
+ },
+ "dirigeants": [
+  {
+   "fullName": "M. Néji GHANDRI",
+   "role": "Chairman of the Board of Directors",
+   "order": 1
+  },
+  {
+   "fullName": "M. Bilel DARNAOUI",
+   "role": "Chief Executive Officer",
+   "order": 2
+  },
+  {
+   "fullName": "Mme Samia REJEB",
+   "role": "Deputy Chief Executive Officer",
+   "order": 3
+  }
+ ],
+ "indicateurs": [
+  {
+   "name": "Number of cards",
+   "unit": "in millions",
+   "icon": "credit_card",
+   "order": 1,
+   "showOnHomepage": true,
+   "values": [
+    {
+     "period": "2022",
+     "year": 2022,
+     "value": 6.582,
+     "displayValue": "6,582",
+     "evolution": 8,
+     "isPartialYear": false
+    },
+    {
+     "period": "2023",
+     "year": 2023,
+     "value": 7.053,
+     "displayValue": "7,053",
+     "evolution": 7,
+     "isPartialYear": false
+    },
+    {
+     "period": "2024",
+     "year": 2024,
+     "value": 5.49,
+     "displayValue": "5,490",
+     "evolution": -22,
+     "isPartialYear": false
+    },
+    {
+     "period": "June 2025",
+     "year": 2025,
+     "value": 5.782,
+     "displayValue": "5,782",
+     "evolution": 5.3,
+     "isPartialYear": true
+    }
+   ]
+  },
+  {
+   "name": "Number of ATMs",
+   "unit": "",
+   "icon": "local_atm",
+   "order": 2,
+   "showOnHomepage": false,
+   "values": [
+    {
+     "period": "2022",
+     "year": 2022,
+     "value": 3039,
+     "displayValue": "3 039",
+     "evolution": 1,
+     "isPartialYear": false
+    },
+    {
+     "period": "2023",
+     "year": 2023,
+     "value": 3207,
+     "displayValue": "3 207",
+     "evolution": 6,
+     "isPartialYear": false
+    },
+    {
+     "period": "2024",
+     "year": 2024,
+     "value": 3305,
+     "displayValue": "3 305",
+     "evolution": 3,
+     "isPartialYear": false
+    },
+    {
+     "period": "June 2025",
+     "year": 2025,
+     "value": 3289,
+     "displayValue": "3 289",
+     "evolution": -0.5,
+     "isPartialYear": true
+    }
+   ]
+  },
+  {
+   "name": "Number of POS terminals",
+   "unit": "",
+   "icon": "point_of_sale",
+   "order": 3,
+   "showOnHomepage": true,
+   "values": [
+    {
+     "period": "2022",
+     "year": 2022,
+     "value": 32891,
+     "displayValue": "32 891",
+     "evolution": 10,
+     "isPartialYear": false
+    },
+    {
+     "period": "2023",
+     "year": 2023,
+     "value": 35300,
+     "displayValue": "35 300",
+     "evolution": 7,
+     "isPartialYear": false
+    },
+    {
+     "period": "2024",
+     "year": 2024,
+     "value": 39197,
+     "displayValue": "39 197",
+     "evolution": 11,
+     "isPartialYear": false
+    },
+    {
+     "period": "June 2025",
+     "year": 2025,
+     "value": 40600,
+     "displayValue": "40 600",
+     "evolution": 3.6,
+     "isPartialYear": true
+    }
+   ]
+  },
+  {
+   "name": "Number of merchants",
+   "unit": "",
+   "icon": "storefront",
+   "order": 4,
+   "showOnHomepage": true,
+   "values": [
+    {
+     "period": "2022",
+     "year": 2022,
+     "value": 30697,
+     "displayValue": "30 697",
+     "evolution": 11,
+     "isPartialYear": false
+    },
+    {
+     "period": "2023",
+     "year": 2023,
+     "value": 32954,
+     "displayValue": "32 954",
+     "evolution": 7,
+     "isPartialYear": false
+    },
+    {
+     "period": "2024",
+     "year": 2024,
+     "value": 36290,
+     "displayValue": "36 290",
+     "evolution": 10,
+     "isPartialYear": false
+    },
+    {
+     "period": "June 2025",
+     "year": 2025,
+     "value": 40685,
+     "displayValue": "40 685",
+     "evolution": 23.1,
+     "isPartialYear": true
+    }
+   ]
+  },
+  {
+   "name": "Number of transactions",
+   "unit": "in millions",
+   "icon": "swap_horizontal_circle",
+   "order": 5,
+   "showOnHomepage": true,
+   "note": "June 2025: change Q2 2024 / Q2 2025",
+   "values": [
+    {
+     "period": "2022",
+     "year": 2022,
+     "value": 126.225,
+     "displayValue": "126,225",
+     "evolution": 25,
+     "isPartialYear": false
+    },
+    {
+     "period": "2023",
+     "year": 2023,
+     "value": 138.854,
+     "displayValue": "138,854",
+     "evolution": 10,
+     "isPartialYear": false
+    },
+    {
+     "period": "2024",
+     "year": 2024,
+     "value": 151.534,
+     "displayValue": "151,534",
+     "evolution": 9,
+     "isPartialYear": false
+    },
+    {
+     "period": "June 2025",
+     "year": 2025,
+     "value": 77.7,
+     "displayValue": "77,700",
+     "evolution": 9,
+     "isPartialYear": true
+    }
+   ]
+  },
+  {
+   "name": "Business volume",
+   "unit": "in millions of TND",
+   "icon": "account_balance_wallet",
+   "order": 6,
+   "showOnHomepage": false,
+   "note": "June 2025: change Q2 2024 / Q2 2025",
+   "values": [
+    {
+     "period": "2022",
+     "year": 2022,
+     "value": 21022,
+     "displayValue": "21,022",
+     "evolution": 35,
+     "isPartialYear": false
+    },
+    {
+     "period": "2023",
+     "year": 2023,
+     "value": 23678,
+     "displayValue": "23,678",
+     "evolution": 13,
+     "isPartialYear": false
+    },
+    {
+     "period": "2024",
+     "year": 2024,
+     "value": 26275,
+     "displayValue": "26,275",
+     "evolution": 11,
+     "isPartialYear": false
+    },
+    {
+     "period": "June 2025",
+     "year": 2025,
+     "value": 13873,
+     "displayValue": "13,873",
+     "evolution": 12,
+     "isPartialYear": true
+    }
+   ]
+  },
+  {
+   "name": "Availability of the national payment switch",
+   "unit": "%",
+   "icon": "speed",
+   "order": 7,
+   "showOnHomepage": true,
+   "values": [
+    {
+     "period": "April 2025",
+     "year": 2025,
+     "value": 99.98,
+     "displayValue": "99,98",
+     "evolution": null,
+     "isPartialYear": false
+    }
+   ]
+  }
+ ],
+ "solutions": [
+  {
+   "name": "Bank Card",
+   "slug": "carte-bancaire",
+   "icon": "credit_card",
+   "tagline": "Bank and private-label card personalisation",
+   "order": 1,
+   "summary": "Bank and private-label card personalisation",
+   "sections": [
+    {
+     "title": "Bank and private-label card personalisation",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "At Monétique Tunisie, we believe every card can be as unique as its holder. That is why we offer a card personalisation service covering both graphic and technical aspects. Using state-of-the-art personalisation equipment, we personalise the magnetic stripe, the chip (contact and contactless) and the design of the card body, including the image. With advanced techniques such as laser engraving, indent printing and embossing, we enable our clients to turn their bank cards into personal, secure works of art that reflect their identity and preferences."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "PIN change",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "At Monétique Tunisie, we understand how important personalised security is for cardholders. That is why we offer a PIN change service, allowing users to change the personal PIN associated with their card. This feature strengthens security by letting cardholders choose a code that is easy for them to remember as well as personal and secure. The option is available through a range of channels, including ATMs, online banking and other customer service channels, for a smooth and secure user experience."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "PIN unblock",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Aware of the challenges posed by international transactions, Monétique Tunisie offers acquiring institutions an access fee recovery service. It is designed to offset the costs generated by these transactions, ensuring efficient and fair management of cross-border operations. With this system, we make fee recovery transparent for our partners, delivering an optimised financial experience for all parties involved."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Access fees",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Aware of the challenges posed by international transactions, Monétique Tunisie offers acquiring institutions an access fee recovery service. It is designed to offset the costs generated by these transactions, ensuring efficient and fair management of cross-border operations. With this system, we make fee recovery transparent for our partners, delivering an optimised financial experience for all parties involved."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "keyPoints": [
+    {
+     "text": "Graphic and technical personalisation"
+    },
+    {
+     "text": "PIN change"
+    },
+    {
+     "text": "PIN unblock"
+    },
+    {
+     "text": "Access fees"
+    }
+   ],
+   "seo": {
+    "metaTitle": "Bank Card",
+    "metaDescription": "Bank and private-label card personalisation"
+   }
+  },
+  {
+   "name": "Payment Switch",
+   "slug": "switch-monetique",
+   "icon": "hub",
+   "tagline": "Facilitating and authorising financial transactions",
+   "order": 2,
+   "summary": "Facilitating and authorising financial transactions",
+   "sections": [
+    {
+     "title": "Facilitating and authorising financial transactions",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "The payment switch is a cornerstone of the payments ecosystem, playing a crucial role in facilitating and authorising financial transactions in real time. As the national switch, Monétique Tunisie provides a central interface for payment processing, building a direct and secure communication bridge between financial institutions. This enables us to offer exceptional fluidity, enhanced security and unrivalled efficiency in processing our clients' transactions."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Instant verification of financial transactions",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "When a cardholder initiates a transaction, our payment switch immediately checks the validity of the card, the availability of funds and compliance with the required security parameters. This instant verification is essential not only for the rapid authorisation of the transaction but also for maintaining an optimal level of security, protecting the financial interests of cardholders and banks."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Smooth and secure banking transactions",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "As a payment switch, our commitment is to ensure that every transaction is processed with the utmost care, providing a smooth and secure user experience. By seamlessly connecting banks and other financial institutions, Monétique Tunisie plays an indispensable role in the payments ecosystem, contributing to the confidence and stability of the Tunisian financial market."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "keyPoints": [
+    {
+     "text": "Real-time authorisations"
+    },
+    {
+     "text": "Instant verification"
+    },
+    {
+     "text": "Smooth and secure banking transactions"
+    }
+   ],
+   "seo": {
+    "metaTitle": "Payment Switch",
+    "metaDescription": "Facilitating and authorising financial transactions"
+   }
+  },
+  {
+   "name": "Mobile Switch",
+   "slug": "switch-mobile",
+   "icon": "smartphone",
+   "tagline": "Mobile payment, the solution for all your spontaneous purchases",
+   "order": 3,
+   "summary": "Mobile payment, the solution for all your spontaneous purchases",
+   "sections": [
+    {
+     "title": "Mobile payment, the solution for all your spontaneous purchases",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Monétique Tunisie's mobile switch is a major innovation in digital payments, offering an integrated technology platform that supports a range of essential features for managing mobile financial transactions. This advanced solution handles authorisation, payment, money transfers and cash-in and cash-out operations, all within a secure environment through electronic wallets."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "A secure and smooth user experience",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "As a central intermediary, our mobile switch ensures smooth and efficient communication between all parties in the payment process: users, merchants, banks and payment institutions. Thanks to this infrastructure, users can make payments, transfer money, and top up or carry out cash-in/cash-out operations with their wallet, for a secure and frictionless experience."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Transforming the digital payments landscape",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "The mobile switch plays an undeniable role in modernising financial services. It improves connectivity within the mobile payments ecosystem, strengthens transaction security and broadens access to financial services for more users. This innovative approach underpins our commitment to financial inclusion and to transforming the digital payments landscape."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "keyPoints": [
+    {
+     "text": "Mobile payment"
+    },
+    {
+     "text": "Optimal user experience"
+    },
+    {
+     "text": "A digital payments revolution"
+    }
+   ],
+   "seo": {
+    "metaTitle": "Mobile Switch",
+    "metaDescription": "Mobile payment, the solution for all your spontaneous purchases"
+   }
+  },
+  {
+   "name": "Bill Aggregator",
+   "slug": "agregateur-de-facturier",
+   "icon": "receipt_long",
+   "tagline": "The easiest way to manage and pay your bills online",
+   "order": 4,
+   "summary": "The easiest way to manage and pay your bills online",
+   "sections": [
+    {
+     "title": "Paysmart, the bill payment aggregation platform",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Paysmart is a significant step forward in payments, placing Monétique Tunisie at the forefront of financial innovation. This bill payment aggregation platform is designed to facilitate and boost interactions between payment service providers (PSPs) and billers. It offers twofold value: billers can present their bills efficiently to many PSPs, while customers enjoy unrivalled flexibility in paying their bills by various means, including bank cards, wallets and bank transfers."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "More connected, flexible and accessible finance",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "The launch of Paysmart reflects Monétique Tunisie's ongoing commitment to simplifying and securing financial transactions for everyone involved. This innovative solution improves the payment experience for end customers and also streamlines bill management for billers, giving them broad visibility with PSPs. In short, Paysmart embodies our vision of more connected, flexible and accessible finance, in step with the market's changing needs."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Digital transformation of the financial sector",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "With Paysmart, Monétique Tunisie strengthens its role as a catalyst for the digital transformation of the financial sector, making it easy to integrate payments into the daily lives of consumers and businesses. This initiative reflects our ambition to keep innovating and to offer solutions that anticipate and meet the challenges of the modern financial world."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "keyPoints": [
+    {
+     "text": "A practical solution"
+    },
+    {
+     "text": "More connected, flexible and accessible finance"
+    },
+    {
+     "text": "Digitalisation of payments"
+    }
+   ],
+   "cta": {
+    "label": "Paysmart website",
+    "url": "#",
+    "style": "primaire",
+    "isExternal": true
+   },
+   "seo": {
+    "metaTitle": "Bill Aggregator",
+    "metaDescription": "The easiest way to manage and pay your bills online"
+   }
+  },
+  {
+   "name": "Certification",
+   "slug": "certification",
+   "icon": "verified",
+   "tagline": "A leader in financial equipment",
+   "order": 5,
+   "summary": "A leader in financial equipment",
+   "sections": [
+    {
+     "title": "A leader in financial equipment",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Monétique Tunisie is a leading reference in the certification of financial equipment. Our expertise covers a wide range of equipment and solutions, including automated teller machines (ATMs), payment terminals (POS), innovative technologies such as Tap to Phone and SoftPOS, payment facilitator (PayFac) services and customised private-label solutions."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Full compliance and reliability of financial devices",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Our certification process is rigorously designed to meet the strictest security standards and current international regulations, ensuring the full compliance and reliability of financial devices. This commitment to quality and security covers every step required for approval, guaranteeing the legitimacy and effectiveness of the payment systems deployed."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "A strategic partner for financial institutions and businesses",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "With close attention to detail and a constant pursuit of excellence, Monétique Tunisie is the ideal strategic partner for financial institutions and businesses seeking secure, reliable payment solutions that comply with international standards. Our role in ensuring the compliance of financial equipment highlights our essential contribution to the financial ecosystem, facilitating the adoption of advanced and secure payment technologies."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "keyPoints": [
+    {
+     "text": "ATMs & POS terminals"
+    },
+    {
+     "text": "Tap to Phone & SoftPOS"
+    },
+    {
+     "text": "PayFac & private-label solutions"
+    }
+   ],
+   "seo": {
+    "metaTitle": "Certification",
+    "metaDescription": "A leader in financial equipment"
+   }
+  },
+  {
+   "name": "Fraud Security and Monitoring",
+   "slug": "securite-fraude-et-monitoring",
+   "icon": "shield",
+   "tagline": "Security of bank card transactions",
+   "order": 6,
+   "summary": "Security of bank card transactions",
+   "sections": [
+    {
+     "title": "Security of bank card transactions",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Monétique Tunisie is a key player in securing bank card transactions. Relying on cutting-edge technologies, the company actively monitors and manages fraud risks, strengthening user confidence in the financial ecosystem."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Committed to protecting financial operations",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "As a pillar of trust and security, Monétique Tunisie embodies a commitment to protecting financial operations through an advanced fraud monitoring solution. This proactive approach to detecting and preventing fraud demonstrates an ongoing commitment to innovating and improving systems to anticipate emerging threats."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "A secure and reliable transaction experience",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Monétique Tunisie thus strengthens its leadership by guaranteeing a secure and reliable transaction experience, while underlining its lasting dedication to the integrity and security of financial transactions."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "keyPoints": [
+    {
+     "text": "Secure transactions"
+    },
+    {
+     "text": "Protected financial operations"
+    },
+    {
+     "text": "Reliable transaction experience"
+    }
+   ],
+   "seo": {
+    "metaTitle": "Security, fraud and monitoring",
+    "metaDescription": "Security of bank card transactions"
+   }
+  },
+  {
+   "name": "Hosting of servers and technology solutions",
+   "slug": "hebergement-securise",
+   "icon": "dns",
+   "tagline": "Secure hosting and technology solutions",
+   "order": 7,
+   "summary": "Secure hosting and technology solutions",
+   "sections": [
+    {
+     "title": "Secure hosting and technology solutions",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Aware of how critical security is in electronic payment services, Monétique Tunisie is firmly committed to providing secure hosting for its partners' servers and technology solutions. Putting security first is driven by the need to protect our clients' sensitive data against any form of vulnerability."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Data confidentiality, integrity and availability",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Our hosting infrastructure is designed to provide the highest level of security, with advanced technologies and rigorous protection measures. The environments hosting our partners' servers benefit from next-generation firewalls, sophisticated intrusion detection systems and strong encryption protocols, ensuring data confidentiality, integrity and availability."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Compliance with the strictest international standards",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Our security excellence is not just a matter of internal commitment: it is validated by regular inspections carried out by renowned international institutions such as VISA and Mastercard. These rigorous audits confirm our ability to maintain first-class physical and operational security. Our PCI DSS certification, renewed every year, also demonstrates our ongoing compliance with the strictest international standards for payment card data security."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "A solid and reliable infrastructure to protect digital assets",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "At Monétique Tunisie, secure hosting is more than a service: it is a promise of peace of mind for our partners and their customers. By adopting and maintaining some of the highest information security standards in the industry, we provide a solid and reliable infrastructure to protect the digital assets that are essential in today's financial landscape."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "keyPoints": [
+    {
+     "text": "Secure Hosting"
+    },
+    {
+     "text": "Protected data"
+    },
+    {
+     "text": "Compliance with international standards"
+    },
+    {
+     "text": "Solid infrastructure"
+    }
+   ],
+   "seo": {
+    "metaTitle": "Secure server hosting",
+    "metaDescription": "Secure hosting and technology solutions"
+   }
+  },
+  {
+   "name": "Support and Consulting",
+   "slug": "assistance-et-conseil",
+   "icon": "support_agent",
+   "tagline": "The undisputed leader in electronic payments",
+   "order": 8,
+   "summary": "The undisputed leader in electronic payments",
+   "sections": [
+    {
+     "title": "The undisputed leader in electronic payments",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Monétique Tunisie is proud to be the undisputed leader in electronic payments, offering a comprehensive range of technical support services designed to meet our clients' varied needs. As a certified external training centre, our commitment to excellence is reflected in tailored training programmes. These programmes are carefully designed to build the essential skills of electronic payment professionals, supporting their success and growth in a constantly changing environment."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "We optimise our clients' payment infrastructure and operational performance",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Beyond training, Monétique Tunisie is a trusted adviser, offering strategic and technical consulting services. Our aim is to help clients select the solutions best suited to their specific needs, with expert advice reflecting industry best practices and the latest technological innovations. This consultative approach enables us to guide our partners towards informed decisions, optimising their payment infrastructure and operational performance."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "We guarantee compliance and client satisfaction",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "In chargeback management, Monétique Tunisie offers banks a highly efficient dispute management service. We ensure that the chargeback process is handled with the utmost precision and transparency, minimising inconvenience for banks and their customers while guaranteeing compliance and satisfaction."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "keyPoints": [
+    {
+     "text": "Tailored training"
+    },
+    {
+     "text": "Operational performance"
+    },
+    {
+     "text": "Dispute management"
+    }
+   ],
+   "seo": {
+    "metaTitle": "Support and Consulting",
+    "metaDescription": "The undisputed leader in electronic payments"
+   }
+  }
+ ],
+ "partenaires": [
+  {
+   "name": "Amen Bank",
+   "category": "banque_tunisienne",
+   "order": 1,
+   "website": "https://www.amenbank.com.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Arab Tunisian Bank",
+   "category": "banque_tunisienne",
+   "order": 2,
+   "website": "https://www.atb.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Attijari Bank",
+   "category": "banque_tunisienne",
+   "order": 3,
+   "website": "https://www.attijaribank.com.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Al Baraka Bank Tunisie",
+   "category": "banque_tunisienne",
+   "order": 4,
+   "website": "https://www.albarakabank.com.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Bank ABC",
+   "category": "banque_tunisienne",
+   "order": 5,
+   "website": "https://www.bank-abc.com",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Banque de Tunisie",
+   "category": "banque_tunisienne",
+   "order": 6,
+   "website": "https://www.bt.com.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Banque de Tunisie et des Emirats",
+   "category": "banque_tunisienne",
+   "order": 7,
+   "website": "https://www.bte.com.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Banque Internationale Arabe de Tunisie",
+   "category": "banque_tunisienne",
+   "order": 8,
+   "website": "https://www.biat.com.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Banque Nationale Agricole",
+   "category": "banque_tunisienne",
+   "order": 9,
+   "website": "https://www.bna.com.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Banque Tuniso-Libyenne",
+   "category": "banque_tunisienne",
+   "order": 10,
+   "website": "https://www.btl.com.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Banque Tunisienne de Solidarité",
+   "category": "banque_tunisienne",
+   "order": 11,
+   "website": "https://www.bts.com.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Banque Zitouna",
+   "category": "banque_tunisienne",
+   "order": 12,
+   "website": "https://www.banquezitouna.com",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "BH Bank",
+   "category": "banque_tunisienne",
+   "order": 13,
+   "website": "https://www.bhbank.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "BTK Bank",
+   "category": "banque_tunisienne",
+   "order": 14,
+   "website": "https://www.btknet.com",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "North Africa International Bank",
+   "category": "banque_tunisienne",
+   "order": 15,
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Qatar National Bank",
+   "category": "banque_tunisienne",
+   "order": 16,
+   "website": "https://www.qnb.com.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Société Tunisienne de Banque",
+   "category": "banque_tunisienne",
+   "order": 17,
+   "website": "https://www.stb.com.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Tunis International Bank",
+   "category": "banque_tunisienne",
+   "order": 18,
+   "website": "https://www.tib.com.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Tunisian Saudi Bank",
+   "category": "banque_tunisienne",
+   "order": 19,
+   "website": "https://www.stusidbank.com.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Union Bancaire pour le Commerce et l’Industrie",
+   "category": "banque_tunisienne",
+   "order": 20,
+   "website": "https://www.ubci.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Union Internationale de Banques",
+   "category": "banque_tunisienne",
+   "order": 21,
+   "website": "https://www.uib.com.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Wifak Bank",
+   "category": "banque_tunisienne",
+   "order": 22,
+   "website": "https://www.wifakbank.com",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Office National des Postes",
+   "category": "banque_tunisienne",
+   "order": 23,
+   "website": "https://www.poste.tn",
+   "showInRibbon": true,
+   "showOnHome": false
+  },
+  {
+   "name": "Banque Centrale de Tunisie",
+   "category": "banque_tunisienne",
+   "order": 24,
+   "website": "https://www.bct.gov.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "BDL",
+   "category": "banque_etrangere",
+   "order": 1,
+   "website": "https://www.bdl.dz",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "BEA",
+   "category": "banque_etrangere",
+   "order": 2,
+   "website": "https://www.bea.dz",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Natixis",
+   "category": "banque_etrangere",
+   "order": 3,
+   "website": "https://www.natixis.dz",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "AlBaraka",
+   "category": "banque_etrangere",
+   "order": 4,
+   "website": "https://www.albaraka-bank.dz",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Société Générale Algérie",
+   "category": "banque_etrangere",
+   "order": 5,
+   "website": "https://www.societegenerale.dz",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Alsalam Bank",
+   "category": "banque_etrangere",
+   "order": 6,
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Bader",
+   "category": "banque_etrangere",
+   "order": 7,
+   "website": "https://www.badr-bank.dz",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Fransabank",
+   "category": "banque_etrangere",
+   "order": 8,
+   "website": "https://www.fransabank.dz",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Tadhamun Bank",
+   "category": "banque_etrangere",
+   "order": 9,
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Nuran Bank",
+   "category": "banque_etrangere",
+   "order": 10,
+   "website": "https://nub.ly",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Banque Congolaise de l’Habitat",
+   "category": "banque_etrangere",
+   "order": 11,
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Banco de Fomento Internacional",
+   "category": "banque_etrangere",
+   "order": 12,
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Pluxee by Sodexo",
+   "category": "client_privatif",
+   "order": 1,
+   "website": "https://www.pluxee.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Jocker Tunisie",
+   "category": "client_privatif",
+   "order": 2,
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Servimax",
+   "category": "client_privatif",
+   "order": 3,
+   "website": "https://www.servimax.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Visa",
+   "category": "partenaire_technologique",
+   "order": 1,
+   "website": "https://www.visa.com",
+   "showInRibbon": true,
+   "showOnHome": false
+  },
+  {
+   "name": "Mastercard",
+   "category": "partenaire_technologique",
+   "order": 2,
+   "website": "https://www.mastercard.com",
+   "showInRibbon": true,
+   "showOnHome": false
+  },
+  {
+   "name": "JCB",
+   "category": "partenaire_technologique",
+   "order": 3,
+   "website": "https://www.global.jcb",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "UnionPay",
+   "category": "partenaire_technologique",
+   "order": 4,
+   "website": "https://www.unionpayintl.com",
+   "showInRibbon": true,
+   "showOnHome": false
+  },
+  {
+   "name": "American Express",
+   "category": "partenaire_technologique",
+   "order": 5,
+   "website": "https://www.americanexpress.com",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "BPC",
+   "category": "partenaire_technologique",
+   "order": 6,
+   "website": "https://www.bpcbt.com",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "MS Solutions",
+   "category": "partenaire_technologique",
+   "order": 7,
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Wesettle",
+   "category": "partenaire_technologique",
+   "order": 8,
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Ooredoo",
+   "category": "operateur_facturier",
+   "order": 1,
+   "website": "https://www.ooredoo.tn",
+   "showInRibbon": true,
+   "showOnHome": true
+  },
+  {
+   "name": "Orange",
+   "category": "operateur_facturier",
+   "order": 2,
+   "website": "https://www.orange.tn",
+   "showInRibbon": true,
+   "showOnHome": true
+  },
+  {
+   "name": "Tunisie Telecom",
+   "category": "operateur_facturier",
+   "order": 3,
+   "website": "https://www.tunisietelecom.tn",
+   "showInRibbon": true,
+   "showOnHome": true
+  },
+  {
+   "name": "TOPNET",
+   "category": "operateur_facturier",
+   "order": 4,
+   "website": "https://www.topnet.tn",
+   "showInRibbon": false,
+   "showOnHome": true
+  },
+  {
+   "name": "STEG",
+   "category": "operateur_facturier",
+   "order": 5,
+   "website": "https://www.steg.com.tn",
+   "showInRibbon": true,
+   "showOnHome": false
+  },
+  {
+   "name": "SONEDE",
+   "category": "operateur_facturier",
+   "order": 6,
+   "website": "https://www.sonede.com.tn",
+   "showInRibbon": true,
+   "showOnHome": true
+  },
+  {
+   "name": "Tunisie Autoroutes",
+   "category": "operateur_facturier",
+   "order": 7,
+   "website": "https://www.tunisieautoroutes.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  }
+ ],
+ "faqs": [
+  {
+   "question": "What can I do with a bank card?",
+   "answer": [
+    {
+     "type": "list",
+     "format": "unordered",
+     "children": [
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "Withdraw cash easily:",
+         "bold": true
+        },
+        {
+         "type": "text",
+         "text": " access your money 24/7 at all automated teller machines (ATMs) with your card."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "Secure payments everywhere:",
+         "bold": true
+        },
+        {
+         "type": "text",
+         "text": " pay for your purchases at thousands of merchants, in store or online, safely and simply."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "category": "carte_bancaire",
+   "order": 1
+  },
+  {
+   "question": "Lost or stolen card?",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Here is what to do:"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "format": "unordered",
+     "children": [
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "Block your card immediately:",
+         "bold": true
+        },
+        {
+         "type": "text",
+         "text": " block your card without delay to prevent fraudulent transactions by contacting your bank and calling the Call Centre, available 24/7, on (+216) 71 155 840."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "Confirm in writing:",
+         "bold": true
+        },
+        {
+         "type": "text",
+         "text": " send a registered letter to your bank to confirm the block and support your request."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "File a police report in case of theft:",
+         "bold": true
+        },
+        {
+         "type": "text",
+         "text": " file a complaint with the police. This may help you get the stolen amounts refunded."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "category": "carte_bancaire",
+   "order": 2
+  },
+  {
+   "question": "Forgotten PIN?",
+   "answer": [
+    {
+     "type": "list",
+     "format": "unordered",
+     "children": [
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "Beware of errors:",
+         "bold": true
+        },
+        {
+         "type": "text",
+         "text": " if you enter a wrong PIN three times, your card will be blocked."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "Solution:",
+         "bold": true
+        },
+        {
+         "type": "text",
+         "text": " contact your bank branch to retrieve your PIN."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "category": "carte_bancaire",
+   "order": 3
+  },
+  {
+   "question": "Where can I get a bank card?",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Your banker is your main point of contact for obtaining a bank card. They will help you choose the card best suited to your needs and explain in detail how it works."
+      }
+     ]
+    }
+   ],
+   "category": "carte_bancaire",
+   "order": 4
+  },
+  {
+   "question": "What is a wallet?",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "A wallet, or electronic purse, is an app that lets you store and use your money electronically on your smartphone or any other connected device. Imagine swapping your bulky physical wallet for a convenient app. That is the promise of the wallet, which is changing the way you manage your everyday finances."
+      }
+     ]
+    }
+   ],
+   "category": "wallet",
+   "order": 1
+  },
+  {
+   "question": "How do I get a wallet?",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "To start enjoying the benefits of a wallet, simply download your bank's or payment institution's electronic wallet app on your smartphone. Many banks and payment institutions offer their own apps, available on the App Store for iOS devices and on Google Play for Android devices. In a few simple steps, you can:"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "format": "unordered",
+     "children": [
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "Choose a wallet app compatible with your device and your needs."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "Download and install the app from the appropriate store."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "Create an account and follow the instructions to set up your wallet."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "category": "wallet",
+   "order": 2
+  },
+  {
+   "question": "What can I do with my cardholder wallet?",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "With a cardholder wallet, you can pay contactless with ease:"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "format": "unordered",
+     "children": [
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "Make your purchases in the blink of an eye by holding your smartphone near the contactless payment terminal."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "Enjoy a smooth and fast payment experience in your favourite shops."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "View your balance and transaction history in real time."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "And much more:"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "format": "unordered",
+     "children": [
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "Manage your budgets and track your spending in real time."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "Secure your data with cutting-edge technologies."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "category": "wallet",
+   "order": 3
+  },
+  {
+   "question": "What can I do with my merchant wallet?",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "As a merchant, the wallet gives you a range of features to simplify the day-to-day management of your business and improve your customers' experience."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Accept contactless payments:",
+       "bold": true
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "format": "unordered",
+     "children": [
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "Collect your customers' payments easily."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "Offer your customers a smooth and fast payment experience, reducing queues and increasing their satisfaction."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "Benefit from a modern and secure payment solution suited to today's needs."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "In addition to accepting payments, you can use the merchant wallet as a cardholder wallet."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Manage your transactions with ease:",
+       "bold": true
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "format": "unordered",
+     "children": [
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "View your transaction history and the details of each sale in real time."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "Use reporting tools to analyse your sales and identify trends."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "Export your transaction data to simplify your accounting."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Improve the security of your payments:",
+       "bold": true
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "format": "unordered",
+     "children": [
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "Benefit from cutting-edge technologies that protect your transactions against fraud and unauthorised payments."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "category": "wallet",
+   "order": 4
+  },
+  {
+   "question": "What is Paysmart?",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Paysmart is Monétique Tunisie's bill payment aggregation platform. It allows billers to present their bills to many payment service providers (PSPs), and customers to pay their bills by various means of payment."
+      }
+     ]
+    }
+   ],
+   "category": "paysmart",
+   "order": 1
+  },
+  {
+   "question": "Which payment methods does Paysmart accept?",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Bank cards, wallets and bank transfers."
+      }
+     ]
+    }
+   ],
+   "category": "paysmart",
+   "order": 2
+  },
+  {
+   "question": "Which billers are on Paysmart?",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Partner billers include STEG, SONEDE, Tunisie Telecom, Topnet and Tunisie Autoroutes."
+      }
+     ]
+    }
+   ],
+   "category": "paysmart",
+   "order": 3
+  },
+  {
+   "question": "What is the CVV2?",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "The CVV2, or Card Verification Value 2, is a three-digit security code printed on the back of your payment card, usually in the signature area. It plays a crucial role in protecting your online and telephone transactions by verifying that you are the legitimate cardholder."
+      }
+     ]
+    }
+   ],
+   "category": "achat_internet",
+   "order": 1
+  },
+  {
+   "question": "How is the CVV2 used?",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "When you shop online, the merchant website will ask you to enter your card's CVV2 in addition to the usual details, such as the card number and expiry date. This extra code confirms that you have the physical card in your possession."
+      }
+     ]
+    }
+   ],
+   "category": "achat_internet",
+   "order": 2
+  },
+  {
+   "question": "What is an OTP?",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "An OTP, or One-Time Password, is a password generated for a single session and requested when you pay on a merchant website. It is often sent by SMS and strengthens the security of online transactions by adding an extra layer of protection to your identity."
+      }
+     ]
+    }
+   ],
+   "category": "achat_internet",
+   "order": 3
+  },
+  {
+   "question": "How is the OTP used?",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "When you pay or shop online, you will be asked to enter an OTP in addition to the CVV2. This unique code, usually valid for only a few minutes, confirms that you are the holder of the bank card making the payment."
+      }
+     ]
+    }
+   ],
+   "category": "achat_internet",
+   "order": 4
+  },
+  {
+   "question": "What is phishing?",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Phishing is a fraud technique in which cybercriminals send deceptive messages to trick recipients into disclosing sensitive personal information, such as bank card numbers, login credentials or passwords. These messages often appear to come from trusted sources."
+      }
+     ]
+    }
+   ],
+   "category": "achat_internet",
+   "order": 5
+  },
+  {
+   "question": "How can I avoid having my card details stolen online?",
+   "answer": [
+    {
+     "type": "list",
+     "format": "unordered",
+     "children": [
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "Use secure websites (shown by \"https\" and a padlock in the address bar)."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "Never share your card details by email or SMS."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "Turn on transaction notifications, where available, to monitor the operations made with your card in real time."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "Use strong, unique passwords for each online account and turn on two-factor authentication (2FA) where possible."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "category": "achat_internet",
+   "order": 6
+  },
+  {
+   "question": "How can I check that a website is secure?",
+   "answer": [
+    {
+     "type": "list",
+     "format": "unordered",
+     "children": [
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "Look for the padlock icon in the browser's address bar."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "Make sure the web address starts with \"https\" (the \"s\" stands for secure)."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "Read the site's privacy policy and legal notice to check that it is legitimate."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "category": "achat_internet",
+   "order": 7
+  },
+  {
+   "question": "CVV2",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Three-digit security code printed on the back of the card, requested for online and telephone payments."
+      }
+     ]
+    }
+   ],
+   "category": "glossaire",
+   "order": 1
+  },
+  {
+   "question": "OTP",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "One-Time Password: a single-use password, often sent by SMS, requested during an online payment."
+      }
+     ]
+    }
+   ],
+   "category": "glossaire",
+   "order": 2
+  },
+  {
+   "question": "Wallet",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Electronic purse: an app for storing and using money on a smartphone or connected device."
+      }
+     ]
+    }
+   ],
+   "category": "glossaire",
+   "order": 3
+  },
+  {
+   "question": "ClicToPay",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Monétique Tunisie's secure online payment platform, which onboards businesses to accept e-commerce payments."
+      }
+     ]
+    }
+   ],
+   "category": "glossaire",
+   "order": 4
+  },
+  {
+   "question": "Mobile Payment",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Mobile payment: authorisation, payment, money transfers and cash-in / cash-out operations carried out through a wallet."
+      }
+     ]
+    }
+   ],
+   "category": "glossaire",
+   "order": 5
+  },
+  {
+   "question": "Switch",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Central payment processing interface that connects financial institutions and authorises transactions in real time."
+      }
+     ]
+    }
+   ],
+   "category": "glossaire",
+   "order": 6
+  }
+ ],
+ "actualites": [
+  {
+   "title": "Simplify your payments with a wallet",
+   "slug": "simplifier-vos-paiements-avec-le-wallet",
+   "date": "2025-02-18",
+   "category": "actualite",
+   "label": "Mobile Payment",
+   "isFeatured": true,
+   "excerpt": "Pay, send and withdraw your money instantly from your phone, without carrying cash or queuing.",
+   "content": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "تحب تسهل خلاصاتك وتتحكم في فلوسك خير؟"
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "With a wallet, everything gets easier: no more carrying cash or standing in line!"
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Pay, send and withdraw your money instantly. A wallet is an electronic purse on your phone that lets you do everything."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Just go to the App Store or Google Play and download the mobile payment app you need in the blink of an eye."
+      }
+     ]
+    }
+   ],
+   "seo": {
+    "metaTitle": "Simplify your payments with a wallet",
+    "metaDescription": "Pay, send and withdraw your money instantly from your phone, without carrying cash or queuing."
+   }
+  },
+  {
+   "title": "What a fantastic event: Monétique Tunisie team building!",
+   "slug": "team-building-monetique-tunisie",
+   "date": "2024-11-07",
+   "category": "evenement",
+   "label": "Company life",
+   "excerpt": "Three days of games and moments of camaraderie, trust and communication, in support of our values of respect, integrity and responsibility.",
+   "content": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "A real success, full of games that highlighted the good relations and friendly atmosphere among employees."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Over the three days of this team building, we shared moments of camaraderie, trust and open communication that made the activities both fun and rewarding."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "The spirit of collaboration and creativity was palpable, reflecting our company's vision centred on innovation and excellence."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "This event strengthened our core values of respect, integrity and responsibility, creating lasting memories that will improve our relationships and foster a dynamic and inclusive culture within our company."
+      }
+     ]
+    }
+   ],
+   "seo": {
+    "metaTitle": "Monétique Tunisie team building",
+    "metaDescription": "Three days of games and moments of camaraderie, trust and communication, in support of our values of respect, integrity and responsibility."
+   }
+  },
+  {
+   "title": "Mr Bilel DARNAOUI on El Wataniya 1's 8 pm news: the growth of bank card payments in Tunisia",
+   "slug": "intervention-bilel-darnaoui-el-wataniya-1",
+   "date": "2024-09-02",
+   "category": "actualite",
+   "label": "Media",
+   "excerpt": "The CEO of Monétique Tunisie discusses the growth of bank card payments in Tunisia.",
+   "content": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "The CEO of Monétique Tunisie, Mr Bilel DARNAOUI, appeared on El Wataniya 1's 8 pm news to discuss the growth of bank card payments in Tunisia."
+      }
+     ]
+    }
+   ],
+   "seo": {
+    "metaTitle": "Bilel Darnaoui on El Wataniya 1 news",
+    "metaDescription": "The CEO of Monétique Tunisie discusses the growth of bank card payments in Tunisia."
+   }
+  },
+  {
+   "title": "Monétique Tunisie at the 3rd International CSR Forum",
+   "slug": "forum-international-rse-3eme-edition",
+   "date": "2024-05-09",
+   "category": "evenement",
+   "label": "RSE",
+   "excerpt": "On the theme \"Sustainable profitability: the new equation of corporate performance\", in Hammamet, May 2024.",
+   "content": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Monétique Tunisie at the 3rd International CSR Forum on the theme: \"Sustainable profitability: the new equation of corporate performance\"."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Hôtel Diar Lemdina, Hammamet – May 2024."
+      }
+     ]
+    }
+   ],
+   "seo": {
+    "metaTitle": "3rd International CSR Forum",
+    "metaDescription": "On the theme \"Sustainable profitability: the new equation of corporate performance\", in Hammamet, May 2024."
+   }
+  },
+  {
+   "title": "Official pre-launch of the national E-construction and EC 2.0 service digitalisation platforms",
+   "slug": "pre-lancement-e-construction-ec-2-0",
+   "date": "2024-04-23",
+   "category": "evenement",
+   "label": "E-payment",
+   "excerpt": "Live demonstration of the E-payment component developed by Monétique Tunisie as part of the Digital4Reforms project.",
+   "content": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Monétique Tunisie took part in the official pre-launch of the national E-construction and Espace Citoyen 2.0 service digitalisation platforms on Tuesday 23 April 2024."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "The event is part of the Digital4Reforms project, E-payment component, implemented by GIZ in cooperation with the Tunisian government and funded by the ministère fédéral allemand de la Coopération économique et du Développement (BMZ), in partnership with the ministère de l'Intérieur, the ministère des Finances and the Banque Centrale de Tunisie."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Live demonstration of the E-payment component developed by Monétique Tunisie."
+      }
+     ]
+    }
+   ],
+   "seo": {
+    "metaTitle": "E-construction and EC 2.0 pre-launch",
+    "metaDescription": "Live demonstration of the E-payment component developed by Monétique Tunisie as part of the Digital4Reforms project."
+   }
+  },
+  {
+   "title": "Taking part in the International CSR Forum press conference",
+   "slug": "conference-de-presse-forum-rse",
+   "date": "2024-01-31",
+   "category": "evenement",
+   "label": "RSE",
+   "excerpt": "Monétique Tunisie took part in the International CSR Forum press conference on 31 January 2024 at the Maison de l'Exportateur (CEPEX).",
+   "content": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "As is its custom, and as part of its concrete commitment to Corporate Social Responsibility (CSR), Monétique Tunisie proudly took part in the International CSR Forum press conference on 31 January 2024 at the Maison de l'Exportateur (CEPEX)."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Monétique Tunisie representatives featured on the 8 pm news during the International CSR Forum press conference."
+      }
+     ]
+    }
+   ],
+   "seo": {
+    "metaTitle": "CSR Forum press conference",
+    "metaDescription": "Monétique Tunisie took part in the International CSR Forum press conference on 31 January 2024 at the Maison de l'Exportateur (CEPEX)."
+   }
+  }
+ ],
+ "appelsOffres": [
+  {
+   "title": "Acquisition, installation, configuration, set-up and commissioning of an Oracle WebLogic licence",
+   "slug": "licence-oracle-weblogic",
+   "type": "appel_offres",
+   "reference": null,
+   "publicationDate": "2025-08-26",
+   "deadline": "2025-09-15T17:00:00+01:00",
+   "tenderStatus": "cloture",
+   "issuer": "Purchasing and Logistics Department",
+   "summary": "Tender documents available for TND 100 from the Purchasing and Logistics Department. Deadline for receipt of bids: 15/09/2025 at 5 pm.",
+   "content": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Monétique Tunisie is launching a call for tenders for: "
+      },
+      {
+       "type": "text",
+       "text": "Acquisition, installation, configuration, set-up and commissioning of an Oracle WebLogic licence",
+       "bold": true
+      },
+      {
+       "type": "text",
+       "text": "."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Bids, which must remain valid for 120 days from the day after the deadline for receipt, must be submitted in accordance with articles 9 and 10 of the tender specifications."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "The deadline for receipt of bids is 15/09/2025 at 5:00 pm. Only the date stamped by Monétique Tunisie's central registry office is authoritative. Any incomplete bid or bid received after the prescribed date and time will be rejected."
+      }
+     ]
+    }
+   ],
+   "documentRetrieval": "Purchasing and Logistics Department – 5th floor, office no. 505, Sana Center, Building \"C\", Centre Urbain Nord, 1082 Tunis. Bring your national identity card and company stamp, together with a receipt proving the cash payment of the non-refundable amount into the company's bank account at the BT Centre Urbain Nord branch.",
+   "documentCost": "TND 100 (non-refundable)",
+   "offerValidityDays": 120,
+   "submissionAddress": "Monétique Tunisie central registry office – Sana Center, Building \"C\", Centre Urbain Nord, 1082 Tunis. Send by registered post or Rapid-Poste (DHL), or deliver by hand against receipt, addressed to the Chief Executive Officer.",
+   "seo": {
+    "metaTitle": "Call for tenders: Oracle WebLogic licence",
+    "metaDescription": "Tender documents available for TND 100 from the Purchasing and Logistics Department. Deadline for receipt of bids: 15/09/2025 at 5 pm."
+   }
+  },
+  {
+   "title": "Call for applications for the appointment of an independent director – chair of the strategic development committee",
+   "slug": "administrateur-independant-comite-developpement-strategique",
+   "type": "appel_candidatures",
+   "reference": null,
+   "publicationDate": "2025-08-13",
+   "deadline": "2025-08-28T13:00:00+01:00",
+   "tenderStatus": "cloture",
+   "issuer": "General Management",
+   "summary": "Appointment of an independent director for three years (2025-2027) to chair the strategic development committee.",
+   "content": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "To strengthen its governance, and in application of the new legal requirements set out in Banque Centrale de Tunisie circular no. 2024-05 of 13 February 2024 laying down the rules governing the management of payment systems and securities settlement systems, in particular articles 21 and 28, Monétique Tunisie intends to appoint, through a call for applications, an independent director for a three-year term (2025-2027) who will chair the strategic development committee."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Candidates must meet the conditions listed in the \"Terms of reference\" and send their application in sealed envelopes by registered post with acknowledgement of receipt or by Rapid-Poste, or hand them in against receipt at the registry office of the head office, no later than Thursday 28 August 2025 at 1 pm, the deadline for receipt of applications."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "link",
+       "url": "https://monetiquetunisie.com/wp-content/uploads/2025/08/Termes-de-Reference_-President-du-comite-du-developpement-strategique.pdf",
+       "children": [
+        {
+         "type": "text",
+         "text": "Download the terms of reference (PDF)"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "documentRetrieval": "Terms of reference available for download: https://monetiquetunisie.com/wp-content/uploads/2025/08/Termes-de-Reference_-President-du-comite-du-developpement-strategique.pdf",
+   "documentCost": "Free of charge",
+   "offerValidityDays": null,
+   "submissionAddress": "Registry office of the head office – Sana Center, Building \"C\", Centre Urbain Nord, 1082 Tunis.",
+   "seo": {
+    "metaTitle": "Independent director – strategy",
+    "metaDescription": "Appointment of an independent director for three years (2025-2027) to chair the strategic development committee."
+   }
+  },
+  {
+   "title": "Call for applications for the appointment of an independent director – chair of the audit and risk committee",
+   "slug": "administrateur-independant-comite-audit-risques",
+   "type": "appel_candidatures",
+   "reference": null,
+   "publicationDate": "2025-08-13",
+   "deadline": "2025-08-28T13:00:00+01:00",
+   "tenderStatus": "cloture",
+   "issuer": "General Management",
+   "summary": "Appointment of an independent director for three years (2025-2027) to chair the audit and risk committee.",
+   "content": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "To strengthen its governance, and in application of the new legal requirements set out in Banque Centrale de Tunisie circular no. 2024-05 of 13 February 2024 laying down the rules governing the management of payment systems and securities settlement systems, in particular articles 21 and 28, Monétique Tunisie intends to appoint, through a call for applications, an independent director for a three-year term (2025-2027) who will chair the audit and risk committee."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Candidates must meet the conditions listed in the \"Terms of reference\" and send their application in sealed envelopes by registered post with acknowledgement of receipt or by Rapid-Poste, or hand them in against receipt at the registry office of the head office, no later than Thursday 28 August 2025 at 1 pm, the deadline for receipt of applications."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "link",
+       "url": "https://monetiquetunisie.com/wp-content/uploads/2025/08/Termes-de-Reference_-President-du-comite-daudit-et-des-risques.pdf",
+       "children": [
+        {
+         "type": "text",
+         "text": "Download the terms of reference (PDF)"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "documentRetrieval": "Terms of reference available for download: https://monetiquetunisie.com/wp-content/uploads/2025/08/Termes-de-Reference_-President-du-comite-daudit-et-des-risques.pdf",
+   "documentCost": "Free of charge",
+   "offerValidityDays": null,
+   "submissionAddress": "Registry office of the head office – Sana Center, Building \"C\", Centre Urbain Nord, 1082 Tunis.",
+   "seo": {
+    "metaTitle": "Independent director – audit and risk",
+    "metaDescription": "Appointment of an independent director for three years (2025-2027) to chair the audit and risk committee."
+   }
+  },
+  {
+   "title": "Acquisition of an electronic document and records management (EDM) solution",
+   "slug": "solution-ged-archives",
+   "type": "appel_offres",
+   "reference": "SMT AO 07/2025",
+   "publicationDate": "2025-07-16",
+   "deadline": "2025-08-06T13:00:00+01:00",
+   "tenderStatus": "cloture",
+   "issuer": "Purchasing and Logistics Department",
+   "summary": "Tender documents available for TND 100 from the Purchasing and Logistics Department. Deadline for receipt of bids: 06/08/2025 at 1 pm.",
+   "content": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Monétique Tunisie is launching a call for tenders for: "
+      },
+      {
+       "type": "text",
+       "text": "Acquisition of an electronic document and records management (EDM) solution",
+       "bold": true
+      },
+      {
+       "type": "text",
+       "text": "."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Bids, which must remain valid for 120 days from the day after the deadline for receipt, must be submitted in accordance with articles 9 and 10 of the tender specifications."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "The deadline for receipt of bids is 06/08/2025 at 1:00 pm. Only the date stamped by Monétique Tunisie's central registry office is authoritative. Any incomplete bid or bid received after the prescribed date and time will be rejected."
+      }
+     ]
+    }
+   ],
+   "documentRetrieval": "Purchasing and Logistics Department – 5th floor, office no. 505, Sana Center, Building \"C\", Centre Urbain Nord, 1082 Tunis. Bring your national identity card and company stamp, together with a receipt proving the cash payment of the non-refundable amount into the company's bank account at the BT Centre Urbain Nord branch.",
+   "documentCost": "TND 100 (non-refundable)",
+   "offerValidityDays": 120,
+   "submissionAddress": "Monétique Tunisie central registry office – Sana Center, Building \"C\", Centre Urbain Nord, 1082 Tunis. Send by registered post or Rapid-Poste (DHL), or deliver by hand against receipt, addressed to the Chief Executive Officer.",
+   "seo": {
+    "metaTitle": "Call for tenders: EDM solution",
+    "metaDescription": "Tender documents available for TND 100 from the Purchasing and Logistics Department. Deadline for receipt of bids: 06/08/2025 at 1 pm."
+   }
+  },
+  {
+   "title": "Acquisition of network solutions",
+   "slug": "acquisition-solutions-reseaux",
+   "type": "appel_offres",
+   "reference": "SMT AO 02/2025",
+   "publicationDate": "2025-01-23",
+   "deadline": "2025-02-10T17:00:00+01:00",
+   "tenderStatus": "cloture",
+   "issuer": "Purchasing and Logistics Department",
+   "summary": "Tender documents available for TND 100 from the Purchasing and Logistics Department. Deadline for receipt of bids: 10/02/2025 at 5 pm.",
+   "content": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Monétique Tunisie is launching a call for tenders for: "
+      },
+      {
+       "type": "text",
+       "text": "Acquisition of network solutions",
+       "bold": true
+      },
+      {
+       "type": "text",
+       "text": "."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Bids, which must remain valid for 120 days from the day after the deadline for receipt, must be submitted in accordance with articles 9 and 10 of the tender specifications."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "The deadline for receipt of bids is 10/02/2025 at 5:00 pm. Only the date stamped by Monétique Tunisie's central registry office is authoritative. Any incomplete bid or bid received after the prescribed date and time will be rejected."
+      }
+     ]
+    }
+   ],
+   "documentRetrieval": "Purchasing and Logistics Department – 5th floor, office no. 505, Sana Center, Building \"C\", Centre Urbain Nord, 1082 Tunis. Bring your national identity card and company stamp, together with a receipt proving the cash payment of the non-refundable amount into the company's bank account at the BT Centre Urbain Nord branch.",
+   "documentCost": "TND 100 (non-refundable)",
+   "offerValidityDays": 120,
+   "submissionAddress": "Monétique Tunisie central registry office – Sana Center, Building \"C\", Centre Urbain Nord, 1082 Tunis. Send by registered post or Rapid-Poste (DHL), or deliver by hand against receipt, addressed to the Chief Executive Officer.",
+   "seo": {
+    "metaTitle": "Call for tenders: network solutions",
+    "metaDescription": "Tender documents available for TND 100 from the Purchasing and Logistics Department. Deadline for receipt of bids: 10/02/2025 at 5 pm."
+   }
+  },
+  {
+   "title": "Acquisition, installation and commissioning of the firewalls at Monétique Tunisie's head office",
+   "slug": "firewalls-siege-social",
+   "type": "appel_offres",
+   "reference": "SMT AO 10/2024",
+   "publicationDate": "2024-11-27",
+   "deadline": "2024-12-11T17:00:00+01:00",
+   "tenderStatus": "cloture",
+   "issuer": "Purchasing and Logistics Department",
+   "summary": "Tender documents available for TND 100 from the Purchasing and Logistics Department. Deadline for receipt of bids: 11/12/2024 at 5 pm.",
+   "content": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Monétique Tunisie is launching a call for tenders for: "
+      },
+      {
+       "type": "text",
+       "text": "Acquisition, installation and commissioning of the firewalls at Monétique Tunisie's head office",
+       "bold": true
+      },
+      {
+       "type": "text",
+       "text": "."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Bids, which must remain valid for 120 days from the day after the deadline for receipt, must be submitted in accordance with articles 9 and 10 of the tender specifications."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "The deadline for receipt of bids is 11/12/2024 at 5:00 pm. Only the date stamped by Monétique Tunisie's central registry office is authoritative. Any incomplete bid or bid received after the prescribed date and time will be rejected."
+      }
+     ]
+    }
+   ],
+   "documentRetrieval": "Purchasing and Logistics Department – 5th floor, office no. 505, Sana Center, Building \"C\", Centre Urbain Nord, 1082 Tunis. Bring your national identity card and company stamp, together with a receipt proving the cash payment of the non-refundable amount into the company's bank account at the BT Centre Urbain Nord branch.",
+   "documentCost": "TND 100 (non-refundable)",
+   "offerValidityDays": 120,
+   "submissionAddress": "Monétique Tunisie central registry office – Sana Center, Building \"C\", Centre Urbain Nord, 1082 Tunis. Send by registered post or Rapid-Poste (DHL), or deliver by hand against receipt, addressed to the Chief Executive Officer.",
+   "seo": {
+    "metaTitle": "Call for tenders: head office firewalls",
+    "metaDescription": "Tender documents available for TND 100 from the Purchasing and Logistics Department. Deadline for receipt of bids: 11/12/2024 at 5 pm."
+   }
+  },
+  {
+   "title": "Selection of a firm to analyse the risks related to SMT's acquisitions and audit its purchasing",
+   "slug": "cabinet-analyse-risques-audit-achats",
+   "type": "appel_offres",
+   "reference": null,
+   "publicationDate": "2024-09-27",
+   "deadline": "2024-10-22T17:00:00+01:00",
+   "tenderStatus": "cloture",
+   "issuer": "Purchasing and Logistics Department",
+   "summary": "Tender documents available free of charge from the Purchasing and Logistics Department. Deadline for receipt of bids: 22/10/2024 at 5 pm.",
+   "content": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Monétique Tunisie is launching a call for tenders for: "
+      },
+      {
+       "type": "text",
+       "text": "Selection of a firm to analyse the risks related to SMT's acquisitions and audit its purchasing",
+       "bold": true
+      },
+      {
+       "type": "text",
+       "text": "."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Bids, which must remain valid for 90 days from the day after the deadline for receipt, must be submitted in accordance with article 9 of the tender specifications."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "The deadline for receipt of bids is 22/10/2024 at 5:00 pm. Only the date stamped by Monétique Tunisie's central registry office is authoritative. Any incomplete bid or bid received after the prescribed date and time will be rejected."
+      }
+     ]
+    }
+   ],
+   "documentRetrieval": "Purchasing and Logistics Department – 5th floor, office no. 505, Sana Center, Building \"C\", Centre Urbain Nord, 1082 Tunis, with your national identity card and company stamp, or on request by email to the Purchasing Department.",
+   "documentCost": "Free of charge",
+   "offerValidityDays": 90,
+   "submissionAddress": "Monétique Tunisie central registry office – Sana Center, Building \"C\", Centre Urbain Nord, 1082 Tunis. Send by registered post or Rapid-Poste (DHL), or deliver by hand against receipt, addressed to the Chief Executive Officer.",
+   "seo": {
+    "metaTitle": "Call for tenders: purchasing audit",
+    "metaDescription": "Tender documents available free of charge from the Purchasing and Logistics Department. Deadline for receipt of bids: 22/10/2024 at 5 pm."
+   }
+  },
+  {
+   "title": "Acquisition of PIN mailer forms for confidential codes",
+   "slug": "imprimes-pinmailer-codes-confidentiels",
+   "type": "appel_offres",
+   "reference": "SMT AO 05/2024",
+   "publicationDate": "2024-08-19",
+   "deadline": "2024-09-06T17:00:00+01:00",
+   "tenderStatus": "cloture",
+   "issuer": "Purchasing and Logistics Department",
+   "summary": "Tender documents available free of charge from the Purchasing and Logistics Department. Deadline for receipt of bids: 06/09/2024 at 5 pm.",
+   "content": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Monétique Tunisie is launching a call for tenders for: "
+      },
+      {
+       "type": "text",
+       "text": "Acquisition of PIN mailer forms for confidential codes",
+       "bold": true
+      },
+      {
+       "type": "text",
+       "text": "."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Bids, which must remain valid for 90 days from the day after the deadline for receipt, must be submitted in accordance with article 6 of the tender specifications."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "The deadline for receipt of bids is 06/09/2024 at 5:00 pm. Only the date stamped by Monétique Tunisie's central registry office is authoritative. Any incomplete bid or bid received after the prescribed date and time will be rejected."
+      }
+     ]
+    }
+   ],
+   "documentRetrieval": "Purchasing and Logistics Department – 5th floor, office no. 505, Sana Center, Building \"C\", Centre Urbain Nord, 1082 Tunis, with your national identity card and company stamp, or on request by email to the Purchasing Department.",
+   "documentCost": "Free of charge",
+   "offerValidityDays": 90,
+   "submissionAddress": "Monétique Tunisie central registry office – Sana Center, Building \"C\", Centre Urbain Nord, 1082 Tunis. Send by registered post or Rapid-Poste (DHL), or deliver by hand against receipt, addressed to the Chief Executive Officer.",
+   "seo": {
+    "metaTitle": "Call for tenders: PIN mailer forms",
+    "metaDescription": "Tender documents available free of charge from the Purchasing and Logistics Department. Deadline for receipt of bids: 06/09/2024 at 5 pm."
+   }
+  },
+  {
+   "title": "Acquisition and implementation of a storage solution",
+   "slug": "solution-de-stockage",
+   "type": "appel_offres",
+   "reference": "SMT AO 04/2024",
+   "publicationDate": "2024-08-19",
+   "deadline": "2024-09-05T17:00:00+01:00",
+   "tenderStatus": "cloture",
+   "issuer": "Purchasing and Logistics Department",
+   "summary": "Tender documents available for TND 100 from the Purchasing and Logistics Department. Deadline for receipt of bids: 05/09/2024 at 5 pm.",
+   "content": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Monétique Tunisie is launching a call for tenders for: "
+      },
+      {
+       "type": "text",
+       "text": "Acquisition and implementation of a storage solution",
+       "bold": true
+      },
+      {
+       "type": "text",
+       "text": "."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "This contract consists of a single lot."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Bids, which must remain valid for 90 days from the day after the deadline for receipt, must be submitted in accordance with article 9 of the tender specifications."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "The deadline for receipt of bids is 05/09/2024 at 5:00 pm. Only the date stamped by Monétique Tunisie's central registry office is authoritative. Any incomplete bid or bid received after the prescribed date and time will be rejected."
+      }
+     ]
+    }
+   ],
+   "documentRetrieval": "Purchasing and Logistics Department – 5th floor, office no. 505, Sana Center, Building \"C\", Centre Urbain Nord, 1082 Tunis. Bring your national identity card and company stamp, together with a receipt proving the cash payment of the non-refundable amount into the company's bank account at the BT Centre Urbain Nord branch.",
+   "documentCost": "TND 100 (non-refundable)",
+   "offerValidityDays": 90,
+   "submissionAddress": "Monétique Tunisie central registry office – Sana Center, Building \"C\", Centre Urbain Nord, 1082 Tunis. Send by registered post or Rapid-Poste (DHL), or deliver by hand against receipt, addressed to the Chief Executive Officer.",
+   "seo": {
+    "metaTitle": "Call for tenders: storage solution",
+    "metaDescription": "Tender documents available for TND 100 from the Purchasing and Logistics Department. Deadline for receipt of bids: 05/09/2024 at 5 pm."
+   }
+  }
+ ],
+ "pages": [
+  {
+   "title": "Home",
+   "slug": "accueil",
+   "isHomepage": true,
+   "seo": {
+    "metaTitle": "Monétique Tunisie – Digital payment solutions",
+    "metaDescription": "National payment switch, mobile switch and bill aggregator (Paysmart), Monétique Tunisie supports banks, fintechs and merchants in Tunisia and Africa."
+   },
+   "blocks": [
+    {
+     "__component": "blocks.hero",
+     "variant": "accueil",
+     "title": "Innovative, reliable, secure digital payment solutions",
+     "subtitle": "We support our partners and clients in their growth by providing them with top-quality payment solutions, while contributing to the continuous development of the digital payments landscape in Tunisia and Africa.",
+     "eyebrow": "National payment switch · Since 1989",
+     "ctas": [
+      {
+       "label": "Our solutions",
+       "url": "/solutions",
+       "style": "primaire",
+       "isExternal": false
+      },
+      {
+       "label": "Payment expertise",
+       "url": "/expertise",
+       "style": "secondaire",
+       "isExternal": false
+      }
+     ]
+    },
+    {
+     "__component": "blocks.key-figures",
+     "eyebrow": "Key figures",
+     "title": "Key figures of electronic payments in Tunisia",
+     "subtitle": "Data as of end of June 2025",
+     "source": "Source : Monétique Tunisie",
+     "cta": {
+      "label": "See all statistics",
+      "url": "/statistiques",
+      "style": "texte",
+      "isExternal": false
+     },
+     "items": [
+      {
+       "value": "77,7",
+       "unit": "M",
+       "label": "Number of transactions",
+       "evolution": "+9 %",
+       "note": "Change Q2 2024 / Q2 2025"
+      },
+      {
+       "value": "5,782",
+       "unit": "M",
+       "label": "Number of cards",
+       "evolution": "+5,3 %"
+      },
+      {
+       "value": "40 600",
+       "label": "Number of POS terminals",
+       "evolution": "+3,6 %"
+      },
+      {
+       "value": "40 685",
+       "label": "Number of merchants",
+       "evolution": "+23,1 %"
+      },
+      {
+       "value": "99,98",
+       "unit": "%",
+       "label": "National switch availability",
+       "note": "April 2025"
+      }
+     ]
+    },
+    {
+     "__component": "blocks.solutions-list",
+     "eyebrow": "National interbank ecosystem",
+     "title": "Our digital payment solutions",
+     "subtitle": "Innovative, tailor-made digital payment solutions for banks, payment institutions, merchants and cardholders."
+    },
+    {
+     "__component": "blocks.cards-grid",
+     "eyebrow": "Discover our",
+     "title": "Innovations",
+     "columns": 3,
+     "subtitle": "Modern solutions to simplify PIN delivery, payment acceptance and merchant onboarding.",
+     "cards": [
+      {
+       "icon": "pin",
+       "eyebrow": "100% digital",
+       "title": "PIN Sender",
+       "text": "With PIN Sender, Monétique Tunisie offers a modern and secure alternative to traditional PIN mailing. This fully digital solution sends the confidential code (PIN) instantly by SMS as soon as the card is received. By eliminating paper and logistical constraints, it makes the service easier to access while reducing its environmental impact.",
+       "bullets": [
+        {
+         "text": "Secure instant delivery"
+        },
+        {
+         "text": "Zero paper, zero logistical constraints"
+        },
+        {
+         "text": "Reduced environmental impact"
+        }
+       ]
+      },
+      {
+       "icon": "contactless",
+       "eyebrow": "Tap to Pay / Tap to Phone",
+       "title": "SoftPOS",
+       "text": "SoftPOS, also known as Tap to Pay or Tap to Phone, is a software-based solution that turns NFC-enabled Android smartphones and tablets into payment acceptance terminals. Unlike traditional POS terminals, it represents a significant step forward in electronic transactions.",
+       "bullets": [
+        {
+         "text": "Contactless card acceptance"
+        },
+        {
+         "text": "A software alternative to traditional POS terminals"
+        },
+        {
+         "text": "NFC Android smartphones and tablets"
+        }
+       ]
+      },
+      {
+       "icon": "store",
+       "eyebrow": "Payment facilitator",
+       "title": "PayFac",
+       "text": "A payment facilitator, also called a PayFac, is a service provider that enables merchants to process bank card payments quickly, efficiently and securely. It acts as an intermediary between its clients and financial institutions and offers a payment solution that integrates easily with existing platforms and management systems.",
+       "bullets": [
+        {
+         "text": "Fast and secure card payments"
+        },
+        {
+         "text": "Intermediary between merchants and financial institutions"
+        },
+        {
+         "text": "Easy integration with existing platforms"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.cta-band",
+     "title": "Simplify your payments with a wallet",
+     "text": "Pay, send and withdraw your money from your phone: download your bank's mobile payment app.",
+     "cta": {
+      "label": "More information",
+      "url": "/actualites/simplifier-vos-paiements-avec-le-wallet",
+      "style": "primaire",
+      "isExternal": false
+     }
+    },
+    {
+     "__component": "blocks.tag-list",
+     "eyebrow": "International",
+     "title": "International expertise",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Monétique Tunisie has highly developed electronic payment expertise, which it has applied to high-value projects in Tunisia, the Maghreb (Algeria, Libya, Mauritania) and Africa (Rwanda, Congo, Cape Verde)."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Monétique Tunisie is ideally placed to offer fully integrated solutions that guarantee a high level of performance and complete security. Monétique Tunisie is a partner of 14 African banks."
+        }
+       ]
+      }
+     ],
+     "tags": [
+      {
+       "text": "Tunisia"
+      },
+      {
+       "text": "Algeria"
+      },
+      {
+       "text": "Libya"
+      },
+      {
+       "text": "Mauritania"
+      },
+      {
+       "text": "Rwanda"
+      },
+      {
+       "text": "Congo"
+      },
+      {
+       "text": "Cape Verde"
+      }
+     ]
+    },
+    {
+     "__component": "blocks.latest-news",
+     "eyebrow": "News",
+     "title": "News & tenders",
+     "source": "mixte",
+     "count": 3
+    },
+    {
+     "__component": "blocks.contact-section",
+     "title": "Support at your fingertips",
+     "showForm": true,
+     "showMap": false
+    },
+    {
+     "__component": "blocks.partners-ribbon",
+     "title": "Interconnected partners & billers",
+     "variant": "facturiers",
+     "showAllLink": false
+    }
+   ]
+  },
+  {
+   "title": "Monétique Tunisie",
+   "slug": "monetique-tunisie",
+   "seo": {
+    "metaTitle": "Mission, governance and shareholders",
+    "metaDescription": "Founded in 1989 by the Tunisian banks and the national post office, Monétique Tunisie is the national payment switch, mobile switch and bill aggregator."
+   },
+   "blocks": [
+    {
+     "__component": "blocks.hero",
+     "variant": "sombre",
+     "title": "A pioneer in payment solutions",
+     "subtitle": "National payment switch, mobile switch and bill aggregator, founded in 1989 by the Tunisian banks and the national post office.",
+     "eyebrow": "Monétique Tunisie",
+     "ctas": []
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "Innovative, tailor-made digital payment solutions",
+     "eyebrow": "Our mission",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Founded in 1989 by the Tunisian banks and the national post office, Monétique Tunisie is a public limited company under Tunisian private law specialising in digital payment solutions in Tunisia. A pioneer in payment solutions, Monétique Tunisie is the national payment switch, mobile switch and bill aggregator."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Monétique Tunisie's mission is to deliver innovative, tailor-made digital payment solutions designed to meet our clients' exact requirements."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Our commitment is to provide a seamless and efficient user experience, backed by constant technology watch and first-class transaction security. We aim to be our clients' growth partners, offering them top-quality digital payment solutions and actively contributing to the development of the digital payments sector in Tunisia."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "Supporting the growth of our partners and clients",
+     "eyebrow": "Our goal is clear!",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Supporting the growth of our partners and clients by providing them with advanced, secure payment technologies tailored to their specific needs."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "At Monétique Tunisie, we are determined to keep innovating and to strengthen the security of our infrastructure, ensuring reliable and efficient financial transactions for all economic players in Tunisia."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.people-grid",
+     "eyebrow": "Governance",
+     "title": "Management & Board of Directors",
+     "anchor": "gouvernance"
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "Shareholders",
+     "eyebrow": "Governance",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Monétique Tunisie was founded by the Tunisian banks and the national post office. A public limited company with share capital of TND 5,000,000, it is an interbank centre licensed by the Banque Centrale de Tunisie."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.tag-list",
+     "eyebrow": "International",
+     "title": "International expertise",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Monétique Tunisie has applied its electronic payment expertise to high-value projects in Tunisia, the Maghreb and Africa. It is a partner of 14 African banks."
+        }
+       ]
+      }
+     ],
+     "tags": [
+      {
+       "text": "Tunisia"
+      },
+      {
+       "text": "Algeria"
+      },
+      {
+       "text": "Libya"
+      },
+      {
+       "text": "Mauritania"
+      },
+      {
+       "text": "Rwanda"
+      },
+      {
+       "text": "Congo"
+      },
+      {
+       "text": "Cape Verde"
+      }
+     ]
+    },
+    {
+     "__component": "blocks.latest-news",
+     "eyebrow": "News",
+     "title": "Latest publications",
+     "source": "mixte",
+     "count": 3
+    },
+    {
+     "__component": "blocks.cta-band",
+     "title": "Discover our solutions",
+     "text": "Bank cards, payment and mobile switches, Paysmart, certification, security, hosting, support and consulting.",
+     "cta": {
+      "label": "Our solutions",
+      "url": "/solutions",
+      "style": "primaire",
+      "isExternal": false
+     }
+    }
+   ]
+  },
+  {
+   "title": "Expertise",
+   "slug": "expertise",
+   "seo": {
+    "metaTitle": "Expertise: payments, e-commerce, mobile",
+    "metaDescription": "A major player in electronic payments in Tunisia: card payments, e-commerce (ClicToPay), mobile payment, payment security, training and consulting."
+   },
+   "blocks": [
+    {
+     "__component": "blocks.hero",
+     "variant": "sombre",
+     "title": "A major player in electronic payments",
+     "subtitle": "Card payments, e-commerce, mobile payment, security, training and consulting: expertise serving banks, merchants and cardholders.",
+     "eyebrow": "Expertise",
+     "ctas": []
+    },
+    {
+     "__component": "blocks.text-image",
+     "title": "The leader in payment systems in Tunisia",
+     "eyebrow": "Electronic payments",
+     "anchor": "monetique",
+     "imagePosition": "droite",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "A major player in electronic and mobile payments, Monétique Tunisie stands out for its exceptional expertise, confirming its position as the market leader in Tunisia."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "With a team of highly qualified professionals and long experience, Monétique Tunisie excels in the design, implementation and management of innovative payment solutions. As the national payment switch, its expertise ranges from digital payment services to transaction processing solutions and bank card personalisation, while guaranteeing the security of financial operations."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Monétique Tunisie also stands out for its ability to anticipate market developments and offer solutions tailored to its clients' specific needs, contributing to the modernisation and efficiency of payment systems in Tunisia."
+        }
+       ]
+      }
+     ],
+     "keyPoints": [
+      {
+       "text": "National payment switch"
+      },
+      {
+       "text": "Interbank centre licensed by the BCT"
+      },
+      {
+       "text": "Card personalisation"
+      }
+     ]
+    },
+    {
+     "__component": "blocks.text-image",
+     "title": "A pioneer of e-commerce in Tunisia",
+     "eyebrow": "E-commerce",
+     "anchor": "ecommerce",
+     "imagePosition": "gauche",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "With exceptional expertise in e-commerce, Monétique Tunisie embodies excellence in the field, offering tailor-made solutions that meet the exact requirements of online businesses."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Our in-depth understanding of e-commerce challenges enables us to deploy efficient and secure digital payment services, simplifying online transactions for an optimal user experience."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "As a trusted partner of financial institutions, Monétique Tunisie is determined to accelerate and secure e-commerce operations by onboarding businesses onto our secure payment platform, ClicToPay."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Our unwavering commitment and in-depth expertise make us a key player in supporting the growth and prosperity of e-commerce in Tunisia, contributing to dynamism and innovation in the sector."
+        }
+       ]
+      }
+     ],
+     "keyPoints": [
+      {
+       "text": "ClicToPay platform"
+      },
+      {
+       "text": "Online payment secured by CVV2 and OTP"
+      }
+     ]
+    },
+    {
+     "__component": "blocks.text-image",
+     "title": "We offer modern payment systems",
+     "eyebrow": "Mobile Payment",
+     "anchor": "mobile-payment",
+     "imagePosition": "droite",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "As the national mobile payment switch, Monétique Tunisie is a pillar in the development of digital financial transactions in Tunisia."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "With our command of technological advances and our keen sense of market trends, we are the undisputed leader in payments in Tunisia. We offer intuitive mobile payment solutions with a strong focus on data confidentiality and security for flawless transactions."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "A central player in the sector in Tunisia, Monétique Tunisie is at the heart of promoting mobile payment, playing a crucial role in transforming and modernising the Tunisian financial sector. Our active involvement is paving the way for a new era of digital finance marked by accessibility, security and innovation."
+        }
+       ]
+      }
+     ],
+     "keyPoints": [
+      {
+       "text": "Payment"
+      },
+      {
+       "text": "Money transfer"
+      },
+      {
+       "text": "Cash-in / Cash-out"
+      }
+     ]
+    },
+    {
+     "__component": "blocks.text-image",
+     "title": "The benchmark for payment security in Tunisia",
+     "eyebrow": "Security",
+     "anchor": "securite",
+     "imagePosition": "gauche",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "In financial transactions, Monétique Tunisie is the absolute benchmark for payment security, covering both traditional card payments and the innovative mobile payment sector. Our unwavering commitment to preserving the confidentiality and integrity of every transaction makes us a true guardian of financial security. With a proactive approach backed by continuous monitoring of emerging cybersecurity threats, we have developed cutting-edge security solutions designed to neutralise any potential vulnerability."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "By implementing next-generation encryption protocols, integrating strong authentication mechanisms and deploying high-precision anti-fraud systems, our mission is to build a secure and tamper-proof transaction environment. This advanced expertise in payment security illustrates Monétique Tunisie's deep commitment to safeguarding its clients' financial interests and its pioneering role in protecting financial data within the Tunisian payments ecosystem."
+        }
+       ]
+      }
+     ],
+     "keyPoints": [
+      {
+       "text": "Encryption protocols"
+      },
+      {
+       "text": "Strong authentication"
+      },
+      {
+       "text": "Anti-fraud systems"
+      }
+     ]
+    },
+    {
+     "__component": "blocks.text-image",
+     "title": "Your strategic partner for consulting and training",
+     "eyebrow": "Training & Consulting",
+     "anchor": "formation-conseil",
+     "imagePosition": "droite",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "With an expert and experienced team of highly qualified trainers, Monétique Tunisie is committed to sharing its in-depth know-how through rigorous, up-to-date training programmes."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Monétique Tunisie's certified external training centre is a valuable resource for industry professionals, offering specialised courses covering various aspects of electronic payments, digital payment and related technologies."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Alongside its commitment to training, Monétique Tunisie also excels in consulting, supporting its clients in their strategy. With an in-depth understanding of market developments and specific needs, it offers personalised consulting services aimed at optimising payment systems, integrating new technologies and strengthening the security of financial transactions."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "This dual expertise in training and consulting makes Monétique Tunisie an essential strategic partner for payment industry players seeking to improve their skills, optimise their systems and actively contribute to their expansion and growth."
+        }
+       ]
+      }
+     ],
+     "keyPoints": [
+      {
+       "text": "Certified external training centre"
+      },
+      {
+       "text": "Strategic and technical consulting"
+      }
+     ]
+    },
+    {
+     "__component": "blocks.key-figures",
+     "title": "A benchmark infrastructure",
+     "items": [
+      {
+       "value": "99,98",
+       "unit": "%",
+       "label": "Switch availability",
+       "note": "April 2025"
+      },
+      {
+       "value": "5,782",
+       "unit": "M",
+       "label": "Cards",
+       "note": "End of June 2025"
+      },
+      {
+       "value": "40 600",
+       "label": "TPE",
+       "note": "End of June 2025"
+      },
+      {
+       "value": "PCI DSS",
+       "label": "Certification renewed every year",
+       "note": "Visa & Mastercard audits"
+      }
+     ]
+    },
+    {
+     "__component": "blocks.cta-band",
+     "title": "A card payment, e-commerce or mobile payment project?",
+     "text": "Our sales department supports banks, payment institutions, fintechs and merchants.",
+     "cta": {
+      "label": "Contact us",
+      "url": "/contact",
+      "style": "primaire",
+      "isExternal": false
+     }
+    }
+   ]
+  },
+  {
+   "title": "Solutions",
+   "slug": "solutions",
+   "seo": {
+    "metaTitle": "Our digital payment solutions",
+    "metaDescription": "Bank cards, payment switch, mobile switch, Paysmart, certification, security, hosting, support and consulting."
+   },
+   "blocks": [
+    {
+     "__component": "blocks.hero",
+     "variant": "sombre",
+     "title": "Our digital payment solutions",
+     "subtitle": "We support our partners and clients in their growth by providing them with top-quality payment solutions.",
+     "eyebrow": "Solutions",
+     "ctas": []
+    },
+    {
+     "__component": "blocks.solutions-list"
+    },
+    {
+     "__component": "blocks.cta-band",
+     "title": "Simplify your payments with a wallet",
+     "text": "Pay, send and withdraw your money from your phone.",
+     "cta": {
+      "label": "Read the article",
+      "url": "/actualites/simplifier-vos-paiements-avec-le-wallet",
+      "style": "primaire",
+      "isExternal": false
+     }
+    }
+   ]
+  },
+  {
+   "title": "Statistics",
+   "slug": "statistiques",
+   "seo": {
+    "metaTitle": "Electronic payment statistics in Tunisia",
+    "metaDescription": "Cards, ATMs, POS terminals, merchants, transactions and business volume: key figures published by Monétique Tunisie (2022 – June 2025)."
+   },
+   "blocks": [
+    {
+     "__component": "blocks.hero",
+     "variant": "sombre",
+     "title": "Statistics",
+     "subtitle": "Key figures of electronic payments in Tunisia: cards, ATMs, POS terminals, merchants, transactions and business volume.",
+     "eyebrow": "Monétique Tunisie",
+     "ctas": []
+    },
+    {
+     "__component": "blocks.stats-table",
+     "title": "Growth of the national network",
+     "subtitle": "Period 2022 – June 2025",
+     "footnote": "*June 2025: change Q2 2024 / Q2 2025 for the number of transactions and business volume."
+    },
+    {
+     "__component": "blocks.cta-band",
+     "title": "Would you like to know more about our figures?",
+     "text": "Our sales department will answer your questions.",
+     "cta": {
+      "label": "Contact us",
+      "url": "/contact",
+      "style": "primaire",
+      "isExternal": false
+     }
+    }
+   ]
+  },
+  {
+   "title": "News",
+   "slug": "actualites",
+   "seo": {
+    "metaTitle": "News, events and tenders",
+    "metaDescription": "News, events, calls for applications and calls for tenders from Monétique Tunisie."
+   },
+   "blocks": [
+    {
+     "__component": "blocks.hero",
+     "variant": "sombre",
+     "title": "News & events",
+     "subtitle": "Find Monétique Tunisie's news, events, calls for applications and calls for tenders.",
+     "eyebrow": "News & publications",
+     "ctas": []
+    },
+    {
+     "__component": "blocks.latest-news",
+     "title": "Latest publications",
+     "source": "mixte",
+     "count": 9
+    },
+    {
+     "__component": "blocks.faq-list",
+     "title": "Frequently asked questions",
+     "category": "carte_bancaire"
+    }
+   ]
+  },
+  {
+   "title": "Tenders",
+   "slug": "appels-offres",
+   "parentLabel": "News",
+   "seo": {
+    "metaTitle": "Calls for tenders and calls for applications",
+    "metaDescription": "Calls for tenders, consultations and calls for applications published by Monétique Tunisie: subject, deadline, collection of tender documents."
+   },
+   "blocks": [
+    {
+     "__component": "blocks.hero",
+     "variant": "sombre",
+     "title": "Tenders",
+     "subtitle": "Calls for tenders, consultations and calls for applications published by Monétique Tunisie.",
+     "eyebrow": "Purchasing & governance",
+     "ctas": []
+    },
+    {
+     "__component": "blocks.latest-news",
+     "title": "Published notices",
+     "source": "appels_offres",
+     "count": 9
+    },
+    {
+     "__component": "blocks.cta-band",
+     "title": "A question about a consultation?",
+     "text": "The Purchasing and Logistics Department can help: Sana Center, 5th floor, office 505.",
+     "cta": {
+      "label": "Contact us",
+      "url": "/contact",
+      "style": "primaire",
+      "isExternal": false
+     }
+    }
+   ]
+  },
+  {
+   "title": "Partners",
+   "slug": "partenaires",
+   "seo": {
+    "metaTitle": "Our partners and clients",
+    "metaDescription": "Tunisian and foreign banks, private-label clients, international networks, operators and billers partnering with Monétique Tunisie."
+   },
+   "blocks": [
+    {
+     "__component": "blocks.hero",
+     "variant": "sombre",
+     "title": "Our partners and clients",
+     "subtitle": "Tunisian and foreign banks, private-label clients, international networks, operators and billers.",
+     "eyebrow": "Partners",
+     "ctas": []
+    },
+    {
+     "__component": "blocks.partners-grid"
+    },
+    {
+     "__component": "blocks.cta-band",
+     "title": "Become a partner",
+     "text": "Our sales department is here to help.",
+     "cta": {
+      "label": "Contact us",
+      "url": "/contact",
+      "style": "primaire",
+      "isExternal": false
+     }
+    }
+   ]
+  },
+  {
+   "title": "FAQ",
+   "slug": "faq",
+   "seo": {
+    "metaTitle": "Frequently asked questions",
+    "metaDescription": "Bank cards, wallets, Paysmart, online shopping and glossary: answers to frequently asked questions."
+   },
+   "blocks": [
+    {
+     "__component": "blocks.hero",
+     "variant": "sombre",
+     "title": "Frequently asked questions",
+     "subtitle": "Bank cards, wallets, Paysmart, online shopping and glossary.",
+     "eyebrow": "Frequently asked questions",
+     "ctas": []
+    },
+    {
+     "__component": "blocks.faq-list",
+     "category": "toutes"
+    },
+    {
+     "__component": "blocks.cta-band",
+     "title": "More questions?",
+     "text": "Our call centre is available 24/7 on +216 71 155 840.",
+     "cta": {
+      "label": "Contact us",
+      "url": "/contact",
+      "style": "primaire",
+      "isExternal": false
+     }
+    }
+   ]
+  },
+  {
+   "title": "Contact",
+   "slug": "contact",
+   "seo": {
+    "metaTitle": "Contact Monétique Tunisie",
+    "metaDescription": "Call centre 24/7: +216 71 155 840. Toll-free number: 80 100 115. Sana Center, Centre Urbain Nord, Tunis."
+   },
+   "blocks": [
+    {
+     "__component": "blocks.hero",
+     "variant": "sombre",
+     "title": "Contact us",
+     "subtitle": "National payment switch, mobile switch and bill aggregator. Our call centre is here for you 24/7.",
+     "eyebrow": "Contact",
+     "ctas": []
+    },
+    {
+     "__component": "blocks.contact-section",
+     "title": "Our contact details",
+     "showForm": true,
+     "showMap": true
+    },
+    {
+     "__component": "blocks.cards-grid",
+     "eyebrow": "Your contacts",
+     "title": "How can we help you?",
+     "columns": 3,
+     "cards": [
+      {
+       "icon": "support_agent",
+       "title": "Call centre 24/7",
+       "text": "For all your questions, information requests and technical support needs: +216 71 155 840."
+      },
+      {
+       "icon": "shield",
+       "title": "Lost or stolen card",
+       "text": "Block your card without delay with your bank and the call centre (+216 71 155 840), then confirm by registered letter to your bank."
+      },
+      {
+       "icon": "verified",
+       "title": "Banks, fintechs & merchants",
+       "text": "Solutions, partnerships, certification, ClicToPay e-commerce: direction.commerciale@monetiquetunisie.com."
+      }
+     ]
+    },
+    {
+     "__component": "blocks.cta-band",
+     "title": "Cardholders",
+     "text": "A question about your card or a complaint about electronic payments? Toll-free number: 80 100 115.",
+     "cta": {
+      "label": "Read the FAQ",
+      "url": "/faq",
+      "style": "primaire",
+      "isExternal": false
+     }
+    }
+   ]
+  },
+  {
+   "title": "Legal notice",
+   "slug": "mentions-legales",
+   "parentLabel": "Legal information",
+   "seo": {
+    "metaTitle": "Legal notice",
+    "noIndex": false
+   },
+   "blocks": [
+    {
+     "__component": "blocks.hero",
+     "variant": "sombre",
+     "title": "Legal notice",
+     "subtitle": "Terms of access and use of the website www.monetiquetunisie.com.",
+     "eyebrow": "Legal information",
+     "ctas": []
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "Website publisher",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "The website available at www.monetiquetunisie.com is published by Monétique-Tunisie, a public limited company with share capital of TND 5,000,000, whose registered office is at Centre Urbain Nord, Sana Center – Building C – 1082 Tunis – Tel. 71 155 800. Registered with the Tunis Trade and Companies Register under number B110131997. Monétique-Tunisie is an interbank centre licensed by the Banque Centrale de Tunisie."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "Chief Executive Officer",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Bilel DARNAOUI, Chief Executive Officer of Monétique-Tunisie. Contact: website webmaster."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "Terms of access and use",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "By accessing this website and the information it contains, users acknowledge that they have read these general terms of use and undertake to comply with them. The publisher reserves the right to amend this notice at any time, in particular to adapt it to changes to the website. Users therefore undertake to consult this notice regularly. Users are deemed to accept the latest version each time they connect to the Website."
+        }
+       ]
+      },
+      {
+       "type": "heading",
+       "level": 3,
+       "children": [
+        {
+         "type": "text",
+         "text": "Terms of access"
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "This website is governed by Tunisian law. Most of the content and services on this website are offered in French and English. In the event of a dispute, the French version shall prevail. The documents, information and service offers published on the website are intended for both banked and unbanked people. The website is accessible 24 hours a day, 7 days a week, except in cases of force majeure, acts of third parties and/or maintenance work and interventions required for the proper functioning of the website. In such cases, the interruption will be notified by a warning on the home page or by any other means. Such an interruption shall in no way engage the publisher's liability and shall not give rise to any compensation."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "Information provided",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "heading",
+       "level": 3,
+       "children": [
+        {
+         "type": "text",
+         "text": "Information on products and services"
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Check availability with your bank branch. Users are invited to contact the bank branch of which they are a customer or on which they depend geographically, or the entity concerned, to find out about the conditions it offers and/or to obtain a service. To keep the information on products and services published on this website accurate, Monétique-Tunisie reserves the right to correct its content at any time without notice."
+        }
+       ]
+      },
+      {
+       "type": "heading",
+       "level": 3,
+       "children": [
+        {
+         "type": "text",
+         "text": "Other general information provided on a non-contractual basis"
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Other general information (economic, financial, legal, on daily life, business life, associations, etc.) is provided on a non-contractual basis and is for guidance or information only. Despite all the care taken in updating this information and its content, the documents published online may contain technical inaccuracies and typographical errors for which Monétique-Tunisie cannot be held liable in any way whatsoever. Users are solely responsible for the use they make of this general information."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "Use of the website by the user",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Users are informed that the use of the internet does not guarantee the confidentiality of correspondence; it is their responsibility to take all appropriate measures to protect their own data and/or tools (see the \""
+        },
+        {
+         "type": "link",
+         "url": "/protection-des-donnees",
+         "children": [
+          {
+           "type": "text",
+           "text": "Security"
+          }
+         ]
+        },
+        {
+         "type": "text",
+         "text": "\" section). Users undertake to respect the integrity of the website and refrain from hindering or forcing its operation, from fraudulently modifying, altering or deleting content accessible via the website and from fraudulently introducing data onto the website. Consequently, the publisher:"
+        }
+       ]
+      },
+      {
+       "type": "list",
+       "format": "unordered",
+       "children": [
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "Cannot be held liable for any damage that may be suffered, during a visit to its website, by the user's technical environment, in particular their computers, software, network equipment (modems, telephones, etc.) and any other hardware used to access or use the service and/or the information."
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "Cannot be held liable in the event of misuse of the website by the user."
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "Can in no way be held liable for the reliability of data transmission, access times, or any access restrictions on the internet or the networks connected to it."
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "Cannot be held liable in the event of interruption of the networks giving access to the Website, total or partial unavailability of the Website resulting in particular from the telecommunications operator, transmission errors or problems relating to transmission security, or failure of your receiving equipment or telephone line."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "Hyperlinks",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "This website contains, in particular, information provided by external companies or hyperlinks to other websites that were not developed by Monétique-Tunisie. The existence on this website of a hyperlink to another website does not constitute an endorsement of that website or its content. Monétique-Tunisie therefore accepts no responsibility for these websites, their content, advertising, products or services available on or from them. Furthermore, Monétique-Tunisie cannot be held liable for the information, opinions and recommendations made by these third parties. Any link to this website requires the express prior authorisation of Monétique-Tunisie, which reserves the right to have the link removed at any time."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "Data protection policy",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Users of this website may provide Monétique-Tunisie with personal data concerning them by filling in the forms or questionnaires on the website."
+        }
+       ]
+      },
+      {
+       "type": "heading",
+       "level": 3,
+       "children": [
+        {
+         "type": "text",
+         "text": "How data is used and collected"
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "You are not obliged to answer all or some of the questions asked. Mandatory information is indicated by an asterisk. By filling in the forms or questionnaires, you agree, subject to your right to object, that your data and any updates to it may be passed on to the bank branch on which the website user depends geographically or of which they are already a customer, in order to respond to their requests for information. The recipients of the processing of a complaint are the customer relations department and the persons authorised within Monétique-Tunisie SA and the financial entities to handle the complaint."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "Discussion areas",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Some areas are intended to allow you to contribute to the discussion topics we propose. The data they contain may not be collected or used for any other purpose."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "A moderator may delete, before publication, any contribution that is unrelated to the discussion topic or the website's editorial line, or that is unlawful. In particular, the moderator will refuse to publish messages that are:"
+        }
+       ]
+      },
+      {
+       "type": "list",
+       "format": "unordered",
+       "children": [
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "Advertising or promotional in nature;"
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "Racist or defamatory, vulgar or insulting, aggressive or violent;"
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "Contrary to copyright or related rights, database law, image rights or the right to privacy, or in breach of any other legislative or regulatory provision in force."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "In general, users undertake to respect the image and reputation of the website www.monetiquetunisie.com and not to make any statements and/or take any action that could harm the website. In the event of a breach of the laws in force, public decency or these terms of use, or for any other freely interpreted reason, www.monetiquetunisie.com reserves the right to close its discussion areas temporarily or permanently and to delete the information and any references to it. By taking part in a discussion forum on www.monetiquetunisie.com, you authorise Monétique-Tunisie to reproduce your contribution on the website free of charge."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Information on the right of access:",
+         "bold": true
+        },
+        {
+         "type": "text",
+         "text": " you have the right to access, modify, rectify and delete data concerning you. You may, at any time, request that your contributions to this discussion area be deleted. Contact: website webmaster."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "Complaints handling",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Monétique-Tunisie pays particular attention to its customers' comments and complaints. In the event of disagreement, misunderstanding or dissatisfaction with your bank branch regarding card payments, Monétique-Tunisie will be pleased to be your point of contact."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "If you are not a bank customer, you can consult the various "
+        },
+        {
+         "type": "link",
+         "url": "/contact",
+         "children": [
+          {
+           "type": "text",
+           "text": "contacts listed here"
+          }
+         ]
+        },
+        {
+         "type": "text",
+         "text": " or send your complaint by post to the following address: Centre Urbain Nord, Sana Center – Building C – 1082 Tunis."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Data protection",
+   "slug": "protection-des-donnees",
+   "parentLabel": "Legal information",
+   "seo": {
+    "metaTitle": "Data protection",
+    "noIndex": false
+   },
+   "blocks": [
+    {
+     "__component": "blocks.hero",
+     "variant": "sombre",
+     "title": "Data protection",
+     "subtitle": "At the cutting edge of new technologies on the market.",
+     "eyebrow": "Security",
+     "ctas": []
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "At the cutting edge of new technologies on the market",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Improving the security of card payments is ongoing work. Preventing and combating fraud are permanent principles that lead Monétique-Tunisie to continually improve preventive security measures, whether for cards, terminals or remote payments."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Monétique Tunisie has highly developed electronic payment expertise, which it has applied to high-value projects in Tunisia. Today, Monétique Tunisie is ideally placed to offer fully integrated solutions that guarantee a high level of performance and complete security."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Monétique Tunisie constantly monitors developments in its areas of expertise. In recent years, accelerating technological change (MMS, Web 2.0, etc.) and new behaviours (the mobile boom, nomadic use, e-commerce, etc.) have created new needs for even more secure and intelligent means of payment."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "A few security rules to follow",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "A bank card is one of the safest means of payment, provided you follow the security rules. You can pay by bank card in many shops or online. It is important to follow certain security advice, in particular to prevent fraudulent use of your card by a third party. Your bank card is personal: never give anyone your four-digit PIN, learn it by heart and avoid writing it down."
+        }
+       ]
+      },
+      {
+       "type": "heading",
+       "level": 3,
+       "children": [
+        {
+         "type": "text",
+         "text": "Security at ATMs"
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "When withdrawing cash:"
+        }
+       ]
+      },
+      {
+       "type": "list",
+       "format": "unordered",
+       "children": [
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "Don't let yourself be distracted."
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "Enter your PIN out of sight of others."
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "Refuse help from anyone."
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "If you cannot retrieve your bank card, block it immediately (some ATMs are tampered with)."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "heading",
+       "level": 3,
+       "children": [
+        {
+         "type": "text",
+         "text": "Security online"
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Most people whose bank card number has been stolen have never ordered anything online. Here are some tips to secure your bank card payments online:"
+        }
+       ]
+      },
+      {
+       "type": "list",
+       "format": "unordered",
+       "children": [
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "Favour well-known merchant sites and reputable brands."
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "Be wary of websites of foreign companies."
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "Identify the merchant's contact details. Read the general terms of sale (this information should be accessible from the home page, as a sign of transparency)."
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "Pay on a secure page by checking that a closed padlock is displayed and that the website's URL begins with https:// (the \"s\" stands for secure)."
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "Keep the confirmation email for your order."
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "Take screenshots or print the screen at each step of the order."
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "Check the amount of the payment on your bank statement."
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "Do not store your bank card number or its code on your computer."
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "Keep your computer's protection systems (antivirus) up to date."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Good to know:",
+         "bold": true
+        },
+        {
+         "type": "text",
+         "text": " although many internet users are reluctant to pay for their online purchases with their bank card, this system is highly secure thanks to encryption."
+        }
+       ]
+      },
+      {
+       "type": "heading",
+       "level": 3,
+       "children": [
+        {
+         "type": "text",
+         "text": "Security at merchants"
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Abroad is where your bank card is most at risk, so be even more vigilant. Here are some recommendations:"
+        }
+       ]
+      },
+      {
+       "type": "list",
+       "format": "unordered",
+       "children": [
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "Check the amount shown on the screen carefully before entering your PIN."
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "Enter your PIN out of sight of others, using your hand as a shield."
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "Never let your bank card out of your sight."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Some businesses, particularly in tourism, have a dubious practice: they photocopy your bank card. Refuse this practice: an unscrupulous person could copy the back of your card, where your security code appears."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "Fraud analysis",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Monétique-Tunisie has an active risk manager on its team who provides online monitoring using tools that detect all operations with a potential risk of fraud and automatically trigger alerts and analyses on the cases detected."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Cookies",
+   "slug": "cookies",
+   "parentLabel": "Legal information",
+   "seo": {
+    "metaTitle": "Cookies",
+    "noIndex": true
+   },
+   "blocks": [
+    {
+     "__component": "blocks.hero",
+     "variant": "sombre",
+     "title": "Cookies",
+     "subtitle": "Use of cookies on the Monétique Tunisie website.",
+     "eyebrow": "Cookies",
+     "ctas": []
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "Content to be completed",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Monétique Tunisie's cookie policy is being drafted by the Legal Department: purposes of cookies, retention period, consent management and webmaster contact details."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

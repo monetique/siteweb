@@ -1,5 +1,7 @@
 /* Blocs « éditoriaux » : leur contenu est saisi directement dans la page Strapi. */
 import type { Block, Page } from "@/lib/strapi";
+import { getLang, t } from "@/lib/lang-server";
+import { localizePeriod } from "@/lib/i18n";
 import { getIndicateurs, mediaUrl } from "@/lib/strapi";
 import { Breadcrumb } from "../Breadcrumb";
 import { Icon } from "../Icon";
@@ -16,7 +18,7 @@ export async function Hero({ block, page }: P) {
   return (
     <section className="relative -mt-[116px] w-full overflow-hidden bg-primary-container pb-16 pt-[156px] text-on-primary shadow-md lg:pb-20">
       <div className="grid-nodes pointer-events-none absolute inset-0 text-white opacity-[0.07]" />
-      <div className="pointer-events-none absolute -top-32 right-0 h-[540px] w-[540px] rounded-full bg-secondary/20 blur-3xl" />
+      <div className="pointer-events-none absolute -top-32 end-0 h-[540px] w-[540px] rounded-full bg-secondary/20 blur-3xl" />
       <Container className="relative">
         <Breadcrumb items={crumbs} />
         {block.eyebrow && (
@@ -37,6 +39,7 @@ export async function Hero({ block, page }: P) {
 async function HomeHero({ block }: { block: Block }) {
   const indicateurs = await getIndicateurs();
   const dispo = indicateurs.find((i) => i.unit === "%")?.values.at(-1);
+  const d = t();
   // Le titre se termine par les mots mis en valeur après la dernière virgule (ex. « …, sécurisées »).
   const words: string[] = block.title.split(" ");
   const accent = words.slice(-1).join(" ");
@@ -62,19 +65,19 @@ async function HomeHero({ block }: { block: Block }) {
             {img && /* eslint-disable-next-line @next/next/no-img-element */ <img src={img} alt="" className="absolute inset-0 h-full w-full object-cover opacity-30" />}
             <div className="grid-nodes pointer-events-none absolute inset-0 text-white opacity-[0.08]" />
             <div className="relative">
-              <Eyebrow dark>Switch national monétique</Eyebrow>
+              <Eyebrow dark>{d.switchNational}</Eyebrow>
               <p className="mt-3 text-body-md text-on-primary-container">
-                Traitement des transactions cartes (GAB, TPE, e-commerce via ClicToPay), du paiement mobile et du paiement de factures avec Paysmart.
+                {d.switchText}
               </p>
               {dispo && (
                 <div className="mt-8 rounded-xl bg-white/5 p-5">
-                  <span className="font-display text-stat text-secondary-container">{dispo.displayValue ?? dispo.value} %</span>
-                  <p className="mt-2 text-label-sm text-on-primary-container">Taux de disponibilité du switch national ({dispo.period.toLowerCase()})</p>
+                  <span className="font-display text-stat text-secondary-container" dir="ltr">{dispo.displayValue ?? dispo.value} %</span>
+                  <p className="mt-2 text-label-sm text-on-primary-container">{d.availability(localizePeriod(dispo.period, getLang()).toLowerCase())}</p>
                 </div>
               )}
               <div className="mt-6 flex flex-wrap gap-2">
-                {["Agréé par la BCT", "PCI DSS", "14 banques africaines"].map((t) => (
-                  <span key={t} className="rounded-full bg-white/10 px-3 py-1 text-label-sm text-secondary-fixed">{t}</span>
+                {d.heroTags.map((tag) => (
+                  <span key={tag} className="rounded-full bg-white/10 px-3 py-1 text-label-sm text-secondary-fixed">{tag}</span>
                 ))}
               </div>
             </div>
@@ -146,7 +149,7 @@ export function KeyFigures({ block }: P) {
           <div key={f.label} className="rounded-xl border border-outline-variant/30 bg-surface-container-lowest p-6 shadow-sm">
             <span className="text-label-sm text-on-surface-variant">{f.label}</span>
             <div className="mt-3 flex items-baseline gap-1">
-              <span className="font-display text-headline-lg text-on-surface">{f.value}</span>
+              <span className="font-display text-headline-lg text-on-surface" dir="ltr">{f.value}</span>
               {f.unit && <span className="text-headline-sm text-on-surface-variant">{f.unit}</span>}
             </div>
             {f.evolution && <span className="mt-2 inline-flex items-center gap-1 text-label-sm text-secondary"><Icon name="trending_up" className="text-[16px]" />{f.evolution}</span>}

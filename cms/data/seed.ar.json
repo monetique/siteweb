@@ -1,0 +1,4760 @@
+{
+ "global": {
+  "siteName": "Monétique Tunisie",
+  "tagline": "المحوّل النقدي الوطني والمحوّل الجوال ومجمّع الفواتير",
+  "statusLabel": "يعمل",
+  "accreditation": "مركز بين بنكي مرخّص من Banque Centrale de Tunisie",
+  "address": "المركز العمراني الشمالي، سانا سنتر، العمارة C – 1082 تونس",
+  "mapUrl": "https://maps.google.com/?q=Sana+Center+Centre+Urbain+Nord+Tunis",
+  "phoneHeadquarters": "+216 71 155 800",
+  "phoneCallCenter": "+216 71 155 840",
+  "phoneGreenNumber": "+216 80 100 115",
+  "emailContact": "contact@monetiquetunisie.com",
+  "emailCommercial": "direction.commerciale@monetiquetunisie.com",
+  "socialLinks": [],
+  "certifications": [
+   {
+    "text": "PCI DSS"
+   },
+   {
+    "text": "Visa"
+   },
+   {
+    "text": "Mastercard"
+   }
+  ],
+  "defaultSeo": {
+   "metaTitle": "Monétique Tunisie – حلول الدفع الرقمي",
+   "metaDescription": "المحوّل النقدي الوطني والمحوّل الجوال ومجمّع الفواتير (Paysmart): حلول دفع رقمي موثوقة وآمنة في تونس وإفريقيا."
+  }
+ },
+ "navigation": {
+  "mainMenu": [
+   {
+    "label": "Monétique Tunisie",
+    "url": "/monetique-tunisie",
+    "children": []
+   },
+   {
+    "label": "الخبرة",
+    "url": "/expertise",
+    "children": []
+   },
+   {
+    "label": "الحلول",
+    "url": "/solutions",
+    "children": [
+     {
+      "label": "البطاقة البنكية",
+      "url": "/solutions/carte-bancaire",
+      "icon": "credit_card"
+     },
+     {
+      "label": "المحوّل النقدي",
+      "url": "/solutions/switch-monetique",
+      "icon": "hub"
+     },
+     {
+      "label": "المحوّل الجوال",
+      "url": "/solutions/switch-mobile",
+      "icon": "smartphone"
+     },
+     {
+      "label": "مجمّع الفواتير",
+      "url": "/solutions/agregateur-de-facturier",
+      "icon": "receipt_long"
+     },
+     {
+      "label": "الإشهاد",
+      "url": "/solutions/certification",
+      "icon": "verified"
+     },
+     {
+      "label": "الأمن ومكافحة الاحتيال والمراقبة",
+      "url": "/solutions/securite-fraude-et-monitoring",
+      "icon": "shield"
+     },
+     {
+      "label": "الإيواء الآمن",
+      "url": "/solutions/hebergement-securise",
+      "icon": "dns"
+     },
+     {
+      "label": "المساندة والاستشارة",
+      "url": "/solutions/assistance-et-conseil",
+      "icon": "support_agent"
+     }
+    ]
+   },
+   {
+    "label": "الإحصائيات",
+    "url": "/statistiques",
+    "children": []
+   },
+   {
+    "label": "الأخبار",
+    "url": "/actualites",
+    "children": []
+   },
+   {
+    "label": "الشركاء",
+    "url": "/partenaires",
+    "children": []
+   },
+   {
+    "label": "FAQ",
+    "url": "/faq",
+    "children": []
+   }
+  ],
+  "headerCta": {
+   "label": "اتصل بنا",
+   "url": "/contact",
+   "style": "primaire",
+   "isExternal": false,
+   "icon": "mail"
+  },
+  "footerColumns": [
+   {
+    "title": "Monétique Tunisie",
+    "links": [
+     {
+      "label": "من نحن",
+      "url": "/monetique-tunisie",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "الحوكمة",
+      "url": "/monetique-tunisie#gouvernance",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "الشركاء",
+      "url": "/partenaires",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "الإحصائيات",
+      "url": "/statistiques",
+      "style": "texte",
+      "isExternal": false
+     }
+    ]
+   },
+   {
+    "title": "الخبرة",
+    "links": [
+     {
+      "label": "النقديات",
+      "url": "/expertise#monetique",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "التجارة الإلكترونية",
+      "url": "/expertise#ecommerce",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "الدفع عبر الهاتف الجوال",
+      "url": "/expertise#mobile-payment",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "الأمن",
+      "url": "/expertise#securite",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "التكوين والاستشارة",
+      "url": "/expertise#formation-conseil",
+      "style": "texte",
+      "isExternal": false
+     }
+    ]
+   },
+   {
+    "title": "الحلول",
+    "links": [
+     {
+      "label": "البطاقة البنكية",
+      "url": "/solutions/carte-bancaire",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "المحوّل النقدي",
+      "url": "/solutions/switch-monetique",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "المحوّل الجوال",
+      "url": "/solutions/switch-mobile",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "مجمّع الفواتير",
+      "url": "/solutions/agregateur-de-facturier",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "الإشهاد",
+      "url": "/solutions/certification",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "الأمن ومكافحة الاحتيال والمراقبة",
+      "url": "/solutions/securite-fraude-et-monitoring",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "الإيواء الآمن",
+      "url": "/solutions/hebergement-securise",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "المساندة والاستشارة",
+      "url": "/solutions/assistance-et-conseil",
+      "style": "texte",
+      "isExternal": false
+     }
+    ]
+   },
+   {
+    "title": "معلومات",
+    "links": [
+     {
+      "label": "الأخبار",
+      "url": "/actualites",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "طلبات العروض",
+      "url": "/appels-offres",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "FAQ",
+      "url": "/faq",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "أمن الدفع",
+      "url": "/protection-des-donnees",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "التشكيات",
+      "url": "/contact",
+      "style": "texte",
+      "isExternal": false
+     }
+    ]
+   }
+  ],
+  "legalLinks": [
+   {
+    "label": "البيانات القانونية",
+    "url": "/mentions-legales",
+    "style": "texte",
+    "isExternal": false
+   },
+   {
+    "label": "حماية المعطيات الشخصية",
+    "url": "/protection-des-donnees",
+    "style": "texte",
+    "isExternal": false
+   },
+   {
+    "label": "ملفات تعريف الارتباط",
+    "url": "/cookies",
+    "style": "texte",
+    "isExternal": false
+   },
+   {
+    "label": "إمكانية النفاذ",
+    "url": "/contact",
+    "style": "texte",
+    "isExternal": false
+   }
+  ],
+  "copyright": "© 2026 Monétique Tunisie (SMT). جميع الحقوق محفوظة."
+ },
+ "dirigeants": [
+  {
+   "fullName": "M. Néji GHANDRI",
+   "role": "رئيس مجلس الإدارة",
+   "order": 1
+  },
+  {
+   "fullName": "M. Bilel DARNAOUI",
+   "role": "المدير العام",
+   "order": 2
+  },
+  {
+   "fullName": "Mme Samia REJEB",
+   "role": "المديرة العامة المساعدة",
+   "order": 3
+  }
+ ],
+ "indicateurs": [
+  {
+   "name": "عدد البطاقات",
+   "unit": "بالملايين",
+   "icon": "credit_card",
+   "order": 1,
+   "showOnHomepage": true,
+   "values": [
+    {
+     "period": "2022",
+     "year": 2022,
+     "value": 6.582,
+     "displayValue": "6,582",
+     "evolution": 8,
+     "isPartialYear": false
+    },
+    {
+     "period": "2023",
+     "year": 2023,
+     "value": 7.053,
+     "displayValue": "7,053",
+     "evolution": 7,
+     "isPartialYear": false
+    },
+    {
+     "period": "2024",
+     "year": 2024,
+     "value": 5.49,
+     "displayValue": "5,490",
+     "evolution": -22,
+     "isPartialYear": false
+    },
+    {
+     "period": "جوان 2025",
+     "year": 2025,
+     "value": 5.782,
+     "displayValue": "5,782",
+     "evolution": 5.3,
+     "isPartialYear": true
+    }
+   ]
+  },
+  {
+   "name": "عدد الموزعات الآلية",
+   "unit": "",
+   "icon": "local_atm",
+   "order": 2,
+   "showOnHomepage": false,
+   "values": [
+    {
+     "period": "2022",
+     "year": 2022,
+     "value": 3039,
+     "displayValue": "3 039",
+     "evolution": 1,
+     "isPartialYear": false
+    },
+    {
+     "period": "2023",
+     "year": 2023,
+     "value": 3207,
+     "displayValue": "3 207",
+     "evolution": 6,
+     "isPartialYear": false
+    },
+    {
+     "period": "2024",
+     "year": 2024,
+     "value": 3305,
+     "displayValue": "3 305",
+     "evolution": 3,
+     "isPartialYear": false
+    },
+    {
+     "period": "جوان 2025",
+     "year": 2025,
+     "value": 3289,
+     "displayValue": "3 289",
+     "evolution": -0.5,
+     "isPartialYear": true
+    }
+   ]
+  },
+  {
+   "name": "عدد أجهزة الدفع الإلكتروني",
+   "unit": "",
+   "icon": "point_of_sale",
+   "order": 3,
+   "showOnHomepage": true,
+   "values": [
+    {
+     "period": "2022",
+     "year": 2022,
+     "value": 32891,
+     "displayValue": "32 891",
+     "evolution": 10,
+     "isPartialYear": false
+    },
+    {
+     "period": "2023",
+     "year": 2023,
+     "value": 35300,
+     "displayValue": "35 300",
+     "evolution": 7,
+     "isPartialYear": false
+    },
+    {
+     "period": "2024",
+     "year": 2024,
+     "value": 39197,
+     "displayValue": "39 197",
+     "evolution": 11,
+     "isPartialYear": false
+    },
+    {
+     "period": "جوان 2025",
+     "year": 2025,
+     "value": 40600,
+     "displayValue": "40 600",
+     "evolution": 3.6,
+     "isPartialYear": true
+    }
+   ]
+  },
+  {
+   "name": "عدد التجار",
+   "unit": "",
+   "icon": "storefront",
+   "order": 4,
+   "showOnHomepage": true,
+   "values": [
+    {
+     "period": "2022",
+     "year": 2022,
+     "value": 30697,
+     "displayValue": "30 697",
+     "evolution": 11,
+     "isPartialYear": false
+    },
+    {
+     "period": "2023",
+     "year": 2023,
+     "value": 32954,
+     "displayValue": "32 954",
+     "evolution": 7,
+     "isPartialYear": false
+    },
+    {
+     "period": "2024",
+     "year": 2024,
+     "value": 36290,
+     "displayValue": "36 290",
+     "evolution": 10,
+     "isPartialYear": false
+    },
+    {
+     "period": "جوان 2025",
+     "year": 2025,
+     "value": 40685,
+     "displayValue": "40 685",
+     "evolution": 23.1,
+     "isPartialYear": true
+    }
+   ]
+  },
+  {
+   "name": "عدد العمليات",
+   "unit": "بالملايين",
+   "icon": "swap_horizontal_circle",
+   "order": 5,
+   "showOnHomepage": true,
+   "note": "جوان 2025: التطور بين الثلاثي الثاني 2024 والثلاثي الثاني 2025",
+   "values": [
+    {
+     "period": "2022",
+     "year": 2022,
+     "value": 126.225,
+     "displayValue": "126,225",
+     "evolution": 25,
+     "isPartialYear": false
+    },
+    {
+     "period": "2023",
+     "year": 2023,
+     "value": 138.854,
+     "displayValue": "138,854",
+     "evolution": 10,
+     "isPartialYear": false
+    },
+    {
+     "period": "2024",
+     "year": 2024,
+     "value": 151.534,
+     "displayValue": "151,534",
+     "evolution": 9,
+     "isPartialYear": false
+    },
+    {
+     "period": "جوان 2025",
+     "year": 2025,
+     "value": 77.7,
+     "displayValue": "77,700",
+     "evolution": 9,
+     "isPartialYear": true
+    }
+   ]
+  },
+  {
+   "name": "رقم المعاملات",
+   "unit": "بملايين الدنانير",
+   "icon": "account_balance_wallet",
+   "order": 6,
+   "showOnHomepage": false,
+   "note": "جوان 2025: التطور بين الثلاثي الثاني 2024 والثلاثي الثاني 2025",
+   "values": [
+    {
+     "period": "2022",
+     "year": 2022,
+     "value": 21022,
+     "displayValue": "21,022",
+     "evolution": 35,
+     "isPartialYear": false
+    },
+    {
+     "period": "2023",
+     "year": 2023,
+     "value": 23678,
+     "displayValue": "23,678",
+     "evolution": 13,
+     "isPartialYear": false
+    },
+    {
+     "period": "2024",
+     "year": 2024,
+     "value": 26275,
+     "displayValue": "26,275",
+     "evolution": 11,
+     "isPartialYear": false
+    },
+    {
+     "period": "جوان 2025",
+     "year": 2025,
+     "value": 13873,
+     "displayValue": "13,873",
+     "evolution": 12,
+     "isPartialYear": true
+    }
+   ]
+  },
+  {
+   "name": "نسبة توفّر المحوّل النقدي الوطني",
+   "unit": "%",
+   "icon": "speed",
+   "order": 7,
+   "showOnHomepage": true,
+   "values": [
+    {
+     "period": "أفريل 2025",
+     "year": 2025,
+     "value": 99.98,
+     "displayValue": "99,98",
+     "evolution": null,
+     "isPartialYear": false
+    }
+   ]
+  }
+ ],
+ "solutions": [
+  {
+   "name": "البطاقة البنكية",
+   "slug": "carte-bancaire",
+   "icon": "credit_card",
+   "tagline": "تخصيص البطاقات البنكية والبطاقات الخاصة",
+   "order": 1,
+   "summary": "تخصيص البطاقات البنكية والبطاقات الخاصة",
+   "sections": [
+    {
+     "title": "تخصيص البطاقات البنكية والبطاقات الخاصة",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "نؤمن في Monétique Tunisie بأنّ كل بطاقة يمكن أن تكون فريدة مثل صاحبها. لذلك نقدّم خدمة تخصيص للبطاقات تشمل الجوانب الفنية والتقنية معًا. وبفضل تجهيزات تخصيص متطورة، نخصّص الشريط المغناطيسي والشريحة (بالتلامس ودون تلامس) وتصميم البطاقة بما في ذلك الصورة. ومن خلال تقنيات متقدمة مثل النقش بالليزر والطباعة والنقش البارز، نمكّن حرفاءنا من تحويل بطاقاتهم البنكية إلى أعمال فنية شخصية وآمنة تعكس هويتهم وتفضيلاتهم."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "تغيير الرمز السري",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "ندرك في Monétique Tunisie أهمية الأمن المخصّص لحاملي البطاقات البنكية. لذلك نقدّم خدمة تغيير الرمز السري التي تتيح للمستخدمين تعديل الرمز الشخصي المرتبط ببطاقاتهم. وتعزّز هذه الخاصية الأمن بتمكين حاملي البطاقات من اختيار رمز يسهل عليهم حفظه ويكون شخصيًا وآمنًا. وتتوفر هذه الخدمة عبر قنوات متعددة، منها الموزعات الآلية والخدمات البنكية عبر الإنترنت وقنوات خدمة الحرفاء الأخرى، بما يضمن تجربة سلسة وآمنة."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "فك حجب الرمز السري",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "إدراكًا منها للتحديات التي تطرحها المعاملات الدولية، تقدّم Monétique Tunisie للمؤسسات المقتنية خدمة لاسترجاع رسوم النفاذ. وقد صُمّمت هذه الخدمة لتعويض التكاليف الناتجة عن هذه المعاملات، بما يضمن تصرفًا ناجعًا وعادلًا في العمليات العابرة للحدود. ومن خلال هذا النظام، نيسّر لشركائنا استرجاعًا شفافًا للرسوم، ونوفّر تجربة مالية مثلى لجميع الأطراف المعنية."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "رسوم النفاذ",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "إدراكًا منها للتحديات التي تطرحها المعاملات الدولية، تقدّم Monétique Tunisie للمؤسسات المقتنية خدمة لاسترجاع رسوم النفاذ. وقد صُمّمت هذه الخدمة لتعويض التكاليف الناتجة عن هذه المعاملات، بما يضمن تصرفًا ناجعًا وعادلًا في العمليات العابرة للحدود. ومن خلال هذا النظام، نيسّر لشركائنا استرجاعًا شفافًا للرسوم، ونوفّر تجربة مالية مثلى لجميع الأطراف المعنية."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "keyPoints": [
+    {
+     "text": "تخصيص فني وتقني"
+    },
+    {
+     "text": "تغيير الرمز السري"
+    },
+    {
+     "text": "فك حجب الرمز السري"
+    },
+    {
+     "text": "رسوم النفاذ"
+    }
+   ],
+   "seo": {
+    "metaTitle": "البطاقة البنكية",
+    "metaDescription": "تخصيص البطاقات البنكية والبطاقات الخاصة"
+   }
+  },
+  {
+   "name": "المحوّل النقدي",
+   "slug": "switch-monetique",
+   "icon": "hub",
+   "tagline": "تيسير المعاملات المالية والترخيص فيها",
+   "order": 2,
+   "summary": "تيسير المعاملات المالية والترخيص فيها",
+   "sections": [
+    {
+     "title": "تيسير المعاملات المالية والترخيص فيها",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "يمثّل المحوّل النقدي عنصرًا أساسيًا في منظومة الدفع، إذ يضطلع بدور محوري في تيسير المعاملات المالية والترخيص فيها في الوقت الحقيقي. وبصفتها المحوّل الوطني، توفّر Monétique Tunisie واجهة مركزية لمعالجة عمليات الدفع، وتقيم جسر تواصل مباشرًا وآمنًا بين مختلف المؤسسات المالية. ويمكّننا ذلك من تقديم سلاسة استثنائية وأمن معزّز ونجاعة لا مثيل لها في معالجة معاملات حرفائنا."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "التحقق الفوري من المعاملات المالية",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "عندما يُطلق حامل البطاقة معاملة، يتدخّل نظام المحوّل النقدي فورًا للتحقق من صلوحية البطاقة وتوفّر الأموال واحترام معايير الأمن المطلوبة. ويُعدّ هذا التحقق الفوري ضروريًا لا لضمان الترخيص السريع في المعاملة فحسب، بل أيضًا للمحافظة على مستوى أمثل من الأمن يحمي المصالح المالية لحاملي البطاقات والمؤسسات البنكية."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "معاملات بنكية سلسة وآمنة",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "يتمثّل التزامنا بصفتنا محوّلًا نقديًا في الحرص على معالجة كل معاملة بأقصى درجات العناية، بما يضمن تجربة استخدام سلسة وآمنة. ومن خلال الربط الشفاف بين البنوك وسائر المؤسسات المالية، تضطلع Monétique Tunisie بدور لا غنى عنه في منظومة الدفع، وتساهم في ثقة السوق المالية التونسية واستقرارها."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "keyPoints": [
+    {
+     "text": "تراخيص في الوقت الحقيقي"
+    },
+    {
+     "text": "تحقق فوري"
+    },
+    {
+     "text": "معاملات بنكية سلسة وآمنة"
+    }
+   ],
+   "seo": {
+    "metaTitle": "المحوّل النقدي",
+    "metaDescription": "تيسير المعاملات المالية والترخيص فيها"
+   }
+  },
+  {
+   "name": "المحوّل الجوال",
+   "slug": "switch-mobile",
+   "icon": "smartphone",
+   "tagline": "الدفع عبر الهاتف الجوال، الحل لكل مشترياتك اليومية",
+   "order": 3,
+   "summary": "الدفع عبر الهاتف الجوال، الحل لكل مشترياتك اليومية",
+   "sections": [
+    {
+     "title": "الدفع عبر الهاتف الجوال، الحل لكل مشترياتك اليومية",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "يمثّل المحوّل الجوال لـMonétique Tunisie ابتكارًا كبيرًا في مجال الدفع الرقمي، إذ يوفّر منصة تكنولوجية متكاملة تتيح جملة من الوظائف الأساسية للتصرف في المعاملات المالية عبر الهاتف الجوال. ويتيح هذا الحل المتطور الترخيص والدفع وتحويل الأموال وعمليات الإيداع والسحب النقدي، في بيئة آمنة عبر المحافظ الإلكترونية."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "تجربة استخدام آمنة وسلسة",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "بصفته وسيطًا مركزيًا، يضمن محوّلنا الجوال تواصلًا سلسًا وناجعًا بين جميع المتدخلين في عملية الدفع: المستخدمين والتجار والبنوك ومؤسسات الدفع. وبفضل هذه البنية التحتية، يستطيع المستخدمون إجراء عمليات الدفع وتحويل الأموال وشحن الرصيد والإيداع والسحب النقدي عبر محافظهم الإلكترونية، بما يضمن تجربة آمنة ودون عوائق."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "تحويل مشهد الدفع الرقمي",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "لا جدال في دور المحوّل الجوال في تحديث الخدمات المالية، فهو يحسّن الترابط داخل منظومة الدفع عبر الهاتف الجوال، ويعزّز أمن المعاملات، ويوسّع النفاذ إلى الخدمات المالية لعدد أكبر من المستخدمين. ويجسّد هذا التمشي المبتكر التزامنا بدعم الشمول المالي وتحويل مشهد الدفع الرقمي."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "keyPoints": [
+    {
+     "text": "الدفع عبر الهاتف الجوال"
+    },
+    {
+     "text": "تجربة استخدام مثلى"
+    },
+    {
+     "text": "ثورة في الدفع الرقمي"
+    }
+   ],
+   "seo": {
+    "metaTitle": "المحوّل الجوال",
+    "metaDescription": "الدفع عبر الهاتف الجوال، الحل لكل مشترياتك اليومية"
+   }
+  },
+  {
+   "name": "مجمّع الفواتير",
+   "slug": "agregateur-de-facturier",
+   "icon": "receipt_long",
+   "tagline": "الطريقة الأبسط للتصرف في فواتيرك وخلاصها عبر الإنترنت",
+   "order": 4,
+   "summary": "الطريقة الأبسط للتصرف في فواتيرك وخلاصها عبر الإنترنت",
+   "sections": [
+    {
+     "title": "Paysmart، منصة تجميع خلاص الفواتير",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "تمثّل Paysmart خطوة مهمة في مجال الدفع، وتضع Monétique Tunisie في طليعة الابتكار المالي. وقد صُمّمت منصة تجميع خلاص الفواتير هذه لتيسير التفاعل بين مزوّدي خدمات الدفع ومصدري الفواتير وتنشيطه. وهي تقدّم قيمة مضافة مزدوجة: تمكين مصدري الفواتير من عرض فواتيرهم بنجاعة على عدد كبير من مزوّدي خدمات الدفع، ومنح الحرفاء مرونة لا مثيل لها في خلاص فواتيرهم بوسائل دفع متنوعة، منها البطاقة البنكية والمحافظ الإلكترونية والتحويلات البنكية."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "مالية أكثر ترابطًا ومرونة وإتاحة",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "يعكس إطلاق Monétique Tunisie لمنصة Paysmart التزامنا الدائم بتبسيط المعاملات المالية وتأمينها لجميع المتدخلين. فهذا الحل المبتكر لا يكتفي بتحسين تجربة الدفع للحرفاء، بل يحسّن أيضًا التصرف في الفواتير لدى مصدريها بمنحهم حضورًا واسعًا لدى مزوّدي خدمات الدفع. وباختصار، تجسّد Paysmart رؤيتنا لمالية أكثر ترابطًا ومرونة وإتاحة، تواكب الاحتياجات المتطورة للسوق."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "التحول الرقمي للقطاع المالي",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "بفضل Paysmart، تعزّز Monétique Tunisie دورها محرّكًا للتحول الرقمي في القطاع المالي، وتيسّر إدماج الدفع في الحياة اليومية للمستهلكين والمؤسسات. وتعكس هذه المبادرة طموحنا إلى مواصلة الابتكار وتقديم حلول تستبق تحديات العالم المالي الحديث وتستجيب لها."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "keyPoints": [
+    {
+     "text": "حل عملي"
+    },
+    {
+     "text": "مالية أكثر ترابطًا ومرونة وإتاحة"
+    },
+    {
+     "text": "رقمنة الدفع"
+    }
+   ],
+   "cta": {
+    "label": "موقع Paysmart",
+    "url": "#",
+    "style": "primaire",
+    "isExternal": true
+   },
+   "seo": {
+    "metaTitle": "مجمّع الفواتير",
+    "metaDescription": "الطريقة الأبسط للتصرف في فواتيرك وخلاصها عبر الإنترنت"
+   }
+  },
+  {
+   "name": "الإشهاد",
+   "slug": "certification",
+   "icon": "verified",
+   "tagline": "رائدة في مجال التجهيزات المالية",
+   "order": 5,
+   "summary": "رائدة في مجال التجهيزات المالية",
+   "sections": [
+    {
+     "title": "رائدة في مجال التجهيزات المالية",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "تُعدّ Monétique Tunisie مرجعًا أساسيًا في مجال إشهاد التجهيزات المالية، بما يعزّز مكانتها الريادية في هذا المجال. وتشمل خبرتنا طيفًا واسعًا من التجهيزات والحلول، منها الموزعات الآلية للأوراق النقدية وأجهزة الدفع الإلكتروني والتكنولوجيات المبتكرة مثل Tap to Phone وSoftPOS، إضافة إلى خدمات ميسّر الدفع (PayFac) والحلول الخاصة المخصّصة."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "مطابقة التجهيزات المالية وموثوقيتها القصوى",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "صُمّم مسار الإشهاد لدينا بصرامة ليستجيب لأشد معايير الأمن والتراتيب الدولية السارية، بما يضمن مطابقة التجهيزات المالية وموثوقيتها القصوى. ويشمل هذا الالتزام بالجودة والأمن جميع المراحل الضرورية للمصادقة، بما يضمن مشروعية أنظمة الدفع المعتمدة ونجاعتها."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "شريك استراتيجي للمؤسسات المالية والشركات",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "بفضل عنايتها الدقيقة بالتفاصيل وسعيها الدائم إلى التميّز، تُعدّ Monétique Tunisie الشريك الاستراتيجي الأمثل للمؤسسات المالية والشركات الباحثة عن حلول دفع آمنة وموثوقة ومطابقة للمعايير الدولية. ويُبرز دورنا في ضمان مطابقة التجهيزات المالية مساهمتنا الأساسية في المنظومة المالية، بما ييسّر اعتماد تكنولوجيات دفع متطورة وآمنة."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "keyPoints": [
+    {
+     "text": "الموزعات الآلية وأجهزة الدفع الإلكتروني"
+    },
+    {
+     "text": "Tap to Phone وSoftPOS"
+    },
+    {
+     "text": "PayFac والحلول الخاصة"
+    }
+   ],
+   "seo": {
+    "metaTitle": "الإشهاد",
+    "metaDescription": "رائدة في مجال التجهيزات المالية"
+   }
+  },
+  {
+   "name": "الأمن ومكافحة الاحتيال والمراقبة",
+   "slug": "securite-fraude-et-monitoring",
+   "icon": "shield",
+   "tagline": "أمن معاملات البطاقات البنكية",
+   "order": 6,
+   "summary": "أمن معاملات البطاقات البنكية",
+   "sections": [
+    {
+     "title": "أمن معاملات البطاقات البنكية",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "تتميّز Monétique Tunisie بكونها فاعلًا أساسيًا في ضمان أمن معاملات البطاقات البنكية. وبالاعتماد على تكنولوجيات متطورة، تتولى الشركة مراقبة مخاطر الاحتيال والتصرف فيها بصفة استباقية، بما يعزّز ثقة المستخدمين في المنظومة المالية."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "التزام بحماية العمليات المالية",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "بصفتها ركيزة للثقة والأمن، تجسّد Monétique Tunisie التزامها بحماية العمليات المالية من خلال اعتماد حل متطور لمراقبة الاحتيال. ويبرهن هذا التمشي الاستباقي في كشف الاحتيال والوقاية منه على التزام متواصل بالابتكار وتطوير الأنظمة لاستباق التهديدات الناشئة."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "تجربة معاملات آمنة وموثوقة",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "وبذلك تعزّز Monétique Tunisie دورها الريادي بضمان تجربة معاملات آمنة وموثوقة، مع تأكيد تفانيها الدائم في الحفاظ على سلامة المعاملات المالية وأمنها."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "keyPoints": [
+    {
+     "text": "معاملات آمنة"
+    },
+    {
+     "text": "عمليات مالية محمية"
+    },
+    {
+     "text": "تجربة معاملات موثوقة"
+    }
+   ],
+   "seo": {
+    "metaTitle": "الأمن والاحتيال والمراقبة",
+    "metaDescription": "أمن معاملات البطاقات البنكية"
+   }
+  },
+  {
+   "name": "إيواء الخوادم والحلول التكنولوجية",
+   "slug": "hebergement-securise",
+   "icon": "dns",
+   "tagline": "إيواء آمن وحلول تكنولوجية",
+   "order": 7,
+   "summary": "إيواء آمن وحلول تكنولوجية",
+   "sections": [
+    {
+     "title": "إيواء آمن وحلول تكنولوجية",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "إدراكًا منها للأهمية القصوى للأمن في قطاع الخدمات النقدية، تؤكد Monétique Tunisie التزامها الثابت بتوفير إيواء آمن لخوادم شركائها وحلولهم التكنولوجية. ويستند وضع الأمن في صدارة اهتماماتنا إلى ضرورة حماية المعطيات الحساسة لحرفائنا من كل أشكال الثغرات."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "سرية المعطيات وسلامتها وتوفّرها",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "صُمّمت بنيتنا التحتية للإيواء لتوفير أعلى مستويات الأمن، وهي مجهزة بتكنولوجيات متطورة وإجراءات حماية صارمة. وتستفيد البيئات التي تُؤوى فيها خوادم شركائنا من جدران حماية من الجيل الأخير وأنظمة متطورة لكشف التسلل وبروتوكولات تشفير معزّزة، بما يضمن سرية المعطيات وسلامتها وتوفّرها."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "مطابقة لأشد المعايير الدولية صرامة",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "لا يقتصر الاعتراف بتميّزنا في مجال الأمن على التزاماتنا الداخلية، بل تؤكده أيضًا عمليات تفقد منتظمة تجريها مؤسسات دولية مرموقة مثل VISA وMastercard. وتثبت عمليات التدقيق الصارمة هذه قدرتنا على المحافظة على أمن مادي وتشغيلي من الطراز الأول. كما يشهد التزامنا بمعايير إشهاد PCI DSS، الذي يُجدّد سنويًا، على مطابقتنا المتواصلة لأشد المعايير الدولية صرامة في مجال أمن معطيات بطاقات الدفع."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "بنية تحتية متينة وموثوقة لحماية الأصول الرقمية",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "الإيواء الآمن في Monétique Tunisie ليس مجرد خدمة، بل هو وعد بالطمأنينة لشركائنا وحرفائهم. ومن خلال اعتماد معايير أمن المعلومات الأعلى في القطاع والمحافظة عليها، نوفّر بنية تحتية متينة وموثوقة لحماية الأصول الرقمية الأساسية في المشهد المالي الحديث."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "keyPoints": [
+    {
+     "text": "الإيواء الآمن"
+    },
+    {
+     "text": "معطيات محمية"
+    },
+    {
+     "text": "مطابقة للمعايير الدولية"
+    },
+    {
+     "text": "بنية تحتية متينة"
+    }
+   ],
+   "seo": {
+    "metaTitle": "إيواء آمن للخوادم",
+    "metaDescription": "إيواء آمن وحلول تكنولوجية"
+   }
+  },
+  {
+   "name": "المساندة والاستشارة",
+   "slug": "assistance-et-conseil",
+   "icon": "support_agent",
+   "tagline": "الرائدة بلا منازع في مجال النقديات",
+   "order": 8,
+   "summary": "الرائدة بلا منازع في مجال النقديات",
+   "sections": [
+    {
+     "title": "الرائدة بلا منازع في مجال النقديات",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "تفخر Monétique Tunisie بمكانتها الريادية بلا منازع في مجال النقديات، بفضل طيف شامل من خدمات المساندة الفنية المصمّمة للاستجابة لاحتياجات حرفائنا المتنوعة. وبصفتنا مركز تكوين خارجيًا معتمدًا، يتجلى التزامنا بالتميّز في برامج تكوين مخصّصة، أُعدّت بعناية لإثراء الكفاءات الأساسية لمهنيي قطاع النقديات وتطويرها، بما يضمن نجاحهم وتطورهم في بيئة دائمة التغيّر."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "نحسّن البنية التحتية النقدية لحرفائنا وأداءهم التشغيلي",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "إلى جانب التكوين، تتميّز Monétique Tunisie بكونها مستشارًا موثوقًا يقدّم خدمات استشارة استراتيجية وفنية. ويتمثل هدفنا في مرافقة حرفائنا في اختيار الحلول الأنسب لاحتياجاتهم الخاصة، من خلال نصائح خبيرة تعكس أفضل الممارسات في القطاع وأحدث الابتكارات التكنولوجية. ويمكّننا هذا التمشي الاستشاري من توجيه شركائنا بنجاعة نحو قرارات مدروسة، بما يحسّن بنيتهم التحتية النقدية وأداءهم التشغيلي."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "نضمن المطابقة ورضا حرفائنا",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "في مجال التصرف في الاسترجاعات (chargebacks)، تتميّز Monétique Tunisie بخبرتها إذ تقدّم للبنوك خدمة ناجعة للتصرف في الاعتراضات. ونحرص على معالجة الاسترجاعات بأقصى درجات الدقة والشفافية، بما يقلّص الإزعاج للبنوك وحرفائها ويضمن المطابقة والرضا."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "keyPoints": [
+    {
+     "text": "تكوين مخصّص"
+    },
+    {
+     "text": "الأداء التشغيلي"
+    },
+    {
+     "text": "التصرف في النزاعات"
+    }
+   ],
+   "seo": {
+    "metaTitle": "المساندة والاستشارة",
+    "metaDescription": "الرائدة بلا منازع في مجال النقديات"
+   }
+  }
+ ],
+ "partenaires": [
+  {
+   "name": "Amen Bank",
+   "category": "banque_tunisienne",
+   "order": 1,
+   "website": "https://www.amenbank.com.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Arab Tunisian Bank",
+   "category": "banque_tunisienne",
+   "order": 2,
+   "website": "https://www.atb.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Attijari Bank",
+   "category": "banque_tunisienne",
+   "order": 3,
+   "website": "https://www.attijaribank.com.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Al Baraka Bank Tunisie",
+   "category": "banque_tunisienne",
+   "order": 4,
+   "website": "https://www.albarakabank.com.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Bank ABC",
+   "category": "banque_tunisienne",
+   "order": 5,
+   "website": "https://www.bank-abc.com",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Banque de Tunisie",
+   "category": "banque_tunisienne",
+   "order": 6,
+   "website": "https://www.bt.com.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Banque de Tunisie et des Emirats",
+   "category": "banque_tunisienne",
+   "order": 7,
+   "website": "https://www.bte.com.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Banque Internationale Arabe de Tunisie",
+   "category": "banque_tunisienne",
+   "order": 8,
+   "website": "https://www.biat.com.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Banque Nationale Agricole",
+   "category": "banque_tunisienne",
+   "order": 9,
+   "website": "https://www.bna.com.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Banque Tuniso-Libyenne",
+   "category": "banque_tunisienne",
+   "order": 10,
+   "website": "https://www.btl.com.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Banque Tunisienne de Solidarité",
+   "category": "banque_tunisienne",
+   "order": 11,
+   "website": "https://www.bts.com.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Banque Zitouna",
+   "category": "banque_tunisienne",
+   "order": 12,
+   "website": "https://www.banquezitouna.com",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "BH Bank",
+   "category": "banque_tunisienne",
+   "order": 13,
+   "website": "https://www.bhbank.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "BTK Bank",
+   "category": "banque_tunisienne",
+   "order": 14,
+   "website": "https://www.btknet.com",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "North Africa International Bank",
+   "category": "banque_tunisienne",
+   "order": 15,
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Qatar National Bank",
+   "category": "banque_tunisienne",
+   "order": 16,
+   "website": "https://www.qnb.com.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Société Tunisienne de Banque",
+   "category": "banque_tunisienne",
+   "order": 17,
+   "website": "https://www.stb.com.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Tunis International Bank",
+   "category": "banque_tunisienne",
+   "order": 18,
+   "website": "https://www.tib.com.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Tunisian Saudi Bank",
+   "category": "banque_tunisienne",
+   "order": 19,
+   "website": "https://www.stusidbank.com.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Union Bancaire pour le Commerce et l’Industrie",
+   "category": "banque_tunisienne",
+   "order": 20,
+   "website": "https://www.ubci.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Union Internationale de Banques",
+   "category": "banque_tunisienne",
+   "order": 21,
+   "website": "https://www.uib.com.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Wifak Bank",
+   "category": "banque_tunisienne",
+   "order": 22,
+   "website": "https://www.wifakbank.com",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Office National des Postes",
+   "category": "banque_tunisienne",
+   "order": 23,
+   "website": "https://www.poste.tn",
+   "showInRibbon": true,
+   "showOnHome": false
+  },
+  {
+   "name": "Banque Centrale de Tunisie",
+   "category": "banque_tunisienne",
+   "order": 24,
+   "website": "https://www.bct.gov.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "BDL",
+   "category": "banque_etrangere",
+   "order": 1,
+   "website": "https://www.bdl.dz",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "BEA",
+   "category": "banque_etrangere",
+   "order": 2,
+   "website": "https://www.bea.dz",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Natixis",
+   "category": "banque_etrangere",
+   "order": 3,
+   "website": "https://www.natixis.dz",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "AlBaraka",
+   "category": "banque_etrangere",
+   "order": 4,
+   "website": "https://www.albaraka-bank.dz",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Société Générale Algérie",
+   "category": "banque_etrangere",
+   "order": 5,
+   "website": "https://www.societegenerale.dz",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Alsalam Bank",
+   "category": "banque_etrangere",
+   "order": 6,
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Bader",
+   "category": "banque_etrangere",
+   "order": 7,
+   "website": "https://www.badr-bank.dz",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Fransabank",
+   "category": "banque_etrangere",
+   "order": 8,
+   "website": "https://www.fransabank.dz",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Tadhamun Bank",
+   "category": "banque_etrangere",
+   "order": 9,
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Nuran Bank",
+   "category": "banque_etrangere",
+   "order": 10,
+   "website": "https://nub.ly",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Banque Congolaise de l’Habitat",
+   "category": "banque_etrangere",
+   "order": 11,
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Banco de Fomento Internacional",
+   "category": "banque_etrangere",
+   "order": 12,
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Pluxee by Sodexo",
+   "category": "client_privatif",
+   "order": 1,
+   "website": "https://www.pluxee.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Jocker Tunisie",
+   "category": "client_privatif",
+   "order": 2,
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Servimax",
+   "category": "client_privatif",
+   "order": 3,
+   "website": "https://www.servimax.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Visa",
+   "category": "partenaire_technologique",
+   "order": 1,
+   "website": "https://www.visa.com",
+   "showInRibbon": true,
+   "showOnHome": false
+  },
+  {
+   "name": "Mastercard",
+   "category": "partenaire_technologique",
+   "order": 2,
+   "website": "https://www.mastercard.com",
+   "showInRibbon": true,
+   "showOnHome": false
+  },
+  {
+   "name": "JCB",
+   "category": "partenaire_technologique",
+   "order": 3,
+   "website": "https://www.global.jcb",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "UnionPay",
+   "category": "partenaire_technologique",
+   "order": 4,
+   "website": "https://www.unionpayintl.com",
+   "showInRibbon": true,
+   "showOnHome": false
+  },
+  {
+   "name": "American Express",
+   "category": "partenaire_technologique",
+   "order": 5,
+   "website": "https://www.americanexpress.com",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "BPC",
+   "category": "partenaire_technologique",
+   "order": 6,
+   "website": "https://www.bpcbt.com",
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "MS Solutions",
+   "category": "partenaire_technologique",
+   "order": 7,
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Wesettle",
+   "category": "partenaire_technologique",
+   "order": 8,
+   "showInRibbon": false,
+   "showOnHome": false
+  },
+  {
+   "name": "Ooredoo",
+   "category": "operateur_facturier",
+   "order": 1,
+   "website": "https://www.ooredoo.tn",
+   "showInRibbon": true,
+   "showOnHome": true
+  },
+  {
+   "name": "Orange",
+   "category": "operateur_facturier",
+   "order": 2,
+   "website": "https://www.orange.tn",
+   "showInRibbon": true,
+   "showOnHome": true
+  },
+  {
+   "name": "Tunisie Telecom",
+   "category": "operateur_facturier",
+   "order": 3,
+   "website": "https://www.tunisietelecom.tn",
+   "showInRibbon": true,
+   "showOnHome": true
+  },
+  {
+   "name": "TOPNET",
+   "category": "operateur_facturier",
+   "order": 4,
+   "website": "https://www.topnet.tn",
+   "showInRibbon": false,
+   "showOnHome": true
+  },
+  {
+   "name": "STEG",
+   "category": "operateur_facturier",
+   "order": 5,
+   "website": "https://www.steg.com.tn",
+   "showInRibbon": true,
+   "showOnHome": false
+  },
+  {
+   "name": "SONEDE",
+   "category": "operateur_facturier",
+   "order": 6,
+   "website": "https://www.sonede.com.tn",
+   "showInRibbon": true,
+   "showOnHome": true
+  },
+  {
+   "name": "Tunisie Autoroutes",
+   "category": "operateur_facturier",
+   "order": 7,
+   "website": "https://www.tunisieautoroutes.tn",
+   "showInRibbon": false,
+   "showOnHome": false
+  }
+ ],
+ "faqs": [
+  {
+   "question": "ماذا يمكنني أن أفعل بالبطاقة البنكية؟",
+   "answer": [
+    {
+     "type": "list",
+     "format": "unordered",
+     "children": [
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "سحب الأموال بسهولة:",
+         "bold": true
+        },
+        {
+         "type": "text",
+         "text": " يمكنك النفاذ إلى أموالك على مدار الساعة وطيلة أيام الأسبوع في جميع الموزعات الآلية للأوراق النقدية بواسطة بطاقتك."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "دفع آمن في كل مكان:",
+         "bold": true
+        },
+        {
+         "type": "text",
+         "text": " اخلص مشترياتك لدى آلاف التجار، في المحلات أو عبر الإنترنت، بكل أمان وبساطة."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "category": "carte_bancaire",
+   "order": 1
+  },
+  {
+   "question": "بطاقة مفقودة أو مسروقة؟",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "إليك الخطوات الواجب اتباعها:"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "format": "unordered",
+     "children": [
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "الاعتراض الفوري:",
+         "bold": true
+        },
+        {
+         "type": "text",
+         "text": " اعترض على بطاقتك دون تأخير لتفادي المعاملات الاحتيالية، وذلك بالاتصال ببنكك وبمركز النداء المتاح على مدار الساعة وطيلة أيام الأسبوع على الرقم ⁦(+216) 71 155 840⁩."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "التأكيد كتابيًا:",
+         "bold": true
+        },
+        {
+         "type": "text",
+         "text": " أرسل رسالة مضمونة الوصول إلى بنكك لتأكيد الاعتراض وتعليل طلبك."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "تقديم شكاية في حالة السرقة:",
+         "bold": true
+        },
+        {
+         "type": "text",
+         "text": " تتبّع مرتكبي السرقة بتقديم شكاية لدى مصالح الأمن، فقد يساعدك ذلك على استرجاع المبالغ المسروقة."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "category": "carte_bancaire",
+   "order": 2
+  },
+  {
+   "question": "نسيت الرمز السري؟",
+   "answer": [
+    {
+     "type": "list",
+     "format": "unordered",
+     "children": [
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "انتبه إلى الأخطاء:",
+         "bold": true
+        },
+        {
+         "type": "text",
+         "text": " إذا أدخلت رمزًا خاطئًا ثلاث مرات، تُحجب بطاقتك."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "الحل:",
+         "bold": true
+        },
+        {
+         "type": "text",
+         "text": " اتصل بفرعك البنكي لاسترجاع رمزك."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "category": "carte_bancaire",
+   "order": 3
+  },
+  {
+   "question": "أين أطلب بطاقتي البنكية؟",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "مستشارك البنكي هو مخاطبك المفضّل للحصول على بطاقة بنكية، إذ يرافقك في اختيار البطاقة الأنسب لاحتياجاتك ويشرح لك طريقة استعمالها بالتفصيل."
+      }
+     ]
+    }
+   ],
+   "category": "carte_bancaire",
+   "order": 4
+  },
+  {
+   "question": "ما هي المحفظة الإلكترونية؟",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "المحفظة الإلكترونية تطبيق يتيح لك حفظ أموالك واستعمالها إلكترونيًا على هاتفك الذكي أو أي جهاز متصل آخر. تخيّل أن تستبدل محفظتك التقليدية بتطبيق عملي: هذا ما تعد به المحفظة الإلكترونية التي تُحدث ثورة في طريقة تصرفك اليومي في أموالك."
+      }
+     ]
+    }
+   ],
+   "category": "wallet",
+   "order": 1
+  },
+  {
+   "question": "كيف أحصل على محفظتي الإلكترونية؟",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "للاستفادة من مزايا المحفظة الإلكترونية، يكفي أن تحمّل تطبيق المحفظة الخاص ببنكك أو بمؤسسة الدفع على هاتفك الذكي. وتقترح بنوك ومؤسسات دفع عديدة تطبيقاتها الخاصة المتوفرة على App Store لأجهزة iOS وعلى Google Play لأجهزة Android. وفي بضع خطوات بسيطة، يمكنك:"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "format": "unordered",
+     "children": [
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "اختيار تطبيق محفظة متوافق مع جهازك واحتياجاتك."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "تحميل التطبيق وتثبيته من منصة التحميل المناسبة."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "إنشاء حساب واتباع التعليمات لإعداد محفظتك."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "category": "wallet",
+   "order": 2
+  },
+  {
+   "question": "ماذا يمكنني أن أفعل بمحفظة الحامل؟",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "بفضل محفظة الحامل، يمكنك الدفع دون تلامس بكل بساطة:"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "format": "unordered",
+     "children": [
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "أنجز مشترياتك في لمح البصر بتقريب هاتفك الذكي من جهاز الدفع دون تلامس."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "استمتع بتجربة دفع سلسة وسريعة في محلاتك المفضلة."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "اطّلع على رصيدك وسجل معاملاتك في الوقت الحقيقي."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "والمزيد:"
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "format": "unordered",
+     "children": [
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "تصرّف في ميزانيتك وتابع مصاريفك في الوقت الحقيقي."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "أمّن معطياتك بفضل تكنولوجيات متطورة."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "category": "wallet",
+   "order": 3
+  },
+  {
+   "question": "ماذا يمكنني أن أفعل بمحفظة التاجر؟",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "بصفتك تاجرًا، توفّر لك المحفظة الإلكترونية جملة من الوظائف لتبسيط التصرف اليومي في نشاطك وتحسين تجربة حرفائك."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "قبول الدفع دون تلامس:",
+       "bold": true
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "format": "unordered",
+     "children": [
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "استخلص مدفوعات حرفائك بسهولة."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "وفّر لحرفائك تجربة دفع سلسة وسريعة تقلّص طوابير الانتظار وتزيد رضاهم."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "استفد من حل دفع عصري وآمن يستجيب لاحتياجات اليوم."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "إضافة إلى قبول الدفع، يمكنك استعمال محفظة التاجر كمحفظة حامل."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "تصرّف في معاملاتك بكل بساطة:",
+       "bold": true
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "format": "unordered",
+     "children": [
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "اطّلع في الوقت الحقيقي على سجل معاملاتك وتفاصيل كل عملية بيع."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "استعمل أدوات التقارير لتحليل مبيعاتك وتحديد التوجهات."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "صدّر معطيات معاملاتك لتيسير مسك المحاسبة."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "حسّن أمن مدفوعاتك:",
+       "bold": true
+      }
+     ]
+    },
+    {
+     "type": "list",
+     "format": "unordered",
+     "children": [
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "استفد من تكنولوجيات متطورة لحماية معاملاتك من الاحتيال والدفع غير المرخّص فيه."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "category": "wallet",
+   "order": 4
+  },
+  {
+   "question": "ما هي Paysmart؟",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Paysmart هي منصة تجميع خلاص الفواتير التابعة لـMonétique Tunisie. وهي تمكّن مصدري الفواتير من عرض فواتيرهم على عدد كبير من مزوّدي خدمات الدفع، وتمكّن الحرفاء من خلاص فواتيرهم بوسائل دفع متنوعة."
+      }
+     ]
+    }
+   ],
+   "category": "paysmart",
+   "order": 1
+  },
+  {
+   "question": "ما هي وسائل الدفع المقبولة على Paysmart؟",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "البطاقة البنكية والمحافظ الإلكترونية والتحويلات البنكية."
+      }
+     ]
+    }
+   ],
+   "category": "paysmart",
+   "order": 2
+  },
+  {
+   "question": "من هم مصدرو الفواتير على Paysmart؟",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "من بين مصدري الفواتير الشركاء: STEG وSONEDE وTunisie Telecom وTopnet وTunisie Autoroutes."
+      }
+     ]
+    }
+   ],
+   "category": "paysmart",
+   "order": 3
+  },
+  {
+   "question": "ما هو رمز CVV2؟",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "رمز CVV2 (Card Verification Value 2) رمز أمان من ثلاثة أرقام مطبوع على ظهر بطاقة الدفع، عادة في خانة الإمضاء. ويضطلع بدور أساسي في حماية معاملاتك عبر الإنترنت والهاتف، إذ يتيح التحقق من أنك الحامل الشرعي للبطاقة."
+      }
+     ]
+    }
+   ],
+   "category": "achat_internet",
+   "order": 1
+  },
+  {
+   "question": "كيف يُستعمل رمز CVV2؟",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "عند الشراء عبر الإنترنت، يطلب منك موقع التاجر إدخال رمز CVV2 لبطاقتك إضافة إلى المعلومات المعتادة مثل رقم البطاقة وتاريخ انتهاء صلوحيتها. ويؤكد هذا الرمز الإضافي أنّ البطاقة بحوزتك فعلًا."
+      }
+     ]
+    }
+   ],
+   "category": "achat_internet",
+   "order": 2
+  },
+  {
+   "question": "ما هو رمز OTP؟",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "رمز OTP (One-Time Password) كلمة عبور صالحة لمرة واحدة تُولَّد لجلسة واحدة وتُطلب عند الدفع على موقع تاجر. وتُرسل غالبًا عبر إرسالية قصيرة، وتعزّز أمن المعاملات عبر الإنترنت بإضافة طبقة حماية إضافية لهويتك."
+      }
+     ]
+    }
+   ],
+   "category": "achat_internet",
+   "order": 3
+  },
+  {
+   "question": "كيف يُستعمل رمز OTP؟",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "عند الدفع أو الشراء عبر الإنترنت، يُطلب منك إدخال رمز OTP إضافة إلى رمز CVV2. ويؤكد هذا الرمز الفريد، الصالح عادة لبضع دقائق فقط، أنك حامل البطاقة البنكية التي تُجرى بها عملية الدفع."
+      }
+     ]
+    }
+   ],
+   "category": "achat_internet",
+   "order": 4
+  },
+  {
+   "question": "ما هو التصيّد الاحتيالي؟",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "التصيّد الاحتيالي (phishing) تقنية احتيال يرسل فيها مجرمو الإنترنت رسائل مضلّلة لدفع المتلقين إلى الإفصاح عن معلومات شخصية حساسة، مثل أرقام البطاقات البنكية أو معرّفات الدخول أو كلمات العبور. وكثيرًا ما تبدو هذه الرسائل صادرة عن جهات موثوقة."
+      }
+     ]
+    }
+   ],
+   "category": "achat_internet",
+   "order": 5
+  },
+  {
+   "question": "كيف أتجنّب سرقة معطيات بطاقتي عبر الإنترنت؟",
+   "answer": [
+    {
+     "type": "list",
+     "format": "unordered",
+     "children": [
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "استعمل المواقع الآمنة (التي يدلّ عليها «https» ورمز القفل في شريط العنوان)."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "لا تشارك أبدًا معطيات بطاقتك عبر البريد الإلكتروني أو الإرساليات القصيرة."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "فعّل إشعارات المعاملات، متى أمكن ذلك، لمتابعة العمليات المنجزة ببطاقتك في الوقت الحقيقي."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "استعمل كلمات عبور قوية ومختلفة لكل حساب على الإنترنت، وفعّل المصادقة الثنائية متى أمكن ذلك."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "category": "achat_internet",
+   "order": 6
+  },
+  {
+   "question": "كيف أتحقق من أنّ موقعًا ما آمن؟",
+   "answer": [
+    {
+     "type": "list",
+     "format": "unordered",
+     "children": [
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "ابحث عن رمز القفل في شريط عنوان المتصفح."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "تأكد من أنّ عنوان الموقع يبدأ بـ«https» (يشير حرف «s» إلى أنه آمن)."
+        }
+       ]
+      },
+      {
+       "type": "list-item",
+       "children": [
+        {
+         "type": "text",
+         "text": "اطّلع على سياسة الخصوصية والبيانات القانونية للموقع للتحقق من مشروعيته."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "category": "achat_internet",
+   "order": 7
+  },
+  {
+   "question": "CVV2",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "رمز أمان من ثلاثة أرقام مطبوع على ظهر البطاقة، يُطلب عند الدفع عبر الإنترنت والهاتف."
+      }
+     ]
+    }
+   ],
+   "category": "glossaire",
+   "order": 1
+  },
+  {
+   "question": "OTP",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "One-Time Password: كلمة عبور صالحة لمرة واحدة، تُرسل غالبًا عبر إرسالية قصيرة، وتُطلب عند الدفع عبر الإنترنت."
+      }
+     ]
+    }
+   ],
+   "category": "glossaire",
+   "order": 2
+  },
+  {
+   "question": "المحفظة الإلكترونية",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "محفظة إلكترونية: تطبيق يتيح حفظ الأموال واستعمالها على هاتف ذكي أو جهاز متصل."
+      }
+     ]
+    }
+   ],
+   "category": "glossaire",
+   "order": 3
+  },
+  {
+   "question": "ClicToPay",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "منصة الدفع الآمن عبر الإنترنت التابعة لـMonétique Tunisie، التي تُدمج المؤسسات لقبول مدفوعات التجارة الإلكترونية."
+      }
+     ]
+    }
+   ],
+   "category": "glossaire",
+   "order": 4
+  },
+  {
+   "question": "الدفع عبر الهاتف الجوال",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "الدفع عبر الهاتف الجوال: الترخيص والدفع وتحويل الأموال وعمليات الإيداع والسحب النقدي المنجزة عبر محفظة إلكترونية."
+      }
+     ]
+    }
+   ],
+   "category": "glossaire",
+   "order": 5
+  },
+  {
+   "question": "المحوّل",
+   "answer": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "واجهة مركزية لمعالجة عمليات الدفع تربط بين المؤسسات المالية وترخّص في المعاملات في الوقت الحقيقي."
+      }
+     ]
+    }
+   ],
+   "category": "glossaire",
+   "order": 6
+  }
+ ],
+ "actualites": [
+  {
+   "title": "بسّط مدفوعاتك بالمحفظة الإلكترونية",
+   "slug": "simplifier-vos-paiements-avec-le-wallet",
+   "date": "2025-02-18",
+   "category": "actualite",
+   "label": "الدفع عبر الهاتف الجوال",
+   "isFeatured": true,
+   "excerpt": "ادفع وأرسل واسحب أموالك فورًا من هاتفك، دون حمل أموال نقدية أو الوقوف في الطوابير.",
+   "content": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "تحب تسهل خلاصاتك وتتحكم في فلوسك خير؟"
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "مع المحفظة الإلكترونية يصبح كل شيء أسهل: لم تعد بحاجة إلى حمل الأموال نقدًا ولا إلى الوقوف في الطوابير!"
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "ادفع وأرسل واسحب أموالك فورًا. المحفظة الإلكترونية محفظة على هاتفك تتيح لك القيام بكل شيء."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "يكفي أن تدخل إلى App Store أو Google Play لتحمّل تطبيق الدفع عبر الهاتف الجوال الذي تحتاجه في لمح البصر."
+      }
+     ]
+    }
+   ],
+   "seo": {
+    "metaTitle": "بسّط مدفوعاتك بالمحفظة الإلكترونية",
+    "metaDescription": "ادفع وأرسل واسحب أموالك فورًا من هاتفك، دون حمل أموال نقدية أو الوقوف في الطوابير."
+   }
+  },
+  {
+   "title": "يا لها من فعالية رائعة: يوم بناء الفريق في Monétique Tunisie!",
+   "slug": "team-building-monetique-tunisie",
+   "date": "2024-11-07",
+   "category": "evenement",
+   "label": "الحياة الداخلية",
+   "excerpt": "ثلاثة أيام من الألعاب ولحظات الزمالة والثقة والتواصل، خدمةً لقيمنا القائمة على الاحترام والنزاهة والمسؤولية.",
+   "content": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "نجاح حقيقي حافل بالألعاب التي أبرزت الانسجام وروح الألفة بين الموظفين."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "على امتداد الأيام الثلاثة لهذه الفعالية، عشنا لحظات من الزمالة والثقة والتواصل المفتوح جعلت الأنشطة ممتعة ومثرية في آن واحد."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "كانت روح التعاون والإبداع ملموسة، تعكس رؤية شركتنا القائمة على الابتكار والتميّز."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "عزّزت هذه الفعالية قيمنا الأساسية القائمة على الاحترام والنزاهة والمسؤولية، وصنعت ذكريات دائمة ستحسّن علاقاتنا وتدعم ثقافة حيوية وشاملة داخل شركتنا."
+      }
+     ]
+    }
+   ],
+   "seo": {
+    "metaTitle": "يوم بناء الفريق في Monétique Tunisie",
+    "metaDescription": "ثلاثة أيام من الألعاب ولحظات الزمالة والثقة والتواصل، خدمةً لقيمنا القائمة على الاحترام والنزاهة والمسؤولية."
+   }
+  },
+  {
+   "title": "مداخلة السيد بلال الدرناوي في نشرة أخبار الثامنة على El Wataniya 1: تطوّر الدفع بالبطاقات البنكية في تونس",
+   "slug": "intervention-bilel-darnaoui-el-wataniya-1",
+   "date": "2024-09-02",
+   "category": "actualite",
+   "label": "إعلام",
+   "excerpt": "المدير العام لـMonétique Tunisie يتحدث عن تطوّر الدفع بالبطاقات البنكية في تونس.",
+   "content": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "شارك المدير العام لـMonétique Tunisie، السيد بلال الدرناوي، في نشرة أخبار الثامنة على El Wataniya 1 للحديث عن تطوّر الدفع بالبطاقات البنكية في تونس."
+      }
+     ]
+    }
+   ],
+   "seo": {
+    "metaTitle": "بلال الدرناوي في نشرة أخبار El Wataniya 1",
+    "metaDescription": "المدير العام لـMonétique Tunisie يتحدث عن تطوّر الدفع بالبطاقات البنكية في تونس."
+   }
+  },
+  {
+   "title": "Monétique Tunisie في الدورة الثالثة للمنتدى الدولي للمسؤولية المجتمعية",
+   "slug": "forum-international-rse-3eme-edition",
+   "date": "2024-05-09",
+   "category": "evenement",
+   "label": "RSE",
+   "excerpt": "تحت شعار «المردودية المستدامة: المعادلة الجديدة لأداء المؤسسة»، بالحمامات في ماي 2024.",
+   "content": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Monétique Tunisie في الدورة الثالثة للمنتدى الدولي للمسؤولية المجتمعية تحت شعار: «المردودية المستدامة: المعادلة الجديدة لأداء المؤسسة»."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "Hôtel Diar Lemdina، الحمامات – ماي 2024."
+      }
+     ]
+    }
+   ],
+   "seo": {
+    "metaTitle": "المنتدى الدولي الثالث للمسؤولية المجتمعية",
+    "metaDescription": "تحت شعار «المردودية المستدامة: المعادلة الجديدة لأداء المؤسسة»، بالحمامات في ماي 2024."
+   }
+  },
+  {
+   "title": "الإطلاق التمهيدي الرسمي للمنصتين الوطنيتين لرقمنة خدمات E-construction وEC 2.0",
+   "slug": "pre-lancement-e-construction-ec-2-0",
+   "date": "2024-04-23",
+   "category": "evenement",
+   "label": "الدفع الإلكتروني",
+   "excerpt": "عرض مباشر لمكوّن الدفع الإلكتروني الذي طوّرته Monétique Tunisie في إطار مشروع Digital4Reforms.",
+   "content": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "شاركت Monétique Tunisie في الإطلاق التمهيدي الرسمي للمنصتين الوطنيتين لرقمنة خدمات E-construction وEspace Citoyen 2.0، الذي انتظم يوم الثلاثاء 23 أفريل 2024."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "تندرج هذه الفعالية في إطار مشروع Digital4Reforms، مكوّن الدفع الإلكتروني، الذي تنفذه GIZ بالتعاون مع الحكومة التونسية وبتمويل من ministère fédéral allemand de la Coopération économique et du Développement (BMZ)، بالشراكة مع ministère de l'Intérieur وministère des Finances وBanque Centrale de Tunisie."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "عرض مباشر لمكوّن الدفع الإلكتروني الذي طوّرته Monétique Tunisie."
+      }
+     ]
+    }
+   ],
+   "seo": {
+    "metaTitle": "الإطلاق التمهيدي لـE-construction وEC 2.0",
+    "metaDescription": "عرض مباشر لمكوّن الدفع الإلكتروني الذي طوّرته Monétique Tunisie في إطار مشروع Digital4Reforms."
+   }
+  },
+  {
+   "title": "المشاركة في الندوة الصحفية للمنتدى الدولي للمسؤولية المجتمعية",
+   "slug": "conference-de-presse-forum-rse",
+   "date": "2024-01-31",
+   "category": "evenement",
+   "label": "RSE",
+   "excerpt": "شاركت Monétique Tunisie في الندوة الصحفية للمنتدى الدولي للمسؤولية المجتمعية يوم 31 جانفي 2024 بMaison de l'Exportateur (CEPEX).",
+   "content": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "كعادتها، وفي إطار التزامها الفعلي بالمسؤولية المجتمعية للمؤسسات، شاركت Monétique Tunisie بكل فخر في الندوة الصحفية للمنتدى الدولي للمسؤولية المجتمعية يوم 31 جانفي 2024 بMaison de l'Exportateur (CEPEX)."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "ظهور ممثلي Monétique Tunisie في نشرة أخبار الثامنة خلال الندوة الصحفية للمنتدى الدولي للمسؤولية المجتمعية."
+      }
+     ]
+    }
+   ],
+   "seo": {
+    "metaTitle": "الندوة الصحفية لمنتدى المسؤولية المجتمعية",
+    "metaDescription": "شاركت Monétique Tunisie في الندوة الصحفية للمنتدى الدولي للمسؤولية المجتمعية يوم 31 جانفي 2024 بMaison de l'Exportateur (CEPEX)."
+   }
+  }
+ ],
+ "appelsOffres": [
+  {
+   "title": "اقتناء رخصة Oracle WebLogic وتركيزها وإعدادها وضبطها ووضعها حيز الاستغلال",
+   "slug": "licence-oracle-weblogic",
+   "type": "appel_offres",
+   "reference": null,
+   "publicationDate": "2025-08-26",
+   "deadline": "2025-09-15T17:00:00+01:00",
+   "tenderStatus": "cloture",
+   "issuer": "إدارة الشراءات واللوجستيك",
+   "summary": "يُسحب كراس الشروط مقابل 100 دينار من إدارة الشراءات واللوجستيك. آخر أجل لقبول العروض: 15/09/2025 على الساعة الخامسة مساءً.",
+   "content": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "تعتزم شركة Monétique Tunisie إطلاق طلب عروض لـ: "
+      },
+      {
+       "type": "text",
+       "text": "اقتناء رخصة Oracle WebLogic وتركيزها وإعدادها وضبطها ووضعها حيز الاستغلال",
+       "bold": true
+      },
+      {
+       "type": "text",
+       "text": "."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "يجب أن تُقدَّم العروض، التي تُشترط صلوحيتها مدة 120 يومًا ابتداءً من اليوم الموالي لآخر أجل لقبولها، طبقًا للفصلين 9 و10 من كراس الشروط."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "حُدّد آخر أجل لقبول العروض يوم 15/09/2025 على الساعة الخامسة مساءً، ويُعتمد حصريًا التاريخ المسجّل بختم مكتب الضبط المركزي لـMonétique Tunisie. ويُرفض كل عرض منقوص أو وارد بعد التاريخ والتوقيت المحدّدين."
+      }
+     ]
+    }
+   ],
+   "documentRetrieval": "إدارة الشراءات واللوجستيك – الطابق الخامس، المكتب عدد 505، سانا سنتر، العمارة «C»، المركز العمراني الشمالي، 1082 تونس. يُشترط الاستظهار ببطاقة التعريف الوطنية وختم الشركة، مقابل وصل يثبت الدفع نقدًا للمبلغ غير القابل للاسترجاع في الحساب البنكي للشركة المفتوح بفرع BT Centre Urbain Nord.",
+   "documentCost": "100 دينار (غير قابلة للاسترجاع)",
+   "offerValidityDays": 120,
+   "submissionAddress": "مكتب الضبط المركزي لـMonétique Tunisie – سانا سنتر، العمارة «C»، المركز العمراني الشمالي، 1082 تونس. تُرسل العروض عن طريق البريد مضمون الوصول أو البريد السريع (DHL)، أو تُسلَّم مباشرة مقابل وصل، باسم المدير العام.",
+   "seo": {
+    "metaTitle": "طلب عروض: رخصة Oracle WebLogic",
+    "metaDescription": "يُسحب كراس الشروط مقابل 100 دينار من إدارة الشراءات واللوجستيك. آخر أجل لقبول العروض: 15/09/2025 على الساعة الخامسة مساءً."
+   }
+  },
+  {
+   "title": "طلب ترشحات لاختيار متصرف مستقل – رئيس لجنة التطوير الاستراتيجي",
+   "slug": "administrateur-independant-comite-developpement-strategique",
+   "type": "appel_candidatures",
+   "reference": null,
+   "publicationDate": "2025-08-13",
+   "deadline": "2025-08-28T13:00:00+01:00",
+   "tenderStatus": "cloture",
+   "issuer": "الإدارة العامة",
+   "summary": "تعيين متصرف مستقل لمدة ثلاث سنوات (2025-2027) يتولى رئاسة لجنة التطوير الاستراتيجي.",
+   "content": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "في إطار تعزيز حوكمتها، وتطبيقًا للمقتضيات القانونية الجديدة الواردة بمنشور Banque Centrale de Tunisie عدد 2024-05 المؤرخ في 13 فيفري 2024 المتعلق بضبط القواعد المنظمة لنشاط التصرف في أنظمة الدفع وأنظمة تسوية الأوراق المالية وتسليمها، ولا سيما الفصلين 21 و28، تعتزم Monétique Tunisie تعيين متصرف مستقل عن طريق طلب ترشحات لمدة ثلاث سنوات (2025-2027) يتولى رئاسة لجنة التطوير الاستراتيجي."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "يجب أن يستوفي المترشح الشروط المبيّنة في «الشروط المرجعية» وأن يرسل ملف ترشحه في ظرف مغلق عن طريق البريد مضمون الوصول مع الإعلام بالبلوغ أو البريد السريع، أو أن يودعه مباشرة مقابل وصل بمكتب الضبط بالمقر الاجتماعي، في أجل أقصاه يوم الخميس 28 أوت 2025 على الساعة الواحدة بعد الظهر، وهو آخر أجل لقبول ملفات الترشح."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "link",
+       "url": "https://monetiquetunisie.com/wp-content/uploads/2025/08/Termes-de-Reference_-President-du-comite-du-developpement-strategique.pdf",
+       "children": [
+        {
+         "type": "text",
+         "text": "تحميل الشروط المرجعية (PDF)"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "documentRetrieval": "الشروط المرجعية متاحة للتحميل: https://monetiquetunisie.com/wp-content/uploads/2025/08/Termes-de-Reference_-President-du-comite-du-developpement-strategique.pdf",
+   "documentCost": "مجانًا",
+   "offerValidityDays": null,
+   "submissionAddress": "مكتب الضبط بالمقر الاجتماعي – سانا سنتر، العمارة «C»، المركز العمراني الشمالي، 1082 تونس.",
+   "seo": {
+    "metaTitle": "متصرف مستقل – الاستراتيجية",
+    "metaDescription": "تعيين متصرف مستقل لمدة ثلاث سنوات (2025-2027) يتولى رئاسة لجنة التطوير الاستراتيجي."
+   }
+  },
+  {
+   "title": "طلب ترشحات لاختيار متصرف مستقل – رئيس لجنة التدقيق والمخاطر",
+   "slug": "administrateur-independant-comite-audit-risques",
+   "type": "appel_candidatures",
+   "reference": null,
+   "publicationDate": "2025-08-13",
+   "deadline": "2025-08-28T13:00:00+01:00",
+   "tenderStatus": "cloture",
+   "issuer": "الإدارة العامة",
+   "summary": "تعيين متصرف مستقل لمدة ثلاث سنوات (2025-2027) يتولى رئاسة لجنة التدقيق والمخاطر.",
+   "content": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "في إطار تعزيز حوكمتها، وتطبيقًا للمقتضيات القانونية الجديدة الواردة بمنشور Banque Centrale de Tunisie عدد 2024-05 المؤرخ في 13 فيفري 2024 المتعلق بضبط القواعد المنظمة لنشاط التصرف في أنظمة الدفع وأنظمة تسوية الأوراق المالية وتسليمها، ولا سيما الفصلين 21 و28، تعتزم Monétique Tunisie تعيين متصرف مستقل عن طريق طلب ترشحات لمدة ثلاث سنوات (2025-2027) يتولى رئاسة لجنة التدقيق والمخاطر."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "يجب أن يستوفي المترشح الشروط المبيّنة في «الشروط المرجعية» وأن يرسل ملف ترشحه في ظرف مغلق عن طريق البريد مضمون الوصول مع الإعلام بالبلوغ أو البريد السريع، أو أن يودعه مباشرة مقابل وصل بمكتب الضبط بالمقر الاجتماعي، في أجل أقصاه يوم الخميس 28 أوت 2025 على الساعة الواحدة بعد الظهر، وهو آخر أجل لقبول ملفات الترشح."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "link",
+       "url": "https://monetiquetunisie.com/wp-content/uploads/2025/08/Termes-de-Reference_-President-du-comite-daudit-et-des-risques.pdf",
+       "children": [
+        {
+         "type": "text",
+         "text": "تحميل الشروط المرجعية (PDF)"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "documentRetrieval": "الشروط المرجعية متاحة للتحميل: https://monetiquetunisie.com/wp-content/uploads/2025/08/Termes-de-Reference_-President-du-comite-daudit-et-des-risques.pdf",
+   "documentCost": "مجانًا",
+   "offerValidityDays": null,
+   "submissionAddress": "مكتب الضبط بالمقر الاجتماعي – سانا سنتر، العمارة «C»، المركز العمراني الشمالي، 1082 تونس.",
+   "seo": {
+    "metaTitle": "متصرف مستقل – التدقيق والمخاطر",
+    "metaDescription": "تعيين متصرف مستقل لمدة ثلاث سنوات (2025-2027) يتولى رئاسة لجنة التدقيق والمخاطر."
+   }
+  },
+  {
+   "title": "اقتناء حل للتصرف الإلكتروني في الوثائق والأرشيف",
+   "slug": "solution-ged-archives",
+   "type": "appel_offres",
+   "reference": "SMT AO 07/2025",
+   "publicationDate": "2025-07-16",
+   "deadline": "2025-08-06T13:00:00+01:00",
+   "tenderStatus": "cloture",
+   "issuer": "إدارة الشراءات واللوجستيك",
+   "summary": "يُسحب كراس الشروط مقابل 100 دينار من إدارة الشراءات واللوجستيك. آخر أجل لقبول العروض: 06/08/2025 على الساعة الواحدة بعد الظهر.",
+   "content": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "تعتزم شركة Monétique Tunisie إطلاق طلب عروض لـ: "
+      },
+      {
+       "type": "text",
+       "text": "اقتناء حل للتصرف الإلكتروني في الوثائق والأرشيف",
+       "bold": true
+      },
+      {
+       "type": "text",
+       "text": "."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "يجب أن تُقدَّم العروض، التي تُشترط صلوحيتها مدة 120 يومًا ابتداءً من اليوم الموالي لآخر أجل لقبولها، طبقًا للفصلين 9 و10 من كراس الشروط."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "حُدّد آخر أجل لقبول العروض يوم 06/08/2025 على الساعة الواحدة بعد الظهر، ويُعتمد حصريًا التاريخ المسجّل بختم مكتب الضبط المركزي لـMonétique Tunisie. ويُرفض كل عرض منقوص أو وارد بعد التاريخ والتوقيت المحدّدين."
+      }
+     ]
+    }
+   ],
+   "documentRetrieval": "إدارة الشراءات واللوجستيك – الطابق الخامس، المكتب عدد 505، سانا سنتر، العمارة «C»، المركز العمراني الشمالي، 1082 تونس. يُشترط الاستظهار ببطاقة التعريف الوطنية وختم الشركة، مقابل وصل يثبت الدفع نقدًا للمبلغ غير القابل للاسترجاع في الحساب البنكي للشركة المفتوح بفرع BT Centre Urbain Nord.",
+   "documentCost": "100 دينار (غير قابلة للاسترجاع)",
+   "offerValidityDays": 120,
+   "submissionAddress": "مكتب الضبط المركزي لـMonétique Tunisie – سانا سنتر، العمارة «C»، المركز العمراني الشمالي، 1082 تونس. تُرسل العروض عن طريق البريد مضمون الوصول أو البريد السريع (DHL)، أو تُسلَّم مباشرة مقابل وصل، باسم المدير العام.",
+   "seo": {
+    "metaTitle": "طلب عروض: حل التصرف الإلكتروني في الوثائق",
+    "metaDescription": "يُسحب كراس الشروط مقابل 100 دينار من إدارة الشراءات واللوجستيك. آخر أجل لقبول العروض: 06/08/2025 على الساعة الواحدة بعد الظهر."
+   }
+  },
+  {
+   "title": "اقتناء حلول شبكية",
+   "slug": "acquisition-solutions-reseaux",
+   "type": "appel_offres",
+   "reference": "SMT AO 02/2025",
+   "publicationDate": "2025-01-23",
+   "deadline": "2025-02-10T17:00:00+01:00",
+   "tenderStatus": "cloture",
+   "issuer": "إدارة الشراءات واللوجستيك",
+   "summary": "يُسحب كراس الشروط مقابل 100 دينار من إدارة الشراءات واللوجستيك. آخر أجل لقبول العروض: 10/02/2025 على الساعة الخامسة مساءً.",
+   "content": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "تعتزم شركة Monétique Tunisie إطلاق طلب عروض لـ: "
+      },
+      {
+       "type": "text",
+       "text": "اقتناء حلول شبكية",
+       "bold": true
+      },
+      {
+       "type": "text",
+       "text": "."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "يجب أن تُقدَّم العروض، التي تُشترط صلوحيتها مدة 120 يومًا ابتداءً من اليوم الموالي لآخر أجل لقبولها، طبقًا للفصلين 9 و10 من كراس الشروط."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "حُدّد آخر أجل لقبول العروض يوم 10/02/2025 على الساعة الخامسة مساءً، ويُعتمد حصريًا التاريخ المسجّل بختم مكتب الضبط المركزي لـMonétique Tunisie. ويُرفض كل عرض منقوص أو وارد بعد التاريخ والتوقيت المحدّدين."
+      }
+     ]
+    }
+   ],
+   "documentRetrieval": "إدارة الشراءات واللوجستيك – الطابق الخامس، المكتب عدد 505، سانا سنتر، العمارة «C»، المركز العمراني الشمالي، 1082 تونس. يُشترط الاستظهار ببطاقة التعريف الوطنية وختم الشركة، مقابل وصل يثبت الدفع نقدًا للمبلغ غير القابل للاسترجاع في الحساب البنكي للشركة المفتوح بفرع BT Centre Urbain Nord.",
+   "documentCost": "100 دينار (غير قابلة للاسترجاع)",
+   "offerValidityDays": 120,
+   "submissionAddress": "مكتب الضبط المركزي لـMonétique Tunisie – سانا سنتر، العمارة «C»، المركز العمراني الشمالي، 1082 تونس. تُرسل العروض عن طريق البريد مضمون الوصول أو البريد السريع (DHL)، أو تُسلَّم مباشرة مقابل وصل، باسم المدير العام.",
+   "seo": {
+    "metaTitle": "طلب عروض: حلول شبكية",
+    "metaDescription": "يُسحب كراس الشروط مقابل 100 دينار من إدارة الشراءات واللوجستيك. آخر أجل لقبول العروض: 10/02/2025 على الساعة الخامسة مساءً."
+   }
+  },
+  {
+   "title": "اقتناء جدران الحماية بالمقر الاجتماعي لـMonétique Tunisie وتركيزها ووضعها حيز الاستغلال",
+   "slug": "firewalls-siege-social",
+   "type": "appel_offres",
+   "reference": "SMT AO 10/2024",
+   "publicationDate": "2024-11-27",
+   "deadline": "2024-12-11T17:00:00+01:00",
+   "tenderStatus": "cloture",
+   "issuer": "إدارة الشراءات واللوجستيك",
+   "summary": "يُسحب كراس الشروط مقابل 100 دينار من إدارة الشراءات واللوجستيك. آخر أجل لقبول العروض: 11/12/2024 على الساعة الخامسة مساءً.",
+   "content": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "تعتزم شركة Monétique Tunisie إطلاق طلب عروض لـ: "
+      },
+      {
+       "type": "text",
+       "text": "اقتناء جدران الحماية بالمقر الاجتماعي لـMonétique Tunisie وتركيزها ووضعها حيز الاستغلال",
+       "bold": true
+      },
+      {
+       "type": "text",
+       "text": "."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "يجب أن تُقدَّم العروض، التي تُشترط صلوحيتها مدة 120 يومًا ابتداءً من اليوم الموالي لآخر أجل لقبولها، طبقًا للفصلين 9 و10 من كراس الشروط."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "حُدّد آخر أجل لقبول العروض يوم 11/12/2024 على الساعة الخامسة مساءً، ويُعتمد حصريًا التاريخ المسجّل بختم مكتب الضبط المركزي لـMonétique Tunisie. ويُرفض كل عرض منقوص أو وارد بعد التاريخ والتوقيت المحدّدين."
+      }
+     ]
+    }
+   ],
+   "documentRetrieval": "إدارة الشراءات واللوجستيك – الطابق الخامس، المكتب عدد 505، سانا سنتر، العمارة «C»، المركز العمراني الشمالي، 1082 تونس. يُشترط الاستظهار ببطاقة التعريف الوطنية وختم الشركة، مقابل وصل يثبت الدفع نقدًا للمبلغ غير القابل للاسترجاع في الحساب البنكي للشركة المفتوح بفرع BT Centre Urbain Nord.",
+   "documentCost": "100 دينار (غير قابلة للاسترجاع)",
+   "offerValidityDays": 120,
+   "submissionAddress": "مكتب الضبط المركزي لـMonétique Tunisie – سانا سنتر، العمارة «C»، المركز العمراني الشمالي، 1082 تونس. تُرسل العروض عن طريق البريد مضمون الوصول أو البريد السريع (DHL)، أو تُسلَّم مباشرة مقابل وصل، باسم المدير العام.",
+   "seo": {
+    "metaTitle": "طلب عروض: جدران حماية المقر",
+    "metaDescription": "يُسحب كراس الشروط مقابل 100 دينار من إدارة الشراءات واللوجستيك. آخر أجل لقبول العروض: 11/12/2024 على الساعة الخامسة مساءً."
+   }
+  },
+  {
+   "title": "اختيار مكتب لتحليل المخاطر المتعلقة باقتناءات الشركة وتدقيق الشراءات",
+   "slug": "cabinet-analyse-risques-audit-achats",
+   "type": "appel_offres",
+   "reference": null,
+   "publicationDate": "2024-09-27",
+   "deadline": "2024-10-22T17:00:00+01:00",
+   "tenderStatus": "cloture",
+   "issuer": "إدارة الشراءات واللوجستيك",
+   "summary": "يُسحب كراس الشروط مجانًا من إدارة الشراءات واللوجستيك. آخر أجل لقبول العروض: 22/10/2024 على الساعة الخامسة مساءً.",
+   "content": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "تعتزم شركة Monétique Tunisie إطلاق طلب عروض لـ: "
+      },
+      {
+       "type": "text",
+       "text": "اختيار مكتب لتحليل المخاطر المتعلقة باقتناءات الشركة وتدقيق الشراءات",
+       "bold": true
+      },
+      {
+       "type": "text",
+       "text": "."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "يجب أن تُقدَّم العروض، التي تُشترط صلوحيتها مدة 90 يومًا ابتداءً من اليوم الموالي لآخر أجل لقبولها، طبقًا للفصل 9 من كراس الشروط."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "حُدّد آخر أجل لقبول العروض يوم 22/10/2024 على الساعة الخامسة مساءً، ويُعتمد حصريًا التاريخ المسجّل بختم مكتب الضبط المركزي لـMonétique Tunisie. ويُرفض كل عرض منقوص أو وارد بعد التاريخ والتوقيت المحدّدين."
+      }
+     ]
+    }
+   ],
+   "documentRetrieval": "إدارة الشراءات واللوجستيك – الطابق الخامس، المكتب عدد 505، سانا سنتر، العمارة «C»، المركز العمراني الشمالي، 1082 تونس، مع الاستظهار ببطاقة التعريف الوطنية وختم الشركة، أو بطلب عبر البريد الإلكتروني إلى إدارة الشراءات.",
+   "documentCost": "مجانًا",
+   "offerValidityDays": 90,
+   "submissionAddress": "مكتب الضبط المركزي لـMonétique Tunisie – سانا سنتر، العمارة «C»، المركز العمراني الشمالي، 1082 تونس. تُرسل العروض عن طريق البريد مضمون الوصول أو البريد السريع (DHL)، أو تُسلَّم مباشرة مقابل وصل، باسم المدير العام.",
+   "seo": {
+    "metaTitle": "طلب عروض: تدقيق الشراءات",
+    "metaDescription": "يُسحب كراس الشروط مجانًا من إدارة الشراءات واللوجستيك. آخر أجل لقبول العروض: 22/10/2024 على الساعة الخامسة مساءً."
+   }
+  },
+  {
+   "title": "اقتناء مطبوعات Pinmailer للرموز السرية",
+   "slug": "imprimes-pinmailer-codes-confidentiels",
+   "type": "appel_offres",
+   "reference": "SMT AO 05/2024",
+   "publicationDate": "2024-08-19",
+   "deadline": "2024-09-06T17:00:00+01:00",
+   "tenderStatus": "cloture",
+   "issuer": "إدارة الشراءات واللوجستيك",
+   "summary": "يُسحب كراس الشروط مجانًا من إدارة الشراءات واللوجستيك. آخر أجل لقبول العروض: 06/09/2024 على الساعة الخامسة مساءً.",
+   "content": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "تعتزم شركة Monétique Tunisie إطلاق طلب عروض لـ: "
+      },
+      {
+       "type": "text",
+       "text": "اقتناء مطبوعات Pinmailer للرموز السرية",
+       "bold": true
+      },
+      {
+       "type": "text",
+       "text": "."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "يجب أن تُقدَّم العروض، التي تُشترط صلوحيتها مدة 90 يومًا ابتداءً من اليوم الموالي لآخر أجل لقبولها، طبقًا للفصل 6 من كراس الشروط."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "حُدّد آخر أجل لقبول العروض يوم 06/09/2024 على الساعة الخامسة مساءً، ويُعتمد حصريًا التاريخ المسجّل بختم مكتب الضبط المركزي لـMonétique Tunisie. ويُرفض كل عرض منقوص أو وارد بعد التاريخ والتوقيت المحدّدين."
+      }
+     ]
+    }
+   ],
+   "documentRetrieval": "إدارة الشراءات واللوجستيك – الطابق الخامس، المكتب عدد 505، سانا سنتر، العمارة «C»، المركز العمراني الشمالي، 1082 تونس، مع الاستظهار ببطاقة التعريف الوطنية وختم الشركة، أو بطلب عبر البريد الإلكتروني إلى إدارة الشراءات.",
+   "documentCost": "مجانًا",
+   "offerValidityDays": 90,
+   "submissionAddress": "مكتب الضبط المركزي لـMonétique Tunisie – سانا سنتر، العمارة «C»، المركز العمراني الشمالي، 1082 تونس. تُرسل العروض عن طريق البريد مضمون الوصول أو البريد السريع (DHL)، أو تُسلَّم مباشرة مقابل وصل، باسم المدير العام.",
+   "seo": {
+    "metaTitle": "طلب عروض: مطبوعات Pinmailer",
+    "metaDescription": "يُسحب كراس الشروط مجانًا من إدارة الشراءات واللوجستيك. آخر أجل لقبول العروض: 06/09/2024 على الساعة الخامسة مساءً."
+   }
+  },
+  {
+   "title": "اقتناء حل للتخزين وتركيزه",
+   "slug": "solution-de-stockage",
+   "type": "appel_offres",
+   "reference": "SMT AO 04/2024",
+   "publicationDate": "2024-08-19",
+   "deadline": "2024-09-05T17:00:00+01:00",
+   "tenderStatus": "cloture",
+   "issuer": "إدارة الشراءات واللوجستيك",
+   "summary": "يُسحب كراس الشروط مقابل 100 دينار من إدارة الشراءات واللوجستيك. آخر أجل لقبول العروض: 05/09/2024 على الساعة الخامسة مساءً.",
+   "content": [
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "تعتزم شركة Monétique Tunisie إطلاق طلب عروض لـ: "
+      },
+      {
+       "type": "text",
+       "text": "اقتناء حل للتخزين وتركيزه",
+       "bold": true
+      },
+      {
+       "type": "text",
+       "text": "."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "تتكوّن هذه الصفقة من قسط وحيد."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "يجب أن تُقدَّم العروض، التي تُشترط صلوحيتها مدة 90 يومًا ابتداءً من اليوم الموالي لآخر أجل لقبولها، طبقًا للفصل 9 من كراس الشروط."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "children": [
+      {
+       "type": "text",
+       "text": "حُدّد آخر أجل لقبول العروض يوم 05/09/2024 على الساعة الخامسة مساءً، ويُعتمد حصريًا التاريخ المسجّل بختم مكتب الضبط المركزي لـMonétique Tunisie. ويُرفض كل عرض منقوص أو وارد بعد التاريخ والتوقيت المحدّدين."
+      }
+     ]
+    }
+   ],
+   "documentRetrieval": "إدارة الشراءات واللوجستيك – الطابق الخامس، المكتب عدد 505، سانا سنتر، العمارة «C»، المركز العمراني الشمالي، 1082 تونس. يُشترط الاستظهار ببطاقة التعريف الوطنية وختم الشركة، مقابل وصل يثبت الدفع نقدًا للمبلغ غير القابل للاسترجاع في الحساب البنكي للشركة المفتوح بفرع BT Centre Urbain Nord.",
+   "documentCost": "100 دينار (غير قابلة للاسترجاع)",
+   "offerValidityDays": 90,
+   "submissionAddress": "مكتب الضبط المركزي لـMonétique Tunisie – سانا سنتر، العمارة «C»، المركز العمراني الشمالي، 1082 تونس. تُرسل العروض عن طريق البريد مضمون الوصول أو البريد السريع (DHL)، أو تُسلَّم مباشرة مقابل وصل، باسم المدير العام.",
+   "seo": {
+    "metaTitle": "طلب عروض: حل التخزين",
+    "metaDescription": "يُسحب كراس الشروط مقابل 100 دينار من إدارة الشراءات واللوجستيك. آخر أجل لقبول العروض: 05/09/2024 على الساعة الخامسة مساءً."
+   }
+  }
+ ],
+ "pages": [
+  {
+   "title": "الرئيسية",
+   "slug": "accueil",
+   "isHomepage": true,
+   "seo": {
+    "metaTitle": "Monétique Tunisie – حلول الدفع الرقمي",
+    "metaDescription": "بصفتها المحوّل النقدي الوطني والمحوّل الجوال ومجمّع الفواتير (Paysmart)، ترافق Monétique Tunisie البنوك وشركات التكنولوجيا المالية والتجار في تونس وإفريقيا."
+   },
+   "blocks": [
+    {
+     "__component": "blocks.hero",
+     "variant": "accueil",
+     "title": "حلول دفع رقمي مبتكرة وموثوقة وآمنة",
+     "subtitle": "نرافق شركاءنا وحرفاءنا في نموّهم من خلال توفير حلول دفع ذات جودة عالية، مع المساهمة في التطوير المتواصل لمشهد الدفع الرقمي في تونس وإفريقيا.",
+     "eyebrow": "المحوّل النقدي الوطني · منذ 1989",
+     "ctas": [
+      {
+       "label": "حلولنا",
+       "url": "/solutions",
+       "style": "primaire",
+       "isExternal": false
+      },
+      {
+       "label": "الخبرة النقدية",
+       "url": "/expertise",
+       "style": "secondaire",
+       "isExternal": false
+      }
+     ]
+    },
+    {
+     "__component": "blocks.key-figures",
+     "eyebrow": "أرقام رئيسية",
+     "title": "أرقام رئيسية حول النقديات في تونس",
+     "subtitle": "معطيات إلى موفّى جوان 2025",
+     "source": "Source : Monétique Tunisie",
+     "cta": {
+      "label": "عرض جميع الإحصائيات",
+      "url": "/statistiques",
+      "style": "texte",
+      "isExternal": false
+     },
+     "items": [
+      {
+       "value": "77,7",
+       "unit": "M",
+       "label": "عدد العمليات",
+       "evolution": "+9 %",
+       "note": "التطور بين الثلاثي الثاني 2024 والثلاثي الثاني 2025"
+      },
+      {
+       "value": "5,782",
+       "unit": "M",
+       "label": "عدد البطاقات",
+       "evolution": "+5,3 %"
+      },
+      {
+       "value": "40 600",
+       "label": "عدد أجهزة الدفع الإلكتروني",
+       "evolution": "+3,6 %"
+      },
+      {
+       "value": "40 685",
+       "label": "عدد التجار",
+       "evolution": "+23,1 %"
+      },
+      {
+       "value": "99,98",
+       "unit": "%",
+       "label": "توفّر المحوّل الوطني",
+       "note": "أفريل 2025"
+      }
+     ]
+    },
+    {
+     "__component": "blocks.solutions-list",
+     "eyebrow": "المنظومة الوطنية بين البنكية",
+     "title": "حلولنا للدفع الرقمي",
+     "subtitle": "حلول دفع رقمي مبتكرة ومصمّمة حسب الطلب للبنوك ومؤسسات الدفع والتجار وحاملي البطاقات."
+    },
+    {
+     "__component": "blocks.cards-grid",
+     "eyebrow": "اكتشف",
+     "title": "ابتكاراتنا",
+     "columns": 3,
+     "subtitle": "حلول عصرية لتبسيط تسلّم الرمز السري وقبول الدفع وإدماج التجار.",
+     "cards": [
+      {
+       "icon": "pin",
+       "eyebrow": "رقمي بالكامل",
+       "title": "PIN Sender",
+       "text": "مع PIN Sender، تقدّم Monétique Tunisie بديلًا عصريًا وآمنًا عن الإرسال التقليدي للرموز السرية. ويتيح هذا الحل الرقمي بالكامل إرسال الرمز السري فورًا عبر إرسالية قصيرة بمجرد تسلّم البطاقة. ومن خلال الاستغناء عن الورق والقيود اللوجستية، ييسّر النفاذ إلى الخدمة ويقلّص أثرها على البيئة.",
+       "bullets": [
+        {
+         "text": "إرسال فوري وآمن"
+        },
+        {
+         "text": "دون ورق ودون قيود لوجستية"
+        },
+        {
+         "text": "أثر بيئي أقل"
+        }
+       ]
+      },
+      {
+       "icon": "contactless",
+       "eyebrow": "Tap to Pay / Tap to Phone",
+       "title": "SoftPOS",
+       "text": "SoftPOS، المعروف أيضًا باسم Tap to Pay أو Tap to Phone، حل برمجي يحوّل الهواتف الذكية واللوحات الرقمية العاملة بنظام Android والمتوافقة مع تقنية NFC إلى أجهزة لقبول الدفع. ويمثّل خطوة مهمة في مجال المعاملات الإلكترونية مقارنة بأجهزة الدفع الإلكتروني التقليدية.",
+       "bullets": [
+        {
+         "text": "قبول البطاقات دون تلامس"
+        },
+        {
+         "text": "بديل برمجي لأجهزة الدفع الإلكتروني التقليدية"
+        },
+        {
+         "text": "هواتف ذكية ولوحات Android متوافقة مع NFC"
+        }
+       ]
+      },
+      {
+       "icon": "store",
+       "eyebrow": "ميسّر الدفع",
+       "title": "PayFac",
+       "text": "ميسّر الدفع، ويُسمى أيضًا PayFac، مزوّد خدمات يمكّن التجار من معالجة الدفع بالبطاقات البنكية بسرعة ونجاعة وأمان. وهو يضطلع بدور الوسيط بين حرفائه والمؤسسات المالية، ويقترح حل دفع يسهل إدماجه في المنصات وأنظمة التصرف القائمة.",
+       "bullets": [
+        {
+         "text": "دفع سريع وآمن بالبطاقة"
+        },
+        {
+         "text": "وسيط بين التجار والمؤسسات المالية"
+        },
+        {
+         "text": "إدماج سهل في المنصات القائمة"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.cta-band",
+     "title": "بسّط مدفوعاتك بالمحفظة الإلكترونية",
+     "text": "ادفع وأرسل واسحب أموالك من هاتفك: حمّل تطبيق الدفع عبر الهاتف الجوال الخاص ببنكك.",
+     "cta": {
+      "label": "مزيد من المعلومات",
+      "url": "/actualites/simplifier-vos-paiements-avec-le-wallet",
+      "style": "primaire",
+      "isExternal": false
+     }
+    },
+    {
+     "__component": "blocks.tag-list",
+     "eyebrow": "على الصعيد الدولي",
+     "title": "خبرة على الصعيد الدولي",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "تمتلك Monétique Tunisie خبرة نقدية متطورة جدًا وظّفتها في مشاريع ذات قيمة مضافة عالية في تونس وكذلك في المغرب العربي (الجزائر وليبيا وموريتانيا) وفي إفريقيا (رواندا والكونغو والرأس الأخضر)."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "تحتل Monétique Tunisie موقعًا مثاليًا لتقديم حلول متكاملة تضمن مستوى عاليًا من الأداء وأمنًا تامًا. وهي شريكة لـ14 بنكًا إفريقيًا."
+        }
+       ]
+      }
+     ],
+     "tags": [
+      {
+       "text": "تونس"
+      },
+      {
+       "text": "الجزائر"
+      },
+      {
+       "text": "ليبيا"
+      },
+      {
+       "text": "موريتانيا"
+      },
+      {
+       "text": "رواندا"
+      },
+      {
+       "text": "الكونغو"
+      },
+      {
+       "text": "الرأس الأخضر"
+      }
+     ]
+    },
+    {
+     "__component": "blocks.latest-news",
+     "eyebrow": "الأخبار",
+     "title": "الأخبار وطلبات العروض",
+     "source": "mixte",
+     "count": 3
+    },
+    {
+     "__component": "blocks.contact-section",
+     "title": "المساعدة في متناولك",
+     "showForm": true,
+     "showMap": false
+    },
+    {
+     "__component": "blocks.partners-ribbon",
+     "title": "الشركاء ومصدرو الفواتير المترابطون",
+     "variant": "facturiers",
+     "showAllLink": false
+    }
+   ]
+  },
+  {
+   "title": "Monétique Tunisie",
+   "slug": "monetique-tunisie",
+   "seo": {
+    "metaTitle": "المهمة والحوكمة والمساهمون",
+    "metaDescription": "تأسست Monétique Tunisie سنة 1989 من قبل البنوك التونسية والبريد التونسي، وهي المحوّل النقدي الوطني والمحوّل الجوال ومجمّع الفواتير."
+   },
+   "blocks": [
+    {
+     "__component": "blocks.hero",
+     "variant": "sombre",
+     "title": "رائدة في مجال حلول الدفع",
+     "subtitle": "المحوّل النقدي الوطني والمحوّل الجوال ومجمّع الفواتير، تأسست سنة 1989 من قبل البنوك التونسية والبريد التونسي.",
+     "eyebrow": "Monétique Tunisie",
+     "ctas": []
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "حلول دفع رقمي مبتكرة ومصمّمة حسب الطلب",
+     "eyebrow": "مهمتنا",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "تأسست Monétique Tunisie سنة 1989 من قبل البنوك التونسية والبريد التونسي، وهي شركة خفية الاسم خاضعة للقانون التونسي الخاص ومختصة في حلول الدفع الرقمي في تونس. وبصفتها رائدة في مجال حلول الدفع، تُعدّ Monétique Tunisie المحوّل النقدي الوطني والمحوّل الجوال ومجمّع الفواتير."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "تتمثل مهمة Monétique Tunisie في تقديم حلول دفع رقمي مبتكرة ومصمّمة حسب الطلب، تستجيب بدقة لمتطلبات حرفائنا."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "يتجسّد التزامنا في توفير تجربة استخدام شفافة وناجعة، مدعومة بيقظة تكنولوجية متواصلة وأمن معاملات من الطراز الأول. ونطمح إلى أن نكون شركاء نموّ لحرفائنا، من خلال تقديم حلول دفع رقمي ذات جودة عالية والمساهمة الفاعلة في تطوير قطاع الدفع الرقمي في تونس."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "مرافقة نموّ شركائنا وحرفائنا",
+     "eyebrow": "هدفنا واضح!",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "مرافقة نموّ شركائنا وحرفائنا بتوفير تكنولوجيات دفع متطورة وآمنة ومكيّفة مع احتياجاتهم الخاصة."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "نحن في Monétique Tunisie عازمون على الابتكار المتواصل وتعزيز أمن بنيتنا التحتية، لضمان موثوقية المعاملات المالية ونجاعتها لجميع الفاعلين الاقتصاديين في تونس."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.people-grid",
+     "eyebrow": "الحوكمة",
+     "title": "الإدارة ومجلس الإدارة",
+     "anchor": "gouvernance"
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "المساهمون",
+     "eyebrow": "الحوكمة",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "أسّست البنوك التونسية والبريد التونسي Monétique Tunisie، وهي شركة خفية الاسم برأس مال قدره 5.000.000 دينار، ومركز بين بنكي مرخّص من Banque Centrale de Tunisie."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.tag-list",
+     "eyebrow": "على الصعيد الدولي",
+     "title": "خبرة على الصعيد الدولي",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "وظّفت Monétique Tunisie خبرتها النقدية في مشاريع ذات قيمة مضافة عالية في تونس والمغرب العربي وإفريقيا، وهي شريكة لـ14 بنكًا إفريقيًا."
+        }
+       ]
+      }
+     ],
+     "tags": [
+      {
+       "text": "تونس"
+      },
+      {
+       "text": "الجزائر"
+      },
+      {
+       "text": "ليبيا"
+      },
+      {
+       "text": "موريتانيا"
+      },
+      {
+       "text": "رواندا"
+      },
+      {
+       "text": "الكونغو"
+      },
+      {
+       "text": "الرأس الأخضر"
+      }
+     ]
+    },
+    {
+     "__component": "blocks.latest-news",
+     "eyebrow": "الأخبار",
+     "title": "آخر المنشورات",
+     "source": "mixte",
+     "count": 3
+    },
+    {
+     "__component": "blocks.cta-band",
+     "title": "اكتشف حلولنا",
+     "text": "البطاقة البنكية والمحوّلان النقدي والجوال وPaysmart والإشهاد والأمن والإيواء والمساندة والاستشارة.",
+     "cta": {
+      "label": "حلولنا",
+      "url": "/solutions",
+      "style": "primaire",
+      "isExternal": false
+     }
+    }
+   ]
+  },
+  {
+   "title": "الخبرة",
+   "slug": "expertise",
+   "seo": {
+    "metaTitle": "الخبرة: النقديات والتجارة الإلكترونية والدفع الجوال",
+    "metaDescription": "فاعل رئيسي في النقديات بتونس: النقديات والتجارة الإلكترونية (ClicToPay) والدفع عبر الهاتف الجوال وأمن الدفع والتكوين والاستشارة."
+   },
+   "blocks": [
+    {
+     "__component": "blocks.hero",
+     "variant": "sombre",
+     "title": "فاعل رئيسي في قطاع النقديات",
+     "subtitle": "النقديات والتجارة الإلكترونية والدفع الجوال والأمن والتكوين والاستشارة: خبرة في خدمة البنوك والتجار وحاملي البطاقات.",
+     "eyebrow": "الخبرة",
+     "ctas": []
+    },
+    {
+     "__component": "blocks.text-image",
+     "title": "الرائدة في أنظمة الدفع بتونس",
+     "eyebrow": "النقديات",
+     "anchor": "monetique",
+     "imagePosition": "droite",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "بصفتها فاعلًا رئيسيًا في قطاع النقديات والدفع عبر الهاتف الجوال، تتميّز Monétique Tunisie بخبرة استثنائية تؤكد موقعها الريادي في السوق التونسية."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "بفضل فريق من المهنيين ذوي الكفاءة العالية وخبرة طويلة، تتميّز Monétique Tunisie في تصميم حلول نقدية مبتكرة وتنفيذها والتصرف فيها. وبصفتها المحوّل النقدي الوطني، تمتد خبرتها من تقديم خدمات الدفع الرقمي إلى حلول معالجة المعاملات وتخصيص البطاقات البنكية، مع ضمان أمن العمليات المالية."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "كما تتميّز Monétique Tunisie بقدرتها على استباق تطورات السوق وتقديم حلول مكيّفة مع الاحتياجات الخاصة لحرفائها، بما يساهم في تحديث أنظمة الدفع في تونس وتعزيز نجاعتها."
+        }
+       ]
+      }
+     ],
+     "keyPoints": [
+      {
+       "text": "المحوّل النقدي الوطني"
+      },
+      {
+       "text": "مركز بين بنكي مرخّص من BCT"
+      },
+      {
+       "text": "تخصيص البطاقات"
+      }
+     ]
+    },
+    {
+     "__component": "blocks.text-image",
+     "title": "رائدة التجارة الإلكترونية في تونس",
+     "eyebrow": "التجارة الإلكترونية",
+     "anchor": "ecommerce",
+     "imagePosition": "gauche",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "بفضل خبرتها الاستثنائية في قطاع التجارة الإلكترونية، تجسّد Monétique Tunisie التميّز في هذا المجال، وتقدّم حلولًا مصمّمة حسب الطلب تستجيب بدقة لمتطلبات المؤسسات الناشطة على الإنترنت."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "يمكّننا فهمنا العميق لرهانات التجارة الإلكترونية من نشر خدمات دفع رقمي ناجعة وآمنة، تبسّط المعاملات عبر الإنترنت لتجربة استخدام مثلى."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "بصفتها شريكًا موثوقًا للمؤسسات المالية، تعمل Monétique Tunisie على تسريع عمليات التجارة الإلكترونية وتأمينها من خلال إدماج المؤسسات في منصة الدفع الآمن ClicToPay."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "يجعل منا التزامنا الثابت وخبرتنا المعمّقة فاعلًا محوريًا في دعم نموّ التجارة الإلكترونية وازدهارها في تونس، بما يساهم في حيوية هذا القطاع وابتكاره."
+        }
+       ]
+      }
+     ],
+     "keyPoints": [
+      {
+       "text": "منصة ClicToPay"
+      },
+      {
+       "text": "دفع آمن عبر الإنترنت برمزي CVV2 وOTP"
+      }
+     ]
+    },
+    {
+     "__component": "blocks.text-image",
+     "title": "نقترح أنظمة دفع عصرية",
+     "eyebrow": "الدفع عبر الهاتف الجوال",
+     "anchor": "mobile-payment",
+     "imagePosition": "droite",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "بصفتها المحوّل الوطني للدفع عبر الهاتف الجوال، تُعدّ Monétique Tunisie ركيزة أساسية في تطور المعاملات المالية الرقمية في تونس."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "بفضل تحكّمنا في التطورات التكنولوجية وحسّنا الدقيق لتوجهات السوق، نحتل موقع الريادة بلا منازع في مجال الدفع في تونس. ونقترح حلول دفع عبر الهاتف الجوال سهلة الاستعمال، تولي أهمية قصوى لسرية المعطيات وأمنها لضمان معاملات دون أخطاء."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "بصفتها فاعلًا محوريًا في القطاع بتونس، تضطلع Monétique Tunisie بدور أساسي في النهوض باستعمال الدفع عبر الهاتف الجوال، وتساهم بشكل حاسم في تحويل القطاع المالي التونسي وتحديثه. ويفتح انخراطنا الفاعل الطريق أمام عصر جديد من المالية الرقمية قوامه الإتاحة والأمن والابتكار."
+        }
+       ]
+      }
+     ],
+     "keyPoints": [
+      {
+       "text": "الدفع"
+      },
+      {
+       "text": "تحويل الأموال"
+      },
+      {
+       "text": "الإيداع والسحب النقدي"
+      }
+     ]
+    },
+    {
+     "__component": "blocks.text-image",
+     "title": "المرجع في أمن الدفع بتونس",
+     "eyebrow": "الأمن",
+     "anchor": "securite",
+     "imagePosition": "gauche",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "في مجال المعاملات المالية، تفرض Monétique Tunisie نفسها مرجعًا مطلقًا في أمن الدفع، سواء في قطاع النقديات التقليدي أو في قطاع الدفع عبر الهاتف الجوال المبتكر. ويجعل منا التزامنا الثابت بالحفاظ على سرية كل معاملة وسلامتها حارسًا حقيقيًا للأمن المالي. ومن خلال تمشٍّ استباقي مدعوم بمراقبة متواصلة للتهديدات الناشئة في مجال الأمن السيبرني، طوّرنا حلولًا أمنية متقدمة تهدف إلى تحييد كل ثغرة محتملة."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "من خلال اعتماد بروتوكولات تشفير من الجيل الأخير وإدماج آليات مصادقة متقدمة ونشر أجهزة دقيقة لمكافحة الاحتيال، تتمثل مهمتنا في إرساء فضاء معاملات آمن ومحصّن. ويجسّد هذا التحكم المتقدم في تأمين الدفع الالتزام العميق لـMonétique Tunisie بحماية المصالح المالية لحرفائها، ويشهد على دورها الريادي في حماية المعطيات المالية داخل المنظومة النقدية التونسية."
+        }
+       ]
+      }
+     ],
+     "keyPoints": [
+      {
+       "text": "بروتوكولات التشفير"
+      },
+      {
+       "text": "مصادقة معزّزة"
+      },
+      {
+       "text": "أجهزة مكافحة الاحتيال"
+      }
+     ]
+    },
+    {
+     "__component": "blocks.text-image",
+     "title": "شريككم الاستراتيجي في الاستشارة والتكوين",
+     "eyebrow": "التكوين والاستشارة",
+     "anchor": "formation-conseil",
+     "imagePosition": "droite",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "بفضل فريق خبير ومتمرّس من المكوّنين ذوي الكفاءة العالية، تلتزم Monétique Tunisie بنقل معارفها المعمّقة من خلال برامج تكوين صارمة ومحيّنة."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "يمثّل مركز التكوين الخارجي المعتمد لـMonétique Tunisie موردًا قيّمًا لمهنيي القطاع، إذ يقدّم دروسًا متخصصة تغطي مختلف جوانب النقديات والدفع الرقمي والتكنولوجيات المرتبطة بها."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "إلى جانب التزامها في مجال التكوين، تتميّز Monétique Tunisie أيضًا في الاستشارة من خلال مرافقة حرفائها في استراتيجياتهم. وبفضل فهمها العميق لتطورات السوق واحتياجاته الخاصة، تقترح خدمات استشارة مخصّصة تهدف إلى تحسين أنظمة الدفع وإدماج التكنولوجيات الجديدة وتعزيز أمن المعاملات المالية."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "تجعل هذه الكفاءة المزدوجة في التكوين والاستشارة من Monétique Tunisie شريكًا استراتيجيًا أساسيًا لفاعلي قطاع النقديات الساعين إلى تطوير كفاءاتهم وتحسين أنظمتهم والمساهمة الفاعلة في توسّعهم ونموّهم."
+        }
+       ]
+      }
+     ],
+     "keyPoints": [
+      {
+       "text": "مركز تكوين خارجي معتمد"
+      },
+      {
+       "text": "استشارة استراتيجية وفنية"
+      }
+     ]
+    },
+    {
+     "__component": "blocks.key-figures",
+     "title": "بنية تحتية مرجعية",
+     "items": [
+      {
+       "value": "99,98",
+       "unit": "%",
+       "label": "توفّر المحوّل",
+       "note": "أفريل 2025"
+      },
+      {
+       "value": "5,782",
+       "unit": "M",
+       "label": "البطاقات",
+       "note": "موفّى جوان 2025"
+      },
+      {
+       "value": "40 600",
+       "label": "TPE",
+       "note": "موفّى جوان 2025"
+      },
+      {
+       "value": "PCI DSS",
+       "label": "إشهاد يُجدّد سنويًا",
+       "note": "عمليات تدقيق Visa وMastercard"
+      }
+     ]
+    },
+    {
+     "__component": "blocks.cta-band",
+     "title": "لديك مشروع في النقديات أو التجارة الإلكترونية أو الدفع الجوال؟",
+     "text": "ترافق إدارتنا التجارية البنوك ومؤسسات الدفع وشركات التكنولوجيا المالية والتجار.",
+     "cta": {
+      "label": "اتصل بنا",
+      "url": "/contact",
+      "style": "primaire",
+      "isExternal": false
+     }
+    }
+   ]
+  },
+  {
+   "title": "الحلول",
+   "slug": "solutions",
+   "seo": {
+    "metaTitle": "حلولنا للدفع الرقمي",
+    "metaDescription": "البطاقة البنكية والمحوّل النقدي والمحوّل الجوال وPaysmart والإشهاد والأمن والإيواء والمساندة والاستشارة."
+   },
+   "blocks": [
+    {
+     "__component": "blocks.hero",
+     "variant": "sombre",
+     "title": "حلولنا للدفع الرقمي",
+     "subtitle": "نرافق شركاءنا وحرفاءنا في نموّهم من خلال توفير حلول دفع ذات جودة عالية.",
+     "eyebrow": "الحلول",
+     "ctas": []
+    },
+    {
+     "__component": "blocks.solutions-list"
+    },
+    {
+     "__component": "blocks.cta-band",
+     "title": "بسّط مدفوعاتك بالمحفظة الإلكترونية",
+     "text": "ادفع وأرسل واسحب أموالك من هاتفك.",
+     "cta": {
+      "label": "قراءة المقال",
+      "url": "/actualites/simplifier-vos-paiements-avec-le-wallet",
+      "style": "primaire",
+      "isExternal": false
+     }
+    }
+   ]
+  },
+  {
+   "title": "الإحصائيات",
+   "slug": "statistiques",
+   "seo": {
+    "metaTitle": "إحصائيات النقديات في تونس",
+    "metaDescription": "البطاقات والموزعات الآلية وأجهزة الدفع الإلكتروني والتجار والعمليات ورقم المعاملات: الأرقام الرئيسية التي تنشرها Monétique Tunisie (2022 – جوان 2025)."
+   },
+   "blocks": [
+    {
+     "__component": "blocks.hero",
+     "variant": "sombre",
+     "title": "الإحصائيات",
+     "subtitle": "الأرقام الرئيسية للنقديات في تونس: البطاقات والموزعات الآلية وأجهزة الدفع الإلكتروني والتجار والعمليات ورقم المعاملات.",
+     "eyebrow": "Monétique Tunisie",
+     "ctas": []
+    },
+    {
+     "__component": "blocks.stats-table",
+     "title": "تطوّر الشبكة الوطنية",
+     "subtitle": "الفترة 2022 – جوان 2025",
+     "footnote": "*جوان 2025: التطور بين الثلاثي الثاني 2024 والثلاثي الثاني 2025 بالنسبة إلى عدد العمليات ورقم المعاملات."
+    },
+    {
+     "__component": "blocks.cta-band",
+     "title": "هل تودّ معرفة المزيد عن أرقامنا؟",
+     "text": "تجيب إدارتنا التجارية عن طلباتكم.",
+     "cta": {
+      "label": "اتصل بنا",
+      "url": "/contact",
+      "style": "primaire",
+      "isExternal": false
+     }
+    }
+   ]
+  },
+  {
+   "title": "الأخبار",
+   "slug": "actualites",
+   "seo": {
+    "metaTitle": "الأخبار والفعاليات وطلبات العروض",
+    "metaDescription": "أخبار Monétique Tunisie وفعالياتها وإعلانات طلبات الترشح وطلبات العروض."
+   },
+   "blocks": [
+    {
+     "__component": "blocks.hero",
+     "variant": "sombre",
+     "title": "الأخبار والفعاليات",
+     "subtitle": "تابع أخبار Monétique Tunisie وفعالياتها وإعلانات طلبات الترشح وطلبات العروض.",
+     "eyebrow": "الأخبار والمنشورات",
+     "ctas": []
+    },
+    {
+     "__component": "blocks.latest-news",
+     "title": "آخر المنشورات",
+     "source": "mixte",
+     "count": 9
+    },
+    {
+     "__component": "blocks.faq-list",
+     "title": "الأسئلة الشائعة",
+     "category": "carte_bancaire"
+    }
+   ]
+  },
+  {
+   "title": "طلبات العروض",
+   "slug": "appels-offres",
+   "parentLabel": "الأخبار",
+   "seo": {
+    "metaTitle": "طلبات العروض وطلبات الترشح",
+    "metaDescription": "طلبات العروض والاستشارات وطلبات الترشح التي تنشرها Monétique Tunisie: الموضوع وآخر أجل وسحب كراس الشروط."
+   },
+   "blocks": [
+    {
+     "__component": "blocks.hero",
+     "variant": "sombre",
+     "title": "طلبات العروض",
+     "subtitle": "طلبات العروض والاستشارات وطلبات الترشح التي تنشرها Monétique Tunisie.",
+     "eyebrow": "الشراءات والحوكمة",
+     "ctas": []
+    },
+    {
+     "__component": "blocks.latest-news",
+     "title": "الإعلانات المنشورة",
+     "source": "appels_offres",
+     "count": 9
+    },
+    {
+     "__component": "blocks.cta-band",
+     "title": "لديك سؤال حول استشارة؟",
+     "text": "تجيبكم إدارة الشراءات واللوجستيك: سانا سنتر، الطابق الخامس، المكتب 505.",
+     "cta": {
+      "label": "اتصل بنا",
+      "url": "/contact",
+      "style": "primaire",
+      "isExternal": false
+     }
+    }
+   ]
+  },
+  {
+   "title": "الشركاء",
+   "slug": "partenaires",
+   "seo": {
+    "metaTitle": "شركاؤنا وحرفاؤنا",
+    "metaDescription": "البنوك التونسية والأجنبية وحرفاء البطاقات الخاصة والشبكات الدولية والمشغلون ومصدرو الفواتير الشركاء لـMonétique Tunisie."
+   },
+   "blocks": [
+    {
+     "__component": "blocks.hero",
+     "variant": "sombre",
+     "title": "شركاؤنا وحرفاؤنا",
+     "subtitle": "البنوك التونسية والأجنبية وحرفاء البطاقات الخاصة والشبكات الدولية والمشغلون ومصدرو الفواتير.",
+     "eyebrow": "الشركاء",
+     "ctas": []
+    },
+    {
+     "__component": "blocks.partners-grid"
+    },
+    {
+     "__component": "blocks.cta-band",
+     "title": "كن شريكًا",
+     "text": "إدارتنا التجارية في خدمتكم.",
+     "cta": {
+      "label": "اتصل بنا",
+      "url": "/contact",
+      "style": "primaire",
+      "isExternal": false
+     }
+    }
+   ]
+  },
+  {
+   "title": "FAQ",
+   "slug": "faq",
+   "seo": {
+    "metaTitle": "الأسئلة الشائعة",
+    "metaDescription": "البطاقة البنكية والمحفظة الإلكترونية وPaysmart والشراء عبر الإنترنت ومسرد المصطلحات: أجوبة عن الأسئلة الشائعة."
+   },
+   "blocks": [
+    {
+     "__component": "blocks.hero",
+     "variant": "sombre",
+     "title": "الأسئلة الشائعة",
+     "subtitle": "البطاقة البنكية والمحفظة الإلكترونية وPaysmart والشراء عبر الإنترنت ومسرد المصطلحات.",
+     "eyebrow": "الأسئلة الشائعة",
+     "ctas": []
+    },
+    {
+     "__component": "blocks.faq-list",
+     "category": "toutes"
+    },
+    {
+     "__component": "blocks.cta-band",
+     "title": "مزيد من الأسئلة؟",
+     "text": "مركز النداء متاح 7 أيام على 7 و24 ساعة على 24 على الرقم ⁦+216 71 155 840⁩.",
+     "cta": {
+      "label": "اتصل بنا",
+      "url": "/contact",
+      "style": "primaire",
+      "isExternal": false
+     }
+    }
+   ]
+  },
+  {
+   "title": "اتصل بنا",
+   "slug": "contact",
+   "seo": {
+    "metaTitle": "اتصل بـMonétique Tunisie",
+    "metaDescription": "مركز النداء 7/7 – 24/24: ⁦+216 71 155 840⁩. الرقم الأخضر: ⁦80 100 115⁩. سانا سنتر، المركز العمراني الشمالي، تونس."
+   },
+   "blocks": [
+    {
+     "__component": "blocks.hero",
+     "variant": "sombre",
+     "title": "اتصل بنا",
+     "subtitle": "المحوّل النقدي الوطني والمحوّل الجوال ومجمّع الفواتير. مركز النداء في خدمتكم 7 أيام على 7 و24 ساعة على 24.",
+     "eyebrow": "اتصل بنا",
+     "ctas": []
+    },
+    {
+     "__component": "blocks.contact-section",
+     "title": "بيانات الاتصال",
+     "showForm": true,
+     "showMap": true
+    },
+    {
+     "__component": "blocks.cards-grid",
+     "eyebrow": "مخاطبوكم",
+     "title": "كيف يمكننا مساعدتك؟",
+     "columns": 3,
+     "cards": [
+      {
+       "icon": "support_agent",
+       "title": "مركز النداء 7/7 – 24/24",
+       "text": "لكل أسئلتكم وطلبات المعلومات واحتياجات المساعدة الفنية: ⁦+216 71 155 840⁩."
+      },
+      {
+       "icon": "shield",
+       "title": "بطاقة مفقودة أو مسروقة",
+       "text": "اعترض على بطاقتك دون تأخير لدى بنكك ومركز النداء (⁦+216 71 155 840⁩)، ثم أكّد ذلك برسالة مضمونة الوصول إلى بنكك."
+      },
+      {
+       "icon": "verified",
+       "title": "البنوك وشركات التكنولوجيا المالية والتجار",
+       "text": "الحلول والشراكات والإشهاد والتجارة الإلكترونية عبر ClicToPay: direction.commerciale@monetiquetunisie.com."
+      }
+     ]
+    },
+    {
+     "__component": "blocks.cta-band",
+     "title": "حاملو البطاقات",
+     "text": "لديك سؤال حول بطاقتك أو تشكٍّ يتعلق بالنقديات؟ الرقم الأخضر: ⁦80 100 115⁩.",
+     "cta": {
+      "label": "الاطلاع على الأسئلة الشائعة",
+      "url": "/faq",
+      "style": "primaire",
+      "isExternal": false
+     }
+    }
+   ]
+  },
+  {
+   "title": "البيانات القانونية",
+   "slug": "mentions-legales",
+   "parentLabel": "معلومات قانونية",
+   "seo": {
+    "metaTitle": "البيانات القانونية",
+    "noIndex": false
+   },
+   "blocks": [
+    {
+     "__component": "blocks.hero",
+     "variant": "sombre",
+     "title": "البيانات القانونية",
+     "subtitle": "شروط النفاذ إلى الموقع www.monetiquetunisie.com واستعماله.",
+     "eyebrow": "معلومات قانونية",
+     "ctas": []
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "ناشر الموقع",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "ينشر الموقع المتاح على العنوان www.monetiquetunisie.com شركة Monétique-Tunisie، وهي شركة خفية الاسم برأس مال قدره 5.000.000 دينار، يقع مقرها الاجتماعي بالمركز العمراني الشمالي، سانا سنتر – العمارة C – 1082 تونس – الهاتف 800 155 71. مرسّمة بالسجل التجاري بتونس تحت عدد B110131997. وMonétique-Tunisie مركز بين بنكي مرخّص من Banque Centrale de Tunisie."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "المدير العام",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "بلال الدرناوي، المدير العام لـMonétique-Tunisie. الاتصال: مشرف الموقع."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "شروط النفاذ والاستعمال",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "بالنفاذ إلى هذا الموقع وإلى المعلومات التي يتضمّنها، يُقرّ المستخدم بأنه اطّلع على شروط الاستعمال العامة هذه ويلتزم باحترامها. ويحتفظ الناشر بحق تعديل هذه الشروط في أي وقت، ولا سيما لملاءمتها مع تطورات الموقع. لذلك يلتزم المستخدم بالاطلاع عليها بانتظام، ويُعتبر قابلًا لآخر نسخة منها عند كل اتصال جديد بالموقع."
+        }
+       ]
+      },
+      {
+       "type": "heading",
+       "level": 3,
+       "children": [
+        {
+         "type": "text",
+         "text": "شروط النفاذ"
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "يخضع هذا الموقع للقانون التونسي. وتُقدَّم أغلب محتويات هذا الموقع وخدماته باللغتين الفرنسية والإنجليزية، وفي حالة النزاع تُعتمد النسخة الفرنسية. والوثائق والمعلومات وعروض الخدمات المنشورة على الموقع موجّهة إلى الأشخاص المتعاملين مع البنوك وغير المتعاملين معها على حد سواء. ويمكن النفاذ إلى الموقع على مدار الساعة وطيلة أيام الأسبوع، باستثناء حالات القوة القاهرة أو فعل الغير و/أو أشغال الصيانة والتدخلات الضرورية لحسن سير الموقع. وفي هذه الحالة، يُعلَم بالانقطاع عبر تنبيه على الصفحة الرئيسية أو بأي وسيلة أخرى. ولا يمكن لهذا الانقطاع بأي حال أن يرتّب مسؤولية الناشر أو أن يخوّل الحق في أي تعويض."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "المعلومات المتاحة",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "heading",
+       "level": 3,
+       "children": [
+        {
+         "type": "text",
+         "text": "المعلومات المتعلقة بالمنتجات والخدمات"
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "استعلم عن مدى توفّر الخدمات لدى فرعك البنكي. ويُدعى مستخدم الإنترنت إلى الاتصال بالفرع البنكي الذي يتعامل معه أو الذي يتبعه جغرافيًا، أو بالجهة المعنية، لمعرفة الشروط المقترحة و/أو للحصول على خدمة. وحرصًا على دقة المعلومات المتعلقة بالمنتجات والخدمات المنشورة على هذا الموقع، تحتفظ Monétique-Tunisie بحق تصحيح محتواها في أي وقت ودون سابق إعلام."
+        }
+       ]
+      },
+      {
+       "type": "heading",
+       "level": 3,
+       "children": [
+        {
+         "type": "text",
+         "text": "المعلومات العامة الأخرى المقدّمة على سبيل الإعلام دون التزام تعاقدي"
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "تُقدَّم المعلومات العامة الأخرى (الاقتصادية والمالية والقانونية والمتعلقة بالحياة اليومية وحياة المؤسسات والجمعيات…) دون التزام تعاقدي، ولها قيمة استدلالية أو إعلامية فقط. ورغم كل العناية المبذولة في تحيين هذه المعلومات ومحتوياتها، قد تتضمّن الوثائق المنشورة على الخط أخطاء فنية أو مطبعية لا يمكن أن ترتّب مسؤولية Monétique-Tunisie بأي شكل من الأشكال. ويتحمّل مستخدم الإنترنت وحده مسؤولية استعماله لهذه المعلومات العامة."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "استعمال الموقع من قبل المستخدم",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "يُحاط المستخدم علمًا بأنّ استعمال شبكة الإنترنت لا يضمن سرية المراسلات، وعليه أن يتخذ جميع التدابير الملائمة لحماية معطياته و/أو أدواته الخاصة (انظر باب «"
+        },
+        {
+         "type": "link",
+         "url": "/protection-des-donnees",
+         "children": [
+          {
+           "type": "text",
+           "text": "الأمن"
+          }
+         ]
+        },
+        {
+         "type": "text",
+         "text": "»). ويلتزم المستخدم باحترام سلامة الموقع، ويمتنع عن عرقلة سيره أو إجباره، وعن تعديل المحتويات المتاحة عبره أو إفسادها أو حذفها بطريقة احتيالية، وعن إدخال معطيات على الموقع بطريقة احتيالية. وبناءً عليه، فإنّ الناشر:"
+        }
+       ]
+      },
+      {
+       "type": "list",
+       "format": "unordered",
+       "children": [
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "لا يتحمّل مسؤولية الأضرار التي قد تلحق، بمناسبة زيارة موقعه، بالمحيط التقني للمستخدم، ولا سيما حواسيبه وبرمجياته وتجهيزاته الشبكية (أجهزة المودم والهواتف وغيرها) وكل عتاد آخر يُستعمل للنفاذ إلى الخدمة و/أو المعلومات أو لاستعمالها."
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "لا يتحمّل مسؤولية سوء استعمال الموقع من قبل المستخدم."
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "لا يمكن بأي حال أن يتحمّل مسؤولية موثوقية نقل المعطيات أو آجال النفاذ أو القيود المحتملة على النفاذ إلى شبكة الإنترنت أو الشبكات المرتبطة بها."
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "لا يتحمّل المسؤولية في حالة انقطاع شبكات النفاذ إلى الموقع، أو عدم توفّر الموقع كليًا أو جزئيًا لأسباب تعود خاصة إلى مشغّل الاتصالات، أو في حالة خطأ في الإرسال أو مشاكل تتعلق بأمن الإرسال، أو في حالة عطل في أجهزة الاستقبال أو في خطك الهاتفي."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "الروابط التشعبية",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "يتضمّن هذا الموقع خاصة معلومات توفّرها شركات خارجية أو روابط تشعبية نحو مواقع أخرى لم تطوّرها شركة Monétique-Tunisie. ولا يمثّل وجود رابط تشعبي على هذا الموقع يؤدي إلى موقع آخر مصادقة على ذلك الموقع أو على محتواه. وبالتالي لا تتحمّل Monétique-Tunisie أي مسؤولية عن هذه المواقع ومحتواها وإشهاراتها والمنتجات أو الخدمات المتاحة عليها أو انطلاقًا منها. كما لا يمكن أن تُرتَّب مسؤولية Monétique-Tunisie عن المعلومات والآراء والتوصيات الصادرة عن هذه الأطراف. ويخضع كل رابط نحو هذا الموقع إلى ترخيص صريح ومسبق من Monétique-Tunisie، التي تحتفظ بإمكانية حذفه في أي وقت."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "سياسة حماية المعطيات الشخصية",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "قد يقدّم مستخدمو هذا الموقع إلى Monétique-Tunisie معطيات شخصية تخصّهم عند تعمير الاستمارات أو الاستبيانات المتاحة على الموقع."
+        }
+       ]
+      },
+      {
+       "type": "heading",
+       "level": 3,
+       "children": [
+        {
+         "type": "text",
+         "text": "خصائص استعمال المعطيات وجمعها"
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "لست ملزمًا بالإجابة عن كل الأسئلة المطروحة عليك أو عن بعضها، ويُشار إلى المعلومات الإجبارية بعلامة النجمة. وبتعمير الاستمارات أو الاستبيانات، توافق، مع مراعاة حقك في الاعتراض، على إحالة معطياتك وتحيينها المحتمل إلى الفرع البنكي الذي يتبعه مستخدم الموقع جغرافيًا أو الذي يتعامل معه، وذلك للإجابة عن طلبات المعلومات الصادرة عنه. والجهات المتلقية لمعالجة التشكي هي مصلحة العلاقات مع الحرفاء والأشخاص المؤهلون داخل Monétique-Tunisie SA والمؤسسات المالية لمعالجة التشكي."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "فضاءات النقاش",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "خُصّصت بعض الفضاءات لتمكينك من المساهمة في مواضيع النقاش التي نقترحها عليك، ولا يمكن جمع المعطيات الواردة فيها أو استعمالها لأغراض أخرى."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "يمكن للمشرف أن يحذف قبل النشر كل مساهمة لا علاقة لها بموضوع النقاش أو بالخط التحريري للموقع أو تكون مخالفة للقانون. ويرفض المشرف بالخصوص نشر الرسائل:"
+        }
+       ]
+      },
+      {
+       "type": "list",
+       "format": "unordered",
+       "children": [
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "ذات الطابع الإشهاري أو الترويجي؛"
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "ذات الطابع العنصري أو التشهيري أو البذيء أو المسيء أو العدواني أو العنيف؛"
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "المخالفة لحقوق المؤلف أو الحقوق المجاورة، أو للقانون المنطبق على قواعد البيانات، أو للحق في الصورة أو في احترام الحياة الخاصة، أو لأي حكم تشريعي أو ترتيبي آخر جارٍ به العمل."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "بصفة عامة، يلتزم المستخدم باحترام صورة الموقع www.monetiquetunisie.com وسمعته، وبعدم الإدلاء بأي تصريحات و/أو القيام بأي أعمال من شأنها الإضرار بالموقع. وفي حالة المساس بالقوانين الجاري بها العمل أو بالأخلاق الحميدة أو بشروط الاستعمال هذه أو لأي سبب آخر يُقدَّر بحرية، يحتفظ الموقع www.monetiquetunisie.com بحق غلق فضاءات النقاش لمدة محددة أو بصفة نهائية، وحذف المعلومات الواردة فيها والإحالات إليها. وبمشاركتك في منتدى نقاش على الموقع www.monetiquetunisie.com، ترخّص لـMonétique-Tunisie في نشر مساهمتك على الموقع مجانًا."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "معلومات حول حق النفاذ:",
+         "bold": true
+        },
+        {
+         "type": "text",
+         "text": " لك حق النفاذ إلى المعطيات التي تخصّك وتعديلها وتصحيحها وحذفها، ويمكنك في أي وقت طلب حذف مساهماتك في فضاء النقاش هذا. الاتصال: مشرف الموقع."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "معالجة التشكيات",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "تولي Monétique-Tunisie عناية خاصة بملاحظات حرفائها وتشكياتهم. وفي حالة خلاف أو سوء فهم أو عدم رضا عن فرعك البنكي في ما يتعلق بمجال النقديات، يسعد Monétique-Tunisie أن تكون مخاطبك."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "إذا لم تكن من حرفاء البنوك، يمكنك الاطلاع على مختلف "
+        },
+        {
+         "type": "link",
+         "url": "/contact",
+         "children": [
+          {
+           "type": "text",
+           "text": "جهات الاتصال المقترحة هنا"
+          }
+         ]
+        },
+        {
+         "type": "text",
+         "text": " أو توجيه تشكيك عبر البريد إلى العنوان التالي: المركز العمراني الشمالي، سانا سنتر – العمارة C – 1082 تونس."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "حماية المعطيات الشخصية",
+   "slug": "protection-des-donnees",
+   "parentLabel": "معلومات قانونية",
+   "seo": {
+    "metaTitle": "حماية المعطيات الشخصية",
+    "noIndex": false
+   },
+   "blocks": [
+    {
+     "__component": "blocks.hero",
+     "variant": "sombre",
+     "title": "حماية المعطيات الشخصية",
+     "subtitle": "في طليعة التكنولوجيات الجديدة في السوق.",
+     "eyebrow": "الأمن",
+     "ctas": []
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "في طليعة التكنولوجيات الجديدة في السوق",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "تحسين أمن الدفع بالبطاقات عمل متواصل. فالوقاية من الاحتيال ومكافحته مبدآن دائمان يدفعان Monétique-Tunisie إلى التحسين المستمر لآليات الأمن الوقائية، سواء تعلّق الأمر بالبطاقات أو بالأجهزة أو بالدفع عن بعد."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "تمتلك Monétique Tunisie خبرة نقدية متطورة جدًا وظّفتها في مشاريع ذات قيمة مضافة عالية في تونس. واليوم، تحتل Monétique Tunisie موقعًا مثاليًا لتقديم حلول متكاملة تضمن مستوى عاليًا من الأداء وأمنًا تامًا."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "تحرص Monétique Tunisie على يقظة دائمة إزاء التطورات التي تشهدها مجالات خبرتها. وقد أفرز تسارع التطورات التكنولوجية في السنوات الأخيرة (الرسائل متعددة الوسائط، الويب 2.0…) وأنماط السلوك الجديدة (طفرة الهاتف الجوال، التنقل، التجارة الإلكترونية…) احتياجات جديدة إلى وسائل دفع أكثر أمانًا وذكاءً."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "بعض قواعد الأمن الواجب احترامها",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "البطاقة البنكية من أكثر وسائل الدفع أمانًا شرط احترام قواعد الأمن. ويمكن الدفع بالبطاقة البنكية في عدد كبير من المحلات أو عبر الإنترنت. ومن المهم اتباع بعض نصائح الأمن، ولا سيما لتفادي استعمال الغير لبطاقتك بطريقة احتيالية. بطاقتك البنكية شخصية: لا تعطِ رمزك السري المكوّن من أربعة أرقام لأي شخص، واحفظه عن ظهر قلب وتجنّب الاحتفاظ به مكتوبًا."
+        }
+       ]
+      },
+      {
+       "type": "heading",
+       "level": 3,
+       "children": [
+        {
+         "type": "text",
+         "text": "الأمن في الموزعات الآلية"
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "عند سحب الأموال:"
+        }
+       ]
+      },
+      {
+       "type": "list",
+       "format": "unordered",
+       "children": [
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "لا تسمح لأحد بتشتيت انتباهك."
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "أدخل رمزك السري بعيدًا عن الأنظار."
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "ارفض مساعدة أي شخص."
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "إذا تعذّر عليك استرجاع بطاقتك البنكية، اعترض عليها فورًا (قد تتعرض بعض الموزعات الآلية للتلاعب)."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "heading",
+       "level": 3,
+       "children": [
+        {
+         "type": "text",
+         "text": "الأمن على الإنترنت"
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "أغلب الأشخاص الذين سُرق رقم بطاقتهم البنكية لم يسبق لهم أن قاموا بطلبيات عبر الإنترنت. إليك بعض النصائح لتأمين دفعك بالبطاقة البنكية عبر الإنترنت:"
+        }
+       ]
+      },
+      {
+       "type": "list",
+       "format": "unordered",
+       "children": [
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "اختر مواقع التجارة المعروفة والعلامات ذات الصيت."
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "احذر من مواقع الشركات الأجنبية."
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "تحقّق من بيانات المؤسسة التجارية واقرأ الشروط العامة للبيع (يجب أن تكون هذه المعلومات متاحة انطلاقًا من الصفحة الرئيسية، فذلك ضمان للشفافية)."
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "ادفع على صفحة آمنة بالتحقق من ظهور قفل مغلق ومن أنّ عنوان الموقع يبدأ بـhttps:// (يشير حرف «s» إلى الأمن)."
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "احتفظ برسالة تأكيد طلبيتك."
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "التقط صورًا للشاشة أو اطبعها في كل مرحلة من مراحل الطلبية."
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "تحقّق في كشف حسابك البنكي من مبلغ الدفع المنجز."
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "لا تحفظ رقم بطاقتك البنكية ولا رمزها على حاسوبك."
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "حيّن أنظمة حماية حاسوبك (مضاد الفيروسات)."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "معلومة مفيدة:",
+         "bold": true
+        },
+        {
+         "type": "text",
+         "text": " رغم تردّد كثير من مستخدمي الإنترنت في خلاص مشترياتهم عبر الإنترنت بالبطاقة البنكية، فاعلم أنّ هذا النظام مؤمَّن للغاية بفضل التشفير."
+        }
+       ]
+      },
+      {
+       "type": "heading",
+       "level": 3,
+       "children": [
+        {
+         "type": "text",
+         "text": "الأمن لدى التجار"
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "في الخارج تكون بطاقتك البنكية أكثر عرضة للمخاطر، لذا كن أكثر يقظة. إليك بعض التوصيات:"
+        }
+       ]
+      },
+      {
+       "type": "list",
+       "format": "unordered",
+       "children": [
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "تحقّق جيدًا من المبلغ المعروض على الشاشة قبل إدخال رمزك السري."
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "أدخل رمزك السري بعيدًا عن الأنظار مستعملًا يدك غطاءً."
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "لا تغفل أبدًا عن بطاقتك البنكية."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "تعتمد بعض المؤسسات، ولا سيما في القطاع السياحي، ممارسة مشبوهة تتمثل في نسخ بطاقتك البنكية. ارفض هذه الممارسة: فقد يستغل شخص غير نزيه نسخة ظهر بطاقتك حيث يوجد رمز الأمان."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "تحليل الاحتيال",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "يضم فريق Monétique-Tunisie مسؤولًا عن التصرف في المخاطر يتولى المراقبة على الخط بواسطة أدوات ترصد جميع العمليات التي تنطوي على خطر احتيال محتمل، وتطلق آليًا تنبيهات وتحاليل بشأن الحالات المرصودة."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "ملفات تعريف الارتباط",
+   "slug": "cookies",
+   "parentLabel": "معلومات قانونية",
+   "seo": {
+    "metaTitle": "ملفات تعريف الارتباط",
+    "noIndex": true
+   },
+   "blocks": [
+    {
+     "__component": "blocks.hero",
+     "variant": "sombre",
+     "title": "ملفات تعريف الارتباط",
+     "subtitle": "استعمال ملفات تعريف الارتباط على موقع Monétique Tunisie.",
+     "eyebrow": "ملفات تعريف الارتباط",
+     "ctas": []
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "محتوى قيد الإعداد",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "تتولى الإدارة القانونية إعداد سياسة ملفات تعريف الارتباط لـMonétique Tunisie: أغراض هذه الملفات ومدة الاحتفاظ بها وإدارة الموافقة وبيانات الاتصال بمشرف الموقع."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,11 +1,14 @@
-import NextLink from "next/link";
+import { L as NextLink } from "@/components/LangProvider";
+
+import { t } from "@/lib/lang-server";
 
 export type Crumb = { label: string; href?: string };
 
 export function Breadcrumb({ items, dark = true }: { items: Crumb[]; dark?: boolean }) {
-  const all: Crumb[] = [{ label: "Accueil", href: "/" }, ...items];
+  const d = t();
+  const all: Crumb[] = [{ label: d.home, href: "/" }, ...items];
   return (
-    <nav aria-label="Fil d'Ariane" className={`mb-6 flex flex-wrap items-center gap-2 text-label-md ${dark ? "text-on-primary-container" : "text-on-surface-variant"}`}>
+    <nav aria-label={d.breadcrumb} className={`mb-6 flex flex-wrap items-center gap-2 text-label-md ${dark ? "text-on-primary-container" : "text-on-surface-variant"}`}>
       {all.map((c, i) => (
         <span key={i} className="flex items-center gap-2">
           {i > 0 && <span className={dark ? "text-white/40" : "text-outline-variant"}>/</span>}

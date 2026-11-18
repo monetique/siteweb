@@ -1,6 +1,8 @@
 import icons from "@/lib/icons.json";
 
 const ICONS = icons as Record<string, string>;
+/** Icônes qui indiquent un sens de lecture : retournées automatiquement en arabe. */
+const DIRECTIONAL = new Set(["east", "west", "arrow_forward", "arrow_back", "chevron_right", "chevron_left", "arrow_outward", "send", "keyboard_arrow_right", "keyboard_arrow_left"]);
 
 /** Icône Material Symbols en SVG inline (taille = taille de police, couleur = couleur du texte). */
 export function Icon({ name, className = "" }: { name?: string | null; className?: string }) {
@@ -12,6 +14,6 @@ export function Icon({ name, className = "" }: { name?: string | null; className
   }
   return (
     <svg viewBox="0 -960 960 960" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"
-      className={`icon inline-block shrink-0 ${className}`} dangerouslySetInnerHTML={{ __html: ICONS[name] }} />
+      className={`icon inline-block shrink-0 ${DIRECTIONAL.has(name) ? "icon-dir" : ""} ${className}`} dangerouslySetInnerHTML={{ __html: ICONS[name] }} />
   );
 }
