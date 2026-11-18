@@ -4,20 +4,24 @@ import { L as NextLink } from "@/components/LangProvider";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import type { Global, Navigation } from "@/lib/strapi";
-import { INTL, LANG_LABEL, LANG_NAME, LANGS, localizePath, stripLang, type Lang } from "@/lib/i18n";
+import { INTL, LANG_LABEL, LANG_NAME, LANGS, WORLD_CLOCKS, localizePath, stripLang, type Lang } from "@/lib/i18n";
 import { useDict, useLang } from "./LangProvider";
 import { Icon } from "./Icon";
 
-function TunisClock({ lang }: { lang: Lang }) {
-  const [time, setTime] = useState<string>("--:--");
+/** Heure courante, rafraîchie toutes les 30 s (null avant l'hydratation : rendu statique sans heure). */
+function useNow() {
+  const [now, setNow] = useState<Date | null>(null);
   useEffect(() => {
-    const tick = () =>
-      setTime(new Date().toLocaleTimeString(INTL[lang], { timeZone: "Africa/Tunis", hour: "2-digit", minute: "2-digit" }));
-    tick();
-    const id = setInterval(tick, 30_000);
+    setNow(new Date());
+    const id = setInterval(() => setNow(new Date()), 30_000);
     return () => clearInterval(id);
-  }, [lang]);
-  return <span suppressHydrationWarning dir="ltr">{time}</span>;
+  }, []);
+  return now;
+}
+
+function Clock({ now, tz, lang }: { now: Date | null; tz: string; lang: Lang }) {
+  const time = now ? now.toLocaleTimeString(INTL[lang], { timeZone: tz, hour: "2-digit", minute: "2-digit", hourCycle: "h23" }) : "--:--";
+  return <span suppressHydrationWarning dir="ltr" className="tabular-nums">{time}</span>;
 }
 
 const norm = (p: string) => (p.length > 1 ? p.replace(/\/$/, "") : p);
@@ -35,6 +39,7 @@ export function Header({ global, nav, logoUrl }: { global: Global; nav: Navigati
   // Après un clic dans un menu déroulant (ancre sur la même page comprise), on le referme
   const closeDropdown = () => (document.activeElement as HTMLElement | null)?.blur();
   const cta = nav.headerCta;
+  const now = useNow();
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
@@ -50,8 +55,16 @@ export function Header({ global, nav, logoUrl }: { global: Global; nav: Navigati
               {d.switchStatus} <strong className="font-semibold text-on-primary">{global.statusLabel ?? d.statusDefault}</strong>
             </span>
             <span className="hidden items-center gap-1.5 md:flex">
-              <Icon name="schedule" className="text-[14px]" />{d.tunisTime} <TunisClock lang={lang} />
+              <Icon name="schedule" className="text-[14px]" />{d.tunisTime} <Clock now={now} tz="Africa/Tunis" lang={lang} />
             </span>
+            {/* Heures des pays de l'expertise internationale (écrans larges uniquement, faute de place) */}
+            <ul aria-label={d.worldClocks} className="hidden items-center gap-4 border-s border-white/15 ps-4 xl:flex">
+              {WORLD_CLOCKS.map((c) => (
+                <li key={c.tz} className="flex items-center gap-1.5 whitespace-nowrap">
+                  {c.name[lang]} <Clock now={now} tz={c.tz} lang={lang} />
+                </li>
+              ))}
+            </ul>
           </div>
           <nav aria-label={d.languages} className="flex items-center gap-2">
             {LANGS.map((l, i) => (

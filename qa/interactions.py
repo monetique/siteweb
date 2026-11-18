@@ -33,6 +33,16 @@ with sync_playwright() as p:
     pg.get_by_role('link', name='Switch Mobile').first.click(); pg.wait_for_url('**/solutions/switch-mobile/')
     check('Lien sous-menu → fiche Switch Mobile', pg.locator('h1').inner_text() == 'Switch Mobile')
 
+    # 2 ter. Bandeau : heures des pays de l'expertise internationale, décalage par rapport à Tunis
+    pg.goto(B + '/', wait_until='networkidle'); pg.wait_for_timeout(300)
+    clocks = pg.eval_on_selector_all('header ul[aria-label] li', 'e => e.map(l => l.innerText.replace(/\\s+/g, " ").trim())')
+    from datetime import datetime, timezone
+    from zoneinfo import ZoneInfo
+    def hm(tz): return datetime.now(timezone.utc).astimezone(ZoneInfo(tz)).strftime('%H:%M')
+    exp = [f'{n} {hm(tz)}' for n, tz in [('Algérie', 'Africa/Algiers'), ('Libye', 'Africa/Tripoli'), ('Mauritanie', 'Africa/Nouakchott'),
+                                          ('Rwanda', 'Africa/Kigali'), ('Congo', 'Africa/Brazzaville'), ('Cap-Vert', 'Atlantic/Cape_Verde')]]
+    check('Bandeau : 6 horloges internationales à l’heure', clocks == exp, ' | '.join(clocks))
+
     # 2 bis. Sous-menu Expertise : lien direct vers chaque section (ancre), y compris depuis la même page
     nav = pg.locator('nav[aria-label="Navigation principale"]')
     sec_top = lambda a: pg.evaluate(f'document.getElementById("{a}").getBoundingClientRect().top')

@@ -12,6 +12,17 @@ export const dirOf = (lang: Lang) => (lang === "ar" ? "rtl" : "ltr");
 
 /** Code de langue des dates et nombres : chiffres latins partout (usage des documents SMT). */
 export const INTL: Record<Lang, string> = { fr: "fr-FR", en: "en-GB", ar: "ar-TN-u-nu-latn" };
+/** Pays de l'expertise internationale (pages Expertise / Monétique Tunisie) affichés dans le bandeau
+ *  supérieur, à côté de l'heure de Tunis. Fuseaux IANA : l'heure d'été éventuelle est gérée par le navigateur. */
+export const WORLD_CLOCKS: { tz: string; name: Record<Lang, string> }[] = [
+  { tz: "Africa/Algiers", name: { fr: "Algérie", en: "Algeria", ar: "الجزائر" } },
+  { tz: "Africa/Tripoli", name: { fr: "Libye", en: "Libya", ar: "ليبيا" } },
+  { tz: "Africa/Nouakchott", name: { fr: "Mauritanie", en: "Mauritania", ar: "موريتانيا" } },
+  { tz: "Africa/Kigali", name: { fr: "Rwanda", en: "Rwanda", ar: "رواندا" } },
+  { tz: "Africa/Brazzaville", name: { fr: "Congo", en: "Congo", ar: "الكونغو" } },
+  { tz: "Atlantic/Cape_Verde", name: { fr: "Cap-Vert", en: "Cape Verde", ar: "الرأس الأخضر" } },
+];
+
 export const OG_LOCALE: Record<Lang, string> = { fr: "fr_TN", en: "en_GB", ar: "ar_TN" };
 export const LANG_LABEL: Record<Lang, string> = { fr: "FR", en: "EN", ar: "عربي" };
 export const LANG_NAME: Record<Lang, string> = { fr: "Français", en: "English", ar: "العربية" };
@@ -64,6 +75,7 @@ const fr = {
   switchStatus: "Statut du switch :",
   statusDefault: "Opérationnel",
   tunisTime: "Tunis :",
+  worldClocks: "Heure locale dans les pays de notre expertise internationale",
   languages: "Langues du site",
   home: "Accueil",
   homeAria: "Accueil",
@@ -198,6 +210,7 @@ const en: Dict = {
   switchStatus: "Switch status:",
   statusDefault: "Operational",
   tunisTime: "Tunis:",
+  worldClocks: "Local time in the countries of our international expertise",
   languages: "Site languages",
   home: "Home",
   homeAria: "Home",
@@ -324,6 +337,7 @@ const ar: Dict = {
   switchStatus: "حالة المحوّل:",
   statusDefault: "يعمل",
   tunisTime: "تونس:",
+  worldClocks: "التوقيت المحلي في بلدان خبرتنا الدولية",
   languages: "لغات الموقع",
   home: "الرئيسية",
   homeAria: "الصفحة الرئيسية",
