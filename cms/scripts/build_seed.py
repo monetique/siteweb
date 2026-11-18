@@ -67,6 +67,30 @@ def kp(t, icon=None):
     return {"text": t, **({"icon": icon} if icon else {})}
 
 # ------------------------------------------------------------------ global & navigation
+# Sites officiels des partenaires. Laisser vide quand l'adresse n'est pas confirmée : aucun lien n'est alors affiché.
+PARTNER_WEBSITES = {
+    "Amen Bank": "https://www.amenbank.com.tn", "Arab Tunisian Bank": "https://www.atb.tn",
+    "Attijari Bank": "https://www.attijaribank.com.tn", "Al Baraka Bank Tunisie": "https://www.albarakabank.com.tn",
+    "Bank ABC": "https://www.bank-abc.com", "Banque de Tunisie": "https://www.bt.com.tn",
+    "Banque de Tunisie et des Emirats": "https://www.bte.com.tn", "Banque Internationale Arabe de Tunisie": "https://www.biat.com.tn",
+    "Banque Nationale Agricole": "https://www.bna.com.tn", "Banque Tuniso-Libyenne": "https://www.btl.com.tn",
+    "Banque Tunisienne de Solidarité": "https://www.bts.com.tn", "Banque Zitouna": "https://www.banquezitouna.com",
+    "BH Bank": "https://www.bhbank.tn", "BTK Bank": "https://www.btknet.com", "Qatar National Bank": "https://www.qnb.com.tn",
+    "Société Tunisienne de Banque": "https://www.stb.com.tn", "Tunis International Bank": "https://www.tib.com.tn",
+    "Tunisian Saudi Bank": "https://www.stusidbank.com.tn", "Union Bancaire pour le Commerce et l’Industrie": "https://www.ubci.tn",
+    "Union Internationale de Banques": "https://www.uib.com.tn", "Wifak Bank": "https://www.wifakbank.com",
+    "Office National des Postes": "https://www.poste.tn", "Banque Centrale de Tunisie": "https://www.bct.gov.tn",
+    "BDL": "https://www.bdl.dz", "BEA": "https://www.bea.dz", "Natixis": "https://www.natixis.dz",
+    "AlBaraka": "https://www.albaraka-bank.dz", "Société Générale Algérie": "https://www.societegenerale.dz",
+    "Bader": "https://www.badr-bank.dz", "Fransabank": "https://www.fransabank.dz", "Nuran Bank": "https://nub.ly",
+    "Pluxee by Sodexo": "https://www.pluxee.tn", "Servimax": "https://www.servimax.tn",
+    "Visa": "https://www.visa.com", "Mastercard": "https://www.mastercard.com", "JCB": "https://www.global.jcb",
+    "UnionPay": "https://www.unionpayintl.com", "American Express": "https://www.americanexpress.com", "BPC": "https://www.bpcbt.com",
+    "Ooredoo": "https://www.ooredoo.tn", "Orange": "https://www.orange.tn", "Tunisie Telecom": "https://www.tunisietelecom.tn",
+    "TOPNET": "https://www.topnet.tn", "STEG": "https://www.steg.com.tn", "SONEDE": "https://www.sonede.com.tn",
+    "Tunisie Autoroutes": "https://www.tunisieautoroutes.tn",
+}
+
 GLOBAL = {
   "siteName": "Monétique Tunisie",
   "tagline": "Switch national monétique, mobile et agrégateur de facturier",
@@ -377,13 +401,14 @@ SEED = {"global": GLOBAL, "navigation": NAVIGATION, "dirigeants": DIRIGEANTS, "i
                        **({"cta": link(s["cta"][0], s["cta"][1], "primaire", True)} if s.get("cta") else {}),
                        "seo": {"metaTitle": SOL_TITLES.get(s["slug"], s["name"]), "metaDescription": s["tagline"]}}
                       for i, s in enumerate(SOLUTIONS)],
-        "partenaires": [{"name": n, "category": cat, "order": i + 1,
+        "partenaires": [{"name": n, "category": cat, "order": i + 1, **({"website": PARTNER_WEBSITES[n]} if n in PARTNER_WEBSITES else {}),
                          "showInRibbon": n in ("Ooredoo", "Orange", "Tunisie Telecom", "TOPNET", "SONEDE")}
                         for cat, names in PARTNERS.items() for i, n in enumerate(names)],
         "faqs": [{"question": q, "answer": blocks(a), "category": cat, "order": i + 1} for cat, items in FAQ.items() for i, (q, a) in enumerate(items)],
         "actualites": [{**a, "content": blocks(a["content"])} for a in ACTUALITES],
         "appelsOffres": [{**a, "content": blocks(a["content"])} for a in APPELS],
         "pages": PAGES}
+
 
 def _check(node, path=''):
     LIM = {'metaTitle': 70, 'metaDescription': 170, 'excerpt': 400}

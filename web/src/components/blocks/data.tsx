@@ -1,6 +1,8 @@
 /* Blocs « données » : ils affichent automatiquement les collections Strapi. */
+import type React from "react";
 import NextLink from "next/link";
-import type { Block, Page } from "@/lib/strapi";
+import type { Block, Page, Partenaire } from "@/lib/strapi";
+import { safeHref } from "@/lib/safe";
 import { getActualites, getAppelsOffres, getDirigeants, getFaqs, getGlobal, getIndicateurs, getPartenaires, getSolutions, mediaUrl } from "@/lib/strapi";
 import { FAQ_CATEGORY, formatDate, formatEvolution, NEWS_CATEGORY, PARTNER_CATEGORY, TENDER_STATUS, TENDER_TYPE } from "@/lib/format";
 import { Icon } from "../Icon";
@@ -69,6 +71,18 @@ export async function LatestNews({ block }: P) {
 }
 
 /* ---------- Partenaires */
+
+/** Lien vers le site officiel d'un partenaire (nouvel onglet) ; simple texte si aucune adresse n'est renseignée. */
+function PartnerLink({ partner, className, children }: { partner: Partenaire; className?: string; children: React.ReactNode }) {
+  const href = partner.website ? safeHref(partner.website) : "#";
+  if (href === "#" || !/^https?:/i.test(href)) return <span className={className}>{children}</span>;
+  return (
+    <a href={href} target="_blank" rel="noopener noreferrer" className={className} aria-label={`${partner.name} – site officiel (nouvel onglet)`}>
+      {children}
+    </a>
+  );
+}
+
 export async function PartnersRibbon({ block }: P) {
   const partners = (await getPartenaires()).filter((p) => p.showInRibbon);
   if (!partners.length) return null;
@@ -86,8 +100,10 @@ export async function PartnersRibbon({ block }: P) {
               const logo = mediaUrl(p.logo);
               return (
                 <li key={p.name} className="text-headline-sm font-bold tracking-wider text-on-surface">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  {logo ? <img src={logo} alt={p.name} className="h-8 w-auto grayscale" /> : p.name}
+                  <PartnerLink partner={p} className="transition-colors hover:text-secondary">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    {logo ? <img src={logo} alt={p.name} className="h-8 w-auto grayscale transition hover:grayscale-0" /> : p.name}
+                  </PartnerLink>
                 </li>
               );
             })}
@@ -121,9 +137,14 @@ export async function PartnersGrid({ block }: P) {
             {g.items.map((p) => {
               const logo = mediaUrl(p.logo);
               return (
-                <li key={p.name} className="flex h-20 items-center justify-center rounded-xl border border-outline-variant/30 bg-surface-container-lowest px-4 text-center text-label-md shadow-sm">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  {logo ? <img src={logo} alt={p.name} className="max-h-12 w-auto" /> : p.name}
+                <li key={p.name}>
+                  <PartnerLink
+                    partner={p}
+                    className="flex h-20 items-center justify-center rounded-xl border border-outline-variant/30 bg-surface-container-lowest px-4 text-center text-label-md shadow-sm transition hover:border-secondary/50 hover:shadow-md"
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    {logo ? <img src={logo} alt={p.name} className="max-h-12 w-auto" /> : p.name}
+                  </PartnerLink>
                 </li>
               );
             })}

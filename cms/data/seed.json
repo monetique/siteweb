@@ -1163,84 +1163,98 @@
    "name": "Amen Bank",
    "category": "banque_tunisienne",
    "order": 1,
+   "website": "https://www.amenbank.com.tn",
    "showInRibbon": false
   },
   {
    "name": "Arab Tunisian Bank",
    "category": "banque_tunisienne",
    "order": 2,
+   "website": "https://www.atb.tn",
    "showInRibbon": false
   },
   {
    "name": "Attijari Bank",
    "category": "banque_tunisienne",
    "order": 3,
+   "website": "https://www.attijaribank.com.tn",
    "showInRibbon": false
   },
   {
    "name": "Al Baraka Bank Tunisie",
    "category": "banque_tunisienne",
    "order": 4,
+   "website": "https://www.albarakabank.com.tn",
    "showInRibbon": false
   },
   {
    "name": "Bank ABC",
    "category": "banque_tunisienne",
    "order": 5,
+   "website": "https://www.bank-abc.com",
    "showInRibbon": false
   },
   {
    "name": "Banque de Tunisie",
    "category": "banque_tunisienne",
    "order": 6,
+   "website": "https://www.bt.com.tn",
    "showInRibbon": false
   },
   {
    "name": "Banque de Tunisie et des Emirats",
    "category": "banque_tunisienne",
    "order": 7,
+   "website": "https://www.bte.com.tn",
    "showInRibbon": false
   },
   {
    "name": "Banque Internationale Arabe de Tunisie",
    "category": "banque_tunisienne",
    "order": 8,
+   "website": "https://www.biat.com.tn",
    "showInRibbon": false
   },
   {
    "name": "Banque Nationale Agricole",
    "category": "banque_tunisienne",
    "order": 9,
+   "website": "https://www.bna.com.tn",
    "showInRibbon": false
   },
   {
    "name": "Banque Tuniso-Libyenne",
    "category": "banque_tunisienne",
    "order": 10,
+   "website": "https://www.btl.com.tn",
    "showInRibbon": false
   },
   {
    "name": "Banque Tunisienne de Solidarité",
    "category": "banque_tunisienne",
    "order": 11,
+   "website": "https://www.bts.com.tn",
    "showInRibbon": false
   },
   {
    "name": "Banque Zitouna",
    "category": "banque_tunisienne",
    "order": 12,
+   "website": "https://www.banquezitouna.com",
    "showInRibbon": false
   },
   {
    "name": "BH Bank",
    "category": "banque_tunisienne",
    "order": 13,
+   "website": "https://www.bhbank.tn",
    "showInRibbon": false
   },
   {
    "name": "BTK Bank",
    "category": "banque_tunisienne",
    "order": 14,
+   "website": "https://www.btknet.com",
    "showInRibbon": false
   },
   {
@@ -1253,84 +1267,98 @@
    "name": "Qatar National Bank",
    "category": "banque_tunisienne",
    "order": 16,
+   "website": "https://www.qnb.com.tn",
    "showInRibbon": false
   },
   {
    "name": "Société Tunisienne de Banque",
    "category": "banque_tunisienne",
    "order": 17,
+   "website": "https://www.stb.com.tn",
    "showInRibbon": false
   },
   {
    "name": "Tunis International Bank",
    "category": "banque_tunisienne",
    "order": 18,
+   "website": "https://www.tib.com.tn",
    "showInRibbon": false
   },
   {
    "name": "Tunisian Saudi Bank",
    "category": "banque_tunisienne",
    "order": 19,
+   "website": "https://www.stusidbank.com.tn",
    "showInRibbon": false
   },
   {
    "name": "Union Bancaire pour le Commerce et l’Industrie",
    "category": "banque_tunisienne",
    "order": 20,
+   "website": "https://www.ubci.tn",
    "showInRibbon": false
   },
   {
    "name": "Union Internationale de Banques",
    "category": "banque_tunisienne",
    "order": 21,
+   "website": "https://www.uib.com.tn",
    "showInRibbon": false
   },
   {
    "name": "Wifak Bank",
    "category": "banque_tunisienne",
    "order": 22,
+   "website": "https://www.wifakbank.com",
    "showInRibbon": false
   },
   {
    "name": "Office National des Postes",
    "category": "banque_tunisienne",
    "order": 23,
+   "website": "https://www.poste.tn",
    "showInRibbon": false
   },
   {
    "name": "Banque Centrale de Tunisie",
    "category": "banque_tunisienne",
    "order": 24,
+   "website": "https://www.bct.gov.tn",
    "showInRibbon": false
   },
   {
    "name": "BDL",
    "category": "banque_etrangere",
    "order": 1,
+   "website": "https://www.bdl.dz",
    "showInRibbon": false
   },
   {
    "name": "BEA",
    "category": "banque_etrangere",
    "order": 2,
+   "website": "https://www.bea.dz",
    "showInRibbon": false
   },
   {
    "name": "Natixis",
    "category": "banque_etrangere",
    "order": 3,
+   "website": "https://www.natixis.dz",
    "showInRibbon": false
   },
   {
    "name": "AlBaraka",
    "category": "banque_etrangere",
    "order": 4,
+   "website": "https://www.albaraka-bank.dz",
    "showInRibbon": false
   },
   {
    "name": "Société Générale Algérie",
    "category": "banque_etrangere",
    "order": 5,
+   "website": "https://www.societegenerale.dz",
    "showInRibbon": false
   },
   {
@@ -1343,12 +1371,14 @@
    "name": "Bader",
    "category": "banque_etrangere",
    "order": 7,
+   "website": "https://www.badr-bank.dz",
    "showInRibbon": false
   },
   {
    "name": "Fransabank",
    "category": "banque_etrangere",
    "order": 8,
+   "website": "https://www.fransabank.dz",
    "showInRibbon": false
   },
   {
@@ -1361,6 +1391,7 @@
    "name": "Nuran Bank",
    "category": "banque_etrangere",
    "order": 10,
+   "website": "https://nub.ly",
    "showInRibbon": false
   },
   {
@@ -1379,6 +1410,7 @@
    "name": "Pluxee by Sodexo",
    "category": "client_privatif",
    "order": 1,
+   "website": "https://www.pluxee.tn",
    "showInRibbon": false
   },
   {
@@ -1391,42 +1423,49 @@
    "name": "Servimax",
    "category": "client_privatif",
    "order": 3,
+   "website": "https://www.servimax.tn",
    "showInRibbon": false
   },
   {
    "name": "Visa",
    "category": "partenaire_technologique",
    "order": 1,
+   "website": "https://www.visa.com",
    "showInRibbon": false
   },
   {
    "name": "Mastercard",
    "category": "partenaire_technologique",
    "order": 2,
+   "website": "https://www.mastercard.com",
    "showInRibbon": false
   },
   {
    "name": "JCB",
    "category": "partenaire_technologique",
    "order": 3,
+   "website": "https://www.global.jcb",
    "showInRibbon": false
   },
   {
    "name": "UnionPay",
    "category": "partenaire_technologique",
    "order": 4,
+   "website": "https://www.unionpayintl.com",
    "showInRibbon": false
   },
   {
    "name": "American Express",
    "category": "partenaire_technologique",
    "order": 5,
+   "website": "https://www.americanexpress.com",
    "showInRibbon": false
   },
   {
    "name": "BPC",
    "category": "partenaire_technologique",
    "order": 6,
+   "website": "https://www.bpcbt.com",
    "showInRibbon": false
   },
   {
@@ -1445,42 +1484,49 @@
    "name": "Ooredoo",
    "category": "operateur_facturier",
    "order": 1,
+   "website": "https://www.ooredoo.tn",
    "showInRibbon": true
   },
   {
    "name": "Orange",
    "category": "operateur_facturier",
    "order": 2,
+   "website": "https://www.orange.tn",
    "showInRibbon": true
   },
   {
    "name": "Tunisie Telecom",
    "category": "operateur_facturier",
    "order": 3,
+   "website": "https://www.tunisietelecom.tn",
    "showInRibbon": true
   },
   {
    "name": "TOPNET",
    "category": "operateur_facturier",
    "order": 4,
+   "website": "https://www.topnet.tn",
    "showInRibbon": true
   },
   {
    "name": "STEG",
    "category": "operateur_facturier",
    "order": 5,
+   "website": "https://www.steg.com.tn",
    "showInRibbon": false
   },
   {
    "name": "SONEDE",
    "category": "operateur_facturier",
    "order": 6,
+   "website": "https://www.sonede.com.tn",
    "showInRibbon": true
   },
   {
    "name": "Tunisie Autoroutes",
    "category": "operateur_facturier",
    "order": 7,
+   "website": "https://www.tunisieautoroutes.tn",
    "showInRibbon": false
   }
  ],

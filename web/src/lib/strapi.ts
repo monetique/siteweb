@@ -25,7 +25,9 @@ async function strapiGet<T>(path: string, params: Record<string, unknown> = {}):
     try {
       res = await fetch(`${STRAPI_URL}/api/${path}?${qs}`, {
         headers: TOKEN ? { Authorization: `Bearer ${TOKEN}` } : {},
-        cache: "force-cache", // partagé entre les pages d'un même build ; vidé avant chaque build (prebuild)
+        // Build : cache partagé entre les pages (vidé avant chaque build par prebuild).
+        // Développement : jamais de cache, pour voir immédiatement ce qui est publié dans le CMS.
+        cache: process.env.NODE_ENV === "development" ? "no-store" : "force-cache",
         signal: AbortSignal.timeout(20_000),
       });
       break;
