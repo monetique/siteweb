@@ -75,7 +75,7 @@ export type Actualite = { documentId: string; title: string; slug: string; date:
 export type AppelOffres = { documentId: string; title: string; slug: string; type: string; reference?: string; publicationDate: string;
   deadline?: string; tenderStatus: string; issuer?: string; summary?: string; content?: BlocksContent; documentRetrieval?: string;
   documentCost?: string; offerValidityDays?: number; submissionAddress?: string; documents?: Media[]; seo?: Seo };
-export type Partenaire = { name: string; category: string; logo?: Media; website?: string; showInRibbon?: boolean; order: number };
+export type Partenaire = { name: string; category: string; logo?: Media; website?: string; showInRibbon?: boolean; showOnHome?: boolean; order: number };
 export type Faq = { question: string; answer: BlocksContent; category: string; order: number };
 export type Indicateur = { name: string; unit?: string; icon?: string; note?: string; showOnHomepage?: boolean; order: number;
   values: { period: string; year?: number; value: number; displayValue?: string; evolution?: number | null; isPartialYear?: boolean }[] };

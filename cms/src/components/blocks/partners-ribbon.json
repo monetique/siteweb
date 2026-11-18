@@ -9,6 +9,14 @@
     "title": {
       "type": "string"
     },
+    "variant": {
+      "type": "enumeration",
+      "enum": [
+        "pastilles",
+        "facturiers"
+      ],
+      "default": "pastilles"
+    },
     "showAllLink": {
       "type": "boolean",
       "default": true

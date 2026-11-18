@@ -30,11 +30,11 @@ if (fs.existsSync(SEED)) collect(JSON.parse(fs.readFileSync(SEED, "utf8")));
 
 // 3. Jeu d'icônes courantes, pour qu'une icône choisie par un éditeur s'affiche sans régénération
 const COMMON = `account_balance account_balance_wallet add analytics apartment api arrow_back arrow_forward arrow_outward arrow_upward
-  assured_workload badge bar_chart bolt business business_center calendar_month calendar_today call campaign check check_circle
+  assured_workload badge bar_chart bolt business_center calendar_month calendar_today call campaign check check_circle
   chevron_left chevron_right close cloud cloud_done code contactless contacts content_copy credit_card credit_score currency_exchange
   dashboard database description devices dns docs domain download east edit_document electric_bolt encrypted event event_available
-  event_busy fact_check fingerprint flag gavel globe groups handshake help hub info insights inventory key language lightbulb link
-  local_atm location_on lock mail map menu monitoring newspaper paid payments person phone_android point_of_sale policy public qr_code
+  event_busy fact_check fingerprint flag gavel globe groups handshake help hub info inventory key language lightbulb link
+  local_atm location_on lock mail map menu monitoring newspaper paid payments person point_of_sale policy public qr_code
   qr_code_scanner query_stats receipt receipt_long request_quote rocket_launch savings schedule school search security send sell
   settings shield shield_lock shopping_cart sim_card speed storage store storefront support_agent sync sync_alt tag task_alt
   timeline trending_up tune verified verified_user visibility wallet water_drop wifi workspace_premium`.split(/\s+/);

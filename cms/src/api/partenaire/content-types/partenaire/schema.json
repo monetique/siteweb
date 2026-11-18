@@ -70,6 +70,15 @@
         }
       }
     },
+    "showOnHome": {
+      "type": "boolean",
+      "default": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
     "order": {
       "type": "integer",
       "default": 0,

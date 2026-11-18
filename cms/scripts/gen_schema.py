@@ -132,6 +132,7 @@ COMPONENTS = {
     "count": {"type": "integer", "default": 3, "min": 1, "max": 9}}),
  'blocks.partners-ribbon': ("Bandeau partenaires", "handHeart", {
     "title": {"type": "string"},
+    "variant": {"type": "enumeration", "enum": ["pastilles", "facturiers"], "default": "pastilles"},
     "showAllLink": {"type": "boolean", "default": True}}),
  'blocks.partners-grid': ("Grille des partenaires", "handHeart", {
     "title": {"type": "string"},
@@ -281,6 +282,7 @@ ct('partenaire', 'collectionType', 'partenaire', 'partenaires', 'Partenaire',
     "category": enum(["banque_tunisienne", "banque_etrangere", "client_privatif", "partenaire_technologique", "operateur_facturier"], required=True),
     "website": f("string", localized=False),
     "showInRibbon": f("boolean", localized=False, default=False),
+    "showOnHome": f("boolean", localized=False, default=False),
     "order": f("integer", localized=False, default=0),
    }, localized=False)
 
@@ -338,7 +340,7 @@ LBL = {
  'documentCost': 'Coût du cahier des charges', 'offerValidityDays': 'Validité des offres (jours)',
  'submissionAddress': 'Adresse de dépôt des offres', 'documents': 'Documents (cahier des charges, termes de référence)',
  'tagline': 'Accroche', 'sections': 'Sections', 'keyPoints': 'Points clés', 'logo': 'Logo', 'website': 'Site web',
- 'showInRibbon': 'Afficher dans le bandeau partenaires', 'question': 'Question', 'answer': 'Réponse', 'unit': 'Unité',
+ 'showInRibbon': 'Afficher dans le bandeau partenaires (pages intérieures)', 'showOnHome': 'Afficher dans le bandeau de l’accueil (facturiers interconnectés)', 'question': 'Question', 'answer': 'Réponse', 'unit': 'Unité',
  'values': 'Valeurs par période', 'note': 'Note', 'showOnHomepage': "Afficher sur l'accueil", 'fullName': 'Nom complet',
  'role': 'Fonction', 'photo': 'Photo', 'bio': 'Biographie', 'phone': 'Téléphone', 'email': 'E-mail', 'subject': 'Objet',
  'message': 'Message', 'status': 'Statut de traitement', 'internalNote': 'Note interne', 'isHomepage': "Page d'accueil",
