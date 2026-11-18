@@ -83,7 +83,7 @@ function PartnerLink({ partner, className, children }: { partner: Partenaire; cl
   );
 }
 
-export async function PartnersRibbon({ block }: P) {
+export async function PartnersRibbon({ block }: { block: Block }) {
   const all = await getPartenaires();
   const homeStyle = block.variant === "facturiers";
   const partners = all.filter((p) => (homeStyle ? p.showOnHome : p.showInRibbon));

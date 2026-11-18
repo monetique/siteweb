@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Footer } from "@/components/Footer";
+import { HideOnHome } from "@/components/HideOnHome";
+import { PartnersRibbon } from "@/components/blocks/data";
 import { Header } from "@/components/Header";
 import { getGlobal, getNavigation, mediaUrl } from "@/lib/strapi";
 import { jsonLd } from "@/lib/safe";
@@ -32,6 +34,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(orgLd) }} />
         <Header global={global} nav={nav} logoUrl={logoUrl} />
         <main id="contenu" className="w-full pt-[116px]">{children}</main>
+        {/* Bandeau « Partenaires & clients » commun à toutes les pages intérieures (maquette) */}
+        <HideOnHome>
+          <PartnersRibbon block={{ __component: "blocks.partners-ribbon", id: 0, title: "Partenaires & clients", variant: "pastilles", showAllLink: true }} />
+        </HideOnHome>
         <Footer global={global} nav={nav} logoUrl={logoUrl} />
       </body>
     </html>

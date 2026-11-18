@@ -3762,12 +3762,6 @@
       "style": "primaire",
       "isExternal": false
      }
-    },
-    {
-     "__component": "blocks.partners-ribbon",
-     "title": "Partenaires & clients",
-     "variant": "pastilles",
-     "showAllLink": true
     }
    ]
   },
@@ -3835,12 +3829,6 @@
       "style": "primaire",
       "isExternal": false
      }
-    },
-    {
-     "__component": "blocks.partners-ribbon",
-     "title": "Partenaires & clients",
-     "variant": "pastilles",
-     "showAllLink": true
     }
    ]
   },
