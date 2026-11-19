@@ -39,9 +39,9 @@ with sync_playwright() as p:
     from datetime import datetime, timezone
     from zoneinfo import ZoneInfo
     def hm(tz): return datetime.now(timezone.utc).astimezone(ZoneInfo(tz)).strftime('%H:%M')
-    exp = [f'{n} {hm(tz)}' for n, tz in [('Algérie', 'Africa/Algiers'), ('Libye', 'Africa/Tripoli'), ('Mauritanie', 'Africa/Nouakchott'),
-                                          ('Rwanda', 'Africa/Kigali'), ('Congo', 'Africa/Brazzaville'), ('Cap-Vert', 'Atlantic/Cape_Verde')]]
-    check('Bandeau : 6 horloges internationales à l’heure', clocks == exp, ' | '.join(clocks))
+    exp = [f'{n} {hm(tz)}' for n, tz in [('Alger', 'Africa/Algiers'), ('Tripoli', 'Africa/Tripoli'), ('Nouakchott', 'Africa/Nouakchott'),
+                                          ('Kigali', 'Africa/Kigali'), ('Brazzaville', 'Africa/Brazzaville'), ('Praia', 'Atlantic/Cape_Verde')]]
+    check('Bandeau : 6 horloges des capitales à l’heure', clocks == exp, ' | '.join(clocks))
 
     # 2 bis. Sous-menu Expertise : lien direct vers chaque section (ancre), y compris depuis la même page
     nav = pg.locator('nav[aria-label="Navigation principale"]')
