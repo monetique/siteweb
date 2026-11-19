@@ -33,6 +33,17 @@ with sync_playwright() as p:
     pg.get_by_role('link', name='Switch Mobile').first.click(); pg.wait_for_url('**/solutions/switch-mobile/')
     check('Lien sous-menu → fiche Switch Mobile', pg.locator('h1').inner_text() == 'Switch Mobile')
 
+    # 2 quater. Bannière d'accueil : mot animé du titre, image, encadré cliquable
+    pg.goto(B + '/', wait_until='networkidle')
+    seen = []
+    for _ in range(3):
+        seen.append(pg.locator('h1 [data-active]').inner_text()); pg.wait_for_timeout(2900)
+    check('Titre : « Solutions de paiement digital » + mot animé', pg.locator('h1').inner_text().startswith('Solutions de paiement digital') and seen == ['sécurisées', 'innovantes', 'fiables'], ' → '.join(seen))
+    check('Titre : les 3 mots lus par les lecteurs d’écran', pg.locator('h1 .sr-only').inner_text() == 'sécurisées, innovantes, fiables')
+    check('Bannière : image chargée', pg.evaluate("(() => { const i = document.querySelector('main section img'); return !!i && i.complete && i.naturalWidth > 0 })()"))
+    pg.locator('main section a[href*="monetique-tunisie"]').first.click(); pg.wait_for_url('**/monetique-tunisie/')
+    check('Encadré « Leader… » → page Monétique Tunisie', pg.url.endswith('/monetique-tunisie/'), pg.url)
+
     # 2 ter. Bandeau : heures des pays de l'expertise internationale, décalage par rapport à Tunis
     pg.goto(B + '/', wait_until='networkidle'); pg.wait_for_timeout(300)
     clocks = pg.eval_on_selector_all('header ul[aria-label] li', 'e => e.map(l => l.innerText.replace(/\\s+/g, " ").trim())')

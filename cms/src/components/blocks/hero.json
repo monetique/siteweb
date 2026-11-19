@@ -18,12 +18,27 @@
     "eyebrow": {
       "type": "string"
     },
+    "badge": {
+      "type": "string"
+    },
     "title": {
       "type": "string",
       "required": true
     },
+    "rotatingWords": {
+      "type": "text"
+    },
     "subtitle": {
       "type": "text"
+    },
+    "highlightTitle": {
+      "type": "string"
+    },
+    "highlightText": {
+      "type": "text"
+    },
+    "highlightUrl": {
+      "type": "string"
     },
     "image": {
       "type": "media",

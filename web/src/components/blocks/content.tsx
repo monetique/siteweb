@@ -7,7 +7,8 @@ import { Breadcrumb } from "../Breadcrumb";
 import { Icon } from "../Icon";
 import { RichText } from "../RichText";
 import { Container, Eyebrow, Section, SectionTitle } from "../Section";
-import { ButtonLink } from "../SmartLink";
+import { ButtonLink, SmartLink } from "../SmartLink";
+import { RotatingWord } from "../RotatingWord";
 
 type P = { block: Block; page: Page };
 
@@ -40,46 +41,96 @@ async function HomeHero({ block }: { block: Block }) {
   const indicateurs = await getIndicateurs();
   const dispo = indicateurs.find((i) => i.unit === "%")?.values.at(-1);
   const d = t();
-  // Le titre se termine par les mots mis en valeur après la dernière virgule (ex. « …, sécurisées »).
-  const words: string[] = block.title.split(" ");
-  const accent = words.slice(-1).join(" ");
-  const lead = words.slice(0, -1).join(" ");
   const img = mediaUrl(block.image);
+
+  // Titre : partie fixe + mot qui défile (un par ligne dans « rotatingWords »).
+  // « {mot} » dans le titre place le mot (ex. EN « {mot} digital payment solutions ») ; sinon il vient à la fin.
+  const words: string[] = String(block.rotatingWords ?? "").split("\n").map((w) => w.trim()).filter(Boolean);
+  let before: string = block.title;
+  let after = "";
+  if (words.length) {
+    [before, after] = block.title.includes("{mot}") ? block.title.split("{mot}") : [`${block.title} `, ""];
+  }
+  const title = words.length ? (
+    <>{before}<RotatingWord words={words} />{after}</>
+  ) : (
+    // Ancien format sans mots animés : dernier mot du titre mis en valeur
+    <>{block.title.split(" ").slice(0, -1).join(" ")} <span className="text-secondary">{block.title.split(" ").at(-1)}</span></>
+  );
+
+  const highlight = block.highlightTitle || block.highlightText ? (
+    <>
+      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-white text-primary-container">
+        <Icon name="chevron_right" className="text-[22px]" />
+      </span>
+      <span className="text-label-md leading-relaxed">
+        {block.highlightTitle && <strong className="block font-semibold text-on-primary">{block.highlightTitle}</strong>}
+        {block.highlightText && <span className="text-on-primary-container">{block.highlightText}</span>}
+      </span>
+    </>
+  ) : null;
+  const highlightClass = "flex items-center gap-4 rounded-lg bg-primary-container p-4 shadow-sm lg:p-5";
+
   return (
     <section className="relative w-full overflow-hidden bg-surface-bright">
-      <Container className="grid grid-cols-1 items-center gap-12 py-16 lg:grid-cols-12 lg:py-24">
+      <Container className="grid grid-cols-1 items-center gap-12 py-14 lg:grid-cols-12 lg:gap-16 lg:py-20">
         <div className="lg:col-span-7">
-          {block.eyebrow && (
-            <span className="inline-flex items-center gap-2 rounded bg-surface-container px-3 py-1 text-eyebrow uppercase text-secondary">
-              {block.eyebrow}
-            </span>
+          {(block.eyebrow || block.badge) && (
+            <div className="flex flex-wrap items-center gap-3">
+              {block.eyebrow && (
+                <span className="rounded bg-surface-container px-3 py-1.5 text-eyebrow uppercase text-secondary">{block.eyebrow}</span>
+              )}
+              {block.badge && <span className="text-label-sm font-semibold text-on-surface-variant">{block.badge}</span>}
+            </div>
           )}
-          <h1 className="mt-6 text-headline-xl-mobile text-on-surface lg:text-headline-xl">
-            {lead} <span className="text-secondary">{accent}</span>
-          </h1>
+          <h1 className="mt-6 text-headline-xl-mobile text-on-surface lg:text-headline-xl">{title}</h1>
           {block.subtitle && <p className="mt-6 max-w-2xl text-body-lg text-on-surface-variant">{block.subtitle}</p>}
-          <div className="mt-8 flex flex-wrap gap-3">{block.ctas?.map((c: any) => <ButtonLink key={c.label} link={c} />)}</div>
+          {highlight && (
+            <>
+              <hr className="my-8 border-outline-variant/40" />
+              {block.highlightUrl ? (
+                <SmartLink href={block.highlightUrl} className={`${highlightClass} group transition-shadow hover:shadow-md`}>{highlight}</SmartLink>
+              ) : (
+                <div className={highlightClass}>{highlight}</div>
+              )}
+            </>
+          )}
+          {block.ctas?.length > 0 && (
+            <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
+              {block.ctas.map((c: any) => (
+                <ButtonLink key={c.label} link={c} className={c.style === "secondaire" ? "w-full bg-surface-container-low! hover:bg-surface-container!" : "w-full"} />
+              ))}
+            </div>
+          )}
         </div>
+
         <div className="lg:col-span-5">
-          <div className="relative overflow-hidden rounded-2xl bg-primary-container p-8 text-on-primary shadow-xl">
-            {img && /* eslint-disable-next-line @next/next/no-img-element */ <img src={img} alt="" className="absolute inset-0 h-full w-full object-cover opacity-30" />}
-            <div className="grid-nodes pointer-events-none absolute inset-0 text-white opacity-[0.08]" />
-            <div className="relative">
-              <Eyebrow dark>{d.switchNational}</Eyebrow>
-              <p className="mt-3 text-body-md text-on-primary-container">
-                {d.switchText}
-              </p>
+          {/* Visuel : photo en haut, fondu vers le bleu nuit, carte « switch national » par-dessus */}
+          <div className="relative overflow-hidden rounded-xl bg-primary-container shadow-2xl lg:aspect-[4/4.3]">
+            {img && (
+              /* eslint-disable-next-line @next/next/no-img-element */
+              <img
+                src={img}
+                alt="" /* illustration : le message est porté par le texte (le texte alternatif de la médiathèque n'est pas traduit) */
+                className="h-60 w-full object-cover object-[58%_50%] sm:h-80 lg:absolute lg:inset-x-0 lg:top-0 lg:h-[72%]"
+                fetchPriority="high"
+              />
+            )}
+            <div className="pointer-events-none absolute inset-x-0 top-[9rem] h-24 bg-gradient-to-b from-transparent to-primary-container sm:top-[14rem] lg:top-[44%] lg:h-[30%]" />
+            <div className="relative mx-4 -mt-16 mb-4 rounded-lg bg-white/95 p-5 shadow-lg backdrop-blur sm:mx-6 sm:mb-6 lg:absolute lg:inset-x-6 lg:bottom-6 lg:m-0">
+              <div className="flex items-center justify-between gap-3">
+                <span className="flex items-center gap-2 text-eyebrow uppercase text-secondary">
+                  <span className="h-2 w-2 rounded-full bg-secondary" />{d.switchNational}
+                </span>
+                <span className="shrink-0 whitespace-nowrap rounded bg-surface-container px-2 py-0.5 text-[11px] font-bold tracking-wide text-secondary">PCI DSS</span>
+              </div>
+              <p className="mt-3 text-label-sm leading-relaxed text-on-surface-variant">{d.switchText}</p>
               {dispo && (
-                <div className="mt-8 rounded-xl bg-white/5 p-5">
-                  <span className="font-display text-stat text-secondary-container" dir="ltr">{dispo.displayValue ?? dispo.value} %</span>
-                  <p className="mt-2 text-label-sm text-on-primary-container">{d.availability(localizePeriod(dispo.period, getLang()).toLowerCase())}</p>
+                <div className="mt-4 flex items-end justify-between gap-4 border-t border-outline-variant/40 pt-4">
+                  <span className="text-label-sm font-semibold text-on-surface">{d.availability(localizePeriod(dispo.period, getLang()).toLowerCase())}</span>
+                  <span className="shrink-0 font-display text-headline-md font-bold text-secondary" dir="ltr">{dispo.displayValue ?? dispo.value} %</span>
                 </div>
               )}
-              <div className="mt-6 flex flex-wrap gap-2">
-                {d.heroTags.map((tag) => (
-                  <span key={tag} className="rounded-full bg-white/10 px-3 py-1 text-label-sm text-secondary-fixed">{tag}</span>
-                ))}
-              </div>
             </div>
           </div>
         </div>

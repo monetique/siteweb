@@ -96,6 +96,23 @@ Sécurité : contenu échappé en HTML, retours à la ligne supprimés des en-t�
 **Simulation en local** : `python3 scripts/smtp-simulateur.py` (nécessite `pip install aiosmtpd`) écoute sur 127.0.0.1:1025 ; chaque e-mail est enregistré dans `mails/` (.eml et aperçu .html). Rien ne part sur Internet.
 **Production** : renseigner `SMTP_HOST`, `SMTP_PORT` (587), `SMTP_REQUIRE_TLS=true`, `SMTP_USERNAME`, `SMTP_PASSWORD`, `SMTP_FROM` avec les paramètres de la messagerie SMT ; prévoir SPF/DKIM pour l'adresse d'envoi afin d'éviter les spams.
 
+## Bannière de la page d'accueil
+
+Dans **Pages → Accueil → Bannière** (variante « accueil ») :
+
+| Champ | Rôle | Exemple |
+|---|---|---|
+| `eyebrow` | pastille au-dessus du titre | Switch national monétique |
+| `badge` | mention à côté de la pastille | Depuis 1989 |
+| `title` | partie fixe du titre | Solutions de paiement digital |
+| `rotatingWords` | mots qui défilent à la fin du titre, **un par ligne** | sécurisées / innovantes / fiables |
+| `subtitle` | paragraphe d'introduction | |
+| `highlightTitle`, `highlightText`, `highlightUrl` | encadré sombre avec flèche (cliquable si une adresse est saisie) | Leader des systèmes… → /monetique-tunisie |
+| `image` | visuel de droite (format paysage, ≥ 1400 px de large ; le haut de l'image reste visible) | |
+| `ctas` | boutons | Nos solutions, Expertise monétique |
+
+Si le mot animé ne doit pas être à la fin (cas de l'anglais : « Secure digital payment solutions »), écrire `{mot}` dans le titre à l'endroit voulu : `{mot} digital payment solutions`. La carte « Switch national monétique » et le taux de disponibilité viennent du dictionnaire du site et des indicateurs statistiques.
+
 ## Traductions
 
 Le site existe en français (langue par défaut), anglais (`en`) et arabe (`ar`) grâce au module i18n de Strapi.

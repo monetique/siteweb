@@ -3132,9 +3132,16 @@
     {
      "__component": "blocks.hero",
      "variant": "accueil",
-     "title": "Innovative, reliable, secure digital payment solutions",
+     "eyebrow": "National payment switch",
+     "badge": "Since 1989",
+     "title": "{mot} digital payment solutions",
+     "rotatingWords": "Secure\nInnovative\nReliable",
      "subtitle": "We support our partners and clients in their growth by providing them with top-quality payment solutions, while contributing to the continuous development of the digital payments landscape in Tunisia and Africa.",
-     "eyebrow": "National payment switch · Since 1989",
+     "highlightTitle": "Leader in digital payment systems in Tunisia,",
+     "highlightText": "Monétique Tunisie is the national card and mobile payment switch and bill aggregator (Paysmart)",
+     "highlightUrl": "/monetique-tunisie",
+     "imageFile": "hero-paiement.jpg",
+     "imageAlt": "Paiement par carte sans contact sur un terminal de paiement électronique",
      "ctas": [
       {
        "label": "Our solutions",

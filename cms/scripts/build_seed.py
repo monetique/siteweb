@@ -267,10 +267,16 @@ PAGES = [
    "seo": {"metaTitle": "Monétique Tunisie – Solutions de paiement digital",
            "metaDescription": "Switch national monétique, mobile et agrégateur de facturier (Paysmart), Monétique Tunisie accompagne banques, fintechs et commerçants en Tunisie et en Afrique."},
    "blocks": [
-     hero("Solutions de paiement digital innovantes, fiables, sécurisées",
+     {**hero("Solutions de paiement digital",
           "Nous accompagnons nos partenaires et clients dans leur croissance en leur fournissant des solutions de paiement de qualité supérieure, tout en contribuant au développement continu du paysage des paiements digitaux en Tunisie et en Afrique.",
-          "Switch national monétique · Depuis 1989", "accueil",
+          "Switch national monétique", "accueil",
           [link("Nos solutions", "/solutions", "primaire"), link("Expertise monétique", "/expertise", "secondaire")]),
+      # Mots qui défilent à la fin du titre (un par ligne) ; « {mot} » dans le titre fixe leur position
+      "badge": "Depuis 1989", "rotatingWords": "sécurisées\ninnovantes\nfiables",
+      "highlightTitle": "Leader des systèmes de paiement digital en Tunisie,",
+      "highlightText": "Monétique Tunisie est le switch national monétique, mobile et agrégateur de facturier (Paysmart)",
+      "highlightUrl": "/monetique-tunisie", "imageFile": "hero-paiement.jpg",
+      "imageAlt": "Paiement par carte sans contact sur un terminal de paiement électronique"},
      {"__component": "blocks.key-figures", "eyebrow": "Chiffres clés", "title": "Chiffres clés de la monétique en Tunisie", "subtitle": "Données à fin juin 2025",
       "source": "Source : Monétique Tunisie", "cta": link("Voir toutes les statistiques", "/statistiques"),
       "items": [{"value": "77,7", "unit": "M", "label": "Nombre d'opérations", "evolution": "+9 %", "note": "Évolution T2 2024 / T2 2025"},

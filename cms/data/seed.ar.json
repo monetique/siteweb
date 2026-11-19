@@ -3132,9 +3132,16 @@
     {
      "__component": "blocks.hero",
      "variant": "accueil",
-     "title": "حلول دفع رقمي مبتكرة وموثوقة وآمنة",
+     "eyebrow": "المحوّل النقدي الوطني",
+     "badge": "منذ 1989",
+     "title": "حلول دفع رقمي",
+     "rotatingWords": "آمنة\nمبتكرة\nموثوقة",
      "subtitle": "نرافق شركاءنا وحرفاءنا في نموّهم من خلال توفير حلول دفع ذات جودة عالية، مع المساهمة في التطوير المتواصل لمشهد الدفع الرقمي في تونس وإفريقيا.",
-     "eyebrow": "المحوّل النقدي الوطني · منذ 1989",
+     "highlightTitle": "رائدة أنظمة الدفع الرقمي في تونس،",
+     "highlightText": "Monétique Tunisie هي المحوّل الوطني للمعاملات النقدية والدفع عبر الهاتف الجوال ومجمّع الفواتير (Paysmart)",
+     "highlightUrl": "/monetique-tunisie",
+     "imageFile": "hero-paiement.jpg",
+     "imageAlt": "Paiement par carte sans contact sur un terminal de paiement électronique",
      "ctas": [
       {
        "label": "حلولنا",

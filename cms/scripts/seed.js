@@ -25,6 +25,8 @@ const TRANSLATIONS = Object.fromEntries(
 
 const clean = (o) => JSON.parse(JSON.stringify(o, (k, v) => (v === null ? undefined : v)));
 
+const MIME = { '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.webp': 'image/webp', '.svg': 'image/svg+xml' };
+
 async function uploadFile(strapi, file, alt) {
   const filepath = path.join(ROOT, 'data', 'media', file);
   const existing = await strapi.db.query('plugin::upload.file').findOne({ where: { name: file } });
@@ -32,9 +34,22 @@ async function uploadFile(strapi, file, alt) {
   const stats = fs.statSync(filepath);
   const [uploaded] = await strapi.plugin('upload').service('upload').upload({
     data: { fileInfo: { name: file, alternativeText: alt, caption: alt } },
-    files: { filepath, originalFilename: file, mimetype: 'image/png', size: stats.size },
+    files: { filepath, originalFilename: file, mimetype: MIME[path.extname(file).toLowerCase()] ?? 'application/octet-stream', size: stats.size },
   });
   return uploaded;
+}
+
+/** Dans les données de démo, `imageFile` (fichier de data/media) + `imageAlt` deviennent le champ média `image`. */
+async function resolveMedia(strapi, value) {
+  if (Array.isArray(value)) return Promise.all(value.map((v) => resolveMedia(strapi, v)));
+  if (!value || typeof value !== 'object') return value;
+  const out = {};
+  for (const [k, v] of Object.entries(value)) {
+    if (k === 'imageAlt') continue;
+    if (k === 'imageFile') out.image = (await uploadFile(strapi, v, value.imageAlt ?? '')).id;
+    else out[k] = await resolveMedia(strapi, v);
+  }
+  return out;
 }
 
 async function setSingle(strapi, uid, data, locale = LOCALE) {
@@ -55,7 +70,7 @@ async function fillCollection(strapi, uid, items, { localized = true, publish = 
   let n = 0;
   let translated = 0;
   for (const [i, item] of items.entries()) {
-    const params = { data: clean(item) };
+    const params = { data: await resolveMedia(strapi, clean(item)) };
     if (localized) params.locale = LOCALE;
     if (publish) params.status = 'published';
     const created = await docs.create(params);
@@ -65,7 +80,7 @@ async function fillCollection(strapi, uid, items, { localized = true, publish = 
       for (const [lang, seed] of Object.entries(TRANSLATIONS)) {
         const tr = seed[key]?.[i];
         if (!tr) continue;
-        await docs.update({ documentId: created.documentId, locale: lang, data: clean(tr), ...(publish ? { status: 'published' } : {}) });
+        await docs.update({ documentId: created.documentId, locale: lang, data: await resolveMedia(strapi, clean(tr)), ...(publish ? { status: 'published' } : {}) });
         translated += 1;
       }
     }

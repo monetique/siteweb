@@ -183,7 +183,6 @@ const fr = {
   switchNational: "Switch national monétique",
   switchText: "Traitement des transactions cartes (GAB, TPE, e-commerce via ClicToPay), du paiement mobile et du paiement de factures avec Paysmart.",
   availability: (p: string) => `Taux de disponibilité du switch national (${p})`,
-  heroTags: ["Agréé par la BCT", "PCI DSS", "14 banques africaines"],
   // libellés de données
   tenderType: { appel_offres: "Appel d’offres", consultation: "Consultation", appel_candidatures: "Appel à candidatures" } as Record<string, string>,
   tenderStatus: { ouvert: "Ouvert", cloture: "Clôturé", attribue: "Attribué", infructueux: "Infructueux", annule: "Annulé" } as Record<string, string>,
@@ -313,7 +312,6 @@ const en: Dict = {
   switchNational: "National payment switch",
   switchText: "Processing of card transactions (ATMs, POS terminals, e-commerce via ClicToPay), mobile payments and bill payments with Paysmart.",
   availability: (p) => `Availability of the national switch (${p})`,
-  heroTags: ["Licensed by the Banque Centrale de Tunisie", "PCI DSS", "14 African banks"],
   tenderType: { appel_offres: "Call for tenders", consultation: "Consultation", appel_candidatures: "Call for applications" },
   tenderStatus: { ouvert: "Open", cloture: "Closed", attribue: "Awarded", infructueux: "Unsuccessful", annule: "Cancelled" },
   newsCategory: { actualite: "News", evenement: "Event", annonce: "Announcement" },
@@ -440,7 +438,6 @@ const ar: Dict = {
   switchNational: "المحوّل النقدي الوطني",
   switchText: "معالجة معاملات البطاقات (الموزعات الآلية، أجهزة الدفع الإلكتروني، التجارة الإلكترونية عبر ClicToPay) والدفع عبر الهاتف الجوال وخلاص الفواتير عبر Paysmart.",
   availability: (p) => `نسبة توفّر المحوّل الوطني (${p})`,
-  heroTags: ["مرخّص من Banque Centrale de Tunisie", "PCI DSS", "14 بنكًا إفريقيًا"],
   tenderType: { appel_offres: "طلب عروض", consultation: "استشارة", appel_candidatures: "طلب ترشحات" },
   tenderStatus: { ouvert: "مفتوح", cloture: "مغلق", attribue: "تمّ الإسناد", infructueux: "غير مثمر", annule: "ملغى" },
   newsCategory: { actualite: "خبر", evenement: "فعالية", annonce: "إعلان" },

@@ -3132,9 +3132,16 @@
     {
      "__component": "blocks.hero",
      "variant": "accueil",
-     "title": "Solutions de paiement digital innovantes, fiables, sécurisées",
+     "eyebrow": "Switch national monétique",
+     "badge": "Depuis 1989",
+     "title": "Solutions de paiement digital",
+     "rotatingWords": "sécurisées\ninnovantes\nfiables",
      "subtitle": "Nous accompagnons nos partenaires et clients dans leur croissance en leur fournissant des solutions de paiement de qualité supérieure, tout en contribuant au développement continu du paysage des paiements digitaux en Tunisie et en Afrique.",
-     "eyebrow": "Switch national monétique · Depuis 1989",
+     "highlightTitle": "Leader des systèmes de paiement digital en Tunisie,",
+     "highlightText": "Monétique Tunisie est le switch national monétique, mobile et agrégateur de facturier (Paysmart)",
+     "highlightUrl": "/monetique-tunisie",
+     "imageFile": "hero-paiement.jpg",
+     "imageAlt": "Paiement par carte sans contact sur un terminal de paiement électronique",
      "ctas": [
       {
        "label": "Nos solutions",
