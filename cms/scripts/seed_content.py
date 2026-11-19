@@ -78,7 +78,7 @@ SOLUTIONS = [{'slug': 'carte-bancaire',
                 'vie quotidienne des consommateurs et des entreprises. Cette initiative reflète notre ambition de continuer à innover et à offrir des solutions qui anticipent et répondent aux défis '
                 'du monde financier moderne.')],
   'keys': ['Une solution pratique', 'Finance plus connectée, flexible et accessible', 'Digitalisation des paiements'],
-  'cta': ('Site web Paysmart', '#')},
+  'cta': ('Site web Paysmart', 'https://www.paysmart.tn')},
  {'slug': 'certification',
   'icon': 'verified',
   'name': 'Certification',

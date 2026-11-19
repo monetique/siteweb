@@ -9,7 +9,7 @@ def req(m,p,b=None,t=None):
     r=urllib.request.Request(S+p,method=m,data=json.dumps(b).encode() if b is not None else None,headers=h)
     with urllib.request.urlopen(r) as x: return json.loads(x.read() or b'{}')
 import os
-if os.path.exists(os.path.join(__import__('tempfile').gettempdir(),'qa_tok')): tok=open(os.path.join(__import__('tempfile').gettempdir(),'qa_tok')).read()
+if os.path.exists(os.path.join(__import__('tempfile').gettempdir(),'qa_tok')): tok=open(os.path.join(__import__('tempfile').gettempdir(),'qa_tok')).read().strip()
 else:
     tok=req('POST','/admin/login',{'email':ADMIN_EMAIL,'password':ADMIN_PASSWORD})['data']['token']; open(os.path.join(__import__('tempfile').gettempdir(),'qa_tok'),'w').write(tok)
 if sys.argv[1]=='create':
