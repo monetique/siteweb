@@ -19,7 +19,7 @@ export const WORLD_CLOCKS: { tz: string; name: Record<Lang, string> }[] = [
   { tz: "Africa/Tripoli", name: { fr: "Tripoli", en: "Tripoli", ar: "طرابلس" } },
   { tz: "Africa/Nouakchott", name: { fr: "Nouakchott", en: "Nouakchott", ar: "نواكشوط" } },
   { tz: "Africa/Kigali", name: { fr: "Kigali", en: "Kigali", ar: "كيغالي" } },
-  { tz: "Africa/Brazzaville", name: { fr: "Brazzaville", en: "Brazzaville", ar: "برازافيل" } },
+  { tz: "Africa/Kinshasa", name: { fr: "Kinshasa", en: "Kinshasa", ar: "كينشاسا" } }, // RD Congo
   { tz: "Atlantic/Cape_Verde", name: { fr: "Praia", en: "Praia", ar: "برايا" } },
 ];
 

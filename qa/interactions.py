@@ -53,12 +53,12 @@ with sync_playwright() as p:
     # 2 quinquies. Carte « Expertise à l'international » : liaisons depuis Tunis, pastilles allumées à l'arrivée
     pg.goto(B + '/', wait_until='networkidle')
     carte = pg.locator('main section').filter(has=pg.locator('svg path[pathLength]')).first
-    check('Carte internationale : rien d’allumé avant d’être à l’écran', pg.locator('li[data-on]').count() == 0)
+    check('Carte internationale : rien d’allumé avant d’être à l’écran', pg.locator('g[data-pin][data-on]').count() == 0)
     carte.scroll_into_view_if_needed(); pg.wait_for_timeout(1200)
-    mid = pg.locator('li[data-on]').count()
+    mid = pg.locator('g[data-pin][data-on]').count()
     pg.wait_for_timeout(5000)
     arcs = pg.eval_on_selector_all('svg path[pathLength]', 'e => e.filter(p => getComputedStyle(p).strokeDashoffset === "0px" || p.getAttribute("stroke-dashoffset") === "0").length')
-    check('Carte internationale : 6 liaisons tracées, 7 pays allumés progressivement', 0 < mid < 7 and arcs == 6 and pg.locator('li[data-on]').count() == 7, f'à 1,2 s : {mid} pays, fin : {arcs} liaisons')
+    check('Carte internationale : 6 liaisons tracées, 7 épingles posées progressivement', 0 < mid < 7 and arcs == 6 and pg.locator('g[data-pin][data-on]').count() == 7, f'à 1,2 s : {mid} pays, fin : {arcs} liaisons')
 
     # 2 ter. Bandeau : heures des pays de l'expertise internationale, décalage par rapport à Tunis
     pg.goto(B + '/', wait_until='networkidle'); pg.wait_for_timeout(300)
@@ -67,7 +67,7 @@ with sync_playwright() as p:
     from zoneinfo import ZoneInfo
     def hm(tz): return datetime.now(timezone.utc).astimezone(ZoneInfo(tz)).strftime('%H:%M')
     exp = [f'{n} {hm(tz)}' for n, tz in [('Alger', 'Africa/Algiers'), ('Tripoli', 'Africa/Tripoli'), ('Nouakchott', 'Africa/Nouakchott'),
-                                          ('Kigali', 'Africa/Kigali'), ('Brazzaville', 'Africa/Brazzaville'), ('Praia', 'Atlantic/Cape_Verde')]]
+                                          ('Kigali', 'Africa/Kigali'), ('Kinshasa', 'Africa/Kinshasa'), ('Praia', 'Atlantic/Cape_Verde')]]
     check('Bandeau : 6 horloges des capitales à l’heure', clocks == exp, ' | '.join(clocks))
 
     # 2 bis. Sous-menu Expertise : lien direct vers chaque section (ancre), y compris depuis la même page

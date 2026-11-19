@@ -116,8 +116,8 @@ Si le mot animé ne doit pas être à la fin (cas de l'anglais : « Secure digit
 ## Carte « Expertise à l'international »
 
 Bloc **Liste d'étiquettes** avec `display` = `carte` (accueil et page Monétique Tunisie) : chaque étiquette est un pays.
-Les liaisons animées partent de Tunis vers la capitale de chaque pays reconnu (Tunisie, Algérie, Libye, Mauritanie,
-Rwanda, Congo, Cap-Vert, en FR / EN / AR). Un pays non reconnu s'affiche en pastille sans liaison : pour l'ajouter
+Les liaisons animées partent de la Tunisie vers l’épingle de chaque pays reconnu (Tunisie, Algérie, Libye, Mauritanie,
+Rwanda, RD Congo, Cap-Vert, en FR / EN / AR). Un pays non reconnu s'affiche en pastille sans liaison : pour l'ajouter
 à la carte, relancer `web/scripts/gen-africa-map.mjs` (mode d'emploi en tête du fichier) et compléter `COUNTRIES`
 dans `web/src/components/InternationalMap.tsx`. Avec `display` = `pastilles`, le bloc reste une simple liste.
 
