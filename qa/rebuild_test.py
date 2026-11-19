@@ -47,7 +47,7 @@ h,st=wait_build(t0); n=len([x for x in st['history'] if x['at']>t0]); check('3 p
 check('Dernière modification en ligne','Modification rapide n°3' in req('GET',SITE+f'/actualites/{slug}/')[1])
 
 # 3. Message de contact → aucun build
-t0=now(); req('POST',SITE+'/api/messages-contact',{'data':{'fullName':'QA','email':'qa@exemple.tn','subject':'paysmart','message':'Pas de reconstruction attendue.','elapsed':9000}})
+t0=now(); req('POST',SITE+'/api/messages-contact',{'data':{'fullName':'QA','email':'qa@exemple.tn','subject':'paysmart','message':'Pas de reconstruction attendue.','elapsed':9000,'consent':True}})
 time.sleep(20); check('Message de contact ne déclenche pas de build',status()['status']=='idle' and not [x for x in status()['history'] if x['at']>t0])
 
 # 4. Dépublication → l'article disparaît

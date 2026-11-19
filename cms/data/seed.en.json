@@ -302,8 +302,8 @@
     "isExternal": false
    },
    {
-    "label": "Data protection",
-    "url": "/protection-des-donnees",
+    "label": "Personal data",
+    "url": "/donnees-personnelles",
     "style": "texte",
     "isExternal": false
    },
@@ -4301,6 +4301,29 @@
          "text": "You are not obliged to answer all or some of the questions asked. Mandatory information is indicated by an asterisk. By filling in the forms or questionnaires, you agree, subject to your right to object, that your data and any updates to it may be passed on to the bank branch on which the website user depends geographically or of which they are already a customer, in order to respond to their requests for information. The recipients of the processing of a complaint are the customer relations department and the persons authorised within Monétique-Tunisie SA and the financial entities to handle the complaint."
         }
        ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Details of the processing (purposes, retention period, recipients) and how to exercise your rights are given on the page "
+        },
+        {
+         "type": "link",
+         "url": "/donnees-personnelles",
+         "children": [
+          {
+           "type": "text",
+           "text": "Personal data"
+          }
+         ]
+        },
+        {
+         "type": "text",
+         "text": "."
+        }
+       ]
       }
      ]
     },
@@ -4754,25 +4777,26 @@
    ]
   },
   {
-   "title": "Cookies",
-   "slug": "cookies",
+   "title": "Personal data",
+   "slug": "donnees-personnelles",
    "parentLabel": "Legal information",
    "seo": {
-    "metaTitle": "Cookies",
-    "noIndex": true
+    "metaTitle": "Personal data",
+    "metaDescription": "How Monétique Tunisie processes the personal data collected on its website, in particular through the contact form, and how to exercise your rights.",
+    "noIndex": false
    },
    "blocks": [
     {
      "__component": "blocks.hero",
      "variant": "sombre",
-     "title": "Cookies",
-     "subtitle": "Use of cookies on the Monétique Tunisie website.",
-     "eyebrow": "Cookies",
+     "title": "Personal data",
+     "subtitle": "How we process the information you entrust to us on this website, and how to exercise your rights.",
+     "eyebrow": "Legal information",
      "ctas": []
     },
     {
      "__component": "blocks.rich-text",
-     "title": "Content to be completed",
+     "title": "Data controller",
      "eyebrow": null,
      "body": [
       {
@@ -4780,7 +4804,483 @@
        "children": [
         {
          "type": "text",
-         "text": "Monétique Tunisie's cookie policy is being drafted by the Legal Department: purposes of cookies, retention period, consent management and webmaster contact details."
+         "text": "Monétique Tunisie, a public limited company whose registered office is located at Centre urbain Nord, Sana Center – Building C – 1082 Tunis."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "For any question about your personal data: "
+        },
+        {
+         "type": "link",
+         "url": "mailto:contact@monetiquetunisie.com",
+         "children": [
+          {
+           "type": "text",
+           "text": "contact@monetiquetunisie.com"
+          }
+         ]
+        },
+        {
+         "type": "text",
+         "text": "."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "Data collected and purpose",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "The website only collects personal data through the contact form:"
+        }
+       ]
+      },
+      {
+       "type": "list",
+       "format": "unordered",
+       "children": [
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "your first and last name;"
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "your email address;"
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "your phone number (optional);"
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "the subject of your request and your message."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "This data is used solely to process your request (information, complaint, business enquiry) and to reply to you. It is not used for advertising, sold or transferred."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Fields marked with an asterisk are mandatory: without them, we cannot process your request."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "Consent",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Sending the form requires your express consent, given by ticking the box provided for this purpose. You may withdraw your consent at any time by writing to us; withdrawal is treated as a request to delete your message."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "Recipients",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "list",
+       "format": "unordered",
+       "children": [
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "authorised staff of the Monétique Tunisie departments concerned by the subject of your request;"
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "for a complaint, and only where its handling requires it, the bank concerned;"
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "the technical provider hosting the website, bound by confidentiality and acting solely on our instructions."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "Retention period",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Messages are kept for 12 months from receipt, then deleted automatically. A complaint still being processed may be kept until it is closed."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "Security",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Data is hosted in Tunisia and is not transferred outside the country. Exchanges with the website are encrypted (HTTPS), the message management tool cannot be accessed from the Internet and only authorised staff have access to it."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "Your rights",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "In accordance with Organic Law No. 2004-63 of 27 July 2004 on the protection of personal data, you have:"
+        }
+       ]
+      },
+      {
+       "type": "list",
+       "format": "unordered",
+       "children": [
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "the right to access your data and obtain a copy of it;"
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "the right to have inaccurate, incomplete or unlawfully processed data corrected, updated or deleted;"
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "the right to object on valid, legitimate and serious grounds;"
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "the right to withdraw your consent at any time."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "To exercise them, write to "
+        },
+        {
+         "type": "link",
+         "url": "mailto:contact@monetiquetunisie.com",
+         "children": [
+          {
+           "type": "text",
+           "text": "contact@monetiquetunisie.com"
+          }
+         ]
+        },
+        {
+         "type": "text",
+         "text": " or by post to the registered office. We will reply within one month."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "You may also contact the National Authority for the Protection of Personal Data (INPDP): "
+        },
+        {
+         "type": "link",
+         "url": "https://www.inpdp.nat.tn",
+         "children": [
+          {
+           "type": "text",
+           "text": "www.inpdp.nat.tn"
+          }
+         ]
+        },
+        {
+         "type": "text",
+         "text": "."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "Declaration to the INPDP",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "The processing of data collected on this website is declared to the INPDP, in accordance with Article 7 of Organic Law No. 2004-63. Declaration reference: to be completed."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "Cookies",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "The website does not set any advertising or audience measurement cookies. For details, see the page "
+        },
+        {
+         "type": "link",
+         "url": "/cookies",
+         "children": [
+          {
+           "type": "text",
+           "text": "Cookies"
+          }
+         ]
+        },
+        {
+         "type": "text",
+         "text": "."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Cookies",
+   "slug": "cookies",
+   "parentLabel": "Legal information",
+   "seo": {
+    "metaTitle": "Cookies",
+    "metaDescription": "The Monétique Tunisie website does not set any advertising, audience measurement or social media cookies.",
+    "noIndex": false
+   },
+   "blocks": [
+    {
+     "__component": "blocks.hero",
+     "variant": "sombre",
+     "title": "Cookies",
+     "subtitle": "This website does not track you: no advertising cookies, no audience measurement.",
+     "eyebrow": "Legal information",
+     "ctas": []
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "No cookies set",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Browsing the Monétique Tunisie website does not set any cookies on your device: no advertising cookies, no audience measurement cookies, no social media cookies. Nor does the website store anything in your browser's memory."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "No consent banner is therefore displayed: there is nothing to accept or refuse."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "No third-party services",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Fonts, images and maps are served by the website itself. No content is loaded from an external service (advertising network, social network, analytics or mapping tool) that could set its own cookies."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "The “Directions” link on the Contact page opens a mapping service in a new tab: that service then applies its own cookie policy."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "Links to other websites",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Our partners' websites, accessible from our pages, apply their own cookie policies, over which Monétique Tunisie has no control."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "Changes to this policy",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Should an audience measurement tool be added, this page would be updated and your consent would be requested before any non-essential cookie is set."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "For any question: "
+        },
+        {
+         "type": "link",
+         "url": "mailto:contact@monetiquetunisie.com",
+         "children": [
+          {
+           "type": "text",
+           "text": "contact@monetiquetunisie.com"
+          }
+         ]
+        },
+        {
+         "type": "text",
+         "text": ". See also the page "
+        },
+        {
+         "type": "link",
+         "url": "/donnees-personnelles",
+         "children": [
+          {
+           "type": "text",
+           "text": "Personal data"
+          }
+         ]
+        },
+        {
+         "type": "text",
+         "text": "."
         }
        ]
       }

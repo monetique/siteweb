@@ -62,7 +62,13 @@ export default factories.createCoreController('api::message-contact.message-cont
       ctx.body = { ok: true };
       return;
     }
-    const data: Record<string, unknown> = { status: 'nouveau' };
+    // Consentement exprès (loi organique n° 2004-63, art. 27) : case cochée dans le formulaire, date conservée
+    if (input.consent !== true) {
+      ctx.status = 400;
+      ctx.body = { error: 'Consentement requis.' };
+      return;
+    }
+    const data: Record<string, unknown> = { status: 'nouveau', consentAt: new Date().toISOString() };
     for (const key of ALLOWED) {
       if (typeof input[key] === 'string') data[key] = input[key].trim();
     }

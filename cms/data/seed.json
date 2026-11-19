@@ -302,8 +302,8 @@
     "isExternal": false
    },
    {
-    "label": "Protection des données",
-    "url": "/protection-des-donnees",
+    "label": "Données personnelles",
+    "url": "/donnees-personnelles",
     "style": "texte",
     "isExternal": false
    },
@@ -4301,6 +4301,29 @@
          "text": "Vous n’êtes pas obligé de répondre à tout ou partie des questions qui vous sont posées. Le caractère obligatoire de la communication des informations est indiqué par la présence d’un astérisque. En renseignant les formulaires ou questionnaires, vous acceptez, sous réserve de l’exercice de votre droit d’opposition, que vos données et leur mise à jour éventuelle soient communiquées à votre agence bancaire dont l’utilisateur du site dépend géographiquement ou dont il est déjà client afin de répondre aux demandes d’information de ce dernier. Les destinataires du traitement d’une réclamation sont le service relation clientèle ainsi que les personnes habilitées au sein de Monétique-Tunisie SA et des entités financières pour le traitement de la réclamation."
         }
        ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Le détail des traitements (finalités, durée de conservation, destinataires) et la façon d’exercer vos droits figurent sur la page "
+        },
+        {
+         "type": "link",
+         "url": "/donnees-personnelles",
+         "children": [
+          {
+           "type": "text",
+           "text": "Données personnelles"
+          }
+         ]
+        },
+        {
+         "type": "text",
+         "text": "."
+        }
+       ]
       }
      ]
     },
@@ -4754,25 +4777,26 @@
    ]
   },
   {
-   "title": "Cookies",
-   "slug": "cookies",
+   "title": "Données personnelles",
+   "slug": "donnees-personnelles",
    "parentLabel": "Informations légales",
    "seo": {
-    "metaTitle": "Cookies",
-    "noIndex": true
+    "metaTitle": "Données personnelles",
+    "metaDescription": "Comment Monétique Tunisie traite les données personnelles recueillies sur son site, notamment via le formulaire de contact, et comment exercer vos droits.",
+    "noIndex": false
    },
    "blocks": [
     {
      "__component": "blocks.hero",
      "variant": "sombre",
-     "title": "Cookies",
-     "subtitle": "Utilisation des cookies sur le site de Monétique Tunisie.",
-     "eyebrow": "Cookies",
+     "title": "Données personnelles",
+     "subtitle": "Comment nous traitons les informations que vous nous confiez sur ce site, et comment exercer vos droits.",
+     "eyebrow": "Informations légales",
      "ctas": []
     },
     {
      "__component": "blocks.rich-text",
-     "title": "Contenu à compléter",
+     "title": "Responsable du traitement",
      "eyebrow": null,
      "body": [
       {
@@ -4780,7 +4804,483 @@
        "children": [
         {
          "type": "text",
-         "text": "La politique cookies de Monétique Tunisie est en cours de rédaction par la Direction juridique : finalités des cookies, durée de conservation, gestion du consentement et coordonnées du webmaster."
+         "text": "Monétique Tunisie, société anonyme dont le siège social est situé Centre urbain Nord, Sana Center – Immeuble C – 1082 Tunis."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Pour toute question relative à vos données personnelles : "
+        },
+        {
+         "type": "link",
+         "url": "mailto:contact@monetiquetunisie.com",
+         "children": [
+          {
+           "type": "text",
+           "text": "contact@monetiquetunisie.com"
+          }
+         ]
+        },
+        {
+         "type": "text",
+         "text": "."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "Données recueillies et finalité",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Le site ne recueille des données personnelles qu’au travers du formulaire de contact :"
+        }
+       ]
+      },
+      {
+       "type": "list",
+       "format": "unordered",
+       "children": [
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "vos nom et prénom ;"
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "votre adresse e-mail ;"
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "votre numéro de téléphone (facultatif) ;"
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "l’objet de votre demande et votre message."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Ces données servent uniquement à traiter votre demande (information, réclamation, contact commercial) et à vous répondre. Elles ne sont ni utilisées à des fins publicitaires, ni vendues, ni cédées."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Les champs marqués d’un astérisque sont obligatoires : sans eux, nous ne pouvons pas traiter votre demande."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "Consentement",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "L’envoi du formulaire suppose votre accord exprès, donné en cochant la case prévue à cet effet. Vous pouvez retirer votre consentement à tout moment en nous écrivant ; ce retrait vaut demande de suppression de votre message."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "Destinataires",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "list",
+       "format": "unordered",
+       "children": [
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "les personnes habilitées des services de Monétique Tunisie concernés par l’objet de votre demande ;"
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "pour une réclamation, et seulement si son traitement l’exige, la banque concernée ;"
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "le prestataire technique qui héberge le site, tenu à la confidentialité et agissant sur nos seules instructions."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "Durée de conservation",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Les messages sont conservés 12 mois à compter de leur réception, puis supprimés automatiquement. Une réclamation encore en cours peut être conservée jusqu’à sa clôture."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "Sécurité",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Les données sont hébergées en Tunisie et ne font l’objet d’aucun transfert hors du territoire. Les échanges avec le site sont chiffrés (HTTPS), l’outil de gestion des messages n’est pas accessible depuis Internet et seules les personnes habilitées y ont accès."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "Vos droits",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Conformément à la loi organique n° 2004-63 du 27 juillet 2004 portant sur la protection des données à caractère personnel, vous disposez :"
+        }
+       ]
+      },
+      {
+       "type": "list",
+       "format": "unordered",
+       "children": [
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "d’un droit d’accès à vos données et d’en obtenir une copie ;"
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "d’un droit de rectification, de mise à jour ou de suppression des données inexactes, incomplètes ou traitées de façon illicite ;"
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "d’un droit d’opposition pour des raisons valables, légitimes et sérieuses ;"
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "du droit de retirer votre consentement à tout moment."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Pour les exercer, écrivez à "
+        },
+        {
+         "type": "link",
+         "url": "mailto:contact@monetiquetunisie.com",
+         "children": [
+          {
+           "type": "text",
+           "text": "contact@monetiquetunisie.com"
+          }
+         ]
+        },
+        {
+         "type": "text",
+         "text": " ou par courrier à l’adresse du siège. Nous vous répondons dans un délai d’un mois."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Vous pouvez également saisir l’Instance nationale de protection des données personnelles (INPDP) : "
+        },
+        {
+         "type": "link",
+         "url": "https://www.inpdp.nat.tn",
+         "children": [
+          {
+           "type": "text",
+           "text": "www.inpdp.nat.tn"
+          }
+         ]
+        },
+        {
+         "type": "text",
+         "text": "."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "Déclaration auprès de l’INPDP",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Le traitement des données recueillies sur ce site est déclaré auprès de l’INPDP, conformément à l’article 7 de la loi organique n° 2004-63. Référence de la déclaration : à compléter."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "Cookies",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Le site ne dépose aucun cookie publicitaire ni de mesure d’audience. Pour le détail, consultez la page "
+        },
+        {
+         "type": "link",
+         "url": "/cookies",
+         "children": [
+          {
+           "type": "text",
+           "text": "Cookies"
+          }
+         ]
+        },
+        {
+         "type": "text",
+         "text": "."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Cookies",
+   "slug": "cookies",
+   "parentLabel": "Informations légales",
+   "seo": {
+    "metaTitle": "Cookies",
+    "metaDescription": "Le site de Monétique Tunisie ne dépose aucun cookie publicitaire, de mesure d’audience ou de réseaux sociaux.",
+    "noIndex": false
+   },
+   "blocks": [
+    {
+     "__component": "blocks.hero",
+     "variant": "sombre",
+     "title": "Cookies",
+     "subtitle": "Ce site ne vous suit pas : aucun cookie publicitaire, aucune mesure d’audience.",
+     "eyebrow": "Informations légales",
+     "ctas": []
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "Aucun cookie déposé",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "La consultation du site de Monétique Tunisie ne dépose aucun cookie sur votre appareil : ni cookie publicitaire, ni cookie de mesure d’audience, ni cookie de réseaux sociaux. Le site n’enregistre rien non plus dans la mémoire de votre navigateur."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Aucun bandeau de consentement n’est donc affiché : il n’y a rien à accepter ni à refuser."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "Aucun service tiers",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Les polices de caractères, les images et les cartes sont servies par le site lui-même. Aucun contenu n’est chargé depuis un service extérieur (régie publicitaire, réseau social, outil de statistiques ou de cartographie) susceptible de déposer ses propres cookies."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Le lien « Itinéraire » de la page Contact ouvre un service de cartographie dans un nouvel onglet : ce service applique alors sa propre politique de cookies."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "Liens vers d’autres sites",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Les sites de nos partenaires, accessibles depuis nos pages, appliquent leur propre politique de cookies, sur laquelle Monétique Tunisie n’a aucune maîtrise."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "Évolution de cette politique",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Si un outil de mesure d’audience devait être ajouté, cette page serait mise à jour et votre accord serait demandé avant tout dépôt de cookie non indispensable."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Pour toute question : "
+        },
+        {
+         "type": "link",
+         "url": "mailto:contact@monetiquetunisie.com",
+         "children": [
+          {
+           "type": "text",
+           "text": "contact@monetiquetunisie.com"
+          }
+         ]
+        },
+        {
+         "type": "text",
+         "text": ". Voir aussi la page "
+        },
+        {
+         "type": "link",
+         "url": "/donnees-personnelles",
+         "children": [
+          {
+           "type": "text",
+           "text": "Données personnelles"
+          }
+         ]
+        },
+        {
+         "type": "text",
+         "text": "."
         }
        ]
       }

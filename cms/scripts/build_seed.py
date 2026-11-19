@@ -432,6 +432,8 @@ for col, lim in (('solutions', 300), ('appelsOffres', 400)):
     for x in SEED[col]:
         if len(x.get('summary') or '') > lim: print('RÉSUMÉ TROP LONG', x.get('title') or x.get('name'))
 
+import legal_pages  # noqa: E402  pages « Données personnelles » et « Cookies »
+legal_pages.apply(SEED)
 out = HERE.parent / 'data' / 'seed.json'
 out.parent.mkdir(exist_ok=True)
 out.write_text(json.dumps(SEED, ensure_ascii=False, indent=1), encoding='utf-8')

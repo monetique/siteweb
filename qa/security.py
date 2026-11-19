@@ -41,13 +41,15 @@ st, body, _ = req('POST', '/api/auth/local/register', {'username': 'qa-intrus', 
 check('Inscription publique d’utilisateurs désactivée', st != 200, f'{st} {body[:80]}')
 
 # --- Formulaire de contact
-st, body, _ = req('POST', '/api/messages-contact', {'data': {'fullName': 'QA', 'email': 'qa@smt.tn', 'subject': 'paysmart', 'message': 'x' * 6000, 'elapsed': 9000}})
+st, body, _ = req('POST', '/api/messages-contact', {'data': {'fullName': 'QA', 'email': 'qa@smt.tn', 'subject': 'paysmart', 'message': 'x' * 6000, 'elapsed': 9000, 'consent': True}})
 check('Message > 5000 caractères refusé', st == 400, st)
-st, body, _ = req('POST', '/api/messages-contact', {'data': {'fullName': 'QA', 'email': 'qa@smt.tn', 'subject': 'inconnu', 'message': 'x', 'elapsed': 9000}})
+st, body, _ = req('POST', '/api/messages-contact', {'data': {'fullName': 'QA', 'email': 'qa@smt.tn', 'subject': 'paysmart', 'message': 'sans case', 'elapsed': 9000}})
+check('Message sans consentement exprès refusé (loi 2004-63, art. 27)', st == 400 and 'onsentement' in body, f'{st} {body[:50]}')
+st, body, _ = req('POST', '/api/messages-contact', {'data': {'fullName': 'QA', 'email': 'qa@smt.tn', 'subject': 'inconnu', 'message': 'x', 'elapsed': 9000, 'consent': True}})
 check('Objet hors liste refusé', st == 400, st)
-st, body, _ = req('POST', '/api/messages-contact', {'data': {'fullName': '<script>alert(1)</script>', 'email': 'qa@smt.tn', 'subject': 'paysmart', 'message': 'test', 'elapsed': 9000}})
+st, body, _ = req('POST', '/api/messages-contact', {'data': {'fullName': '<script>alert(1)</script>', 'email': 'qa@smt.tn', 'subject': 'paysmart', 'message': 'test', 'elapsed': 9000, 'consent': True}})
 check('Réponse publique sans donnée renvoyée', body.strip() == '{"ok":true}', body[:60])
-codes = [req('POST', '/api/messages-contact', {'data': {'fullName': 'Flood', 'email': 'f@smt.tn', 'subject': 'paysmart', 'message': 'flood', 'elapsed': 9000}})[0] for _ in range(25)]
+codes = [req('POST', '/api/messages-contact', {'data': {'fullName': 'Flood', 'email': 'f@smt.tn', 'subject': 'paysmart', 'message': 'flood', 'elapsed': 9000, 'consent': True}})[0] for _ in range(25)]
 # Filtre anti-spam côté serveur : réponse identique (le robot n'apprend rien), message non enregistré (voir journal Strapi « message écarté »)
 for label, extra in [('envoi direct sans délai de saisie', {}), ('champ piège rempli', {'website': 'http://spam.example', 'elapsed': 9000}),
                      ('envoi en moins de 3 s', {'elapsed': 500}), ('plus de 3 liens', {'elapsed': 9000, 'message': 'http://a http://b http://c http://d'})]:

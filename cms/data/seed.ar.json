@@ -302,8 +302,8 @@
     "isExternal": false
    },
    {
-    "label": "حماية المعطيات الشخصية",
-    "url": "/protection-des-donnees",
+    "label": "البيانات الشخصية",
+    "url": "/donnees-personnelles",
     "style": "texte",
     "isExternal": false
    },
@@ -4301,6 +4301,29 @@
          "text": "لست ملزمًا بالإجابة عن كل الأسئلة المطروحة عليك أو عن بعضها، ويُشار إلى المعلومات الإجبارية بعلامة النجمة. وبتعمير الاستمارات أو الاستبيانات، توافق، مع مراعاة حقك في الاعتراض، على إحالة معطياتك وتحيينها المحتمل إلى الفرع البنكي الذي يتبعه مستخدم الموقع جغرافيًا أو الذي يتعامل معه، وذلك للإجابة عن طلبات المعلومات الصادرة عنه. والجهات المتلقية لمعالجة التشكي هي مصلحة العلاقات مع الحرفاء والأشخاص المؤهلون داخل Monétique-Tunisie SA والمؤسسات المالية لمعالجة التشكي."
         }
        ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "تفاصيل المعالجة (الأغراض، مدة الحفظ، الجهات المتلقية) وكيفية ممارسة حقوقكم متوفرة في صفحة "
+        },
+        {
+         "type": "link",
+         "url": "/donnees-personnelles",
+         "children": [
+          {
+           "type": "text",
+           "text": "البيانات الشخصية"
+          }
+         ]
+        },
+        {
+         "type": "text",
+         "text": "."
+        }
+       ]
       }
      ]
     },
@@ -4754,25 +4777,26 @@
    ]
   },
   {
-   "title": "ملفات تعريف الارتباط",
-   "slug": "cookies",
+   "title": "البيانات الشخصية",
+   "slug": "donnees-personnelles",
    "parentLabel": "معلومات قانونية",
    "seo": {
-    "metaTitle": "ملفات تعريف الارتباط",
-    "noIndex": true
+    "metaTitle": "البيانات الشخصية",
+    "metaDescription": "كيف تعالج Monétique Tunisie البيانات الشخصية التي يتم جمعها عبر موقعها، ولا سيما عبر استمارة الاتصال، وكيفية ممارسة حقوقكم.",
+    "noIndex": false
    },
    "blocks": [
     {
      "__component": "blocks.hero",
      "variant": "sombre",
-     "title": "ملفات تعريف الارتباط",
-     "subtitle": "استعمال ملفات تعريف الارتباط على موقع Monétique Tunisie.",
-     "eyebrow": "ملفات تعريف الارتباط",
+     "title": "البيانات الشخصية",
+     "subtitle": "كيف نعالج المعلومات التي تودعونها لدينا عبر هذا الموقع، وكيف تمارسون حقوقكم.",
+     "eyebrow": "معلومات قانونية",
      "ctas": []
     },
     {
      "__component": "blocks.rich-text",
-     "title": "محتوى قيد الإعداد",
+     "title": "المسؤول عن المعالجة",
      "eyebrow": null,
      "body": [
       {
@@ -4780,7 +4804,483 @@
        "children": [
         {
          "type": "text",
-         "text": "تتولى الإدارة القانونية إعداد سياسة ملفات تعريف الارتباط لـMonétique Tunisie: أغراض هذه الملفات ومدة الاحتفاظ بها وإدارة الموافقة وبيانات الاتصال بمشرف الموقع."
+         "text": "Monétique Tunisie، شركة خفية الاسم يقع مقرها الاجتماعي بالمركز العمراني الشمالي، Sana Center – العمارة C – 1082 تونس."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "لأي سؤال يتعلق ببياناتكم الشخصية: "
+        },
+        {
+         "type": "link",
+         "url": "mailto:contact@monetiquetunisie.com",
+         "children": [
+          {
+           "type": "text",
+           "text": "contact@monetiquetunisie.com"
+          }
+         ]
+        },
+        {
+         "type": "text",
+         "text": "."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "البيانات المجمّعة والغرض منها",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "لا يجمع الموقع بيانات شخصية إلا عبر استمارة الاتصال:"
+        }
+       ]
+      },
+      {
+       "type": "list",
+       "format": "unordered",
+       "children": [
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "الاسم واللقب؛"
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "عنوان البريد الإلكتروني؛"
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "رقم الهاتف (اختياري)؛"
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "موضوع الطلب ونص الرسالة."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "تُستعمل هذه البيانات حصريًا لمعالجة طلبكم (استعلام، شكوى، اتصال تجاري) والرد عليكم. ولا تُستعمل لأغراض إشهارية، ولا تُباع ولا يُتنازل عنها."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "الخانات المشار إليها بنجمة إجبارية: لا يمكننا معالجة طلبكم بدونها."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "الموافقة",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "يستوجب إرسال الاستمارة موافقتكم الصريحة، وذلك بتأشير الخانة المخصّصة لذلك. يمكنكم سحب موافقتكم في أي وقت بمراسلتنا، ويُعدّ هذا السحب طلبًا لحذف رسالتكم."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "الجهات المتلقية",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "list",
+       "format": "unordered",
+       "children": [
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "الأعوان المؤهّلون في مصالح Monétique Tunisie المعنية بموضوع طلبكم؛"
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "بالنسبة إلى الشكاوى، وفقط عندما تقتضي معالجتها ذلك، البنك المعني؛"
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "مزوّد الخدمة التقنية الذي يستضيف الموقع، الملتزم بالسرية والذي لا يتصرّف إلا وفق تعليماتنا."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "مدة الحفظ",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "تُحفظ الرسائل لمدة 12 شهرًا ابتداءً من تاريخ استلامها، ثم تُحذف آليًا. ويمكن الاحتفاظ بالشكوى التي لا تزال قيد المعالجة إلى حين ختمها."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "الأمن",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "تُستضاف البيانات في تونس ولا يتم نقلها خارج التراب التونسي. التبادلات مع الموقع مشفّرة (HTTPS)، وأداة إدارة الرسائل غير متاحة عبر الإنترنت، ولا يطّلع عليها إلا الأعوان المؤهّلون."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "حقوقكم",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "طبقًا للقانون الأساسي عدد 63 لسنة 2004 المؤرخ في 27 جويلية 2004 المتعلق بحماية المعطيات الشخصية، لكم:"
+        }
+       ]
+      },
+      {
+       "type": "list",
+       "format": "unordered",
+       "children": [
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "حق النفاذ إلى بياناتكم والحصول على نسخة منها؛"
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "حق تصحيح البيانات غير الصحيحة أو المنقوصة أو المعالجة بصفة غير قانونية أو تحيينها أو حذفها؛"
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "حق الاعتراض لأسباب وجيهة ومشروعة وجدية؛"
+          }
+         ]
+        },
+        {
+         "type": "list-item",
+         "children": [
+          {
+           "type": "text",
+           "text": "حق سحب موافقتكم في أي وقت."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "لممارسة هذه الحقوق، راسلونا على "
+        },
+        {
+         "type": "link",
+         "url": "mailto:contact@monetiquetunisie.com",
+         "children": [
+          {
+           "type": "text",
+           "text": "contact@monetiquetunisie.com"
+          }
+         ]
+        },
+        {
+         "type": "text",
+         "text": " أو عبر البريد على عنوان المقر الاجتماعي. نردّ عليكم في أجل شهر."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "يمكنكم أيضًا اللجوء إلى الهيئة الوطنية لحماية المعطيات الشخصية (INPDP): "
+        },
+        {
+         "type": "link",
+         "url": "https://www.inpdp.nat.tn",
+         "children": [
+          {
+           "type": "text",
+           "text": "www.inpdp.nat.tn"
+          }
+         ]
+        },
+        {
+         "type": "text",
+         "text": "."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "التصريح لدى الهيئة الوطنية لحماية المعطيات الشخصية",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "تمّ التصريح بمعالجة البيانات المجمّعة عبر هذا الموقع لدى الهيئة الوطنية لحماية المعطيات الشخصية، طبقًا للفصل 7 من القانون الأساسي عدد 63 لسنة 2004. مرجع التصريح: يُستكمل لاحقًا."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "ملفات تعريف الارتباط",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "لا يضع الموقع أي ملفات تعريف ارتباط إشهارية أو لقياس عدد الزوار. للمزيد من التفاصيل، راجعوا صفحة "
+        },
+        {
+         "type": "link",
+         "url": "/cookies",
+         "children": [
+          {
+           "type": "text",
+           "text": "ملفات تعريف الارتباط"
+          }
+         ]
+        },
+        {
+         "type": "text",
+         "text": "."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "ملفات تعريف الارتباط",
+   "slug": "cookies",
+   "parentLabel": "معلومات قانونية",
+   "seo": {
+    "metaTitle": "ملفات تعريف الارتباط",
+    "metaDescription": "لا يضع موقع Monétique Tunisie أي ملفات تعريف ارتباط إشهارية أو لقياس عدد الزوار أو لشبكات التواصل الاجتماعي.",
+    "noIndex": false
+   },
+   "blocks": [
+    {
+     "__component": "blocks.hero",
+     "variant": "sombre",
+     "title": "ملفات تعريف الارتباط",
+     "subtitle": "هذا الموقع لا يتتبّعكم: لا ملفات تعريف ارتباط إشهارية ولا قياس لعدد الزوار.",
+     "eyebrow": "معلومات قانونية",
+     "ctas": []
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "لا ملفات تعريف ارتباط",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "لا يؤدي تصفّح موقع Monétique Tunisie إلى وضع أي ملف تعريف ارتباط على جهازكم: لا ملفات إشهارية ولا ملفات لقياس عدد الزوار ولا ملفات لشبكات التواصل الاجتماعي. كما لا يخزّن الموقع أي شيء في ذاكرة متصفّحكم."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "لذلك لا يظهر أي شريط موافقة: لا يوجد ما يستوجب القبول أو الرفض."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "لا خدمات خارجية",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "تُقدَّم الخطوط والصور والخرائط من الموقع نفسه. ولا يتم تحميل أي محتوى من خدمة خارجية (شبكة إشهار، شبكة تواصل اجتماعي، أداة إحصاء أو خرائط) قد تضع ملفات تعريف ارتباط خاصة بها."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "يفتح رابط «المسار» في صفحة الاتصال خدمة خرائط في علامة تبويب جديدة: تطبّق هذه الخدمة عندئذ سياستها الخاصة بملفات تعريف الارتباط."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "روابط نحو مواقع أخرى",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "تطبّق مواقع شركائنا، المتاحة انطلاقًا من صفحاتنا، سياساتها الخاصة بملفات تعريف الارتباط، ولا سلطة لـ Monétique Tunisie عليها."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "__component": "blocks.rich-text",
+     "title": "تطوّر هذه السياسة",
+     "eyebrow": null,
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "في حال إضافة أداة لقياس عدد الزوار، سيتم تحيين هذه الصفحة وطلب موافقتكم قبل وضع أي ملف تعريف ارتباط غير ضروري."
+        }
+       ]
+      },
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "لأي سؤال: "
+        },
+        {
+         "type": "link",
+         "url": "mailto:contact@monetiquetunisie.com",
+         "children": [
+          {
+           "type": "text",
+           "text": "contact@monetiquetunisie.com"
+          }
+         ]
+        },
+        {
+         "type": "text",
+         "text": ". راجعوا أيضًا صفحة "
+        },
+        {
+         "type": "link",
+         "url": "/donnees-personnelles",
+         "children": [
+          {
+           "type": "text",
+           "text": "البيانات الشخصية"
+          }
+         ]
+        },
+        {
+         "type": "text",
+         "text": "."
         }
        ]
       }

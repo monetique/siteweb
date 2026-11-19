@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { Icon } from "./Icon";
-import { useDict } from "./LangProvider";
+import { L as NextLink, useDict } from "./LangProvider";
 
 const SUBJECT_KEYS = ["carte_bancaire", "switch_monetique", "switch_mobile_wallet", "ecommerce_clictopay", "paysmart", "certification", "formation_conseil", "reclamation_autre"];
 
@@ -30,6 +30,7 @@ export function ContactForm() {
         body: JSON.stringify({
           data: {
             fullName: data.fullName, phone: data.phone, email: data.email, subject: data.subject, message: data.message,
+            consent: data.consent === "on", // consentement exprès (case obligatoire), vérifié par le serveur
             website: data.website, // champ piège (vide pour un humain), vérifié par le serveur
             elapsed: Date.now() - shownAt.current, // délai de saisie, vérifié par le serveur
           },
@@ -65,6 +66,13 @@ export function ContactForm() {
         <label className="block md:col-span-2"><span className="mb-1.5 block text-label-sm uppercase">{d.message} <span className="text-error">*</span></span>
           <textarea name="message" required rows={5} maxLength={5000} className={field} /></label>
         <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
+        {/* Consentement exprès au traitement des données (loi organique n° 2004-63, art. 27) */}
+        <label className="flex items-start gap-3 md:col-span-2">
+          <input type="checkbox" name="consent" required className="mt-1 h-4 w-4 shrink-0 accent-secondary" />
+          <span className="text-body-sm text-on-surface">
+            {d.consentLabel} <NextLink href="/donnees-personnelles" className="text-secondary underline underline-offset-2">{d.privacyLink}</NextLink>. <span className="text-error">*</span>
+          </span>
+        </label>
       </div>
       <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <p className="flex items-start gap-2 text-body-sm text-on-surface-variant">
@@ -75,6 +83,10 @@ export function ContactForm() {
           {state === "sending" ? d.sending : d.send} <Icon name="send" className="text-[18px]" />
         </button>
       </div>
+      {/* Information préalable des personnes (loi organique n° 2004-63, art. 31) */}
+      <p className="mt-6 border-t border-outline-variant/30 pt-4 text-[13px] font-normal leading-relaxed text-on-surface-variant">
+        {d.privacyNotice}
+      </p>
       <div aria-live="polite">
         {state === "ok" && <p className="mt-4 rounded-lg bg-surface-container-low p-3 text-body-sm text-secondary">{d.sent}</p>}
         {state === "error" && <p className="mt-4 rounded-lg bg-error-container p-3 text-body-sm text-on-error-container">{d.sendError}</p>}

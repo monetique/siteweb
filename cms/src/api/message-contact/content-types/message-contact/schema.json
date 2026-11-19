@@ -60,6 +60,9 @@
     "internalNote": {
       "type": "text",
       "private": true
+    },
+    "consentAt": {
+      "type": "datetime"
     }
   }
 }
