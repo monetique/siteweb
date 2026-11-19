@@ -35,10 +35,16 @@ with sync_playwright() as p:
 
     # 2 quater. Bannière d'accueil : mot animé du titre, image, encadré cliquable
     pg.goto(B + '/', wait_until='networkidle')
-    seen = []
-    for _ in range(3):
-        seen.append(pg.locator('h1 [data-active]').inner_text()); pg.wait_for_timeout(2900)
-    check('Titre : « Solutions de paiement digital » + mot animé', pg.locator('h1').inner_text().startswith('Solutions de paiement digital') and seen == ['sécurisées', 'innovantes', 'fiables'], ' → '.join(seen))
+    # Effet machine à écrire : on échantillonne le texte affiché pendant ~13 s
+    typed, targets = [], []
+    for _ in range(130):
+        typed.append(pg.locator('h1 [data-typed]').inner_text().replace('\u200b', ''))
+        targets.append(pg.locator('h1 [data-word]').get_attribute('data-word')); pg.wait_for_timeout(100)
+    order = [w for k, w in enumerate(targets) if k == 0 or w != targets[k - 1]]
+    partial = any(0 < len(t) < len(w) and w.startswith(t) for t, w in zip(typed, targets))
+    check('Titre : « Solutions de paiement digital » + mot écrit/effacé lettre par lettre',
+          pg.locator('h1').inner_text().startswith('Solutions de paiement digital') and partial and order[:3] == ['sécurisées', 'innovantes', 'fiables'],
+          ' → '.join(order))
     check('Titre : les 3 mots lus par les lecteurs d’écran', pg.locator('h1 .sr-only').inner_text() == 'sécurisées, innovantes, fiables')
     check('Bannière : image chargée', pg.evaluate("(() => { const i = document.querySelector('main section img'); return !!i && i.complete && i.naturalWidth > 0 })()"))
     pg.locator('main section a[href*="monetique-tunisie"]').first.click(); pg.wait_for_url('**/monetique-tunisie/')

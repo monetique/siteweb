@@ -105,7 +105,7 @@ Dans **Pages → Accueil → Bannière** (variante « accueil ») :
 | `eyebrow` | pastille au-dessus du titre | Switch national monétique |
 | `badge` | mention à côté de la pastille | Depuis 1989 |
 | `title` | partie fixe du titre | Solutions de paiement digital |
-| `rotatingWords` | mots qui défilent à la fin du titre, **un par ligne** | sécurisées / innovantes / fiables |
+| `rotatingWords` | mots écrits puis effacés lettre par lettre à la fin du titre (effet machine à écrire), **un par ligne** | sécurisées / innovantes / fiables |
 | `subtitle` | paragraphe d'introduction | |
 | `highlightTitle`, `highlightText`, `highlightUrl` | encadré sombre (cliquable si une adresse est saisie) | Leader des systèmes… → /monetique-tunisie |
 | `image` | visuel de droite (format paysage, ≥ 1400 px de large ; le haut de l'image reste visible) | |

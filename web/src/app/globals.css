@@ -118,3 +118,17 @@
 [dir="rtl"] body { line-height: 1.7; }
 /* Numéros de téléphone, adresses e-mail et références restent de gauche à droite */
 [dir="rtl"] a[href^="tel:"], [dir="rtl"] a[href^="mailto:"] { direction: ltr; unicode-bidi: isolate; }
+
+/* Curseur de l'effet « machine à écrire » (titre de la bannière d'accueil) */
+.typing-caret {
+  display: inline-block;
+  width: 0.06em;
+  height: 0.85em;
+  margin-inline-start: 0.06em;
+  vertical-align: -0.05em;
+  background: currentColor;
+  animation: caret-blink 1s steps(1) infinite;
+}
+@keyframes caret-blink {
+  50% { opacity: 0; }
+}

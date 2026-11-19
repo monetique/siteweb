@@ -1,64 +1,79 @@
 "use client";
 
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
+
+type Segmenter = new (l?: string, o?: { granularity: string }) => { segment: (s: string) => Iterable<{ segment: string }> };
+
+/** Découpe en caractères visibles (gère les accents combinés et l'arabe). */
+const letters = (word: string): string[] => {
+  const Seg = (Intl as unknown as { Segmenter?: Segmenter }).Segmenter;
+  return Seg ? Array.from(new Seg(undefined, { granularity: "grapheme" }).segment(word), (s) => s.segment) : Array.from(word);
+};
+
+const TYPE_MS = 90; // écriture d'une lettre
+const ERASE_MS = 45; // effacement d'une lettre
+const HOLD_MS = 2200; // mot complet affiché
+const GAP_MS = 350; // pause entre l'effacement et la réécriture
 
 /**
- * Mot qui défile dans le titre de la bannière d'accueil (« sécurisées » → « innovantes » → « fiables »).
- * - La largeur suit le mot affiché (transition douce) : pas de trou quand le mot n'est pas en fin de titre
- *   (ex. anglais « Secure digital payment solutions »). Avant hydratation : largeur du mot le plus long.
- * - Les lecteurs d'écran lisent la liste complète une fois (le mot animé leur est masqué).
- * - Animation suspendue au survol ; mot fixe si l'utilisateur a demandé moins d'animations.
+ * Mot du titre de la bannière d'accueil, effet « machine à écrire » :
+ * le mot s'efface lettre par lettre, puis le suivant s'écrit lettre par lettre
+ * (« sécurisées » → « innovantes » → « fiables » → …).
+ * - Rendu initial (sans JavaScript) : premier mot complet.
+ * - Lecteurs d'écran : liste complète lue une fois, le mot animé leur est masqué.
+ * - Pause au survol ; mot fixe, sans curseur, si l'utilisateur a demandé moins d'animations.
  */
-export function RotatingWord({ words, interval = 2800 }: { words: string[]; interval?: number }) {
+export function RotatingWord({ words }: { words: string[] }) {
   const [index, setIndex] = useState(0);
-  const [previous, setPrevious] = useState<number | null>(null);
+  const [count, setCount] = useState(() => letters(words[0] ?? "").length);
+  const [erasing, setErasing] = useState(false);
   const [paused, setPaused] = useState(false);
-  const [width, setWidth] = useState<number | null>(null);
-  const refs = useRef<(HTMLSpanElement | null)[]>([]);
-
-  useLayoutEffect(() => {
-    const measure = () => setWidth(refs.current[index]?.offsetWidth ?? null);
-    measure();
-    window.addEventListener("resize", measure);
-    document.fonts?.ready.then(measure);
-    return () => window.removeEventListener("resize", measure);
-  }, [index]);
+  const [animated, setAnimated] = useState(false);
 
   useEffect(() => {
-    if (words.length < 2 || paused) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    const id = setInterval(() => {
-      setIndex((i) => {
-        setPrevious(i);
-        return (i + 1) % words.length;
-      });
-    }, interval);
-    return () => clearInterval(id);
-  }, [words.length, interval, paused]);
+    setAnimated(words.length > 1 && !window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+  }, [words.length]);
+
+  useEffect(() => {
+    if (!animated || paused) return;
+    const total = letters(words[index]).length;
+    let delay: number;
+    let step: () => void;
+    if (!erasing && count < total) {
+      delay = TYPE_MS;
+      step = () => setCount((c) => c + 1);
+    } else if (!erasing) {
+      delay = HOLD_MS;
+      step = () => setErasing(true);
+    } else if (count > 0) {
+      delay = ERASE_MS;
+      step = () => setCount((c) => c - 1);
+    } else {
+      delay = GAP_MS;
+      step = () => {
+        setErasing(false);
+        setIndex((i) => (i + 1) % words.length);
+      };
+    }
+    const id = setTimeout(step, delay);
+    return () => clearTimeout(id);
+  }, [animated, paused, erasing, count, index, words]);
 
   if (!words.length) return null;
+  const shown = letters(words[index]).slice(0, count).join("");
   return (
     <>
       <span className="sr-only">{words.join(", ")}</span>
       <span
         aria-hidden="true"
-        className="relative inline-grid overflow-hidden pb-[0.08em] align-bottom text-secondary transition-[width] duration-500 ease-out motion-reduce:transition-none"
-        style={width ? { width } : undefined}
+        data-word={words[index]}
+        className="whitespace-nowrap text-secondary"
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
       >
-        {words.map((w, k) => (
-          <span
-            key={w}
-            ref={(el) => { refs.current[k] = el; }}
-            data-active={k === index || undefined}
-            className={`col-start-1 row-start-1 justify-self-start whitespace-nowrap transition-[opacity,transform] duration-500 ease-out motion-reduce:transition-none ${
-              k === index ? "translate-y-0 opacity-100" : k === previous ? "-translate-y-[60%] opacity-0" : "translate-y-[60%] opacity-0"
-            }`}
-          >
-            {w}
-          </span>
-        ))}
+        {/* caractère invisible si le mot est vide : la ligne garde sa hauteur */}
+        <span data-typed>{shown || "​"}</span>
+        {animated && <span className="typing-caret" />}
       </span>
     </>
   );
