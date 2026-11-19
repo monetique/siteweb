@@ -60,9 +60,6 @@ async function HomeHero({ block }: { block: Block }) {
 
   const highlight = block.highlightTitle || block.highlightText ? (
     <>
-      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-white text-primary-container">
-        <Icon name="chevron_right" className="text-[22px]" />
-      </span>
       <span className="text-label-md leading-relaxed">
         {block.highlightTitle && <strong className="block font-semibold text-on-primary">{block.highlightTitle}</strong>}
         {block.highlightText && <span className="text-on-primary-container">{block.highlightText}</span>}

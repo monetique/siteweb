@@ -107,7 +107,7 @@ Dans **Pages → Accueil → Bannière** (variante « accueil ») :
 | `title` | partie fixe du titre | Solutions de paiement digital |
 | `rotatingWords` | mots qui défilent à la fin du titre, **un par ligne** | sécurisées / innovantes / fiables |
 | `subtitle` | paragraphe d'introduction | |
-| `highlightTitle`, `highlightText`, `highlightUrl` | encadré sombre avec flèche (cliquable si une adresse est saisie) | Leader des systèmes… → /monetique-tunisie |
+| `highlightTitle`, `highlightText`, `highlightUrl` | encadré sombre (cliquable si une adresse est saisie) | Leader des systèmes… → /monetique-tunisie |
 | `image` | visuel de droite (format paysage, ≥ 1400 px de large ; le haut de l'image reste visible) | |
 | `ctas` | boutons | Nos solutions, Expertise monétique |
 
