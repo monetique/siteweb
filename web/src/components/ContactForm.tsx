@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import { Icon } from "./Icon";
 import { useDict } from "./LangProvider";
 
@@ -14,21 +14,30 @@ const field = "w-full rounded-lg border border-outline-variant/60 bg-surface-con
 export function ContactForm() {
   const d = useDict();
   const [state, setState] = useState<"idle" | "sending" | "ok" | "error">("idle");
+  // Heure d'affichage du formulaire : le serveur écarte les envois trop rapides (robots)
+  const shownAt = useRef(0);
+  useEffect(() => { shownAt.current = Date.now(); }, []);
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const data = Object.fromEntries(new FormData(form)) as Record<string, string>;
-    if (data.website) return; // champ piège anti-robots
     setState("sending");
     try {
       const res = await fetch(ENDPOINT, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ data: { fullName: data.fullName, phone: data.phone, email: data.email, subject: data.subject, message: data.message } }),
+        body: JSON.stringify({
+          data: {
+            fullName: data.fullName, phone: data.phone, email: data.email, subject: data.subject, message: data.message,
+            website: data.website, // champ piège (vide pour un humain), vérifié par le serveur
+            elapsed: Date.now() - shownAt.current, // délai de saisie, vérifié par le serveur
+          },
+        }),
       });
       if (!res.ok) throw new Error(String(res.status));
       form.reset();
+      shownAt.current = Date.now();
       setState("ok");
     } catch {
       setState("error");

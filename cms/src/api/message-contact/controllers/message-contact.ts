@@ -17,6 +17,32 @@ function tooMany(ip: string) {
 }
 
 /**
+ * Filtre anti-spam (côté serveur : un robot qui écrit directement à l'API ne passe pas par le formulaire).
+ * Renvoie la raison du rejet, ou null si le message semble légitime.
+ *  - champ piège « website » rempli (invisible pour un humain) ;
+ *  - envoi trop rapide (< 3 s après l'affichage du formulaire) ou sans le délai fourni par le formulaire ;
+ *  - plus de 3 liens dans le message ;
+ *  - même message envoyé deux fois par la même adresse e-mail en moins de 10 minutes.
+ */
+const MIN_FILL_MS = 3000;
+const MAX_LINKS = 3;
+const DUP_MS = 10 * 60 * 1000;
+const recent = new Map<string, number>();
+function spamReason(input: Record<string, unknown>): string | null {
+  if (typeof input.website === 'string' && input.website.trim()) return 'champ piège rempli';
+  const elapsed = Number(input.elapsed);
+  if (!Number.isFinite(elapsed) || elapsed < MIN_FILL_MS || elapsed > 24 * 3600 * 1000) return 'délai de saisie anormal';
+  const text = String(input.message ?? '');
+  if ((text.match(/https?:\/\/|www\./gi) ?? []).length > MAX_LINKS) return 'trop de liens';
+  const key = `${String(input.email ?? '').toLowerCase()}|${text.trim().slice(0, 500)}`;
+  const now = Date.now();
+  if (now - (recent.get(key) ?? 0) < DUP_MS) return 'doublon';
+  recent.set(key, now);
+  if (recent.size > 10_000) recent.clear();
+  return null;
+}
+
+/**
  * Le public peut seulement déposer un message : on ne garde que les champs du formulaire,
  * le statut est forcé à « nouveau » et la réponse ne renvoie aucune donnée.
  */
@@ -28,6 +54,14 @@ export default factories.createCoreController('api::message-contact.message-cont
       return;
     }
     const input = (ctx.request.body as any)?.data ?? {};
+    const reason = spamReason(input);
+    if (reason) {
+      // Réponse identique à un envoi réussi : le robot n'apprend rien ; rien n'est enregistré ni envoyé.
+      strapi.log.info(`[contact] message écarté (${reason}) — IP ${ctx.request.ip}`);
+      ctx.status = 201;
+      ctx.body = { ok: true };
+      return;
+    }
     const data: Record<string, unknown> = { status: 'nouveau' };
     for (const key of ALLOWED) {
       if (typeof input[key] === 'string') data[key] = input[key].trim();

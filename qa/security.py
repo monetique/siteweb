@@ -41,13 +41,19 @@ st, body, _ = req('POST', '/api/auth/local/register', {'username': 'qa-intrus', 
 check('Inscription publique d’utilisateurs désactivée', st != 200, f'{st} {body[:80]}')
 
 # --- Formulaire de contact
-st, body, _ = req('POST', '/api/messages-contact', {'data': {'fullName': 'QA', 'email': 'qa@smt.tn', 'subject': 'paysmart', 'message': 'x' * 6000}})
+st, body, _ = req('POST', '/api/messages-contact', {'data': {'fullName': 'QA', 'email': 'qa@smt.tn', 'subject': 'paysmart', 'message': 'x' * 6000, 'elapsed': 9000}})
 check('Message > 5000 caractères refusé', st == 400, st)
-st, body, _ = req('POST', '/api/messages-contact', {'data': {'fullName': 'QA', 'email': 'qa@smt.tn', 'subject': 'inconnu', 'message': 'x'}})
+st, body, _ = req('POST', '/api/messages-contact', {'data': {'fullName': 'QA', 'email': 'qa@smt.tn', 'subject': 'inconnu', 'message': 'x', 'elapsed': 9000}})
 check('Objet hors liste refusé', st == 400, st)
-st, body, _ = req('POST', '/api/messages-contact', {'data': {'fullName': '<script>alert(1)</script>', 'email': 'qa@smt.tn', 'subject': 'paysmart', 'message': 'test'}})
+st, body, _ = req('POST', '/api/messages-contact', {'data': {'fullName': '<script>alert(1)</script>', 'email': 'qa@smt.tn', 'subject': 'paysmart', 'message': 'test', 'elapsed': 9000}})
 check('Réponse publique sans donnée renvoyée', body.strip() == '{"ok":true}', body[:60])
-codes = [req('POST', '/api/messages-contact', {'data': {'fullName': 'Flood', 'email': 'f@smt.tn', 'subject': 'paysmart', 'message': 'flood'}})[0] for _ in range(25)]
+codes = [req('POST', '/api/messages-contact', {'data': {'fullName': 'Flood', 'email': 'f@smt.tn', 'subject': 'paysmart', 'message': 'flood', 'elapsed': 9000}})[0] for _ in range(25)]
+# Filtre anti-spam côté serveur : réponse identique (le robot n'apprend rien), message non enregistré (voir journal Strapi « message écarté »)
+for label, extra in [('envoi direct sans délai de saisie', {}), ('champ piège rempli', {'website': 'http://spam.example', 'elapsed': 9000}),
+                     ('envoi en moins de 3 s', {'elapsed': 500}), ('plus de 3 liens', {'elapsed': 9000, 'message': 'http://a http://b http://c http://d'})]:
+    payload = {'fullName': 'Robot QA', 'email': 'robot@example.com', 'subject': 'paysmart', 'message': 'spam', **extra}
+    st, body, _ = req('POST', '/api/messages-contact', {'data': payload})
+    check(f'Anti-spam : {label} → réponse neutre', st in (201, 429) and (st == 429 or body.strip() == '{"ok":true}'), f'{st} {body[:40]}')
 check('Limitation des envois en rafale (25 messages d’affilée)', any(c == 429 for c in codes), f'codes : {sorted(set(codes))}')
 st, _, h = req('OPTIONS', '/api/messages-contact', headers={'Origin': 'https://site-pirate.example', 'Access-Control-Request-Method': 'POST'})
 check('CORS limité au domaine du site', h.get('Access-Control-Allow-Origin') not in ('*', 'https://site-pirate.example'), h.get('Access-Control-Allow-Origin'))
