@@ -178,7 +178,7 @@ ACTUALITES = [
   {"title": "Simplifier vos paiements avec le Wallet", "slug": "simplifier-vos-paiements-avec-le-wallet", "date": "2025-02-18",
    "category": "actualite", "label": "Mobile Payment", "isFeatured": True,
    "excerpt": "Payez, envoyez et retirez votre argent instantanément depuis votre téléphone, sans transporter d’espèces ni faire la queue.",
-   "content": "<p>تحب تسهل خلاصاتك وتتحكم في فلوسك خير؟</p><p>بالـWallet كل شيء يسهال، معادش تستحق بش تهز فلوس كاش و تشد الصف!</p><p>خلّص، ابعث، واجبد فلوسك بالوقت. الـWallet هو محفظة إلكترونية على تالفونك، تنجم تعمل بيه كل شيء.</p><p>مالا أدخل على Appstore ولا Playstore تلشرجي الـ Application Mobile payment إلّي حاجتك بيها في رمشة عين.</p>"},
+   "content": "<p>Vous souhaitez simplifier vos paiements et mieux maîtriser votre argent ?</p><p>Avec le Wallet, tout devient plus simple : plus besoin de transporter de l’argent liquide ni de faire la queue !</p><p>Payez, envoyez et retirez votre argent instantanément. Le Wallet est un portefeuille électronique sur votre téléphone qui vous permet de tout faire.</p><p>Il vous suffit de vous rendre sur l’App Store ou Google Play pour télécharger, en un clin d’œil, l’application de paiement mobile dont vous avez besoin.</p>"},
   {"title": "Quel fantastique événement : Team building Monétique Tunisie !", "slug": "team-building-monetique-tunisie", "date": "2024-11-07",
    "category": "evenement", "label": "Vie interne",
    "excerpt": "Trois jours de jeux et de moments de camaraderie, de confiance et de communication, au service de nos valeurs de respect, d’intégrité et de responsabilité.",

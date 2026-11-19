@@ -5,7 +5,7 @@ Les scripts utilisent le compte admin de **recette** : variables `QA_ADMIN_EMAIL
 
 | Script | Rôle |
 |---|---|
-| `crawl.py` | Parcourt toutes les pages du sitemap dans les 3 langues (≈ 110 pages) : statut HTTP, `lang`/`dir`, liens restant dans la langue, hreflang, pictogrammes manquants, erreurs console, ressources en échec, SEO (title, description, canonical, OG, JSON-LD), titres, accessibilité axe-core, débordements mobile |
+| `crawl.py` | Parcourt toutes les pages du sitemap dans les 3 langues (≈ 110 pages) : statut HTTP, `lang`/`dir`, liens restant dans la langue, texte arabe oublié dans les pages FR/EN (et français dans les pages EN/AR), hreflang, pictogrammes manquants, erreurs console, ressources en échec, SEO (title, description, canonical, OG, JSON-LD), titres, accessibilité axe-core, débordements mobile |
 | `interactions.py` | 67 contrôles utilisateur : consentement et mention d’information du formulaire, pages Données personnelles et Cookies, carte « Expertise à l’international » (liaisons animées), bannière d’accueil (mot animé, image, encadré), horloges du bandeau, menus, sous-menus Solutions et Expertise (ancres, fermeture après clic), recherche/filtres/pagination actualités, FAQ, formulaire de contact, mobile, 404, sélecteur de langue, arabe RTL (menu, chiffres, formulaire, mobile), hreflang |
 | `security.py` | 35 contrôles API et rôles (lecture publique seule, brouillons invisibles, Rédacteur/Validateur, CORS, inscription fermée, limitation de débit) |
 | `pentest.py` | 28 tentatives d'intrusion (injections, fichiers piégés, énumération, accès admin, fichiers sensibles) |
