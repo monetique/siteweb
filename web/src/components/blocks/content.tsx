@@ -185,6 +185,7 @@ export function TextImage({ block }: P) {
 }
 
 /* ---------- Chiffres clés */
+const COLS: Record<number, string> = { 2: "lg:grid-cols-2", 3: "lg:grid-cols-3", 4: "lg:grid-cols-4", 5: "lg:grid-cols-5" };
 export function KeyFigures({ block }: P) {
   return (
     <Section tone="surface">
@@ -192,16 +193,22 @@ export function KeyFigures({ block }: P) {
         <SectionTitle eyebrow={block.eyebrow} title={block.title} subtitle={block.subtitle} />
         {block.cta && <div className="mb-10"><ButtonLink link={{ ...block.cta, style: "texte" }} /></div>}
       </div>
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
+      <div className={`grid grid-cols-1 gap-6 sm:grid-cols-2 ${COLS[block.items?.length] ?? "lg:grid-cols-4"}`}>
         {block.items?.map((f: any) => (
-          <div key={f.label} className="rounded-xl border border-outline-variant/30 bg-surface-container-lowest p-6 shadow-sm">
-            <span className="text-label-sm text-on-surface-variant">{f.label}</span>
-            <div className="mt-3 flex items-baseline gap-1">
-              <span className="font-display text-headline-lg text-on-surface" dir="ltr">{f.value}</span>
-              {f.unit && <span className="text-headline-sm text-on-surface-variant">{f.unit}</span>}
+          <div key={f.label} className="flex flex-col rounded-xl border border-outline-variant/30 bg-surface-container-lowest p-6 shadow-sm lg:p-7">
+            <div className="flex items-start justify-between gap-3">
+              <span className="pt-1 text-label-sm font-medium text-on-surface">{f.label}</span>
+              {f.evolution && (
+                <span className="inline-flex shrink-0 items-center gap-1 rounded bg-surface-container px-2 py-1 text-label-sm font-bold text-secondary">
+                  <Icon name="trending_up" className="text-[16px]" /><span dir="ltr">{f.evolution}</span>
+                </span>
+              )}
             </div>
-            {f.evolution && <span className="mt-2 inline-flex items-center gap-1 text-label-sm text-secondary"><Icon name="trending_up" className="text-[16px]" />{f.evolution}</span>}
-            {f.note && <p className="mt-2 text-body-sm text-on-surface-variant">{f.note}</p>}
+            <div className="mt-6 flex items-baseline gap-2">
+              <span className="font-display text-stat text-on-surface lg:text-[3.5rem]" dir="ltr">{f.value}</span>
+              {f.unit && <span className="font-display text-headline-md font-medium text-on-surface-variant">{f.unit}</span>}
+            </div>
+            {f.note && <p className="mt-auto pt-6 text-body-sm leading-relaxed text-on-surface-variant">{f.note}</p>}
           </div>
         ))}
       </div>

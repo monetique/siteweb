@@ -3175,29 +3175,26 @@
        "unit": "M",
        "label": "Number of transactions",
        "evolution": "+9 %",
-       "note": "Change Q2 2024 / Q2 2025"
+       "note": "Transactions at end of June 2025, in millions (change Q2 2024 / Q2 2025)."
       },
       {
        "value": "5,782",
        "unit": "M",
-       "label": "Number of cards",
-       "evolution": "+5,3 %"
+       "label": "Bank cards",
+       "evolution": "+5,3 %",
+       "note": "Number of cards at end of June 2025, in millions."
       },
       {
        "value": "40 600",
-       "label": "Number of POS terminals",
-       "evolution": "+3,6 %"
+       "label": "POS terminals & ATMs",
+       "evolution": "+3,6 %",
+       "note": "Electronic payment terminals (POS) at end of June 2025."
       },
       {
        "value": "40 685",
-       "label": "Number of merchants",
-       "evolution": "+23,1 %"
-      },
-      {
-       "value": "99,98",
-       "unit": "%",
-       "label": "National switch availability",
-       "note": "April 2025"
+       "label": "Merchants",
+       "evolution": "+23,1 %",
+       "note": "Affiliated merchants at end of June 2025."
       }
      ]
     },

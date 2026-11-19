@@ -3173,31 +3173,28 @@
       {
        "value": "77,7",
        "unit": "M",
-       "label": "Nombre d'opérations",
+       "label": "Nombre d’opérations",
        "evolution": "+9 %",
-       "note": "Évolution T2 2024 / T2 2025"
+       "note": "Opérations à fin juin 2025, en millions (évolution T2 2024 / T2 2025)."
       },
       {
        "value": "5,782",
        "unit": "M",
-       "label": "Nombre de cartes",
-       "evolution": "+5,3 %"
+       "label": "Cartes Bancaires",
+       "evolution": "+5,3 %",
+       "note": "Nombre de cartes à fin juin 2025, en millions."
       },
       {
        "value": "40 600",
-       "label": "Nombre de TPE",
-       "evolution": "+3,6 %"
+       "label": "TPE & GAB",
+       "evolution": "+3,6 %",
+       "note": "Terminaux de paiement électroniques (TPE) à fin juin 2025."
       },
       {
        "value": "40 685",
-       "label": "Nombre de commerçants",
-       "evolution": "+23,1 %"
-      },
-      {
-       "value": "99,98",
-       "unit": "%",
-       "label": "Disponibilité du switch national",
-       "note": "Avril 2025"
+       "label": "Commerçants",
+       "evolution": "+23,1 %",
+       "note": "Commerçants affiliés à fin juin 2025."
       }
      ]
     },
