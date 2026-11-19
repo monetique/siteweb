@@ -21,7 +21,7 @@ SKIP_KEYS = {
     "mime", "website", "reference", "emailContact", "emailCommercial", "phoneHeadquarters", "phoneCallCenter",
     "phoneGreenNumber", "mapUrl", "fullName", "format", "level", "isExternal", "showForm", "showMap", "showAllLink",
     "isHomepage", "showOnHomepage", "isFeatured", "isPartialYear", "offerValidityDays", "displayValue",
-    "anchor", "imagePosition", "tone", "background", "layout", "imageFile", "imageAlt", "highlightUrl",
+    "anchor", "imagePosition", "tone", "background", "layout", "imageFile", "imageAlt", "highlightUrl", "display",
 }
 SKIP_SECTIONS = {"partenaires"}  # noms propres, type non traduit
 

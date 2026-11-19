@@ -3277,6 +3277,7 @@
     },
     {
      "__component": "blocks.tag-list",
+     "display": "carte",
      "eyebrow": "International",
      "title": "Expertise à l’international",
      "body": [
@@ -3443,6 +3444,7 @@
     },
     {
      "__component": "blocks.tag-list",
+     "display": "carte",
      "eyebrow": "International",
      "title": "Expertise à l’international",
      "body": [

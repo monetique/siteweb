@@ -9,6 +9,7 @@ import { RichText } from "../RichText";
 import { Container, Eyebrow, Section, SectionTitle } from "../Section";
 import { ButtonLink, SmartLink } from "../SmartLink";
 import { RotatingWord } from "../RotatingWord";
+import { InternationalMap } from "../InternationalMap";
 
 type P = { block: Block; page: Page };
 
@@ -254,11 +255,15 @@ export function TagList({ block }: P) {
           <SectionTitle eyebrow={block.eyebrow} title={block.title} />
           <RichText content={block.body} />
         </div>
-        <div className="flex flex-wrap gap-3">
-          {block.tags?.map((t: any) => (
-            <span key={t.text} className="rounded-full border border-outline-variant/40 bg-surface-container-lowest px-4 py-2 text-label-md">{t.text}</span>
-          ))}
-        </div>
+        {block.display === "carte" ? (
+          <InternationalMap tags={(block.tags ?? []).map((t: any) => t.text)} />
+        ) : (
+          <div className="flex flex-wrap gap-3">
+            {block.tags?.map((t: any) => (
+              <span key={t.text} className="rounded-full border border-outline-variant/40 bg-surface-container-lowest px-4 py-2 text-label-md">{t.text}</span>
+            ))}
+          </div>
+        )}
       </div>
     </Section>
   );

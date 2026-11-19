@@ -6,6 +6,14 @@
   },
   "options": {},
   "attributes": {
+    "display": {
+      "type": "enumeration",
+      "enum": [
+        "pastilles",
+        "carte"
+      ],
+      "default": "pastilles"
+    },
     "eyebrow": {
       "type": "string"
     },

@@ -50,6 +50,16 @@ with sync_playwright() as p:
     pg.locator('main section a[href*="monetique-tunisie"]').first.click(); pg.wait_for_url('**/monetique-tunisie/')
     check('Encadré « Leader… » → page Monétique Tunisie', pg.url.endswith('/monetique-tunisie/'), pg.url)
 
+    # 2 quinquies. Carte « Expertise à l'international » : liaisons depuis Tunis, pastilles allumées à l'arrivée
+    pg.goto(B + '/', wait_until='networkidle')
+    carte = pg.locator('main section').filter(has=pg.locator('svg path[pathLength]')).first
+    check('Carte internationale : rien d’allumé avant d’être à l’écran', pg.locator('li[data-on]').count() == 0)
+    carte.scroll_into_view_if_needed(); pg.wait_for_timeout(1200)
+    mid = pg.locator('li[data-on]').count()
+    pg.wait_for_timeout(5000)
+    arcs = pg.eval_on_selector_all('svg path[pathLength]', 'e => e.filter(p => getComputedStyle(p).strokeDashoffset === "0px" || p.getAttribute("stroke-dashoffset") === "0").length')
+    check('Carte internationale : 6 liaisons tracées, 7 pays allumés progressivement', 0 < mid < 7 and arcs == 6 and pg.locator('li[data-on]').count() == 7, f'à 1,2 s : {mid} pays, fin : {arcs} liaisons')
+
     # 2 ter. Bandeau : heures des pays de l'expertise internationale, décalage par rapport à Tunis
     pg.goto(B + '/', wait_until='networkidle'); pg.wait_for_timeout(300)
     clocks = pg.eval_on_selector_all('header ul[aria-label] li', 'e => e.map(l => l.innerText.replace(/\\s+/g, " ").trim())')
