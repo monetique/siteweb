@@ -109,9 +109,10 @@ GLOBAL = {
                  "metaDescription": "Switch national monétique, mobile et agrégateur de facturier (Paysmart) : des solutions de paiement digital fiables et sécurisées en Tunisie et en Afrique."},
 }
 
-SOL_NAV = [("Carte Bancaire", "carte-bancaire", "credit_card"), ("Switch Monétique", "switch-monetique", "hub"),
-           ("Switch Mobile", "switch-mobile", "smartphone"), ("Agrégateur de facturier", "agregateur-de-facturier", "receipt_long"),
-           ("Certification", "certification", "verified"), ("Sécurité Fraude et Monitoring", "securite-fraude-et-monitoring", "shield"),
+SOL_NAV = [("Carte Bancaire", "carte-bancaire", "credit_card"), ("Switch Mobile", "switch-mobile", "smartphone"),
+           ("Plateforme de paiement e-commerce ClicToPay", "plateforme-paiement-e-commerce", "shopping_cart"),
+           ("Agrégateur de facturier Paysmart", "agregateur-de-facturier", "receipt_long"), ("Switch Monétique", "switch-monetique", "hub"),
+           ("Sécurité Fraude et Monitoring", "securite-fraude-et-monitoring", "shield"), ("Certification", "certification", "verified"),
            ("Hébergement sécurisé", "hebergement-securise", "dns"), ("Assistance et conseil", "assistance-et-conseil", "support_agent")]
 
 EXP_NAV = [("Monétique", "monetique", "payments"), ("E-commerce", "ecommerce", "shopping_cart"),
@@ -283,7 +284,8 @@ PAGES = [
                 {"value": "5,782", "unit": "M", "label": "Cartes Bancaires", "evolution": "+5,3 %", "note": "Nombre de cartes à fin juin 2025, en millions."},
                 {"value": "40 600", "label": "TPE & GAB", "evolution": "+3,6 %", "note": "Terminaux de paiement électroniques (TPE) à fin juin 2025."},
                 {"value": "40 685", "label": "Commerçants", "evolution": "+23,1 %", "note": "Commerçants affiliés à fin juin 2025."}]},
-     {"__component": "blocks.solutions-list", "eyebrow": "Écosystème national interbancaire", "title": "Nos solutions de paiement digital",
+     {"__component": "blocks.solutions-list", "eyebrow": "Écosystème national interbancaire", "title": "Nos solutions de paiement digital", "display": "parcours",
+      "stepLabels": "Émettre et payer\nAgréger, router et sécuriser\nCertifier, héberger et accompagner",
       "subtitle": "Des solutions de paiement digital innovantes et sur mesure pour les banques, les établissements de paiement, les commerçants et les porteurs de carte."},
      {"__component": "blocks.cards-grid", "eyebrow": "Découvrez nos", "title": "Innovations", "columns": 3,
       "subtitle": "Des solutions modernes pour simplifier la réception du code PIN, l'acceptation des paiements et l'intégration des commerçants.",
@@ -377,7 +379,7 @@ PAGES = [
 ] + [{"title": t, "slug": s, "parentLabel": "Informations légales", "seo": {"metaTitle": t, "noIndex": s == "cookies"},
       "blocks": [hero(t, sub, badge)] + [rich(h, body) for h, body in secs]} for t, s, badge, sub, secs in LEGAL]
 
-SOL_TITLES = {"hebergement-securise": "Hébergement sécurisé des serveurs", "securite-fraude-et-monitoring": "Sécurité, fraude et monitoring"}
+SOL_TITLES = {"plateforme-paiement-e-commerce": "Plateforme de paiement e-commerce ClicToPay", "hebergement-securise": "Hébergement sécurisé des serveurs", "securite-fraude-et-monitoring": "Sécurité, fraude et monitoring"}
 NEWS_TITLES = {
   "simplifier-vos-paiements-avec-le-wallet": "Simplifier vos paiements avec le Wallet",
   "team-building-monetique-tunisie": "Team building Monétique Tunisie",

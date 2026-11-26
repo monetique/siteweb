@@ -143,3 +143,8 @@
   from { transform: scale(1); opacity: 0.9; }
   to { transform: scale(3); opacity: 0; }
 }
+
+/* Section « Nos solutions » en trajet : curseur flèche + carte bancaire au survol d'une solution */
+.cursor-card {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='34' viewBox='0 0 34 34'%3E%3Cpath d='M3 2 L3 20 L8 15.5 L11.5 23 L14.5 21.6 L11 14.2 L17.5 14.2 Z' fill='%23111' stroke='%23fff' stroke-width='1.5' stroke-linejoin='round'/%3E%3Crect x='15' y='20' width='17' height='11' rx='2' fill='%230d1b33' stroke='%23fff' stroke-width='1'/%3E%3Crect x='15' y='23' width='17' height='2.2' fill='%2300658d'/%3E%3Crect x='17.5' y='26.5' width='3.5' height='2.6' rx='.6' fill='%23fac775'/%3E%3C/svg%3E") 3 2, pointer;
+}

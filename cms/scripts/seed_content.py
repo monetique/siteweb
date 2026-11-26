@@ -1,6 +1,22 @@
 """Contenu réel de monetiquetunisie.com (nov. 2026), figé pour l'import Strapi."""
 
-SOLUTIONS = [{'slug': 'carte-bancaire',
+SOLUTIONS = [{'slug': 'plateforme-paiement-e-commerce',
+  'icon': 'shopping_cart',
+  'name': 'Plateforme de paiement e-commerce ClicToPay',
+  'tagline': 'Encaissez vos ventes en ligne en toute sécurité',
+  'sections': [('ClicToPay, la plateforme de paiement en ligne de Monétique Tunisie',
+                'ClicToPay est la plateforme de paiement e-commerce de Monétique Tunisie. Elle permet aux commerçants, aux entreprises et aux administrations d’accepter les paiements par carte '
+                'bancaire sur leur site web ou leur application mobile, en lien avec la banque de leur choix ou La Poste Tunisienne. Startups, grandes enseignes ou services publics disposent ainsi '
+                'd’un moyen d’encaissement en ligne fiable, accessible à tous les porteurs de carte.'),
+               ('Une intégration simple pour les e-commerçants',
+                'Le commerçant signe son contrat d’acceptation auprès de sa banque, puis intègre la page de paiement sécurisée ClicToPay à son site marchand. Un environnement de test permet de valider '
+                'l’intégration avant la mise en production, et nos équipes accompagnent les commerçants et leurs prestataires techniques à chaque étape.'),
+               ('Des paiements protégés de bout en bout',
+                'Les données de carte sont saisies sur une page hébergée par Monétique Tunisie et ne transitent jamais par le site du commerçant. L’authentification du porteur et le contrôle '
+                'anti-fraude en temps réel protègent chaque transaction, dans un environnement conforme à la norme PCI DSS.')],
+  'keys': ['Paiement en ligne par carte', 'Intégration rapide', 'Paiements protégés de bout en bout'],
+  'cta': ('Site web ClicToPay', 'https://www.clictopay.com.tn')},
+ {'slug': 'carte-bancaire',
   'icon': 'credit_card',
   'name': 'Carte Bancaire',
   'tagline': 'Personnalisation carte bancaire et privative',
@@ -61,7 +77,7 @@ SOLUTIONS = [{'slug': 'carte-bancaire',
   'keys': ['Paiement mobile', 'Expérience utilisateur optimale', 'Révolution des paiements digitaux']},
  {'slug': 'agregateur-de-facturier',
   'icon': 'receipt_long',
-  'name': 'Agrégateur de facturier',
+  'name': 'Agrégateur de facturier Paysmart',
   'tagline': 'Le moyen le plus simple de gérer et de payer vos factures en ligne',
   'sections': [('Paysmart, plateforme d’agrégation de paiement de factures',
                 'Paysmart représente une avancée significative dans le paysage des paiements, positionnant Monétique Tunisie à l’avant-garde de l’innovation financière. Cette plateforme d’agrégation '
@@ -152,6 +168,10 @@ SOLUTIONS = [{'slug': 'carte-bancaire',
                 'veillons à ce que le processus de chargeback soit géré avec la plus grande précision et transparence, minimisant ainsi les désagréments pour les banques et leurs clients tout en '
                 'garantissant la conformité et la satisfaction.')],
   'keys': ['Formations spécifiques', 'Performance opérationnelle', 'Gestion des litiges']}]
+
+ORDER = ['carte-bancaire', 'switch-mobile', 'plateforme-paiement-e-commerce', 'agregateur-de-facturier', 'switch-monetique',
+         'securite-fraude-et-monitoring', 'certification', 'hebergement-securise', 'assistance-et-conseil']
+SOLUTIONS.sort(key=lambda x: ORDER.index(x['slug']))
 
 PARTNERS = {'banque_tunisienne': ['Amen Bank',
                        'Arab Tunisian Bank',

@@ -76,29 +76,34 @@
       "icon": "credit_card"
      },
      {
-      "label": "Payment Switch",
-      "url": "/solutions/switch-monetique",
-      "icon": "hub"
-     },
-     {
       "label": "Mobile Switch",
       "url": "/solutions/switch-mobile",
       "icon": "smartphone"
      },
      {
-      "label": "Bill Aggregator",
+      "label": "ClicToPay e-commerce payment platform",
+      "url": "/solutions/plateforme-paiement-e-commerce",
+      "icon": "shopping_cart"
+     },
+     {
+      "label": "Paysmart bill aggregator",
       "url": "/solutions/agregateur-de-facturier",
       "icon": "receipt_long"
      },
      {
-      "label": "Certification",
-      "url": "/solutions/certification",
-      "icon": "verified"
+      "label": "Payment Switch",
+      "url": "/solutions/switch-monetique",
+      "icon": "hub"
      },
      {
       "label": "Fraud Security and Monitoring",
       "url": "/solutions/securite-fraude-et-monitoring",
       "icon": "shield"
+     },
+     {
+      "label": "Certification",
+      "url": "/solutions/certification",
+      "icon": "verified"
      },
      {
       "label": "Secure Hosting",
@@ -215,32 +220,38 @@
       "isExternal": false
      },
      {
-      "label": "Payment Switch",
-      "url": "/solutions/switch-monetique",
-      "style": "texte",
-      "isExternal": false
-     },
-     {
       "label": "Mobile Switch",
       "url": "/solutions/switch-mobile",
       "style": "texte",
       "isExternal": false
      },
      {
-      "label": "Bill Aggregator",
+      "label": "ClicToPay e-commerce payment platform",
+      "url": "/solutions/plateforme-paiement-e-commerce",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "Paysmart bill aggregator",
       "url": "/solutions/agregateur-de-facturier",
       "style": "texte",
       "isExternal": false
      },
      {
-      "label": "Certification",
-      "url": "/solutions/certification",
+      "label": "Payment Switch",
+      "url": "/solutions/switch-monetique",
       "style": "texte",
       "isExternal": false
      },
      {
       "label": "Fraud Security and Monitoring",
       "url": "/solutions/securite-fraude-et-monitoring",
+      "style": "texte",
+      "isExternal": false
+     },
+     {
+      "label": "Certification",
+      "url": "/solutions/certification",
       "style": "texte",
       "isExternal": false
      },
@@ -692,78 +703,11 @@
    }
   },
   {
-   "name": "Payment Switch",
-   "slug": "switch-monetique",
-   "icon": "hub",
-   "tagline": "Facilitating and authorising financial transactions",
-   "order": 2,
-   "summary": "Facilitating and authorising financial transactions",
-   "sections": [
-    {
-     "title": "Facilitating and authorising financial transactions",
-     "body": [
-      {
-       "type": "paragraph",
-       "children": [
-        {
-         "type": "text",
-         "text": "The payment switch is a cornerstone of the payments ecosystem, playing a crucial role in facilitating and authorising financial transactions in real time. As the national switch, Monétique Tunisie provides a central interface for payment processing, building a direct and secure communication bridge between financial institutions. This enables us to offer exceptional fluidity, enhanced security and unrivalled efficiency in processing our clients' transactions."
-        }
-       ]
-      }
-     ]
-    },
-    {
-     "title": "Instant verification of financial transactions",
-     "body": [
-      {
-       "type": "paragraph",
-       "children": [
-        {
-         "type": "text",
-         "text": "When a cardholder initiates a transaction, our payment switch immediately checks the validity of the card, the availability of funds and compliance with the required security parameters. This instant verification is essential not only for the rapid authorisation of the transaction but also for maintaining an optimal level of security, protecting the financial interests of cardholders and banks."
-        }
-       ]
-      }
-     ]
-    },
-    {
-     "title": "Smooth and secure banking transactions",
-     "body": [
-      {
-       "type": "paragraph",
-       "children": [
-        {
-         "type": "text",
-         "text": "As a payment switch, our commitment is to ensure that every transaction is processed with the utmost care, providing a smooth and secure user experience. By seamlessly connecting banks and other financial institutions, Monétique Tunisie plays an indispensable role in the payments ecosystem, contributing to the confidence and stability of the Tunisian financial market."
-        }
-       ]
-      }
-     ]
-    }
-   ],
-   "keyPoints": [
-    {
-     "text": "Real-time authorisations"
-    },
-    {
-     "text": "Instant verification"
-    },
-    {
-     "text": "Smooth and secure banking transactions"
-    }
-   ],
-   "seo": {
-    "metaTitle": "Payment Switch",
-    "metaDescription": "Facilitating and authorising financial transactions"
-   }
-  },
-  {
    "name": "Mobile Switch",
    "slug": "switch-mobile",
    "icon": "smartphone",
    "tagline": "Mobile payment, the solution for all your spontaneous purchases",
-   "order": 3,
+   "order": 2,
    "summary": "Mobile payment, the solution for all your spontaneous purchases",
    "sections": [
     {
@@ -826,7 +770,80 @@
    }
   },
   {
-   "name": "Bill Aggregator",
+   "name": "ClicToPay e-commerce payment platform",
+   "slug": "plateforme-paiement-e-commerce",
+   "icon": "shopping_cart",
+   "tagline": "Accept online payments securely",
+   "order": 3,
+   "summary": "Accept online payments securely",
+   "sections": [
+    {
+     "title": "ClicToPay, Monétique Tunisie's online payment platform",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "ClicToPay is Monétique Tunisie's e-commerce payment platform. It enables merchants, businesses and public administrations to accept card payments on their website or mobile app, through the bank of their choice or La Poste Tunisienne. Startups, major retailers and public services alike get a reliable way to collect payments online, open to every cardholder."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Simple integration for online merchants",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "The merchant signs an acceptance agreement with their bank, then integrates the secure ClicToPay payment page into their online store. A test environment lets them validate the integration before going live, and our teams support merchants and their technical providers at every step."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "End-to-end protected payments",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Card details are entered on a page hosted by Monétique Tunisie and never pass through the merchant's website. Cardholder authentication and real-time fraud monitoring protect every transaction, in a PCI DSS compliant environment."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "keyPoints": [
+    {
+     "text": "Online card payments"
+    },
+    {
+     "text": "Fast integration"
+    },
+    {
+     "text": "End-to-end protected payments"
+    }
+   ],
+   "cta": {
+    "label": "ClicToPay website",
+    "url": "https://www.clictopay.com.tn",
+    "style": "primaire",
+    "isExternal": true
+   },
+   "seo": {
+    "metaTitle": "ClicToPay e-commerce payment platform",
+    "metaDescription": "Accept online payments securely"
+   }
+  },
+  {
+   "name": "Paysmart bill aggregator",
    "slug": "agregateur-de-facturier",
    "icon": "receipt_long",
    "tagline": "The easiest way to manage and pay your bills online",
@@ -894,55 +911,55 @@
     "isExternal": true
    },
    "seo": {
-    "metaTitle": "Bill Aggregator",
+    "metaTitle": "Paysmart bill aggregator",
     "metaDescription": "The easiest way to manage and pay your bills online"
    }
   },
   {
-   "name": "Certification",
-   "slug": "certification",
-   "icon": "verified",
-   "tagline": "A leader in financial equipment",
+   "name": "Payment Switch",
+   "slug": "switch-monetique",
+   "icon": "hub",
+   "tagline": "Facilitating and authorising financial transactions",
    "order": 5,
-   "summary": "A leader in financial equipment",
+   "summary": "Facilitating and authorising financial transactions",
    "sections": [
     {
-     "title": "A leader in financial equipment",
+     "title": "Facilitating and authorising financial transactions",
      "body": [
       {
        "type": "paragraph",
        "children": [
         {
          "type": "text",
-         "text": "Monétique Tunisie is a leading reference in the certification of financial equipment. Our expertise covers a wide range of equipment and solutions, including automated teller machines (ATMs), payment terminals (POS), innovative technologies such as Tap to Phone and SoftPOS, payment facilitator (PayFac) services and customised private-label solutions."
+         "text": "The payment switch is a cornerstone of the payments ecosystem, playing a crucial role in facilitating and authorising financial transactions in real time. As the national switch, Monétique Tunisie provides a central interface for payment processing, building a direct and secure communication bridge between financial institutions. This enables us to offer exceptional fluidity, enhanced security and unrivalled efficiency in processing our clients' transactions."
         }
        ]
       }
      ]
     },
     {
-     "title": "Full compliance and reliability of financial devices",
+     "title": "Instant verification of financial transactions",
      "body": [
       {
        "type": "paragraph",
        "children": [
         {
          "type": "text",
-         "text": "Our certification process is rigorously designed to meet the strictest security standards and current international regulations, ensuring the full compliance and reliability of financial devices. This commitment to quality and security covers every step required for approval, guaranteeing the legitimacy and effectiveness of the payment systems deployed."
+         "text": "When a cardholder initiates a transaction, our payment switch immediately checks the validity of the card, the availability of funds and compliance with the required security parameters. This instant verification is essential not only for the rapid authorisation of the transaction but also for maintaining an optimal level of security, protecting the financial interests of cardholders and banks."
         }
        ]
       }
      ]
     },
     {
-     "title": "A strategic partner for financial institutions and businesses",
+     "title": "Smooth and secure banking transactions",
      "body": [
       {
        "type": "paragraph",
        "children": [
         {
          "type": "text",
-         "text": "With close attention to detail and a constant pursuit of excellence, Monétique Tunisie is the ideal strategic partner for financial institutions and businesses seeking secure, reliable payment solutions that comply with international standards. Our role in ensuring the compliance of financial equipment highlights our essential contribution to the financial ecosystem, facilitating the adoption of advanced and secure payment technologies."
+         "text": "As a payment switch, our commitment is to ensure that every transaction is processed with the utmost care, providing a smooth and secure user experience. By seamlessly connecting banks and other financial institutions, Monétique Tunisie plays an indispensable role in the payments ecosystem, contributing to the confidence and stability of the Tunisian financial market."
         }
        ]
       }
@@ -951,18 +968,18 @@
    ],
    "keyPoints": [
     {
-     "text": "ATMs & POS terminals"
+     "text": "Real-time authorisations"
     },
     {
-     "text": "Tap to Phone & SoftPOS"
+     "text": "Instant verification"
     },
     {
-     "text": "PayFac & private-label solutions"
+     "text": "Smooth and secure banking transactions"
     }
    ],
    "seo": {
-    "metaTitle": "Certification",
-    "metaDescription": "A leader in financial equipment"
+    "metaTitle": "Payment Switch",
+    "metaDescription": "Facilitating and authorising financial transactions"
    }
   },
   {
@@ -1033,11 +1050,78 @@
    }
   },
   {
+   "name": "Certification",
+   "slug": "certification",
+   "icon": "verified",
+   "tagline": "A leader in financial equipment",
+   "order": 7,
+   "summary": "A leader in financial equipment",
+   "sections": [
+    {
+     "title": "A leader in financial equipment",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Monétique Tunisie is a leading reference in the certification of financial equipment. Our expertise covers a wide range of equipment and solutions, including automated teller machines (ATMs), payment terminals (POS), innovative technologies such as Tap to Phone and SoftPOS, payment facilitator (PayFac) services and customised private-label solutions."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Full compliance and reliability of financial devices",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Our certification process is rigorously designed to meet the strictest security standards and current international regulations, ensuring the full compliance and reliability of financial devices. This commitment to quality and security covers every step required for approval, guaranteeing the legitimacy and effectiveness of the payment systems deployed."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "A strategic partner for financial institutions and businesses",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "With close attention to detail and a constant pursuit of excellence, Monétique Tunisie is the ideal strategic partner for financial institutions and businesses seeking secure, reliable payment solutions that comply with international standards. Our role in ensuring the compliance of financial equipment highlights our essential contribution to the financial ecosystem, facilitating the adoption of advanced and secure payment technologies."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "keyPoints": [
+    {
+     "text": "ATMs & POS terminals"
+    },
+    {
+     "text": "Tap to Phone & SoftPOS"
+    },
+    {
+     "text": "PayFac & private-label solutions"
+    }
+   ],
+   "seo": {
+    "metaTitle": "Certification",
+    "metaDescription": "A leader in financial equipment"
+   }
+  },
+  {
    "name": "Hosting of servers and technology solutions",
    "slug": "hebergement-securise",
    "icon": "dns",
    "tagline": "Secure hosting and technology solutions",
-   "order": 7,
+   "order": 8,
    "summary": "Secure hosting and technology solutions",
    "sections": [
     {
@@ -1121,7 +1205,7 @@
    "slug": "assistance-et-conseil",
    "icon": "support_agent",
    "tagline": "The undisputed leader in electronic payments",
-   "order": 8,
+   "order": 9,
    "summary": "The undisputed leader in electronic payments",
    "sections": [
     {
@@ -3132,16 +3216,9 @@
     {
      "__component": "blocks.hero",
      "variant": "accueil",
-     "eyebrow": "National payment switch",
-     "badge": "Since 1989",
      "title": "{mot} digital payment solutions",
-     "rotatingWords": "Secure\nInnovative\nReliable",
      "subtitle": "We support our partners and clients in their growth by providing them with top-quality payment solutions, while contributing to the continuous development of the digital payments landscape in Tunisia and Africa.",
-     "highlightTitle": "Leader in digital payment systems in Tunisia,",
-     "highlightText": "Monétique Tunisie is the national card and mobile payment switch and bill aggregator (Paysmart)",
-     "highlightUrl": "/monetique-tunisie",
-     "imageFile": "hero-paiement.jpg",
-     "imageAlt": "Paiement par carte sans contact sur un terminal de paiement électronique",
+     "eyebrow": "National payment switch",
      "ctas": [
       {
        "label": "Our solutions",
@@ -3155,7 +3232,14 @@
        "style": "secondaire",
        "isExternal": false
       }
-     ]
+     ],
+     "badge": "Since 1989",
+     "rotatingWords": "Secure\nInnovative\nReliable",
+     "highlightTitle": "Leader in digital payment systems in Tunisia,",
+     "highlightText": "Monétique Tunisie is the national card and mobile payment switch and bill aggregator (Paysmart)",
+     "highlightUrl": "/monetique-tunisie",
+     "imageFile": "hero-paiement.jpg",
+     "imageAlt": "Paiement par carte sans contact sur un terminal de paiement électronique"
     },
     {
      "__component": "blocks.key-figures",
@@ -3202,6 +3286,8 @@
      "__component": "blocks.solutions-list",
      "eyebrow": "National interbank ecosystem",
      "title": "Our digital payment solutions",
+     "display": "parcours",
+     "stepLabels": "Issue and pay\nAggregate, route and secure\nCertify, host and support",
      "subtitle": "Innovative, tailor-made digital payment solutions for banks, payment institutions, merchants and cardholders."
     },
     {

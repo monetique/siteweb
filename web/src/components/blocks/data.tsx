@@ -11,6 +11,7 @@ import { RichText } from "../RichText";
 import { Container, Section, SectionTitle } from "../Section";
 import { ContactForm } from "../ContactForm";
 import { NewsCard, type NewsItem } from "../NewsCard";
+import { SolutionsJourney } from "../SolutionsJourney";
 export type { NewsItem };
 
 type P = { block: Block; page: Page };
@@ -21,6 +22,11 @@ export async function SolutionsList({ block }: P) {
   return (
     <Section tone="low">
       {block.title ? <SectionTitle eyebrow={block.eyebrow} title={block.title} subtitle={block.subtitle} /> : <h2 className="sr-only">{t().solutionsList}</h2>}
+      {block.display === "parcours" ? (
+        <SolutionsJourney learnMore={t().learnMore}
+          labels={String(block.stepLabels ?? "").split("\n").map((l: string) => l.trim()).filter(Boolean)}
+          items={solutions.map((s) => ({ slug: s.slug, name: s.name, tagline: s.tagline, icon: s.icon }))} />
+      ) : (
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
         {solutions.map((s) => (
           <NextLink key={s.slug} href={`/solutions/${s.slug}`}
@@ -34,6 +40,7 @@ export async function SolutionsList({ block }: P) {
           </NextLink>
         ))}
       </div>
+      )}
     </Section>
   );
 }

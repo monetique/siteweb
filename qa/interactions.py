@@ -206,6 +206,32 @@ with sync_playwright() as p:
     check('Mobile : Expertise → E-commerce, menu refermé', m.locator('#menu-mobile').count() == 0 and m.url.endswith('#ecommerce'), m.url)
     hl = pg.eval_on_selector_all('link[rel=alternate][hreflang]', 'e => e.map(l => l.hreflang).sort()')
     check('Balises hreflang fr/en/ar/x-default', hl == ['ar', 'en', 'fr', 'x-default'], str(hl))
+
+    # --- Section « Nos solutions » en trajet (accueil)
+    LIT = "[...document.querySelectorAll('[data-journey-node]')].filter(n => n.dataset.lit === 'true').length"
+    pg.set_viewport_size({'width': 1280, 'height': 900}); pg.goto(B + '/', wait_until='networkidle')
+    j = pg.locator('[data-journey]').first
+    check('Parcours : 9 solutions affichées, dont ClicToPay', j.locator('[data-journey-node]').count() == 9 and j.get_by_text('Plateforme de paiement e-commerce ClicToPay').count() == 1)
+    j.scroll_into_view_if_needed(); pg.wait_for_timeout(300)
+    rows = pg.evaluate("[...document.querySelectorAll('[data-journey-row]')].map(r => [...r.querySelectorAll('[data-journey-node]')].map(n => Math.round(n.getBoundingClientRect().top)))")
+    check('Parcours : pictogrammes alignés dans chaque rangée', all(max(r) - min(r) <= 1 for r in rows), str(rows))
+    links = pg.evaluate("[...document.querySelectorAll('[data-journey-row]')].map(r => [...r.querySelectorAll('a > span:last-child')].map(n => Math.round(n.getBoundingClientRect().top)))")
+    check('Parcours : liens « En savoir plus » alignés', all(max(r) - min(r) <= 2 for r in links), str(links))
+    seen = 0
+    for _ in range(40):
+        pg.wait_for_timeout(250); seen = max(seen, pg.evaluate(LIT))
+    check('Parcours : la carte allume les pictogrammes au passage', seen >= 1, str(seen))
+    pg.wait_for_timeout(13000)
+    check('Parcours : animation arrêtée après 2 passages (aucun picto allumé)', pg.evaluate(LIT) == 0)
+    cur = pg.eval_on_selector('[data-journey] a', 'a => getComputedStyle(a).cursor')
+    check('Parcours : curseur carte bancaire au survol', cur.startswith('url('), cur[:40])
+    j.locator('a', has_text='ClicToPay').click(); pg.wait_for_url('**/solutions/plateforme-paiement-e-commerce/')
+    check('Fiche ClicToPay : titre et bouton vers le site ClicToPay', pg.locator('h1').inner_text().strip().endswith('ClicToPay') and pg.locator('a[href^="https://www.clictopay.com.tn"]').count() >= 1, pg.locator('h1').inner_text())
+    pg.goto(B + '/ar/', wait_until='networkidle')
+    xs = pg.evaluate("[...document.querySelector('[data-journey-row]').querySelectorAll('[data-journey-node]')].map(n => Math.round(n.getBoundingClientRect().left))")
+    check('AR : le parcours part de la droite', xs == sorted(xs, reverse=True), str(xs))
+    m.goto(B + '/', wait_until='networkidle')
+    check('Mobile : parcours en liste verticale (9 solutions)', m.locator('[data-journey]').first.is_hidden() and m.locator('.md\\:hidden a[href*="/solutions/"]').count() == 9)
     br.close()
 
 print(f'OK {len(ok)} / KO {len(ko)}')
