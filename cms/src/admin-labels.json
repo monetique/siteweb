@@ -109,7 +109,8 @@
     "footnote": "Note de bas de tableau",
     "intro": "Introduction",
     "showForm": "Afficher le formulaire",
-    "showMap": "Afficher la carte"
+    "showMap": "Afficher la carte",
+    "video": "Vidéo (animation jouée une fois)"
   },
   "descriptions": {
     "slug": "Générée depuis le titre. Ne pas modifier après publication.",
@@ -120,7 +121,8 @@
     "isFeatured": "Affiche cette actualité en grand en tête de la page Actualités.",
     "displayValue": "Format affiché, ex. « 5,782 » ou « 40 600 ». Laisser vide pour utiliser la valeur.",
     "isPartialYear": "Cocher pour une période en cours (ex. juin 2025).",
-    "excerpt": "Résumé court affiché dans les listes (400 caractères max)."
+    "excerpt": "Résumé court affiché dans les listes (400 caractères max).",
+    "video": "Facultatif. MP4 sans son, mêmes proportions que l'image ; joué une seule fois au chargement, puis l'image reste affichée."
   },
   "mainFields": {
     "api::page.page": "title",

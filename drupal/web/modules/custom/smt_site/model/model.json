@@ -1536,6 +1536,16 @@
      "multiple": false
     },
     {
+     "name": "hero_video",
+     "strapi": "video",
+     "label": "Vidéo (animation jouée une fois)",
+     "description": "Facultatif. MP4 sans son, mêmes proportions que l'image ; joué une seule fois au chargement, puis l'image reste affichée.",
+     "required": false,
+     "translatable": true,
+     "type": "file",
+     "multiple": false
+    },
+    {
      "name": "hero_ctas",
      "strapi": "ctas",
      "label": "Boutons",

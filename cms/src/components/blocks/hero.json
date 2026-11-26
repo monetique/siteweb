@@ -47,6 +47,13 @@
         "images"
       ]
     },
+    "video": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "videos"
+      ]
+    },
     "ctas": {
       "type": "component",
       "component": "shared.link",

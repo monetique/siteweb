@@ -128,6 +128,12 @@ function smt_values(array $def, array $item, string $dir, bool $translatable_onl
       }
       continue;
     }
+    if ($f['type'] === 'file' && $k === 'video' && !empty($item['videoFile'])) {
+      if ($file = smt_file($dir, $item['videoFile'], 'videos')) {
+        $values[$f['name']] = ['target_id' => $file->id()];
+      }
+      continue;
+    }
     if (!array_key_exists($k, $item) || $item[$k] === NULL || $item[$k] === '' || $item[$k] === []) {
       continue;
     }

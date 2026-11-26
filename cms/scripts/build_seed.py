@@ -276,7 +276,7 @@ PAGES = [
       "badge": "Depuis 1989", "rotatingWords": "sécurisées\ninnovantes\nfiables",
       "highlightTitle": "Leader des systèmes de paiement digital en Tunisie,",
       "highlightText": "Monétique Tunisie est le switch national monétique, mobile et agrégateur de facturier (Paysmart)",
-      "highlightUrl": "/monetique-tunisie", "imageFile": "hero-paiement.jpg",
+      "highlightUrl": "/monetique-tunisie", "imageFile": "hero-paiement.jpg", "videoFile": "hero-animation.mp4",
       "imageAlt": "Paiement par carte sans contact sur un terminal de paiement électronique"},
      {"__component": "blocks.key-figures", "eyebrow": "Chiffres clés", "title": "Chiffres clés de la monétique en Tunisie", "subtitle": "Données à fin juin 2025",
       "source": "Source : Monétique Tunisie", "cta": link("Voir toutes les statistiques", "/statistiques"),

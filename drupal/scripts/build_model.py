@@ -16,7 +16,7 @@ LBL, DESC = labels['labels'], labels['descriptions']
 TITLE = {'page': 'title', 'actualite': 'title', 'appel_offres': 'title', 'solution': 'name', 'innovation': 'name',
          'faq': 'question', 'dirigeant': 'fullName', 'indicateur': 'name', 'partenaire': 'name',
          'global': 'siteName', 'message_contact': 'fullName'}
-FILE_FIELDS = {'attachments', 'documents', 'favicon'}
+FILE_FIELDS = {'attachments', 'documents', 'favicon', 'video'}
 
 def snake(s): return re.sub(r'([a-z0-9])([A-Z])', r'\1_\2', s).replace('-', '_').lower()
 def comp_id(c): return snake(c.split('.', 1)[1])

@@ -116,8 +116,8 @@ class ModelBuilder {
         return ['image', [], ['file_extensions' => 'png gif jpg jpeg webp', 'alt_field' => TRUE, 'alt_field_required' => FALSE,
           'file_directory' => 'images/[date:custom:Y]-[date:custom:m]', 'max_filesize' => '8 MB'], 'image_image'];
       case 'file':
-        return ['file', [], ['file_extensions' => 'pdf doc docx xls xlsx ppt pptx zip png jpg jpeg ico',
-          'file_directory' => 'documents/[date:custom:Y]-[date:custom:m]', 'max_filesize' => '20 MB'], 'file_generic'];
+        return ['file', [], ['file_extensions' => $f['strapi'] === 'video' ? 'mp4 webm' : 'pdf doc docx xls xlsx ppt pptx zip png jpg jpeg ico',
+          'file_directory' => ($f['strapi'] === 'video' ? 'videos' : 'documents') . '/[date:custom:Y]-[date:custom:m]', 'max_filesize' => '20 MB'], 'file_generic'];
       case 'paragraphs':
         return ['entity_reference_revisions', ['target_type' => 'paragraph'], [
           'handler' => 'default:paragraph',

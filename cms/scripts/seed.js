@@ -25,7 +25,7 @@ const TRANSLATIONS = Object.fromEntries(
 
 const clean = (o) => JSON.parse(JSON.stringify(o, (k, v) => (v === null ? undefined : v)));
 
-const MIME = { '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.webp': 'image/webp', '.svg': 'image/svg+xml' };
+const MIME = { '.mp4': 'video/mp4', '.webm': 'video/webm', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.webp': 'image/webp', '.svg': 'image/svg+xml' };
 
 async function uploadFile(strapi, file, alt) {
   const filepath = path.join(ROOT, 'data', 'media', file);
@@ -47,6 +47,7 @@ async function resolveMedia(strapi, value) {
   for (const [k, v] of Object.entries(value)) {
     if (k === 'imageAlt') continue;
     if (k === 'imageFile') out.image = (await uploadFile(strapi, v, value.imageAlt ?? '')).id;
+    else if (k === 'videoFile') out.video = (await uploadFile(strapi, v, '')).id;
     else out[k] = await resolveMedia(strapi, v);
   }
   return out;

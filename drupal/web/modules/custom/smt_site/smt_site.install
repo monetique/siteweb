@@ -24,3 +24,33 @@ function smt_site_update_11001(): string {
   ModelBuilder::build();
   return 'Modèle de contenu mis à jour.';
 }
+
+/**
+ * Champ « Vidéo » de la bannière ; joint l'animation de départ à la bannière d'accueil si elle n'en a pas.
+ */
+function smt_site_update_11002(): string {
+  ModelBuilder::build();
+  $added = 0;
+  $dir = getenv('SMT_SEED_DIR') ?: DRUPAL_ROOT . '/../../cms/data';
+  $src = "$dir/media/hero-animation.mp4";
+  if (is_file($src)) {
+    $fs = \Drupal::service('file_system');
+    $d = 'public://videos';
+    $fs->prepareDirectory($d, 1 | 2);
+    $uri = $fs->copy($src, "$d/hero-animation.mp4", 1);
+    $file = \Drupal\file\Entity\File::create(['uri' => $uri, 'status' => 1, 'uid' => 1]);
+    $file->save();
+    foreach (\Drupal::entityTypeManager()->getStorage('paragraph')->loadByProperties(['type' => 'hero', 'hero_variant' => 'accueil']) as $p) {
+      foreach ($p->getTranslationLanguages() as $lang) {
+        $t = $p->getTranslation($lang->getId());
+        if ($t->get('hero_video')->isEmpty()) {
+          $t->set('hero_video', ['target_id' => $file->id()]);
+          $added++;
+        }
+      }
+      $p->setNewRevision(FALSE);
+      $p->save();
+    }
+  }
+  return "Champ vidéo ajouté ; animation jointe à $added bannière(s).";
+}

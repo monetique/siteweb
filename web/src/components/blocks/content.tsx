@@ -4,6 +4,7 @@ import { getLang, t } from "@/lib/lang-server";
 import { localizePeriod } from "@/lib/i18n";
 import { getIndicateurs, mediaUrl } from "@/lib/strapi";
 import { Breadcrumb } from "../Breadcrumb";
+import { HeroVisual } from "../HeroVisual";
 import { Icon } from "../Icon";
 import { RichText } from "../RichText";
 import { Container, Eyebrow, Section, SectionTitle } from "../Section";
@@ -106,12 +107,11 @@ async function HomeHero({ block }: { block: Block }) {
           {/* Visuel : photo en haut, fondu vers le bleu nuit, carte « switch national » par-dessus */}
           <div className="relative overflow-hidden rounded-xl bg-primary-container shadow-2xl lg:aspect-[4/4.3]">
             {img && (
-              /* eslint-disable-next-line @next/next/no-img-element */
-              <img
-                src={img}
-                alt="" /* illustration : le message est porté par le texte (le texte alternatif de la médiathèque n'est pas traduit) */
-                className="h-60 w-full object-cover object-[58%_50%] sm:h-80 lg:absolute lg:inset-x-0 lg:top-0 lg:h-[72%]"
-                fetchPriority="high"
+              <HeroVisual
+                img={img}
+                video={mediaUrl(block.video)}
+                className="h-60 w-full sm:h-80 lg:absolute lg:inset-x-0 lg:top-0 lg:h-[72%]"
+                imgClassName="object-[58%_50%]"
               />
             )}
             <div className="pointer-events-none absolute inset-x-0 top-[9rem] h-24 bg-gradient-to-b from-transparent to-primary-container sm:top-[14rem] lg:top-[44%] lg:h-[30%]" />
