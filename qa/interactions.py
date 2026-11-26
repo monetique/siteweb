@@ -230,6 +230,16 @@ with sync_playwright() as p:
     pg.goto(B + '/ar/', wait_until='networkidle')
     xs = pg.evaluate("[...document.querySelector('[data-journey-row]').querySelectorAll('[data-journey-node]')].map(n => Math.round(n.getBoundingClientRect().left))")
     check('AR : le parcours part de la droite', xs == sorted(xs, reverse=True), str(xs))
+    # --- Encarts « Innovations » de l'accueil et leurs pages détaillées
+    pg.goto(B + '/', wait_until='networkidle')
+    hrefs = [x.get_attribute('href') for x in pg.locator('#innovations a').all()]
+    check('Innovations : 3 encarts avec lien « En savoir plus »', hrefs == ['/innovations/pin-sender/', '/innovations/softpos/', '/innovations/payfac/'], str(hrefs))
+    pg.locator('#innovations a').nth(1).click(); pg.wait_for_url('**/innovations/softpos/')
+    check('Innovations : page SoftPOS (titre, fil d’Ariane)', pg.locator('h1').inner_text().strip() == 'SoftPOS' and pg.get_by_role('link', name='Innovations').count() >= 1)
+    ok3 = all(pg.goto(B + f'{pre}/innovations/{sl}/').status == 200 for pre in ('', '/en', '/ar') for sl in ('pin-sender', 'softpos', 'payfac'))
+    check('Innovations : 9 pages (3 innovations × 3 langues)', ok3)
+    pg.goto(B + '/ar/innovations/payfac/', wait_until='networkidle')
+    check('AR : page PayFac en arabe', pg.locator('html').get_attribute('dir') == 'rtl' and 'مسهّل الدفع' in pg.title(), pg.title())
     m.goto(B + '/', wait_until='networkidle')
     check('Mobile : parcours en liste verticale (9 solutions)', m.locator('[data-journey]').first.is_hidden() and m.locator('.md\\:hidden a[href*="/solutions/"]').count() == 9)
     br.close()

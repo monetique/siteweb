@@ -7,7 +7,7 @@ from html.parser import HTMLParser
 
 HERE = pathlib.Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-from seed_content import SOLUTIONS, PARTNERS, FAQ, LEGAL  # noqa: E402
+from seed_content import SOLUTIONS, PARTNERS, FAQ, LEGAL, INNOVATIONS  # noqa: E402
 
 # ------------------------------------------------------------------ HTML -> Strapi "blocks" rich text
 class _Blocks(HTMLParser):
@@ -287,16 +287,16 @@ PAGES = [
      {"__component": "blocks.solutions-list", "eyebrow": "Écosystème national interbancaire", "title": "Nos solutions de paiement digital", "display": "parcours",
       "stepLabels": "Émettre et payer\nAgréger, router et sécuriser\nCertifier, héberger et accompagner",
       "subtitle": "Des solutions de paiement digital innovantes et sur mesure pour les banques, les établissements de paiement, les commerçants et les porteurs de carte."},
-     {"__component": "blocks.cards-grid", "eyebrow": "Découvrez nos", "title": "Innovations", "columns": 3,
+     {"__component": "blocks.cards-grid", "eyebrow": "Découvrez nos", "title": "Innovations", "anchor": "innovations", "columns": 3,
       "subtitle": "Des solutions modernes pour simplifier la réception du code PIN, l'acceptation des paiements et l'intégration des commerçants.",
       "cards": [
-        {"icon": "pin", "eyebrow": "100 % digital", "title": "PIN Sender",
+        {"icon": "pin", "eyebrow": "100 % digital", "title": "PIN Sender", "link": link("En savoir plus", "/innovations/pin-sender/"),
          "text": "Avec PIN Sender, Monétique Tunisie offre une alternative moderne et sécurisée à l’envoi traditionnel des codes PIN. Cette solution 100 % digitale permet la transmission instantanée du code confidentiel (PIN) par SMS dès la réception de la carte. En éliminant l’usage du papier et les contraintes logistiques, elle facilite l’accès au service tout en réduisant son impact sur l’environnement.",
          "bullets": [kp("Transmission instantanée sécurisée"), kp("Zéro papier, zéro contrainte logistique"), kp("Impact environnemental réduit")]},
-        {"icon": "contactless", "eyebrow": "Tap to Pay / Tap to Phone", "title": "SoftPOS",
+        {"icon": "contactless", "eyebrow": "Tap to Pay / Tap to Phone", "title": "SoftPOS", "link": link("En savoir plus", "/innovations/softpos/"),
          "text": "Le SoftPOS, également connu sous le nom de Tap to Pay ou Tap to Phone, est une solution basée sur un logiciel qui transforme les smartphones et tablettes Android compatibles NFC en terminaux d’acceptation de paiement. Il représente une avancée significative dans le domaine des transactions électroniques, contrairement aux TPE classiques.",
          "bullets": [kp("Acceptation des cartes sans contact"), kp("Alternative logicielle aux TPE classiques"), kp("Smartphones et tablettes Android NFC")]},
-        {"icon": "store", "eyebrow": "Facilitateur de paiement", "title": "PayFac",
+        {"icon": "store", "eyebrow": "Facilitateur de paiement", "title": "PayFac", "link": link("En savoir plus", "/innovations/payfac/"),
          "text": "Un facilitateur de paiement, également appelé PayFac, est un prestataire de services qui permet aux commerçants de traiter les paiements par carte bancaire de manière rapide, efficace et sécurisée. Il agit comme un intermédiaire entre ses clients et les institutions financières et propose une solution de paiement facilement intégrable aux plateformes et aux systèmes de gestion existants.",
          "bullets": [kp("Paiements par carte rapides et sécurisés"), kp("Intermédiaire commerçants / institutions financières"), kp("Intégration facile aux plateformes existantes")]},
       ]},
@@ -410,6 +410,12 @@ SEED = {"global": GLOBAL, "navigation": NAVIGATION, "dirigeants": DIRIGEANTS, "i
                        **({"cta": link(s["cta"][0], s["cta"][1], "primaire", True)} if s.get("cta") else {}),
                        "seo": {"metaTitle": SOL_TITLES.get(s["slug"], s["name"]), "metaDescription": s["tagline"]}}
                       for i, s in enumerate(SOLUTIONS)],
+        "innovations": [{"name": s["name"], "slug": s["slug"], "icon": s["icon"], "tagline": s["tagline"], "order": i + 1, "summary": s["tagline"],
+                         "sections": [{"title": t, "body": blocks(txt)} for t, txt in s["sections"]],
+                         "keyPoints": [kp(k) for k in s["keys"]],
+                         **({"cta": link(s["cta"][0], s["cta"][1], "primaire", s["cta"][1].startswith("http"))} if s.get("cta") else {}),
+                         "seo": {"metaTitle": s["metaTitle"], "metaDescription": s["tagline"]}}
+                        for i, s in enumerate(INNOVATIONS)],
         "partenaires": [{"name": n, "category": cat, "order": i + 1, **({"website": PARTNER_WEBSITES[n]} if n in PARTNER_WEBSITES else {}),
                          "showInRibbon": n in ("Visa", "Mastercard", "UnionPay", "Office National des Postes", "Ooredoo", "Orange", "Tunisie Telecom", "STEG", "SONEDE"),
                          "showOnHome": n in ("Ooredoo", "Orange", "Tunisie Telecom", "TOPNET", "SONEDE")}

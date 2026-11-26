@@ -127,6 +127,7 @@
     "api::actualite.actualite": "title",
     "api::appel-offres.appel-offres": "title",
     "api::solution.solution": "name",
+    "api::innovation.innovation": "name",
     "api::partenaire.partenaire": "name",
     "api::faq.faq": "question",
     "api::indicateur.indicateur": "name",

@@ -142,6 +142,9 @@ export async function getPageSlugs() {
 export async function getSolutions() {
   return (await strapiGet<Many<Solution>>("solutions", { sort: "order:asc", populate: "*", pagination: ALL })).data;
 }
+export async function getInnovations() {
+  return (await strapiGet<Many<Solution>>("innovations", { sort: "order:asc", populate: "*", pagination: ALL })).data;
+}
 export async function getPartenaires() {
   return (await strapiGet<Many<Partenaire>>("partenaires", { locale: undefined, sort: "order:asc", populate: "logo", pagination: ALL })).data;
 }
@@ -166,5 +169,6 @@ async function bySlug<T>(path: string, slug: string, populate: unknown = "*") {
   return res.data[0] ?? null;
 }
 export const getSolution = (slug: string) => bySlug<Solution>("solutions", slug, { sections: true, keyPoints: true, cta: true, seo: { populate: "*" } });
+export const getInnovation = (slug: string) => bySlug<Solution>("innovations", slug, { sections: true, keyPoints: true, cta: true, seo: { populate: "*" } });
 export const getActualite = (slug: string) => bySlug<Actualite>("actualites", slug, { cover: true, attachments: true, seo: { populate: "*" } });
 export const getAppelOffres = (slug: string) => bySlug<AppelOffres>("appels-offres", slug, { documents: true, seo: { populate: "*" } });

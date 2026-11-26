@@ -453,3 +453,49 @@ EXPERTISE = [
          pos='droite' if i % 2 == 0 else 'gauche', points=_POINTS[e['anchor']])
     for i, e in enumerate(_EXP)
 ]
+
+# ------------------------------------------------------------------ innovations (encarts de l'accueil + pages détaillées)
+# Sources publiques : convention Bank ABC / Monétique Tunisie pour PIN Sender (La Presse, 11/11/2025) ;
+# SoftPOS certifié développé par Monétique Tunisie et parc de TPE (intervention du DG, déc. 2024) ;
+# cadre du facilitateur de paiement (note BCT du 11/01/2024). À faire valider par les équipes métier.
+INNOVATIONS = [
+ {'slug': 'pin-sender', 'icon': 'pin', 'name': 'PIN Sender', 'metaTitle': 'PIN Sender : le code PIN de la carte par SMS',
+  'tagline': 'Le code PIN de la carte, envoyé par SMS en toute sécurité',
+  'sections': [('Le code PIN reçu instantanément par SMS',
+                'Avec PIN Sender, Monétique Tunisie offre une alternative moderne et sécurisée à l’envoi traditionnel des codes PIN sous pli postal. Dès la réception de sa carte, le porteur reçoit '
+                'son code confidentiel par SMS sur le numéro de mobile enregistré auprès de sa banque. Il peut utiliser sa carte sans attendre de courrier et sans se déplacer en agence.'),
+               ('Une transmission sécurisée, sans papier',
+                'Le code PIN est transmis depuis les plateformes sécurisées de Monétique Tunisie, sans impression ni manipulation de courrier. La banque garde la maîtrise de la relation avec son client '
+                'et du déclenchement de l’envoi, tandis que les contraintes logistiques et les risques liés à l’acheminement des plis disparaissent.'),
+               ('Une démarche écoresponsable',
+                'En supprimant le papier, PIN Sender réduit l’empreinte environnementale de l’émission des cartes. En novembre 2025, Bank ABC et Monétique Tunisie ont signé une convention pour le '
+                'lancement officiel de la solution, dans le cadre de leur engagement commun en matière de responsabilité sociétale.')],
+  'keys': ['Code PIN reçu dès la réception de la carte', 'Zéro papier, zéro contrainte logistique', 'Impact environnemental réduit'],
+  },
+ {'slug': 'softpos', 'icon': 'contactless', 'name': 'SoftPOS', 'metaTitle': 'SoftPOS : le smartphone devient terminal de paiement',
+  'tagline': 'Votre smartphone devient un terminal de paiement',
+  'sections': [('Accepter les cartes sans contact avec un smartphone',
+                'Le SoftPOS, également appelé Tap to Pay ou Tap to Phone, est une solution logicielle qui transforme les smartphones et tablettes Android compatibles NFC en terminaux d’acceptation de '
+                'paiement. Le client approche sa carte ou son téléphone de l’appareil du commerçant, et le paiement est accepté comme sur un terminal classique.'),
+               ('Une solution développée par Monétique Tunisie',
+                'Monétique Tunisie a développé sa propre solution SoftPOS, certifiée par les systèmes de paiement internationaux. Les banques acquéreuses et les établissements de paiement peuvent la '
+                'proposer à leurs commerçants, en s’appuyant sur le switch monétique national pour l’autorisation des transactions.'),
+               ('Démocratiser l’acceptation des paiements',
+                'Le nombre de terminaux de paiement installés chez les commerçants reste limité en Tunisie. Sans équipement à acheter ni à entretenir, le SoftPOS permet aux petits commerces, artisans, '
+                'professions libérales et commerçants itinérants d’accepter la carte, et contribue à réduire l’usage des espèces.')],
+  'keys': ['Acceptation des cartes sans contact', 'Pas de terminal à acheter', 'Smartphones et tablettes Android NFC'],
+  },
+ {'slug': 'payfac', 'icon': 'store', 'name': 'PayFac', 'metaTitle': 'PayFac : facilitateur de paiement',
+  'tagline': 'Faciliter l’acceptation des paiements pour les petits commerçants',
+  'sections': [('Qu’est-ce qu’un facilitateur de paiement ?',
+                'Un facilitateur de paiement, également appelé PayFac, est un prestataire de services qui permet aux commerçants de traiter les paiements par carte bancaire de manière rapide, efficace '
+                'et sécurisée. Il regroupe des sous-marchands sous un contrat conclu avec une banque acquéreuse, et leur propose une solution de paiement facilement intégrable à leurs plateformes.'),
+               ('Un cadre fixé par la Banque Centrale de Tunisie',
+                'Par une note du 11 janvier 2024, la Banque Centrale de Tunisie a précisé les règles applicables à l’activité de facilitateur de paiement : gouvernance, assise financière, relations entre '
+                'la banque acquéreuse, le facilitateur et ses sous-marchands, gestion des risques et protection des clients. Le facilitateur exerce en partenariat avec une banque acquéreuse.'),
+               ('L’accompagnement de Monétique Tunisie',
+                'Monétique Tunisie met à la disposition des banques acquéreuses et de leurs facilitateurs de paiement ses plateformes et ses interfaces de programmation : paiement e-commerce, SoftPOS '
+                'et switch monétique. Ses équipes les accompagnent dans l’intégration technique et la mise en service.')],
+  'keys': ['Paiements par carte rapides et sécurisés', 'Intermédiaire commerçants / institutions financières', 'Intégration facile aux plateformes existantes'],
+  },
+]

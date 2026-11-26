@@ -110,6 +110,7 @@ async function main() {
     await fillCollection(strapi, 'api::dirigeant.dirigeant', SEED.dirigeants, { key: 'dirigeants' });
     await fillCollection(strapi, 'api::indicateur.indicateur', SEED.indicateurs, { key: 'indicateurs' });
     await fillCollection(strapi, 'api::solution.solution', SEED.solutions, { key: 'solutions' });
+    await fillCollection(strapi, 'api::innovation.innovation', SEED.innovations, { key: 'innovations' });
     await fillCollection(strapi, 'api::partenaire.partenaire', SEED.partenaires, { localized: false });
     await fillCollection(strapi, 'api::faq.faq', SEED.faqs, { key: 'faqs' });
     await fillCollection(strapi, 'api::actualite.actualite', SEED.actualites, { key: 'actualites' });

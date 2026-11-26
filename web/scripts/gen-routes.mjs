@@ -35,6 +35,7 @@ const ROUTES = [
   dynamicRoute("pages", "PageView", "pageMetadata", "pageParams", "[slug]/page.tsx"),
   staticRoute("SolutionsView", "solutionsMetadata", "solutions/page.tsx"),
   dynamicRoute("solution", "SolutionView", "solutionMetadata", "solutionParams", "solutions/[slug]/page.tsx"),
+  dynamicRoute("solution", "InnovationView", "innovationMetadata", "innovationParams", "innovations/[slug]/page.tsx"),
   staticRoute("NewsView", "newsMetadata", "actualites/page.tsx"),
   dynamicRoute("article", "ArticleView", "articleMetadata", "articleParams", "actualites/[slug]/page.tsx"),
   staticRoute("TendersView", "tendersMetadata", "appels-offres/page.tsx"),

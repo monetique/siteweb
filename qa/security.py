@@ -20,7 +20,7 @@ def req(method, path, body=None, token=None, headers=None):
         return e.code, e.read().decode(), dict(e.headers)
 
 # --- Lecture/écriture publiques
-for col in ['actualites', 'appels-offres', 'pages', 'solutions', 'partenaires', 'faqs']:
+for col in ['actualites', 'appels-offres', 'pages', 'solutions', 'innovations', 'partenaires', 'faqs']:
     st, _, _ = req('POST', f'/api/{col}', {'data': {'title': 'pirate', 'name': 'pirate', 'question': 'x'}})
     check(f'POST public /api/{col} refusé', st in (401, 403, 405), st)
 st, body, _ = req('GET', '/api/actualites?pagination[pageSize]=1')

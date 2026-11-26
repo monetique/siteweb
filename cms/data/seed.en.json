@@ -1268,6 +1268,209 @@
    }
   }
  ],
+ "innovations": [
+  {
+   "name": "PIN Sender",
+   "slug": "pin-sender",
+   "icon": "pin",
+   "tagline": "Your card PIN, sent securely by SMS",
+   "order": 1,
+   "summary": "Your card PIN, sent securely by SMS",
+   "sections": [
+    {
+     "title": "Your PIN delivered instantly by SMS",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "With PIN Sender, Monétique Tunisie offers a modern and secure alternative to the traditional PIN mailer. As soon as cardholders receive their card, they get their PIN by SMS on the mobile number registered with their bank. They can use their card right away, without waiting for a letter or visiting a branch."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Secure, paperless delivery",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "The PIN is sent from Monétique Tunisie's secure platforms, with no printing or mail handling. The bank keeps control of its customer relationship and of when the PIN is sent, while the logistics and the risks of mail delivery disappear."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "An eco-friendly approach",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "By removing paper, PIN Sender reduces the environmental footprint of card issuing. In November 2025, Bank ABC and Monétique Tunisie signed an agreement for the official launch of the solution, as part of their shared commitment to corporate social responsibility."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "keyPoints": [
+    {
+     "text": "PIN received as soon as the card arrives"
+    },
+    {
+     "text": "Zero paper, zero logistical constraints"
+    },
+    {
+     "text": "Reduced environmental impact"
+    }
+   ],
+   "seo": {
+    "metaTitle": "PIN Sender: your card PIN by SMS",
+    "metaDescription": "Your card PIN, sent securely by SMS"
+   }
+  },
+  {
+   "name": "SoftPOS",
+   "slug": "softpos",
+   "icon": "contactless",
+   "tagline": "Your smartphone becomes a payment terminal",
+   "order": 2,
+   "summary": "Your smartphone becomes a payment terminal",
+   "sections": [
+    {
+     "title": "Accept contactless cards with a smartphone",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "SoftPOS, also known as Tap to Pay or Tap to Phone, is a software solution that turns NFC-enabled Android smartphones and tablets into payment acceptance terminals. Customers tap their card or phone on the merchant's device, and the payment is accepted just as on a traditional terminal."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "A solution developed by Monétique Tunisie",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Monétique Tunisie has developed its own SoftPOS solution, certified by the international payment schemes. Acquiring banks and payment institutions can offer it to their merchants, relying on the national payment switch to authorise transactions."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Making card acceptance accessible to all",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "The number of payment terminals installed at merchants remains limited in Tunisia. With no equipment to buy or maintain, SoftPOS lets small shops, craftspeople, professionals and mobile merchants accept cards, and helps reduce the use of cash."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "keyPoints": [
+    {
+     "text": "Contactless card acceptance"
+    },
+    {
+     "text": "No terminal to buy"
+    },
+    {
+     "text": "NFC Android smartphones and tablets"
+    }
+   ],
+   "seo": {
+    "metaTitle": "SoftPOS: your smartphone becomes a payment terminal",
+    "metaDescription": "Your smartphone becomes a payment terminal"
+   }
+  },
+  {
+   "name": "PayFac",
+   "slug": "payfac",
+   "icon": "store",
+   "tagline": "Making card acceptance easier for small merchants",
+   "order": 3,
+   "summary": "Making card acceptance easier for small merchants",
+   "sections": [
+    {
+     "title": "What is a payment facilitator?",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "A payment facilitator, also called a PayFac, is a service provider that enables merchants to process card payments quickly, efficiently and securely. It groups sub-merchants under an agreement with an acquiring bank and offers them a payment solution that is easy to integrate into their platforms."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "A framework set by the Central Bank of Tunisia",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "In a circular dated 11 January 2024, the Central Bank of Tunisia set out the rules governing payment facilitation: governance, financial soundness, relations between the acquiring bank, the facilitator and its sub-merchants, risk management and customer protection. The facilitator operates in partnership with an acquiring bank."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Monétique Tunisie's support",
+     "body": [
+      {
+       "type": "paragraph",
+       "children": [
+        {
+         "type": "text",
+         "text": "Monétique Tunisie provides acquiring banks and their payment facilitators with its platforms and application programming interfaces: e-commerce payment, SoftPOS and the payment switch. Its teams support them through technical integration and go-live."
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "keyPoints": [
+    {
+     "text": "Fast and secure card payments"
+    },
+    {
+     "text": "Intermediary between merchants and financial institutions"
+    },
+    {
+     "text": "Easy integration with existing platforms"
+    }
+   ],
+   "seo": {
+    "metaTitle": "PayFac: payment facilitator",
+    "metaDescription": "Making card acceptance easier for small merchants"
+   }
+  }
+ ],
  "partenaires": [
   {
    "name": "Amen Bank",
@@ -3294,6 +3497,7 @@
      "__component": "blocks.cards-grid",
      "eyebrow": "Discover our",
      "title": "Innovations",
+     "anchor": "innovations",
      "columns": 3,
      "subtitle": "Modern solutions to simplify PIN delivery, payment acceptance and merchant onboarding.",
      "cards": [
@@ -3301,6 +3505,12 @@
        "icon": "pin",
        "eyebrow": "100% digital",
        "title": "PIN Sender",
+       "link": {
+        "label": "Learn more",
+        "url": "/innovations/pin-sender/",
+        "style": "texte",
+        "isExternal": false
+       },
        "text": "With PIN Sender, Monétique Tunisie offers a modern and secure alternative to traditional PIN mailing. This fully digital solution sends the confidential code (PIN) instantly by SMS as soon as the card is received. By eliminating paper and logistical constraints, it makes the service easier to access while reducing its environmental impact.",
        "bullets": [
         {
@@ -3318,6 +3528,12 @@
        "icon": "contactless",
        "eyebrow": "Tap to Pay / Tap to Phone",
        "title": "SoftPOS",
+       "link": {
+        "label": "Learn more",
+        "url": "/innovations/softpos/",
+        "style": "texte",
+        "isExternal": false
+       },
        "text": "SoftPOS, also known as Tap to Pay or Tap to Phone, is a software-based solution that turns NFC-enabled Android smartphones and tablets into payment acceptance terminals. Unlike traditional POS terminals, it represents a significant step forward in electronic transactions.",
        "bullets": [
         {
@@ -3335,6 +3551,12 @@
        "icon": "store",
        "eyebrow": "Payment facilitator",
        "title": "PayFac",
+       "link": {
+        "label": "Learn more",
+        "url": "/innovations/payfac/",
+        "style": "texte",
+        "isExternal": false
+       },
        "text": "A payment facilitator, also called a PayFac, is a service provider that enables merchants to process bank card payments quickly, efficiently and securely. It acts as an intermediary between its clients and financial institutions and offers a payment solution that integrates easily with existing platforms and management systems.",
        "bullets": [
         {

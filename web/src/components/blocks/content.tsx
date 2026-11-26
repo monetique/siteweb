@@ -222,7 +222,7 @@ export function KeyFigures({ block }: P) {
 export function CardsGrid({ block }: P) {
   const cols = { 2: "md:grid-cols-2", 3: "md:grid-cols-3", 4: "md:grid-cols-2 lg:grid-cols-4" }[block.columns as 2 | 3 | 4] ?? "md:grid-cols-3";
   return (
-    <Section tone="low">
+    <Section tone="low" id={block.anchor || undefined}>
       <SectionTitle eyebrow={block.eyebrow} title={block.title} subtitle={block.subtitle} />
       <div className={`grid grid-cols-1 gap-6 ${cols}`}>
         {block.cards?.map((c: any) => (

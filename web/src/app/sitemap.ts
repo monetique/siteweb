@@ -1,16 +1,17 @@
 import type { MetadataRoute } from "next";
 import { LANGS, localizePath } from "@/lib/i18n";
-import { getActualites, getAppelsOffres, getPageSlugs, getSolutions } from "@/lib/strapi";
+import { getActualites, getAppelsOffres, getPageSlugs, getSolutions, getInnovations } from "@/lib/strapi";
 
 export const dynamic = "force-static";
 const SITE = (process.env.SITE_URL || "https://www.monetiquetunisie.com").replace(/\/$/, "");
 
 /** Plan du site : chaque page dans les trois langues, avec les liens hreflang entre versions. */
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const [pages, solutions, actus, aos] = await Promise.all([getPageSlugs(), getSolutions(), getActualites(), getAppelsOffres()]);
+  const [pages, solutions, innovations, actus, aos] = await Promise.all([getPageSlugs(), getSolutions(), getInnovations(), getActualites(), getAppelsOffres()]);
   const entries: { path: string; priority: number; lastModified?: string; changeFrequency?: "monthly" | "yearly" }[] = [
     ...pages.filter((p) => p.slug !== "cookies").map((p) => ({ path: p.isHomepage ? "/" : `/${p.slug}/`, priority: p.isHomepage ? 1 : 0.7, changeFrequency: "monthly" as const })),
     ...solutions.map((s) => ({ path: `/solutions/${s.slug}/`, priority: 0.8, changeFrequency: "yearly" as const })),
+    ...innovations.map((s) => ({ path: `/innovations/${s.slug}/`, priority: 0.7, changeFrequency: "yearly" as const })),
     ...actus.map((a) => ({ path: `/actualites/${a.slug}/`, priority: 0.6, lastModified: a.date })),
     ...aos.map((t) => ({ path: `/appels-offres/${t.slug}/`, priority: 0.6, lastModified: t.publicationDate })),
   ];

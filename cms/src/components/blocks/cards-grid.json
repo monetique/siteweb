@@ -25,6 +25,9 @@
       "type": "component",
       "component": "blocks.card",
       "repeatable": true
+    },
+    "anchor": {
+      "type": "string"
     }
   }
 }

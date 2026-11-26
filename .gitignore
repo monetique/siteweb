@@ -32,3 +32,6 @@ __pycache__/
 
 # Généré automatiquement (npm run icons, lancé avant dev et build)
 web/src/lib/icons.json
+
+# Types générés par Strapi (strapi develop / ts:generate-types)
+cms/types/
