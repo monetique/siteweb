@@ -1,0 +1,4 @@
+manage smt contact messages:
+  title: 'Gérer les messages de contact'
+  description: 'Lire, traiter et supprimer les messages reçus par le formulaire de contact (données personnelles).'
+  restrict access: true

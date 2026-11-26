@@ -1,0 +1,132 @@
+<?php
+
+/**
+ * @file
+ * Accès aux messages de contact, purge RGPD/INPDP, e-mails et reconstruction du site public.
+ */
+
+use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_node_access().
+ *
+ * Les messages de contact (données personnelles) ne sont visibles que des personnes habilitées.
+ */
+function smt_site_node_access(NodeInterface $node, $op, AccountInterface $account) {
+  if ($node->bundle() === 'message_contact') {
+    return AccessResult::forbiddenIf(!$account->hasPermission('manage smt contact messages'))->cachePerPermissions();
+  }
+  return AccessResult::neutral();
+}
+
+/**
+ * Implements hook_query_TAG_alter() pour les listes : aucun message de contact dans les requêtes publiques.
+ */
+function smt_site_query_node_access_alter($query) {
+  if (!\Drupal::currentUser()->hasPermission('manage smt contact messages')) {
+    foreach ($query->getTables() as $alias => $t) {
+      if (($t['table'] ?? '') === 'node_field_data') {
+        $query->condition("$alias.type", 'message_contact', '<>');
+        break;
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_cron().
+ *
+ * Durée de conservation des messages (12 mois par défaut, SMT_CONTACT_RETENTION_MONTHS),
+ * sauf réclamations non traitées. Exécution au plus une fois par jour.
+ */
+function smt_site_cron(): void {
+  $state = \Drupal::state();
+  if (\Drupal::time()->getRequestTime() - $state->get('smt_site.purge_last', 0) < 86400) {
+    return;
+  }
+  $months = (int) (getenv('SMT_CONTACT_RETENTION_MONTHS') ?: 12);
+  $limit = strtotime("-$months months");
+  $storage = \Drupal::entityTypeManager()->getStorage('node');
+  $ids = $storage->getQuery()->accessCheck(FALSE)
+    ->condition('type', 'message_contact')
+    ->condition('created', $limit, '<')
+    ->execute();
+  $deleted = 0;
+  foreach ($storage->loadMultiple($ids) as $msg) {
+    $open_claim = $msg->get('message_contact_subject')->value === 'reclamation_autre' && $msg->get('message_contact_status')->value !== 'traite';
+    if (!$open_claim) {
+      $msg->delete();
+      $deleted++;
+    }
+  }
+  $state->set('smt_site.purge_last', \Drupal::time()->getRequestTime());
+  if ($deleted) {
+    \Drupal::logger('smt_site')->notice('Purge : @n message(s) de contact de plus de @m mois supprimé(s).', ['@n' => $deleted, '@m' => $months]);
+  }
+}
+
+/**
+ * Implements hook_entity_insert().
+ */
+function smt_site_entity_insert(EntityInterface $entity) {
+  _smt_site_rebuild($entity, 'entry.create');
+}
+
+/**
+ * Implements hook_entity_update().
+ */
+function smt_site_entity_update(EntityInterface $entity) {
+  _smt_site_rebuild($entity, 'entry.update');
+}
+
+/**
+ * Implements hook_entity_delete().
+ */
+function smt_site_entity_delete(EntityInterface $entity) {
+  _smt_site_rebuild($entity, 'entry.delete');
+}
+
+/**
+ * Demande au service de construction (deploy/builder) de régénérer le site statique.
+ *
+ * Variables : SMT_REBUILD_URL (ex. http://127.0.0.1:4000/rebuild) et SMT_REBUILD_SECRET.
+ * Seules les modifications visibles du public déclenchent une reconstruction (contenu publié,
+ * retiré ou supprimé) ; les brouillons et les messages de contact non.
+ */
+function _smt_site_rebuild(EntityInterface $entity, string $event): void {
+  $url = getenv('SMT_REBUILD_URL');
+  if (!$url || !($entity instanceof NodeInterface) || $entity->bundle() === 'message_contact') {
+    return;
+  }
+  $was = isset($entity->original) && $entity->original instanceof NodeInterface ? $entity->original->isPublished() : FALSE;
+  if ($event !== 'entry.delete' && !$entity->isPublished() && !$was) {
+    return;
+  }
+  if ($event !== 'entry.delete' && !$entity->isDefaultRevision()) {
+    return;
+  }
+  try {
+    \Drupal::httpClient()->post($url, [
+      'timeout' => 5,
+      'headers' => ['Authorization' => 'Bearer ' . getenv('SMT_REBUILD_SECRET')],
+      'json' => ['event' => $entity->isPublished() || $event === 'entry.delete' ? ($event === 'entry.delete' ? 'entry.delete' : 'entry.publish') : 'entry.unpublish', 'model' => $entity->bundle()],
+    ]);
+  }
+  catch (\Throwable $e) {
+    \Drupal::logger('smt_site')->warning('Reconstruction du site non déclenchée : @m', ['@m' => $e->getMessage()]);
+  }
+}
+
+/**
+ * Implements hook_mail().
+ */
+function smt_site_mail($key, &$message, $params) {
+  $message['subject'] = $params['subject'];
+  $message['body'][] = $params['text'];
+  if (!empty($params['reply_to'])) {
+    $message['reply-to'] = $params['reply_to'];
+  }
+}

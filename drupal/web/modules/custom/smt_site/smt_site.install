@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * Installation : crée tout le modèle de contenu (voir src/ModelBuilder.php).
+ */
+
+use Drupal\smt_site\ModelBuilder;
+
+/**
+ * Implements hook_install().
+ */
+function smt_site_install(): void {
+  ModelBuilder::build();
+  // Interface d'administration en français ; le formulaire de connexion reste le seul accès public au back-office.
+  \Drupal::configFactory()->getEditable('user.settings')->set('register', 'admin_only')->save();
+  \Drupal::configFactory()->getEditable('jsonapi.settings')->set('read_only', TRUE)->save();
+}
+
+/**
+ * Met à jour le modèle de contenu après une évolution de model/model.json.
+ */
+function smt_site_update_11001(): string {
+  ModelBuilder::build();
+  return 'Modèle de contenu mis à jour.';
+}

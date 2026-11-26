@@ -1,0 +1,9 @@
+smt_site.contact:
+  path: '/api/messages-contact'
+  defaults:
+    _controller: '\Drupal\smt_site\Controller\ContactController::submit'
+  methods: [POST, OPTIONS]
+  requirements:
+    _access: 'TRUE'
+  options:
+    no_cache: TRUE

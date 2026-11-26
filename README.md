@@ -1,42 +1,46 @@
 # Site institutionnel Monétique Tunisie
 
-Nouveau site web de Monétique Tunisie : un **CMS Strapi** (back-office des équipes) et un **site Next.js** généré en pages statiques (rapide, sûr, sans serveur applicatif exposé).
+Nouveau site web de Monétique Tunisie : un **back-office Drupal 11** (CMS découplé, équipes éditoriales) et un **site Next.js** généré en pages statiques (rapide, sûr, sans serveur applicatif exposé).
 
 ```
-cms/      Strapi 5 — contenus, rôles Rédacteur/Validateur, formulaire de contact, e-mails, webhook
-web/      Next.js 16 — site public généré en HTML statique
+drupal/   Drupal 11 — contenus, rôles Rédacteur/Validateur, validation, formulaire de contact, e-mails (module smt_site)
+web/      Next.js 16 — site public généré en HTML statique à partir de l'API Drupal
+cms/      Ancien CMS Strapi (transition) et contenu de départ commun (cms/data/seed*.json)
 deploy/   Production : configuration Nginx, service de reconstruction automatique, procédures
 qa/       Scripts de tests QA, accessibilité, sécurité, intrusion, reconstruction
 docs/     Rapport de recette QA & sécurité
 ```
 
-## Installation sur un poste (Windows, macOS, Linux)
+## Installation sur un poste
 
-**Pré-requis :** [Node.js 22 LTS](https://nodejs.org) et [Git](https://git-scm.com). Python 3 est facultatif (tests et simulateur d'e-mails).
+**Pré-requis :** [Node.js 22 LTS](https://nodejs.org), [Git](https://git-scm.com), PHP 8.3+ et Composer (macOS : `brew install php composer`). Python 3 est facultatif (tests).
 
 ```bash
-git clone <adresse-du-dépôt> site-monetique-tunisie
-cd site-monetique-tunisie
-npm install        # outil de lancement
-npm run setup      # dépendances, fichiers .env locaux, import du contenu (≈ 3-5 min)
-npm run dev        # lance le CMS et le site
+git clone <adresse-du-dépôt> siteweb && cd siteweb
+npm install                 # outil de lancement
+npm run setup               # dépendances du site, fichiers .env locaux
+npm run drupal:install      # Drupal : installation en français, module smt_site, import du contenu (≈ 5 min)
+npm run dev                 # lance Drupal et le site
 ```
 
-1. Ouvrir **http://localhost:1337/admin** et créer le premier compte administrateur (une seule fois).
-2. Le site est sur **http://localhost:3100** (port choisi pour ne pas entrer en conflit avec d'autres applications sur le port 3000). Une modification publiée dans le CMS apparaît au rechargement de la page.
+1. Back-office : **http://127.0.0.1:8080/user/login**, compte `admin` (mot de passe affiché à la fin de `drupal:install`, à changer).
+2. Le site est sur **http://localhost:3100**. Une modification publiée dans Drupal apparaît au rechargement de la page.
 
 | Commande | Rôle |
 |---|---|
-| `npm run dev` | CMS + site en développement |
+| `npm run dev` | Drupal + site en développement |
 | `npm run dev:cms` / `npm run dev:web` | l'un ou l'autre séparément |
-| `npm run build:web` | génère le site statique dans `web/out/` (CMS lancé) |
-| `cd cms && npm run seed -- --reset` | réimporte le contenu de démonstration |
-| `python cms/scripts/smtp-simulateur.py` | reçoit localement les e-mails du formulaire dans `cms/mails/` |
+| `npm run build:web` | génère le site statique dans `web/out/` (Drupal lancé) |
+| `npm run drupal:import` | remplace le contenu par le contenu de départ |
+| `npm run drupal:update` | après un `git pull` (dépendances, mises à jour du modèle) |
+| `npm run dev:strapi` | ancien CMS Strapi (transition, `CMS_BACKEND=strapi`) |
 | `npm run audit` | vérifie les vulnérabilités connues des dépendances |
+
+Détails du back-office, variables et mise en production : `drupal/README.md`.
 
 Le site est trilingue : français à la racine (`/`), anglais sous **/en/** et arabe (de droite à gauche) sous **/ar/**. Voir « Langues » plus bas.
 
-En local, la base est un fichier SQLite (`cms/.tmp/data.db`) et les médias sont dans `cms/public/uploads/` : ni l'un ni l'autre n'est versionné.
+En local, la base Drupal est un fichier SQLite (`drupal/web/sites/default/files/.ht.sqlite`) et les médias sont dans `drupal/web/sites/default/files/` : ni l’un ni l’autre n’est versionné.
 
 ## Langues (FR / EN / AR)
 

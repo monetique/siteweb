@@ -60,7 +60,8 @@ if (!fs.existsSync(webEnv)) {
   fs.writeFileSync(webEnv, `STRAPI_URL=http://localhost:1337
 STRAPI_TOKEN=
 SITE_URL=http://localhost:3100
-NEXT_PUBLIC_CONTACT_ENDPOINT=http://localhost:1337/api/messages-contact
+NEXT_PUBLIC_CONTACT_ENDPOINT=http://127.0.0.1:8080/api/messages-contact
+DRUPAL_URL=http://127.0.0.1:8080
 `);
   console.log("✓ web/.env.local créé");
 }

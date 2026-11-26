@@ -1,0 +1,10 @@
+# Dépendances installées par Composer (composer install)
+/vendor/
+# Drupal et modules contribués, fichiers générés : seul le code propre au site est versionné
+/web/*
+!/web/modules/
+/web/modules/*
+!/web/modules/custom/
+# Base locale, fichiers téléversés, réglages et secrets
+/private/
+*.sqlite

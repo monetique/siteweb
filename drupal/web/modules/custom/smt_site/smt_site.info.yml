@@ -1,0 +1,21 @@
+name: 'Monétique Tunisie – site'
+type: module
+description: 'Modèle de contenu, rôles, circuit de validation, formulaire de contact et reconstruction du site public (Next.js).'
+package: 'Monétique Tunisie'
+core_version_requirement: ^11
+dependencies:
+  - drupal:node
+  - drupal:text
+  - drupal:options
+  - drupal:datetime
+  - drupal:image
+  - drupal:file
+  - drupal:language
+  - drupal:locale
+  - drupal:content_translation
+  - drupal:jsonapi
+  - drupal:serialization
+  - drupal:workflows
+  - drupal:content_moderation
+  - paragraphs:paragraphs
+  - entity_reference_revisions:entity_reference_revisions

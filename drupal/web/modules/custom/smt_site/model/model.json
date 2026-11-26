@@ -1,0 +1,2382 @@
+{
+ "node": {
+  "actualite": {
+   "label": "Actualité",
+   "description": "Actualités, évènements et annonces",
+   "strapi": "actualites",
+   "single": false,
+   "translatable": true,
+   "titleField": "title",
+   "titleLabel": "Titre",
+   "fields": [
+    {
+     "name": "actualite_slug",
+     "strapi": "slug",
+     "label": "Adresse (URL)",
+     "description": "Générée depuis le titre. Ne pas modifier après publication.",
+     "required": true,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "actualite_date",
+     "strapi": "date",
+     "label": "Date",
+     "description": "",
+     "required": true,
+     "translatable": false,
+     "type": "date"
+    },
+    {
+     "name": "actualite_category",
+     "strapi": "category",
+     "label": "Catégorie",
+     "description": "",
+     "required": false,
+     "translatable": false,
+     "type": "list_string",
+     "options": [
+      "actualite",
+      "evenement",
+      "annonce"
+     ],
+     "default": "actualite"
+    },
+    {
+     "name": "actualite_label",
+     "strapi": "label",
+     "label": "Libellé",
+     "description": "Étiquette affichée au-dessus du titre (ex. Gouvernance, Mobile Payment).",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "actualite_excerpt",
+     "strapi": "excerpt",
+     "label": "Chapô",
+     "description": "Résumé court affiché dans les listes (400 caractères max).",
+     "required": false,
+     "translatable": true,
+     "type": "string_long"
+    },
+    {
+     "name": "actualite_cover",
+     "strapi": "cover",
+     "label": "Image de couverture",
+     "description": "",
+     "required": false,
+     "translatable": false,
+     "type": "image",
+     "multiple": false
+    },
+    {
+     "name": "actualite_content",
+     "strapi": "content",
+     "label": "Contenu",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "text_long"
+    },
+    {
+     "name": "actualite_attachments",
+     "strapi": "attachments",
+     "label": "Pièces jointes",
+     "description": "",
+     "required": false,
+     "translatable": false,
+     "type": "file",
+     "multiple": true
+    },
+    {
+     "name": "actualite_is_featured",
+     "strapi": "isFeatured",
+     "label": "Mettre à la une",
+     "description": "Affiche cette actualité en grand en tête de la page Actualités.",
+     "required": false,
+     "translatable": false,
+     "type": "boolean",
+     "default": false
+    },
+    {
+     "name": "actualite_seo",
+     "strapi": "seo",
+     "label": "Référencement (SEO)",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "paragraphs",
+     "targets": [
+      "seo"
+     ],
+     "multiple": false
+    }
+   ]
+  },
+  "appel_offres": {
+   "label": "Appel d'offres",
+   "description": "Appels d'offres, consultations et appels à candidatures",
+   "strapi": "appels-offres",
+   "single": false,
+   "translatable": true,
+   "titleField": "title",
+   "titleLabel": "Titre",
+   "fields": [
+    {
+     "name": "appel_offres_slug",
+     "strapi": "slug",
+     "label": "Adresse (URL)",
+     "description": "Générée depuis le titre. Ne pas modifier après publication.",
+     "required": true,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "appel_offres_type",
+     "strapi": "type",
+     "label": "Type",
+     "description": "",
+     "required": false,
+     "translatable": false,
+     "type": "list_string",
+     "options": [
+      "appel_offres",
+      "consultation",
+      "appel_candidatures"
+     ],
+     "default": "appel_offres"
+    },
+    {
+     "name": "appel_offres_reference",
+     "strapi": "reference",
+     "label": "Référence",
+     "description": "",
+     "required": false,
+     "translatable": false,
+     "type": "string"
+    },
+    {
+     "name": "appel_offres_publication_date",
+     "strapi": "publicationDate",
+     "label": "Date de publication",
+     "description": "",
+     "required": true,
+     "translatable": false,
+     "type": "date"
+    },
+    {
+     "name": "appel_offres_deadline",
+     "strapi": "deadline",
+     "label": "Date limite de dépôt",
+     "description": "Date et heure limites de réception des offres (heure de Tunis).",
+     "required": false,
+     "translatable": false,
+     "type": "datetime"
+    },
+    {
+     "name": "appel_offres_tender_status",
+     "strapi": "tenderStatus",
+     "label": "Statut",
+     "description": "Passer à « clôturé » après la date limite.",
+     "required": false,
+     "translatable": false,
+     "type": "list_string",
+     "options": [
+      "ouvert",
+      "cloture",
+      "attribue",
+      "infructueux",
+      "annule"
+     ],
+     "default": "ouvert"
+    },
+    {
+     "name": "appel_offres_issuer",
+     "strapi": "issuer",
+     "label": "Direction émettrice",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "appel_offres_summary",
+     "strapi": "summary",
+     "label": "Résumé",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string_long"
+    },
+    {
+     "name": "appel_offres_content",
+     "strapi": "content",
+     "label": "Contenu",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "text_long"
+    },
+    {
+     "name": "appel_offres_document_retrieval",
+     "strapi": "documentRetrieval",
+     "label": "Retrait du cahier des charges",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string_long"
+    },
+    {
+     "name": "appel_offres_document_cost",
+     "strapi": "documentCost",
+     "label": "Coût du cahier des charges",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "appel_offres_offer_validity_days",
+     "strapi": "offerValidityDays",
+     "label": "Validité des offres (jours)",
+     "description": "",
+     "required": false,
+     "translatable": false,
+     "type": "integer"
+    },
+    {
+     "name": "appel_offres_submission_address",
+     "strapi": "submissionAddress",
+     "label": "Adresse de dépôt des offres",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string_long"
+    },
+    {
+     "name": "appel_offres_documents",
+     "strapi": "documents",
+     "label": "Documents (cahier des charges, termes de référence)",
+     "description": "",
+     "required": false,
+     "translatable": false,
+     "type": "file",
+     "multiple": true
+    },
+    {
+     "name": "appel_offres_seo",
+     "strapi": "seo",
+     "label": "Référencement (SEO)",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "paragraphs",
+     "targets": [
+      "seo"
+     ],
+     "multiple": false
+    }
+   ]
+  },
+  "dirigeant": {
+   "label": "Dirigeant",
+   "description": "Gouvernance : président, direction générale",
+   "strapi": "dirigeants",
+   "single": false,
+   "translatable": true,
+   "titleField": "fullName",
+   "titleLabel": "Nom complet",
+   "fields": [
+    {
+     "name": "dirigeant_role",
+     "strapi": "role",
+     "label": "Fonction",
+     "description": "",
+     "required": true,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "dirigeant_photo",
+     "strapi": "photo",
+     "label": "Photo",
+     "description": "",
+     "required": false,
+     "translatable": false,
+     "type": "image",
+     "multiple": false
+    },
+    {
+     "name": "dirigeant_bio",
+     "strapi": "bio",
+     "label": "Biographie",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string_long"
+    },
+    {
+     "name": "dirigeant_order",
+     "strapi": "order",
+     "label": "Ordre d'affichage",
+     "description": "",
+     "required": false,
+     "translatable": false,
+     "type": "integer",
+     "default": 0
+    }
+   ]
+  },
+  "faq": {
+   "label": "Question FAQ",
+   "description": "Foire aux questions et glossaire",
+   "strapi": "faqs",
+   "single": false,
+   "translatable": true,
+   "titleField": "question",
+   "titleLabel": "Question",
+   "fields": [
+    {
+     "name": "faq_answer",
+     "strapi": "answer",
+     "label": "Réponse",
+     "description": "",
+     "required": true,
+     "translatable": true,
+     "type": "text_long"
+    },
+    {
+     "name": "faq_category",
+     "strapi": "category",
+     "label": "Catégorie",
+     "description": "",
+     "required": true,
+     "translatable": false,
+     "type": "list_string",
+     "options": [
+      "carte_bancaire",
+      "wallet",
+      "paysmart",
+      "achat_internet",
+      "glossaire"
+     ],
+     "default": null
+    },
+    {
+     "name": "faq_order",
+     "strapi": "order",
+     "label": "Ordre d'affichage",
+     "description": "",
+     "required": false,
+     "translatable": false,
+     "type": "integer",
+     "default": 0
+    }
+   ]
+  },
+  "global": {
+   "label": "Réglages globaux",
+   "description": "Identité, coordonnées et SEO par défaut, partagés par tout le site",
+   "strapi": "globals",
+   "single": true,
+   "translatable": true,
+   "titleField": "siteName",
+   "titleLabel": "Nom du site",
+   "fields": [
+    {
+     "name": "global_tagline",
+     "strapi": "tagline",
+     "label": "Accroche",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "global_logo",
+     "strapi": "logo",
+     "label": "Logo",
+     "description": "",
+     "required": false,
+     "translatable": false,
+     "type": "image",
+     "multiple": false
+    },
+    {
+     "name": "global_favicon",
+     "strapi": "favicon",
+     "label": "Icône d'onglet",
+     "description": "",
+     "required": false,
+     "translatable": false,
+     "type": "file",
+     "multiple": false
+    },
+    {
+     "name": "global_status_label",
+     "strapi": "statusLabel",
+     "label": "Statut du switch (bandeau)",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "global_accreditation",
+     "strapi": "accreditation",
+     "label": "Mention d’agrément",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "global_address",
+     "strapi": "address",
+     "label": "Adresse",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string_long"
+    },
+    {
+     "name": "global_map_url",
+     "strapi": "mapUrl",
+     "label": "Lien itinéraire",
+     "description": "",
+     "required": false,
+     "translatable": false,
+     "type": "string"
+    },
+    {
+     "name": "global_phone_headquarters",
+     "strapi": "phoneHeadquarters",
+     "label": "Téléphone standard",
+     "description": "",
+     "required": false,
+     "translatable": false,
+     "type": "string"
+    },
+    {
+     "name": "global_phone_call_center",
+     "strapi": "phoneCallCenter",
+     "label": "Centre d'appel",
+     "description": "",
+     "required": false,
+     "translatable": false,
+     "type": "string"
+    },
+    {
+     "name": "global_phone_green_number",
+     "strapi": "phoneGreenNumber",
+     "label": "Numéro vert",
+     "description": "",
+     "required": false,
+     "translatable": false,
+     "type": "string"
+    },
+    {
+     "name": "global_email_contact",
+     "strapi": "emailContact",
+     "label": "E-mail de contact",
+     "description": "",
+     "required": false,
+     "translatable": false,
+     "type": "email"
+    },
+    {
+     "name": "global_email_commercial",
+     "strapi": "emailCommercial",
+     "label": "E-mail direction commerciale",
+     "description": "",
+     "required": false,
+     "translatable": false,
+     "type": "email"
+    },
+    {
+     "name": "global_social_links",
+     "strapi": "socialLinks",
+     "label": "Réseaux sociaux",
+     "description": "",
+     "required": false,
+     "translatable": false,
+     "type": "paragraphs",
+     "targets": [
+      "social_link"
+     ],
+     "multiple": true
+    },
+    {
+     "name": "global_certifications",
+     "strapi": "certifications",
+     "label": "Certifications affichées",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "paragraphs",
+     "targets": [
+      "key_point"
+     ],
+     "multiple": true
+    },
+    {
+     "name": "global_default_seo",
+     "strapi": "defaultSeo",
+     "label": "SEO par défaut",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "paragraphs",
+     "targets": [
+      "seo"
+     ],
+     "multiple": false
+    }
+   ]
+  },
+  "indicateur": {
+   "label": "Indicateur statistique",
+   "description": "Chiffres clés publiés (cartes, GAB, TPE, commerçants, opérations, volume d'affaires)",
+   "strapi": "indicateurs",
+   "single": false,
+   "translatable": true,
+   "titleField": "name",
+   "titleLabel": "Nom",
+   "fields": [
+    {
+     "name": "indicateur_unit",
+     "strapi": "unit",
+     "label": "Unité",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "indicateur_icon",
+     "strapi": "icon",
+     "label": "Icône (Material Symbols)",
+     "description": "Nom d’icône Material Symbols, ex. credit_card, hub, smartphone.",
+     "required": false,
+     "translatable": false,
+     "type": "string"
+    },
+    {
+     "name": "indicateur_values",
+     "strapi": "values",
+     "label": "Valeurs par période",
+     "description": "",
+     "required": false,
+     "translatable": false,
+     "type": "paragraphs",
+     "targets": [
+      "value"
+     ],
+     "multiple": true
+    },
+    {
+     "name": "indicateur_note",
+     "strapi": "note",
+     "label": "Note",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "indicateur_show_on_homepage",
+     "strapi": "showOnHomepage",
+     "label": "Afficher sur l'accueil",
+     "description": "",
+     "required": false,
+     "translatable": false,
+     "type": "boolean",
+     "default": false
+    },
+    {
+     "name": "indicateur_order",
+     "strapi": "order",
+     "label": "Ordre d'affichage",
+     "description": "",
+     "required": false,
+     "translatable": false,
+     "type": "integer",
+     "default": 0
+    }
+   ]
+  },
+  "innovation": {
+   "label": "Innovation",
+   "description": "Innovations mises en avant sur l'accueil (PIN Sender, SoftPOS, PayFac…), avec leur page détaillée",
+   "strapi": "innovations",
+   "single": false,
+   "translatable": true,
+   "titleField": "name",
+   "titleLabel": "Nom",
+   "fields": [
+    {
+     "name": "innovation_slug",
+     "strapi": "slug",
+     "label": "Adresse (URL)",
+     "description": "Générée depuis le titre. Ne pas modifier après publication.",
+     "required": true,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "innovation_icon",
+     "strapi": "icon",
+     "label": "Icône (Material Symbols)",
+     "description": "Nom d’icône Material Symbols, ex. credit_card, hub, smartphone.",
+     "required": false,
+     "translatable": false,
+     "type": "string"
+    },
+    {
+     "name": "innovation_tagline",
+     "strapi": "tagline",
+     "label": "Accroche",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "innovation_summary",
+     "strapi": "summary",
+     "label": "Résumé",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string_long"
+    },
+    {
+     "name": "innovation_sections",
+     "strapi": "sections",
+     "label": "Sections",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "paragraphs",
+     "targets": [
+      "section"
+     ],
+     "multiple": true
+    },
+    {
+     "name": "innovation_key_points",
+     "strapi": "keyPoints",
+     "label": "Points clés",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "paragraphs",
+     "targets": [
+      "key_point"
+     ],
+     "multiple": true
+    },
+    {
+     "name": "innovation_cta",
+     "strapi": "cta",
+     "label": "Bouton",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "paragraphs",
+     "targets": [
+      "link"
+     ],
+     "multiple": false
+    },
+    {
+     "name": "innovation_order",
+     "strapi": "order",
+     "label": "Ordre d'affichage",
+     "description": "",
+     "required": false,
+     "translatable": false,
+     "type": "integer",
+     "default": 0
+    },
+    {
+     "name": "innovation_seo",
+     "strapi": "seo",
+     "label": "Référencement (SEO)",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "paragraphs",
+     "targets": [
+      "seo"
+     ],
+     "multiple": false
+    }
+   ]
+  },
+  "message_contact": {
+   "label": "Message de contact",
+   "description": "Messages reçus via le formulaire du site",
+   "strapi": "messages-contact",
+   "single": false,
+   "translatable": false,
+   "titleField": "fullName",
+   "titleLabel": "Nom complet",
+   "fields": [
+    {
+     "name": "message_contact_phone",
+     "strapi": "phone",
+     "label": "Téléphone",
+     "description": "",
+     "required": false,
+     "translatable": false,
+     "type": "string"
+    },
+    {
+     "name": "message_contact_email",
+     "strapi": "email",
+     "label": "E-mail",
+     "description": "",
+     "required": true,
+     "translatable": false,
+     "type": "email"
+    },
+    {
+     "name": "message_contact_subject",
+     "strapi": "subject",
+     "label": "Objet",
+     "description": "",
+     "required": true,
+     "translatable": false,
+     "type": "list_string",
+     "options": [
+      "carte_bancaire",
+      "switch_monetique",
+      "switch_mobile_wallet",
+      "ecommerce_clictopay",
+      "paysmart",
+      "certification",
+      "formation_conseil",
+      "reclamation_autre"
+     ],
+     "default": null
+    },
+    {
+     "name": "message_contact_message",
+     "strapi": "message",
+     "label": "Message",
+     "description": "",
+     "required": true,
+     "translatable": false,
+     "type": "string_long"
+    },
+    {
+     "name": "message_contact_status",
+     "strapi": "status",
+     "label": "Statut de traitement",
+     "description": "",
+     "required": false,
+     "translatable": false,
+     "type": "list_string",
+     "options": [
+      "nouveau",
+      "en_cours",
+      "traite"
+     ],
+     "default": "nouveau"
+    },
+    {
+     "name": "message_contact_internal_note",
+     "strapi": "internalNote",
+     "label": "Note interne",
+     "description": "",
+     "required": false,
+     "translatable": false,
+     "type": "string_long"
+    },
+    {
+     "name": "message_contact_consent_at",
+     "strapi": "consentAt",
+     "label": "Consent at",
+     "description": "",
+     "required": false,
+     "translatable": false,
+     "type": "datetime"
+    }
+   ]
+  },
+  "navigation": {
+   "label": "Navigation",
+   "description": "Menu principal, bouton d'action et pied de page",
+   "strapi": "navigations",
+   "single": true,
+   "translatable": true,
+   "titleField": null,
+   "titleLabel": "Titre",
+   "fields": [
+    {
+     "name": "navigation_main_menu",
+     "strapi": "mainMenu",
+     "label": "Menu principal",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "paragraphs",
+     "targets": [
+      "menu_item"
+     ],
+     "multiple": true
+    },
+    {
+     "name": "navigation_header_cta",
+     "strapi": "headerCta",
+     "label": "Bouton de l'en-tête",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "paragraphs",
+     "targets": [
+      "link"
+     ],
+     "multiple": false
+    },
+    {
+     "name": "navigation_footer_columns",
+     "strapi": "footerColumns",
+     "label": "Colonnes du pied de page",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "paragraphs",
+     "targets": [
+      "footer_column"
+     ],
+     "multiple": true
+    },
+    {
+     "name": "navigation_legal_links",
+     "strapi": "legalLinks",
+     "label": "Liens légaux",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "paragraphs",
+     "targets": [
+      "link"
+     ],
+     "multiple": true
+    },
+    {
+     "name": "navigation_copyright",
+     "strapi": "copyright",
+     "label": "Mention de copyright",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    }
+   ]
+  },
+  "page": {
+   "label": "Page",
+   "description": "Pages composées de blocs : accueil, Monétique Tunisie, expertise, contact, pages légales",
+   "strapi": "pages",
+   "single": false,
+   "translatable": true,
+   "titleField": "title",
+   "titleLabel": "Titre",
+   "fields": [
+    {
+     "name": "page_slug",
+     "strapi": "slug",
+     "label": "Adresse (URL)",
+     "description": "Générée depuis le titre. Ne pas modifier après publication.",
+     "required": true,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "page_is_homepage",
+     "strapi": "isHomepage",
+     "label": "Page d'accueil",
+     "description": "",
+     "required": false,
+     "translatable": false,
+     "type": "boolean",
+     "default": false
+    },
+    {
+     "name": "page_parent_label",
+     "strapi": "parentLabel",
+     "label": "Rubrique (fil d'Ariane)",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "page_blocks",
+     "strapi": "blocks",
+     "label": "Blocs de la page",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "paragraphs",
+     "targets": [
+      "hero",
+      "rich_text",
+      "text_image",
+      "key_figures",
+      "cards_grid",
+      "tag_list",
+      "cta_band",
+      "solutions_list",
+      "latest_news",
+      "partners_ribbon",
+      "partners_grid",
+      "faq_list",
+      "people_grid",
+      "stats_table",
+      "contact_section"
+     ],
+     "multiple": true
+    },
+    {
+     "name": "page_seo",
+     "strapi": "seo",
+     "label": "Référencement (SEO)",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "paragraphs",
+     "targets": [
+      "seo"
+     ],
+     "multiple": false
+    }
+   ]
+  },
+  "partenaire": {
+   "label": "Partenaire",
+   "description": "Banques, clients privatifs, réseaux et facturiers",
+   "strapi": "partenaires",
+   "single": false,
+   "translatable": false,
+   "titleField": "name",
+   "titleLabel": "Nom",
+   "fields": [
+    {
+     "name": "partenaire_logo",
+     "strapi": "logo",
+     "label": "Logo",
+     "description": "",
+     "required": false,
+     "translatable": false,
+     "type": "image",
+     "multiple": false
+    },
+    {
+     "name": "partenaire_category",
+     "strapi": "category",
+     "label": "Catégorie",
+     "description": "",
+     "required": true,
+     "translatable": false,
+     "type": "list_string",
+     "options": [
+      "banque_tunisienne",
+      "banque_etrangere",
+      "client_privatif",
+      "partenaire_technologique",
+      "operateur_facturier"
+     ],
+     "default": null
+    },
+    {
+     "name": "partenaire_website",
+     "strapi": "website",
+     "label": "Site web",
+     "description": "",
+     "required": false,
+     "translatable": false,
+     "type": "string"
+    },
+    {
+     "name": "partenaire_show_in_ribbon",
+     "strapi": "showInRibbon",
+     "label": "Afficher dans le bandeau partenaires (pages intérieures)",
+     "description": "",
+     "required": false,
+     "translatable": false,
+     "type": "boolean",
+     "default": false
+    },
+    {
+     "name": "partenaire_show_on_home",
+     "strapi": "showOnHome",
+     "label": "Afficher dans le bandeau de l’accueil (facturiers interconnectés)",
+     "description": "",
+     "required": false,
+     "translatable": false,
+     "type": "boolean",
+     "default": false
+    },
+    {
+     "name": "partenaire_order",
+     "strapi": "order",
+     "label": "Ordre d'affichage",
+     "description": "",
+     "required": false,
+     "translatable": false,
+     "type": "integer",
+     "default": 0
+    }
+   ]
+  },
+  "solution": {
+   "label": "Solution",
+   "description": "Fiches solutions (carte bancaire, switch, Paysmart…)",
+   "strapi": "solutions",
+   "single": false,
+   "translatable": true,
+   "titleField": "name",
+   "titleLabel": "Nom",
+   "fields": [
+    {
+     "name": "solution_slug",
+     "strapi": "slug",
+     "label": "Adresse (URL)",
+     "description": "Générée depuis le titre. Ne pas modifier après publication.",
+     "required": true,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "solution_icon",
+     "strapi": "icon",
+     "label": "Icône (Material Symbols)",
+     "description": "Nom d’icône Material Symbols, ex. credit_card, hub, smartphone.",
+     "required": false,
+     "translatable": false,
+     "type": "string"
+    },
+    {
+     "name": "solution_tagline",
+     "strapi": "tagline",
+     "label": "Accroche",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "solution_summary",
+     "strapi": "summary",
+     "label": "Résumé",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string_long"
+    },
+    {
+     "name": "solution_sections",
+     "strapi": "sections",
+     "label": "Sections",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "paragraphs",
+     "targets": [
+      "section"
+     ],
+     "multiple": true
+    },
+    {
+     "name": "solution_key_points",
+     "strapi": "keyPoints",
+     "label": "Points clés",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "paragraphs",
+     "targets": [
+      "key_point"
+     ],
+     "multiple": true
+    },
+    {
+     "name": "solution_cta",
+     "strapi": "cta",
+     "label": "Bouton",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "paragraphs",
+     "targets": [
+      "link"
+     ],
+     "multiple": false
+    },
+    {
+     "name": "solution_order",
+     "strapi": "order",
+     "label": "Ordre d'affichage",
+     "description": "",
+     "required": false,
+     "translatable": false,
+     "type": "integer",
+     "default": 0
+    },
+    {
+     "name": "solution_seo",
+     "strapi": "seo",
+     "label": "Référencement (SEO)",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "paragraphs",
+     "targets": [
+      "seo"
+     ],
+     "multiple": false
+    }
+   ]
+  }
+ },
+ "paragraph": {
+  "card": {
+   "label": "Carte",
+   "strapi": "blocks.card",
+   "fields": [
+    {
+     "name": "card_icon",
+     "strapi": "icon",
+     "label": "Icône (Material Symbols)",
+     "description": "Nom d’icône Material Symbols, ex. credit_card, hub, smartphone.",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "card_eyebrow",
+     "strapi": "eyebrow",
+     "label": "Sur-titre",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "card_title",
+     "strapi": "title",
+     "label": "Titre",
+     "description": "",
+     "required": true,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "card_text",
+     "strapi": "text",
+     "label": "Texte",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string_long"
+    },
+    {
+     "name": "card_bullets",
+     "strapi": "bullets",
+     "label": "Puces",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "paragraphs",
+     "targets": [
+      "key_point"
+     ],
+     "multiple": true
+    },
+    {
+     "name": "card_link",
+     "strapi": "link",
+     "label": "Lien",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "paragraphs",
+     "targets": [
+      "link"
+     ],
+     "multiple": false
+    }
+   ]
+  },
+  "cards_grid": {
+   "label": "Grille de cartes",
+   "strapi": "blocks.cards-grid",
+   "fields": [
+    {
+     "name": "cards_grid_eyebrow",
+     "strapi": "eyebrow",
+     "label": "Sur-titre",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "cards_grid_title",
+     "strapi": "title",
+     "label": "Titre",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "cards_grid_subtitle",
+     "strapi": "subtitle",
+     "label": "Sous-titre",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string_long"
+    },
+    {
+     "name": "cards_grid_columns",
+     "strapi": "columns",
+     "label": "Colonnes",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "integer",
+     "default": 3
+    },
+    {
+     "name": "cards_grid_cards",
+     "strapi": "cards",
+     "label": "Cartes",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "paragraphs",
+     "targets": [
+      "card"
+     ],
+     "multiple": true
+    },
+    {
+     "name": "cards_grid_anchor",
+     "strapi": "anchor",
+     "label": "Ancre (#)",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    }
+   ]
+  },
+  "contact_section": {
+   "label": "Coordonnées + formulaire",
+   "strapi": "blocks.contact-section",
+   "fields": [
+    {
+     "name": "contact_section_title",
+     "strapi": "title",
+     "label": "Titre",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "contact_section_show_form",
+     "strapi": "showForm",
+     "label": "Afficher le formulaire",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "boolean",
+     "default": true
+    },
+    {
+     "name": "contact_section_show_map",
+     "strapi": "showMap",
+     "label": "Afficher la carte",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "boolean",
+     "default": false
+    }
+   ]
+  },
+  "cta_band": {
+   "label": "Bandeau d'appel à l'action",
+   "strapi": "blocks.cta-band",
+   "fields": [
+    {
+     "name": "cta_band_title",
+     "strapi": "title",
+     "label": "Titre",
+     "description": "",
+     "required": true,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "cta_band_text",
+     "strapi": "text",
+     "label": "Texte",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string_long"
+    },
+    {
+     "name": "cta_band_cta",
+     "strapi": "cta",
+     "label": "Bouton",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "paragraphs",
+     "targets": [
+      "link"
+     ],
+     "multiple": false
+    }
+   ]
+  },
+  "faq_list": {
+   "label": "Liste FAQ",
+   "strapi": "blocks.faq-list",
+   "fields": [
+    {
+     "name": "faq_list_title",
+     "strapi": "title",
+     "label": "Titre",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "faq_list_category",
+     "strapi": "category",
+     "label": "Catégorie",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "list_string",
+     "options": [
+      "toutes",
+      "carte_bancaire",
+      "wallet",
+      "paysmart",
+      "achat_internet",
+      "glossaire"
+     ],
+     "default": "toutes"
+    }
+   ]
+  },
+  "figure": {
+   "label": "Chiffre",
+   "strapi": "blocks.figure",
+   "fields": [
+    {
+     "name": "figure_value",
+     "strapi": "value",
+     "label": "Valeur",
+     "description": "",
+     "required": true,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "figure_unit",
+     "strapi": "unit",
+     "label": "Unité",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "figure_label",
+     "strapi": "label",
+     "label": "Libellé",
+     "description": "Étiquette affichée au-dessus du titre (ex. Gouvernance, Mobile Payment).",
+     "required": true,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "figure_evolution",
+     "strapi": "evolution",
+     "label": "Évolution (%)",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "figure_note",
+     "strapi": "note",
+     "label": "Note",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    }
+   ]
+  },
+  "hero": {
+   "label": "Bannière",
+   "strapi": "blocks.hero",
+   "fields": [
+    {
+     "name": "hero_variant",
+     "strapi": "variant",
+     "label": "Style",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "list_string",
+     "options": [
+      "sombre",
+      "claire",
+      "accueil"
+     ],
+     "default": "sombre"
+    },
+    {
+     "name": "hero_eyebrow",
+     "strapi": "eyebrow",
+     "label": "Sur-titre",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "hero_badge",
+     "strapi": "badge",
+     "label": "Badge",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "hero_title",
+     "strapi": "title",
+     "label": "Titre",
+     "description": "",
+     "required": true,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "hero_rotating_words",
+     "strapi": "rotatingWords",
+     "label": "Rotating words",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string_long"
+    },
+    {
+     "name": "hero_subtitle",
+     "strapi": "subtitle",
+     "label": "Sous-titre",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string_long"
+    },
+    {
+     "name": "hero_highlight_title",
+     "strapi": "highlightTitle",
+     "label": "Highlight title",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "hero_highlight_text",
+     "strapi": "highlightText",
+     "label": "Highlight text",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string_long"
+    },
+    {
+     "name": "hero_highlight_url",
+     "strapi": "highlightUrl",
+     "label": "Highlight url",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "hero_image",
+     "strapi": "image",
+     "label": "Image",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "image",
+     "multiple": false
+    },
+    {
+     "name": "hero_ctas",
+     "strapi": "ctas",
+     "label": "Boutons",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "paragraphs",
+     "targets": [
+      "link"
+     ],
+     "multiple": true
+    }
+   ]
+  },
+  "key_figures": {
+   "label": "Chiffres clés",
+   "strapi": "blocks.key-figures",
+   "fields": [
+    {
+     "name": "key_figures_eyebrow",
+     "strapi": "eyebrow",
+     "label": "Sur-titre",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "key_figures_title",
+     "strapi": "title",
+     "label": "Titre",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "key_figures_subtitle",
+     "strapi": "subtitle",
+     "label": "Sous-titre",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string_long"
+    },
+    {
+     "name": "key_figures_items",
+     "strapi": "items",
+     "label": "Chiffres",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "paragraphs",
+     "targets": [
+      "figure"
+     ],
+     "multiple": true
+    },
+    {
+     "name": "key_figures_source",
+     "strapi": "source",
+     "label": "Source",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "key_figures_cta",
+     "strapi": "cta",
+     "label": "Bouton",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "paragraphs",
+     "targets": [
+      "link"
+     ],
+     "multiple": false
+    }
+   ]
+  },
+  "latest_news": {
+   "label": "Dernières publications",
+   "strapi": "blocks.latest-news",
+   "fields": [
+    {
+     "name": "latest_news_eyebrow",
+     "strapi": "eyebrow",
+     "label": "Sur-titre",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "latest_news_title",
+     "strapi": "title",
+     "label": "Titre",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "latest_news_source",
+     "strapi": "source",
+     "label": "Source",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "list_string",
+     "options": [
+      "actualites",
+      "appels_offres",
+      "mixte"
+     ],
+     "default": "mixte"
+    },
+    {
+     "name": "latest_news_count",
+     "strapi": "count",
+     "label": "Nombre d’éléments",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "integer",
+     "default": 3
+    }
+   ]
+  },
+  "partners_grid": {
+   "label": "Grille des partenaires",
+   "strapi": "blocks.partners-grid",
+   "fields": [
+    {
+     "name": "partners_grid_title",
+     "strapi": "title",
+     "label": "Titre",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "partners_grid_intro",
+     "strapi": "intro",
+     "label": "Introduction",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string_long"
+    }
+   ]
+  },
+  "partners_ribbon": {
+   "label": "Bandeau partenaires",
+   "strapi": "blocks.partners-ribbon",
+   "fields": [
+    {
+     "name": "partners_ribbon_title",
+     "strapi": "title",
+     "label": "Titre",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "partners_ribbon_variant",
+     "strapi": "variant",
+     "label": "Style",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "list_string",
+     "options": [
+      "pastilles",
+      "facturiers"
+     ],
+     "default": "pastilles"
+    },
+    {
+     "name": "partners_ribbon_show_all_link",
+     "strapi": "showAllLink",
+     "label": "Lien « Voir tous »",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "boolean",
+     "default": true
+    }
+   ]
+  },
+  "people_grid": {
+   "label": "Dirigeants",
+   "strapi": "blocks.people-grid",
+   "fields": [
+    {
+     "name": "people_grid_eyebrow",
+     "strapi": "eyebrow",
+     "label": "Sur-titre",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "people_grid_title",
+     "strapi": "title",
+     "label": "Titre",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "people_grid_anchor",
+     "strapi": "anchor",
+     "label": "Ancre (#)",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    }
+   ]
+  },
+  "rich_text": {
+   "label": "Texte riche",
+   "strapi": "blocks.rich-text",
+   "fields": [
+    {
+     "name": "rich_text_eyebrow",
+     "strapi": "eyebrow",
+     "label": "Sur-titre",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "rich_text_title",
+     "strapi": "title",
+     "label": "Titre",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "rich_text_body",
+     "strapi": "body",
+     "label": "Texte",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "text_long"
+    }
+   ]
+  },
+  "solutions_list": {
+   "label": "Liste des solutions",
+   "strapi": "blocks.solutions-list",
+   "fields": [
+    {
+     "name": "solutions_list_eyebrow",
+     "strapi": "eyebrow",
+     "label": "Sur-titre",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "solutions_list_title",
+     "strapi": "title",
+     "label": "Titre",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "solutions_list_subtitle",
+     "strapi": "subtitle",
+     "label": "Sous-titre",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string_long"
+    },
+    {
+     "name": "solutions_list_display",
+     "strapi": "display",
+     "label": "Display",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "list_string",
+     "options": [
+      "cartes",
+      "parcours"
+     ],
+     "default": "cartes"
+    },
+    {
+     "name": "solutions_list_step_labels",
+     "strapi": "stepLabels",
+     "label": "Step labels",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string_long"
+    }
+   ]
+  },
+  "stats_table": {
+   "label": "Tableau statistiques",
+   "strapi": "blocks.stats-table",
+   "fields": [
+    {
+     "name": "stats_table_title",
+     "strapi": "title",
+     "label": "Titre",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "stats_table_subtitle",
+     "strapi": "subtitle",
+     "label": "Sous-titre",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string_long"
+    },
+    {
+     "name": "stats_table_footnote",
+     "strapi": "footnote",
+     "label": "Note de bas de tableau",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    }
+   ]
+  },
+  "tag_list": {
+   "label": "Liste d'étiquettes",
+   "strapi": "blocks.tag-list",
+   "fields": [
+    {
+     "name": "tag_list_display",
+     "strapi": "display",
+     "label": "Display",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "list_string",
+     "options": [
+      "pastilles",
+      "carte"
+     ],
+     "default": "pastilles"
+    },
+    {
+     "name": "tag_list_eyebrow",
+     "strapi": "eyebrow",
+     "label": "Sur-titre",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "tag_list_title",
+     "strapi": "title",
+     "label": "Titre",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "tag_list_body",
+     "strapi": "body",
+     "label": "Texte",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "text_long"
+    },
+    {
+     "name": "tag_list_tags",
+     "strapi": "tags",
+     "label": "Étiquettes",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "paragraphs",
+     "targets": [
+      "key_point"
+     ],
+     "multiple": true
+    }
+   ]
+  },
+  "text_image": {
+   "label": "Texte + visuel",
+   "strapi": "blocks.text-image",
+   "fields": [
+    {
+     "name": "text_image_anchor",
+     "strapi": "anchor",
+     "label": "Ancre (#)",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "text_image_eyebrow",
+     "strapi": "eyebrow",
+     "label": "Sur-titre",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "text_image_title",
+     "strapi": "title",
+     "label": "Titre",
+     "description": "",
+     "required": true,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "text_image_body",
+     "strapi": "body",
+     "label": "Texte",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "text_long"
+    },
+    {
+     "name": "text_image_image",
+     "strapi": "image",
+     "label": "Image",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "image",
+     "multiple": false
+    },
+    {
+     "name": "text_image_image_position",
+     "strapi": "imagePosition",
+     "label": "Position de l'image",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "list_string",
+     "options": [
+      "droite",
+      "gauche"
+     ],
+     "default": "droite"
+    },
+    {
+     "name": "text_image_key_points",
+     "strapi": "keyPoints",
+     "label": "Points clés",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "paragraphs",
+     "targets": [
+      "key_point"
+     ],
+     "multiple": true
+    },
+    {
+     "name": "text_image_cta",
+     "strapi": "cta",
+     "label": "Bouton",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "paragraphs",
+     "targets": [
+      "link"
+     ],
+     "multiple": false
+    }
+   ]
+  },
+  "section": {
+   "label": "Section de texte",
+   "strapi": "content.section",
+   "fields": [
+    {
+     "name": "section_title",
+     "strapi": "title",
+     "label": "Titre",
+     "description": "",
+     "required": true,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "section_body",
+     "strapi": "body",
+     "label": "Texte",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "text_long"
+    }
+   ]
+  },
+  "footer_column": {
+   "label": "Colonne de pied de page",
+   "strapi": "navigation.footer-column",
+   "fields": [
+    {
+     "name": "footer_column_title",
+     "strapi": "title",
+     "label": "Titre",
+     "description": "",
+     "required": true,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "footer_column_links",
+     "strapi": "links",
+     "label": "Liens",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "paragraphs",
+     "targets": [
+      "link"
+     ],
+     "multiple": true
+    }
+   ]
+  },
+  "menu_item": {
+   "label": "Entrée de menu",
+   "strapi": "navigation.menu-item",
+   "fields": [
+    {
+     "name": "menu_item_label",
+     "strapi": "label",
+     "label": "Libellé",
+     "description": "Étiquette affichée au-dessus du titre (ex. Gouvernance, Mobile Payment).",
+     "required": true,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "menu_item_url",
+     "strapi": "url",
+     "label": "Lien (URL)",
+     "description": "",
+     "required": true,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "menu_item_children",
+     "strapi": "children",
+     "label": "Sous-menus",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "paragraphs",
+     "targets": [
+      "sub_item"
+     ],
+     "multiple": true
+    }
+   ]
+  },
+  "sub_item": {
+   "label": "Sous-menu",
+   "strapi": "navigation.sub-item",
+   "fields": [
+    {
+     "name": "sub_item_label",
+     "strapi": "label",
+     "label": "Libellé",
+     "description": "Étiquette affichée au-dessus du titre (ex. Gouvernance, Mobile Payment).",
+     "required": true,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "sub_item_url",
+     "strapi": "url",
+     "label": "Lien (URL)",
+     "description": "",
+     "required": true,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "sub_item_icon",
+     "strapi": "icon",
+     "label": "Icône (Material Symbols)",
+     "description": "Nom d’icône Material Symbols, ex. credit_card, hub, smartphone.",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    }
+   ]
+  },
+  "key_point": {
+   "label": "Point clé",
+   "strapi": "shared.key-point",
+   "fields": [
+    {
+     "name": "key_point_text",
+     "strapi": "text",
+     "label": "Texte",
+     "description": "",
+     "required": true,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "key_point_icon",
+     "strapi": "icon",
+     "label": "Icône (Material Symbols)",
+     "description": "Nom d’icône Material Symbols, ex. credit_card, hub, smartphone.",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    }
+   ]
+  },
+  "link": {
+   "label": "Lien",
+   "strapi": "shared.link",
+   "fields": [
+    {
+     "name": "link_label",
+     "strapi": "label",
+     "label": "Libellé",
+     "description": "Étiquette affichée au-dessus du titre (ex. Gouvernance, Mobile Payment).",
+     "required": true,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "link_url",
+     "strapi": "url",
+     "label": "Lien (URL)",
+     "description": "",
+     "required": true,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "link_is_external",
+     "strapi": "isExternal",
+     "label": "Lien externe",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "boolean",
+     "default": false
+    },
+    {
+     "name": "link_style",
+     "strapi": "style",
+     "label": "Style",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "list_string",
+     "options": [
+      "primaire",
+      "secondaire",
+      "texte"
+     ],
+     "default": "texte"
+    },
+    {
+     "name": "link_icon",
+     "strapi": "icon",
+     "label": "Icône (Material Symbols)",
+     "description": "Nom d’icône Material Symbols, ex. credit_card, hub, smartphone.",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    }
+   ]
+  },
+  "seo": {
+   "label": "SEO",
+   "strapi": "shared.seo",
+   "fields": [
+    {
+     "name": "seo_meta_title",
+     "strapi": "metaTitle",
+     "label": "Titre SEO",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "seo_meta_description",
+     "strapi": "metaDescription",
+     "label": "Description SEO",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "string_long"
+    },
+    {
+     "name": "seo_share_image",
+     "strapi": "shareImage",
+     "label": "Image de partage",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "image",
+     "multiple": false
+    },
+    {
+     "name": "seo_no_index",
+     "strapi": "noIndex",
+     "label": "Ne pas indexer",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "boolean",
+     "default": false
+    }
+   ]
+  },
+  "social_link": {
+   "label": "Réseau social",
+   "strapi": "shared.social-link",
+   "fields": [
+    {
+     "name": "social_link_platform",
+     "strapi": "platform",
+     "label": "Réseau",
+     "description": "",
+     "required": true,
+     "translatable": true,
+     "type": "list_string",
+     "options": [
+      "facebook",
+      "linkedin",
+      "youtube",
+      "x",
+      "instagram"
+     ],
+     "default": null
+    },
+    {
+     "name": "social_link_url",
+     "strapi": "url",
+     "label": "Lien (URL)",
+     "description": "",
+     "required": true,
+     "translatable": true,
+     "type": "string"
+    }
+   ]
+  },
+  "value": {
+   "label": "Valeur statistique",
+   "strapi": "stats.value",
+   "fields": [
+    {
+     "name": "value_period",
+     "strapi": "period",
+     "label": "Période",
+     "description": "",
+     "required": true,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "value_year",
+     "strapi": "year",
+     "label": "Année",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "integer"
+    },
+    {
+     "name": "value_value",
+     "strapi": "value",
+     "label": "Valeur",
+     "description": "",
+     "required": true,
+     "translatable": true,
+     "type": "decimal"
+    },
+    {
+     "name": "value_display_value",
+     "strapi": "displayValue",
+     "label": "Valeur affichée",
+     "description": "Format affiché, ex. « 5,782 » ou « 40 600 ». Laisser vide pour utiliser la valeur.",
+     "required": false,
+     "translatable": true,
+     "type": "string"
+    },
+    {
+     "name": "value_evolution",
+     "strapi": "evolution",
+     "label": "Évolution (%)",
+     "description": "",
+     "required": false,
+     "translatable": true,
+     "type": "decimal"
+    },
+    {
+     "name": "value_is_partial_year",
+     "strapi": "isPartialYear",
+     "label": "Période partielle",
+     "description": "Cocher pour une période en cours (ex. juin 2025).",
+     "required": false,
+     "translatable": true,
+     "type": "boolean",
+     "default": false
+    }
+   ]
+  }
+ }
+}

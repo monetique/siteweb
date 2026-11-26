@@ -1,8 +1,16 @@
+/**
+ * Accès au contenu du site. Le CMS est Drupal (API JSON:API, voir lib/cms/drupal.ts) ;
+ * l'ancien Strapi reste utilisable pendant la transition avec CMS_BACKEND=strapi.
+ * Les deux renvoient les mêmes objets : pages et composants ne dépendent pas du CMS.
+ */
 import type { BlocksContent } from "@strapi/blocks-react-renderer";
 import { DEFAULT_LANG } from "./i18n";
 import { getLang } from "./lang-server";
+import { list } from "./cms/drupal";
 
 /* ------------------------------------------------------------------ configuration */
+export const CMS_BACKEND: "drupal" | "strapi" = process.env.CMS_BACKEND === "strapi" ? "strapi" : "drupal";
+const DRUPAL = CMS_BACKEND === "drupal";
 const STRAPI_URL = (process.env.STRAPI_URL || "http://localhost:1337").replace(/\/$/, "");
 const MEDIA_BASE_URL = (process.env.MEDIA_BASE_URL || STRAPI_URL).replace(/\/$/, "");
 const TOKEN = process.env.STRAPI_TOKEN;
@@ -99,37 +107,28 @@ export type Dirigeant = { fullName: string; role: string; photo?: Media; bio?: s
 
 /* ------------------------------------------------------------------ requêtes */
 const ALL = { pageSize: 100 };
+const byOrder = <T extends { order?: number }>(a: T[]) => [...a].sort((x, y) => (x.order ?? 0) - (y.order ?? 0));
+const desc = <T,>(a: T[], k: keyof T) => [...a].sort((x, y) => String(y[k] ?? "").localeCompare(String(x[k] ?? "")));
 
 export async function getGlobal() {
+  if (DRUPAL) return (await list<Global>("global"))[0];
   return (await strapiGet<One<Global>>("global", { populate: "*" })).data;
 }
 export async function getNavigation() {
+  if (DRUPAL) return (await list<Navigation>("navigation"))[0];
   return (await strapiGet<One<Navigation>>("navigation", {
     populate: { mainMenu: { populate: "*" }, headerCta: true, footerColumns: { populate: "*" }, legalLinks: true },
   })).data;
 }
 
 const BLOCK_POPULATE = {
-  on: {
-    "blocks.hero": { populate: "*" },
-    "blocks.rich-text": { populate: "*" },
-    "blocks.text-image": { populate: "*" },
-    "blocks.key-figures": { populate: "*" },
-    "blocks.cards-grid": { populate: { cards: { populate: "*" } } },
-    "blocks.tag-list": { populate: "*" },
-    "blocks.cta-band": { populate: "*" },
-    "blocks.solutions-list": { populate: "*" },
-    "blocks.latest-news": { populate: "*" },
-    "blocks.partners-ribbon": { populate: "*" },
-    "blocks.partners-grid": { populate: "*" },
-    "blocks.faq-list": { populate: "*" },
-    "blocks.people-grid": { populate: "*" },
-    "blocks.stats-table": { populate: "*" },
-    "blocks.contact-section": { populate: "*" },
-  },
+  on: Object.fromEntries(["hero", "rich-text", "text-image", "key-figures", "tag-list", "cta-band", "solutions-list", "latest-news",
+    "partners-ribbon", "partners-grid", "faq-list", "people-grid", "stats-table", "contact-section"].map((b) => [`blocks.${b}`, { populate: "*" }])
+    .concat([["blocks.cards-grid", { populate: { cards: { populate: "*" } } } as any]])),
 };
 
 export async function getPage(slug: string) {
+  if (DRUPAL) return (await list<Page>("page")).find((p) => p.slug === slug) ?? null;
   const res = await strapiGet<Many<Page>>("pages", {
     filters: { slug: { $eq: slug } },
     populate: { blocks: BLOCK_POPULATE, seo: { populate: "*" } },
@@ -137,38 +136,48 @@ export async function getPage(slug: string) {
   return res.data[0] ?? null;
 }
 export async function getPageSlugs() {
+  if (DRUPAL) return (await list<Page>("page")).map(({ slug, isHomepage }) => ({ slug, isHomepage }));
   return (await strapiGet<Many<Pick<Page, "slug" | "isHomepage">>>("pages", { fields: ["slug", "isHomepage"], pagination: ALL })).data;
 }
 export async function getSolutions() {
+  if (DRUPAL) return byOrder(await list<Solution>("solution"));
   return (await strapiGet<Many<Solution>>("solutions", { sort: "order:asc", populate: "*", pagination: ALL })).data;
 }
 export async function getInnovations() {
+  if (DRUPAL) return byOrder(await list<Solution>("innovation"));
   return (await strapiGet<Many<Solution>>("innovations", { sort: "order:asc", populate: "*", pagination: ALL })).data;
 }
 export async function getPartenaires() {
+  if (DRUPAL) return byOrder(await list<Partenaire>("partenaire", DEFAULT_LANG));
   return (await strapiGet<Many<Partenaire>>("partenaires", { locale: undefined, sort: "order:asc", populate: "logo", pagination: ALL })).data;
 }
 export async function getActualites(limit = 100) {
+  if (DRUPAL) return desc(await list<Actualite>("actualite"), "date").slice(0, limit);
   return (await strapiGet<Many<Actualite>>("actualites", { sort: "date:desc", populate: "*", pagination: { pageSize: limit } })).data;
 }
 export async function getAppelsOffres(limit = 100) {
+  if (DRUPAL) return desc(await list<AppelOffres>("appel_offres"), "publicationDate").slice(0, limit);
   return (await strapiGet<Many<AppelOffres>>("appels-offres", { sort: "publicationDate:desc", populate: "*", pagination: { pageSize: limit } })).data;
 }
 export async function getFaqs() {
+  if (DRUPAL) return [...(await list<Faq>("faq"))].sort((a, b) => a.category.localeCompare(b.category) || (a.order ?? 0) - (b.order ?? 0));
   return (await strapiGet<Many<Faq>>("faqs", { sort: ["category:asc", "order:asc"], pagination: ALL })).data;
 }
 export async function getIndicateurs() {
+  if (DRUPAL) return byOrder(await list<Indicateur>("indicateur"));
   return (await strapiGet<Many<Indicateur>>("indicateurs", { sort: "order:asc", populate: "values", pagination: ALL })).data;
 }
 export async function getDirigeants() {
+  if (DRUPAL) return byOrder(await list<Dirigeant>("dirigeant"));
   return (await strapiGet<Many<Dirigeant>>("dirigeants", { sort: "order:asc", populate: "photo", pagination: ALL })).data;
 }
 
-async function bySlug<T>(path: string, slug: string, populate: unknown = "*") {
+async function bySlug<T extends { slug: string }>(path: string, bundle: string, slug: string, populate: unknown = "*") {
+  if (DRUPAL) return (await list<T>(bundle)).find((x) => x.slug === slug) ?? null;
   const res = await strapiGet<Many<T>>(path, { filters: { slug: { $eq: slug } }, populate });
   return res.data[0] ?? null;
 }
-export const getSolution = (slug: string) => bySlug<Solution>("solutions", slug, { sections: true, keyPoints: true, cta: true, seo: { populate: "*" } });
-export const getInnovation = (slug: string) => bySlug<Solution>("innovations", slug, { sections: true, keyPoints: true, cta: true, seo: { populate: "*" } });
-export const getActualite = (slug: string) => bySlug<Actualite>("actualites", slug, { cover: true, attachments: true, seo: { populate: "*" } });
-export const getAppelOffres = (slug: string) => bySlug<AppelOffres>("appels-offres", slug, { documents: true, seo: { populate: "*" } });
+export const getSolution = (slug: string) => bySlug<Solution>("solutions", "solution", slug, { sections: true, keyPoints: true, cta: true, seo: { populate: "*" } });
+export const getInnovation = (slug: string) => bySlug<Solution>("innovations", "innovation", slug, { sections: true, keyPoints: true, cta: true, seo: { populate: "*" } });
+export const getActualite = (slug: string) => bySlug<Actualite>("actualites", "actualite", slug, { cover: true, attachments: true, seo: { populate: "*" } });
+export const getAppelOffres = (slug: string) => bySlug<AppelOffres>("appels-offres", "appel_offres", slug, { documents: true, seo: { populate: "*" } });

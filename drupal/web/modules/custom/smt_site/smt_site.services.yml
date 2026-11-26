@@ -1,0 +1,9 @@
+services:
+  smt_site.jsonapi_resources:
+    class: Drupal\smt_site\EventSubscriber\JsonApiResourceSubscriber
+    tags:
+      - { name: event_subscriber }
+  smt_site.contact_cors:
+    class: Drupal\smt_site\EventSubscriber\ContactCorsSubscriber
+    tags:
+      - { name: event_subscriber }

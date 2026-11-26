@@ -25,7 +25,8 @@ for (const file of walk(path.join(ROOT, "src")).filter((f) => /\.(tsx?|mjs)$/.te
 // 2. Icônes du contenu de départ (cms/data/seed.json) : disponibles même si Strapi n'est pas encore démarré
 const collect = (node) => {
   if (Array.isArray(node)) return node.forEach(collect);
-  if (node && typeof node === "object") for (const [k, v] of Object.entries(node)) (k === "icon" && typeof v === "string" ? names.add(v) : collect(v));
+  // « icon » (Strapi) ou « <type>_icon » (Drupal)
+  if (node && typeof node === "object") for (const [k, v] of Object.entries(node)) ((k === "icon" || k.endsWith("_icon")) && typeof v === "string" ? names.add(v) : collect(v));
 };
 const SEED = path.resolve(ROOT, "../cms/data/seed.json");
 if (fs.existsSync(SEED)) collect(JSON.parse(fs.readFileSync(SEED, "utf8")));
@@ -52,8 +53,24 @@ async function strapiReady() {
   }
   return false;
 }
-const reachable = process.env.ICONS_SKIP_STRAPI === "true" ? false : await strapiReady();
-if (!reachable) console.warn("[icons] Strapi indisponible : icônes du code, du contenu de départ et du jeu courant uniquement");
+// Drupal (CMS par défaut) : champs « *_icon » des contenus et paragraphes, lus directement dans l'API.
+const DRUPAL = process.env.CMS_BACKEND === "strapi" ? null : (process.env.DRUPAL_URL || "http://127.0.0.1:8080").replace(/\/$/, "");
+if (DRUPAL && process.env.ICONS_SKIP_STRAPI !== "true") {
+  const res = ["node/solution", "node/innovation", "node/indicateur", "paragraph/card", "paragraph/sub_item", "paragraph/key_point", "paragraph/link"];
+  let ok = 0;
+  for (const r of res) {
+    for (let url = `${DRUPAL}/jsonapi/${r}?page[limit]=50`; url; ) {
+      try {
+        const doc = await (await fetch(url, { signal: AbortSignal.timeout(10000) })).json();
+        collect((doc.data ?? []).map((d) => d.attributes)); ok++;
+        url = doc.links?.next?.href;
+      } catch { url = null; }
+    }
+  }
+  if (!ok) console.warn("[icons] Drupal indisponible : icônes du code, du contenu de départ et du jeu courant uniquement");
+}
+const reachable = DRUPAL || process.env.ICONS_SKIP_STRAPI === "true" ? false : await strapiReady();
+if (!reachable && !DRUPAL) console.warn("[icons] Strapi indisponible : icônes du code, du contenu de départ et du jeu courant uniquement");
 for (const ep of reachable ? endpoints : []) {
   try {
     const res = await fetch(`${STRAPI}/api/${ep}${ep.includes("?") ? "&" : "?"}locale=fr`, { headers: process.env.STRAPI_TOKEN ? { Authorization: `Bearer ${process.env.STRAPI_TOKEN}` } : {} });
