@@ -54,3 +54,20 @@ function smt_site_update_11002(): string {
   }
   return "Champ vidéo ajouté ; animation jointe à $added bannière(s).";
 }
+
+/**
+ * Réglage « Vidéo en boucle » de la bannière ; activé pour la bannière d'accueil.
+ */
+function smt_site_update_11003(): string {
+  ModelBuilder::build();
+  $n = 0;
+  foreach (\Drupal::entityTypeManager()->getStorage('paragraph')->loadByProperties(['type' => 'hero', 'hero_variant' => 'accueil']) as $p) {
+    foreach ($p->getTranslationLanguages() as $lang) {
+      $p->getTranslation($lang->getId())->set('hero_video_loop', 1);
+      $n++;
+    }
+    $p->setNewRevision(FALSE);
+    $p->save();
+  }
+  return "Vidéo en boucle activée sur $n bannière(s) d'accueil.";
+}

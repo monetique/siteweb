@@ -1538,12 +1538,22 @@
     {
      "name": "hero_video",
      "strapi": "video",
-     "label": "Vidéo (animation jouée une fois)",
-     "description": "Facultatif. MP4 sans son, mêmes proportions que l'image ; joué une seule fois au chargement, puis l'image reste affichée.",
+     "label": "Vidéo (animation)",
+     "description": "Facultatif. MP4 sans son, mêmes proportions que l'image. Jouée une fois puis l'image reste affichée, ou en boucle selon le réglage ci-dessous.",
      "required": false,
      "translatable": true,
      "type": "file",
      "multiple": false
+    },
+    {
+     "name": "hero_video_loop",
+     "strapi": "videoLoop",
+     "label": "Vidéo en boucle",
+     "description": "Cochée : la vidéo tourne en continu (mise en pause hors de l'écran). Décochée : jouée une seule fois au chargement.",
+     "required": false,
+     "translatable": true,
+     "type": "boolean",
+     "default": false
     },
     {
      "name": "hero_ctas",

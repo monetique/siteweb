@@ -3443,6 +3443,7 @@
      "highlightUrl": "/monetique-tunisie",
      "imageFile": "hero-paiement.jpg",
      "videoFile": "hero-animation.mp4",
+     "videoLoop": true,
      "imageAlt": "Paiement par carte sans contact sur un terminal de paiement électronique"
     },
     {

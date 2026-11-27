@@ -110,6 +110,7 @@ async function HomeHero({ block }: { block: Block }) {
               <HeroVisual
                 img={img}
                 video={mediaUrl(block.video)}
+                loop={!!block.videoLoop}
                 className="h-60 w-full sm:h-80 lg:absolute lg:inset-x-0 lg:top-0 lg:h-[72%]"
                 imgClassName="object-[58%_50%]"
               />

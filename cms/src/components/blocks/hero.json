@@ -54,6 +54,10 @@
         "videos"
       ]
     },
+    "videoLoop": {
+      "type": "boolean",
+      "default": false
+    },
     "ctas": {
       "type": "component",
       "component": "shared.link",
