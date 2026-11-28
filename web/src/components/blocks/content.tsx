@@ -11,6 +11,7 @@ import { Container, Eyebrow, Section, SectionTitle } from "../Section";
 import { ButtonLink, SmartLink } from "../SmartLink";
 import { RotatingWord } from "../RotatingWord";
 import { InternationalMap } from "../InternationalMap";
+import { CardLossNotice } from "../CardLossNotice";
 
 type P = { block: Block; page: Page };
 
@@ -134,6 +135,7 @@ async function HomeHero({ block }: { block: Block }) {
           </div>
         </div>
       </Container>
+      <CardLossNotice />
     </section>
   );
 }

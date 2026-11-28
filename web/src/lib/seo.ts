@@ -15,7 +15,8 @@ export async function buildMetadata(seo: Seo | undefined, fallbackTitle: string,
   const url = `${SITE_URL}${localizePath(path, lang)}`;
   const languages = Object.fromEntries([...LANGS.map((l) => [l, `${SITE_URL}${localizePath(path, l)}`]), ["x-default", `${SITE_URL}${path}`]]);
   return {
-    title: path === "/" ? { absolute: title } : title,
+    // Accueil, ou titre qui contient déjà le nom du site (« Contactez Monétique Tunisie ») : pas de suffixe « | Monétique Tunisie »
+    title: path === "/" || (g.siteName && title.includes(g.siteName)) ? { absolute: title } : title,
     description,
     alternates: { canonical: url, languages },
     robots: seo?.noIndex ? { index: false, follow: true } : undefined,
