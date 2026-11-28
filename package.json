@@ -7,15 +7,15 @@
   },
   "scripts": {
     "setup": "node scripts/setup-local.mjs",
-    "drupal:install": "cd drupal && composer install --no-interaction && vendor/bin/drush site:install standard --db-url=sqlite://localhost/sites/default/files/.ht.sqlite --site-name='Monétique Tunisie' --account-name=admin --locale=fr -y && vendor/bin/drush en smt_site -y && vendor/bin/drush php:script web/modules/custom/smt_site/scripts/import.php",
-    "drupal:update": "cd drupal && composer install --no-interaction && vendor/bin/drush updatedb -y && vendor/bin/drush cr",
-    "drupal:import": "cd drupal && vendor/bin/drush php:script web/modules/custom/smt_site/scripts/import.php -- --reset",
+    "drupal:install": "cd drupal && . scripts/php-env.sh && composer install --no-interaction && vendor/bin/drush site:install standard --db-url=sqlite://localhost/sites/default/files/.ht.sqlite --site-name='Monétique Tunisie' --account-name=admin --locale=fr -y && vendor/bin/drush en smt_site -y && vendor/bin/drush pm:uninstall automated_cron announcements_feed help views_ui menu_ui menu_link_content block_content taxonomy -y && vendor/bin/drush php:script web/modules/custom/smt_site/scripts/import.php",
+    "drupal:update": "cd drupal && . scripts/php-env.sh && composer install --no-interaction && vendor/bin/drush updatedb -y && vendor/bin/drush cr",
+    "drupal:import": "cd drupal && . scripts/php-env.sh && vendor/bin/drush php:script web/modules/custom/smt_site/scripts/import.php -- --reset",
     "dev": "concurrently -n cms,site -c blue,green \"npm run dev:cms\" \"npm --prefix web run dev\"",
-    "dev:cms": "cd drupal && vendor/bin/drush runserver 127.0.0.1:8080",
+    "dev:cms": "cd drupal && . scripts/php-env.sh && vendor/bin/drush runserver 127.0.0.1:8080",
     "dev:web": "npm --prefix web run dev",
     "dev:strapi": "concurrently -n strapi,site -c blue,green \"npm --prefix cms run develop\" \"CMS_BACKEND=strapi npm --prefix web run dev\"",
     "build:web": "npm --prefix web run build",
-    "audit": "npm --prefix web audit --omit=dev && (cd drupal && composer audit)"
+    "audit": "npm --prefix web audit --omit=dev && (cd drupal && . scripts/php-env.sh && composer audit)"
   },
   "devDependencies": {
     "concurrently": "^9.2.1"

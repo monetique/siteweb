@@ -19,7 +19,11 @@ Tout le paramétrage est créé par le module **`smt_site`** (`web/modules/custo
 
 ## Installation locale (Mac)
 
-Prérequis : PHP 8.3 ou plus et Composer (`brew install php composer`).
+Prérequis : PHP 8.3, la version de production, et Composer (`brew install php@8.3 composer`).
+PHP 8.3 s'installe à côté d'un autre PHP sans le remplacer. Les commandes `npm run drupal:*` et `npm run dev:cms`
+le choisissent d'elles-mêmes (`scripts/php-env.sh`) ; une version plus récente remplit le journal
+d'avertissements « Deprecated function ». Réglez `memory_limit = 256M` dans
+`/opt/homebrew/etc/php/8.3/php.ini` : 128M ne suffit pas pour désinstaller des modules.
 
 ```bash
 npm run drupal:install      # dépendances, installation en français, module smt_site, import du contenu
@@ -69,10 +73,25 @@ SMTP dans `settings.php` (`$config['system.mail']['mailer_dsn']`).
 
 1. Serveur Ubuntu 24.04 : `php8.3-fpm php8.3-{gd,xml,mbstring,curl,pgsql,sqlite3,zip,intl}`, PostgreSQL ou MariaDB.
 2. `composer install --no-dev`, puis `drush site:install … --db-url=pgsql://…` et `drush en smt_site`, ou import d'une sauvegarde de base.
+   Retirer ensuite les modules inutiles à un back-office découplé (comme `npm run drupal:install`) :
+   `drush pm:uninstall automated_cron announcements_feed help views_ui menu_ui menu_link_content block_content taxonomy -y`.
+   Le cron automatique, en particulier, s'exécuterait à la fin d'une requête d'un rédacteur : le cron système (étape 4) le remplace.
 3. Nginx : Drupal sur une adresse interne (ex. `127.0.0.1:8080`, accessible par VPN seulement) ;
    le site public ne proxifie que `POST /api/messages-contact` vers cette adresse (voir `deploy/nginx-smt.conf`).
 4. Cron : `*/15 * * * * cd /opt/smt/drupal && vendor/bin/drush cron` (purge des messages, tâches Drupal).
 5. Sauvegardes quotidiennes de la base et de `web/sites/default/files`.
+6. Réglages PHP (`/etc/php/8.3/fpm/php.ini` et `/etc/php/8.3/cli/php.ini`) :
+
+   ```ini
+   memory_limit = 256M                ; 128M ne suffit pas (API avec blocs imbriqués, désinstallations)
+   opcache.memory_consumption = 192
+   opcache.max_accelerated_files = 20000
+   opcache.validate_timestamps = 0    ; recharger PHP-FPM après chaque déploiement
+   realpath_cache_size = 4096K
+   ```
+
+7. Journal : remplacer le journal en base par celui du système, pour éviter une écriture en base par message :
+   `drush en syslog -y && drush pm:uninstall dblog -y` (messages dans `/var/log/syslog`).
 
 ## Vérifications
 
